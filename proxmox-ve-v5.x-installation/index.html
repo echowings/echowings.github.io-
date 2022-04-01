@@ -1,308 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Proxmoxve VE V5.x Installation - echowings</title><meta name="Description" content="echowings"><meta property="og:title" content="Proxmoxve VE V5.x Installation" />
-<meta property="og:description" content="Proxmox VE 5.x Installation Proxmox won’t install- “A volume group called pve already exists Solution:
- Boot the proxmox installer USB Select Debug Mode Press “CTRL&#43;D” to start the installer wizard. Click on abort Run “vgdisplay” to dislay the LVM PG’s. Run “vgremode pve ” to remove pve PG.  Remove “No valid Subscription” Message  shell solution.  1 2  sed -i.bak &#34;s/data.status !== &#39;Active&#39;/false/g&#34; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js &amp;&amp; systemctl restart pveproxy." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://echowings.github.io/proxmox-ve-v5.x-installation/" /><meta property="og:image" content="https://echowings.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-11-19T23:38:39+08:00" />
-<meta property="article:modified_time" content="2022-04-01T13:43:11+08:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://echowings.github.io/logo.png"/>
-
-<meta name="twitter:title" content="Proxmoxve VE V5.x Installation"/>
-<meta name="twitter:description" content="Proxmox VE 5.x Installation Proxmox won’t install- “A volume group called pve already exists Solution:
- Boot the proxmox installer USB Select Debug Mode Press “CTRL&#43;D” to start the installer wizard. Click on abort Run “vgdisplay” to dislay the LVM PG’s. Run “vgremode pve ” to remove pve PG.  Remove “No valid Subscription” Message  shell solution.  1 2  sed -i.bak &#34;s/data.status !== &#39;Active&#39;/false/g&#34; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js &amp;&amp; systemctl restart pveproxy."/>
-<meta name="application-name" content="echowings">
-<meta name="apple-mobile-web-app-title" content="echowings"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="canonical" href="https://echowings.github.io/proxmox-ve-v5.x-installation/" /><link rel="prev" href="https://echowings.github.io/linux-in-action-01/" /><link rel="next" href="https://echowings.github.io/ssh-login-without-password/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Proxmoxve VE V5.x Installation",
-        "inLanguage": "en",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/echowings.github.io\/proxmox-ve-v5.x-installation\/"
-        },"image": ["https:\/\/echowings.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "PVE","wordcount":  274 ,
-        "url": "https:\/\/echowings.github.io\/proxmox-ve-v5.x-installation\/","datePublished": "2018-11-19T23:38:39+08:00","dateModified": "2022-04-01T13:43:11+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
-            "@type": "Organization",
-            "name": "xxxx","logo": "https:\/\/echowings.github.io\/images\/avatar.png"},"author": {
-                "@type": "Person",
-                "name": "steve dong"
-            },"description": ""
-    }
-    </script></head>
-    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="echowings"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>echowings</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/echowings" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/proxmox-ve-v5.x-installation/" selected>English</option></select>
-                    </a><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="echowings"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>echowings</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/echowings" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/proxmox-ve-v5.x-installation/" selected>English</option></select>
-                </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Proxmoxve VE V5.x Installation</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>steve dong</a></span>&nbsp;<span class="post-category">included in <a href="/categories/virtualization/"><i class="far fa-folder fa-fw"></i>virtualization</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-11-19">2018-11-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;274 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#proxmox-wont-install--a-volume-group-called-pve-already-exists">Proxmox won’t install- “A volume group called pve already exists</a></li>
-    <li><a href="#remove-no-valid-subscription-message">Remove “No valid Subscription” Message</a></li>
-    <li><a href="#change-update-source">Change update source</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#reference">Reference</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h1 id="proxmox-ve-5x-installation">Proxmox VE 5.x Installation</h1>
-<h2 id="proxmox-wont-install--a-volume-group-called-pve-already-exists">Proxmox won’t install- “A volume group called pve already exists</h2>
-<p>Solution:</p>
-<ol>
-<li>Boot the proxmox installer USB</li>
-<li>Select Debug Mode</li>
-<li>Press “CTRL+D” to start the installer wizard.</li>
-<li>Click on abort</li>
-<li>Run “vgdisplay” to dislay the LVM PG’s.</li>
-<li>Run “vgremode pve ” to remove pve PG.</li>
-</ol>
-<h2 id="remove-no-valid-subscription-message">Remove “No valid Subscription” Message</h2>
-<ul>
-<li>shell solution.</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i.bak <span class="s2">&#34;s/data.status !== &#39;Active&#39;/false/g&#34;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js <span class="o">&amp;&amp;</span> systemctl restart pveproxy.service
-</span></span><span class="line"><span class="cl">	
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>manual solution:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /usr/share/javascript/proxmox-widget-toolkit
-</span></span><span class="line"><span class="cl">cp proxmoxlib.js proxmoxlib.js.bak
-</span></span><span class="line"><span class="cl">nano proxmoxlib.js
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># change </span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span>data.status !<span class="o">==</span> <span class="s1">&#39;Active&#39;</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="nb">false</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#restart pveproxy.service</span>
-</span></span><span class="line"><span class="cl">systemctl restart pveproxy.service
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="change-update-source">Change update source</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#chang debian source list</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb https://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb-src https://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb https://mirrors.ustc.edu.cn/debian/ stretch-updates main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb-src https://mirrors.ustc.edu.cn/debian/ stretch-updates main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb https://mirrors.ustc.edu.cn/debian/ stretch-backports main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb-src https://mirrors.ustc.edu.cn/debian/ stretch-backports main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb https://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
-</span></span></span><span class="line"><span class="cl"><span class="s2">deb-src https://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free&#34;</span> &gt; /etc/apt/sources.list
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#change pve 5.x update source list</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve/ stretch pve-no-subscription&#34;</span> &gt;&gt; /etc/apt/sources.list
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#change ceph source list to utsc mirrors</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-luminous stretch main&#34;</span> &gt;&gt; /etc/apt/sources.list
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add key</span>
-</span></span><span class="line"><span class="cl">wget http://mirrors.ustc.edu.cn/proxmox/debian/proxmox-ve-release-5.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">apt update <span class="o">&amp;&amp;</span> apt -y dist-upgrade
-</span></span><span class="line"><span class="cl">update-grub
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h1 id="remove-sourcelist-of-pve-enterprise-subscription-and-ceph">Remove sourcelist of pve enterprise subscription and ceph</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Delete Enterprise subscription.</span>
-</span></span><span class="line"><span class="cl">rm -rf /etc/apt/sources.list.d/pve-enterprise.list
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Delete proxmox ve offical ceph source. </span>
-</span></span><span class="line"><span class="cl">rm -rf /etc/apt/sources.list.d/ceph.list
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="reference">Reference</h2>
-<ol>
-<li><a href="https://forum.proxmox.com/threads/proxmox-wont-install-a-volume-group-called-pve-already-exists.43724/" target="_blank" rel="noopener noreffer">Proxmox won’t install - “A volume group called pve already exists”.</a></li>
-<li><a href="https://johnscs.com/remove-proxmox51-subscription-notice/" target="_blank" rel="noopener noreffer">Remove Proxmox 5.1 or 5.2 Subscription Notice</a></li>
-</ol>
-</div><div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>Updated on 2022-04-01&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/d89eeee1cd72aee0fbd9dbd92ddeea4f3206fd63" target="_blank" title="commit by stevedong(dongjunbo@gmail.com) d89eeee1cd72aee0fbd9dbd92ddeea4f3206fd63: init">
-                                    <i class="fas fa-hashtag fa-fw"></i>d89eeee</a></span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/proxmox-ve-v5.x-installation/index.md" target="_blank">Read Markdown</a>
-                        </span></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://echowings.github.io/proxmox-ve-v5.x-installation/" data-title="Proxmoxve VE V5.x Installation" data-via="xxxx" data-hashtags="PVE"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://echowings.github.io/proxmox-ve-v5.x-installation/" data-hashtag="PVE"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://echowings.github.io/proxmox-ve-v5.x-installation/" data-title="Proxmoxve VE V5.x Installation"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://echowings.github.io/proxmox-ve-v5.x-installation/" data-title="Proxmoxve VE V5.x Installation"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://echowings.github.io/proxmox-ve-v5.x-installation/" data-title="Proxmoxve VE V5.x Installation"><i class="fab fa-weibo fa-fw"></i></a></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">pve</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/linux-in-action-01/" class="prev" rel="prev" title="Linux in Action 01"><i class="fas fa-angle-left fa-fw"></i>Linux in Action 01</a>
-            <a href="/ssh-login-without-password/" class="next" rel="next" title="Ssh Login Without Password">Ssh Login Without Password<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id="comments"><div id="utterances"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">echowings</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
-        </div>
-    </footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"echowings/blogcomment"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
-</html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>Proxmoxve VE V5.x Installation - echowings</title><meta name=Description content="echowings"><meta property="og:title" content="Proxmoxve VE V5.x Installation"><meta property="og:description" content="Proxmox VE 5.x Installation Proxmox won’t install- “A volume group called pve already exists Solution:
+ Boot the proxmox installer USB Select Debug Mode Press “CTRL+D” to start the installer wizard. Click on abort Run “vgdisplay” to dislay the LVM PG’s. Run “vgremode pve ” to remove pve PG.  Remove “No valid Subscription” Message  shell solution.  1 2  sed -i.bak &#34;s/data.status !== 'Active'/false/g&#34; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy."><meta property="og:type" content="article"><meta property="og:url" content="https://echowings.github.io/proxmox-ve-v5.x-installation/"><meta property="og:image" content="https://echowings.github.io/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2018-11-19T23:38:39+08:00"><meta property="article:modified_time" content="2022-04-01T17:55:37+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://echowings.github.io/logo.png"><meta name=twitter:title content="Proxmoxve VE V5.x Installation"><meta name=twitter:description content="Proxmox VE 5.x Installation Proxmox won’t install- “A volume group called pve already exists Solution:
+ Boot the proxmox installer USB Select Debug Mode Press “CTRL+D” to start the installer wizard. Click on abort Run “vgdisplay” to dislay the LVM PG’s. Run “vgremode pve ” to remove pve PG.  Remove “No valid Subscription” Message  shell solution.  1 2  sed -i.bak &#34;s/data.status !== 'Active'/false/g&#34; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy."><meta name=application-name content="echowings"><meta name=apple-mobile-web-app-title content="echowings"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=canonical href=https://echowings.github.io/proxmox-ve-v5.x-installation/><link rel=prev href=https://echowings.github.io/linux-in-action-01/><link rel=next href=https://echowings.github.io/ssh-login-without-password/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Proxmoxve VE V5.x Installation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/echowings.github.io\/proxmox-ve-v5.x-installation\/"},"image":["https:\/\/echowings.github.io\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"PVE","wordcount":274,"url":"https:\/\/echowings.github.io\/proxmox-ve-v5.x-installation\/","datePublished":"2018-11-19T23:38:39+08:00","dateModified":"2022-04-01T17:55:37+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"xxxx","logo":"https:\/\/echowings.github.io\/images\/avatar.png"},"author":{"@type":"Person","name":"steve dong"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=echowings><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>echowings</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/categories/documentation/>Docs </a><a class=menu-item href=/about/>About </a><a class=menu-item href=https://github.com/echowings title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a><a class=menu-item href=/search/><i class="fas fa-fw fa-search"></i> Search </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select id=language-select-desktop onchange="location=this.value"><option value=/proxmox-ve-v5.x-installation/ selected>English</option></select>
+</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme"><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=echowings><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>echowings</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/tags/ title>Tags</a><a class=menu-item href=/categories/ title>Categories</a><a class=menu-item href=/categories/documentation/ title>Docs</a><a class=menu-item href=/about/ title>About</a><a class=menu-item href=https://github.com/echowings title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a><a class=menu-item href=/search/ title><i class="fas fa-fw fa-search"></i>Search</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+</a><a href=javascript:void(0); class=menu-item title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select onchange="location=this.value"><option value=/proxmox-ve-v5.x-installation/ selected>English</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">Proxmoxve VE V5.x Installation</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>steve dong</a></span>&nbsp;<span class=post-category>included in <a href=/categories/virtualization/><i class="far fa-folder fa-fw"></i>virtualization</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2018-11-19>2018-11-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;274 words&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#proxmox-wont-install--a-volume-group-called-pve-already-exists>Proxmox won’t install- “A volume group called pve already exists</a></li><li><a href=#remove-no-valid-subscription-message>Remove “No valid Subscription” Message</a></li><li><a href=#change-update-source>Change update source</a></li></ul><ul><li><a href=#reference>Reference</a></li></ul></nav></div></div><div class=content id=content><h1 id=proxmox-ve-5x-installation>Proxmox VE 5.x Installation</h1><h2 id=proxmox-wont-install--a-volume-group-called-pve-already-exists>Proxmox won’t install- “A volume group called pve already exists</h2><p>Solution:</p><ol><li>Boot the proxmox installer USB</li><li>Select Debug Mode</li><li>Press “CTRL+D” to start the installer wizard.</li><li>Click on abort</li><li>Run “vgdisplay” to dislay the LVM PG’s.</li><li>Run “vgremode pve ” to remove pve PG.</li></ol><h2 id=remove-no-valid-subscription-message>Remove “No valid Subscription” Message</h2><ul><li>shell solution.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sed -i.bak <span class=s2>&#34;s/data.status !== &#39;Active&#39;/false/g&#34;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js <span class=o>&amp;&amp;</span> systemctl restart pveproxy.service
+</span></span><span class=line><span class=cl>	
+</span></span></code></pre></td></tr></table></div></div><ul><li>manual solution:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /usr/share/javascript/proxmox-widget-toolkit
+</span></span><span class=line><span class=cl>cp proxmoxlib.js proxmoxlib.js.bak
+</span></span><span class=line><span class=cl>nano proxmoxlib.js
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># change </span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>(</span>data.status !<span class=o>==</span> <span class=s1>&#39;Active&#39;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>(</span><span class=nb>false</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#restart pveproxy.service</span>
+</span></span><span class=line><span class=cl>systemctl restart pveproxy.service
+</span></span></code></pre></td></tr></table></div></div><h2 id=change-update-source>Change update source</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1>#chang debian source list</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;deb https://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>deb-src https://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>
+</span></span></span><span class=line><span class=cl><span class=s2>deb https://mirrors.ustc.edu.cn/debian/ stretch-updates main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>deb-src https://mirrors.ustc.edu.cn/debian/ stretch-updates main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>
+</span></span></span><span class=line><span class=cl><span class=s2>deb https://mirrors.ustc.edu.cn/debian/ stretch-backports main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>deb-src https://mirrors.ustc.edu.cn/debian/ stretch-backports main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>
+</span></span></span><span class=line><span class=cl><span class=s2>deb https://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
+</span></span></span><span class=line><span class=cl><span class=s2>deb-src https://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free&#34;</span> &gt; /etc/apt/sources.list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#change pve 5.x update source list</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve/ stretch pve-no-subscription&#34;</span> &gt;&gt; /etc/apt/sources.list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#change ceph source list to utsc mirrors</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-luminous stretch main&#34;</span> &gt;&gt; /etc/apt/sources.list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># add key</span>
+</span></span><span class=line><span class=cl>wget http://mirrors.ustc.edu.cn/proxmox/debian/proxmox-ve-release-5.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>apt update <span class=o>&amp;&amp;</span> apt -y dist-upgrade
+</span></span><span class=line><span class=cl>update-grub
+</span></span></code></pre></td></tr></table></div></div><h1 id=remove-sourcelist-of-pve-enterprise-subscription-and-ceph>Remove sourcelist of pve enterprise subscription and ceph</h1><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=c1># Delete Enterprise subscription.</span>
+</span></span><span class=line><span class=cl>rm -rf /etc/apt/sources.list.d/pve-enterprise.list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Delete proxmox ve offical ceph source. </span>
+</span></span><span class=line><span class=cl>rm -rf /etc/apt/sources.list.d/ceph.list
+</span></span></code></pre></td></tr></table></div></div><h2 id=reference>Reference</h2><ol><li><a href=https://forum.proxmox.com/threads/proxmox-wont-install-a-volume-group-called-pve-already-exists.43724/ target=_blank rel="noopener noreffer">Proxmox won’t install - “A volume group called pve already exists”.</a></li><li><a href=https://johnscs.com/remove-proxmox51-subscription-notice/ target=_blank rel="noopener noreffer">Remove Proxmox 5.1 or 5.2 Subscription Notice</a></li></ol></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2022-04-01&nbsp;<a class=git-hash href=https://github.com/dillonzq/LoveIt/commit/63e5c53e84acbe4ad3a524d87ffcd7c42cf0364f target=_blank title="commit by stevedong(dongjunbo@gmail.com) 63e5c53e84acbe4ad3a524d87ffcd7c42cf0364f: change github action">
+<i class="fas fa-hashtag fa-fw"></i>63e5c53</a></span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/proxmox-ve-v5.x-installation/index.md target=_blank>Read Markdown</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=https://echowings.github.io/proxmox-ve-v5.x-installation/ data-title="Proxmoxve VE V5.x Installation" data-via=xxxx data-hashtags=PVE><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://echowings.github.io/proxmox-ve-v5.x-installation/ data-hashtag=PVE><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://echowings.github.io/proxmox-ve-v5.x-installation/ data-title="Proxmoxve VE V5.x Installation"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://echowings.github.io/proxmox-ve-v5.x-installation/ data-title="Proxmoxve VE V5.x Installation"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg></i></a><a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://echowings.github.io/proxmox-ve-v5.x-installation/ data-title="Proxmoxve VE V5.x Installation"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/pve/>pve</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/linux-in-action-01/ class=prev rel=prev title="Linux in Action 01"><i class="fas fa-angle-left fa-fw"></i>Linux in Action 01</a>
+<a href=/ssh-login-without-password/ class=next rel=next title="Ssh Login Without Password">Ssh Login Without Password<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=utterances></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2018 - 2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>echowings</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw"></i></a></div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"",lightTheme:"github-light",repo:"echowings/blogcomment"}}}</script><script type=text/javascript src=/js/theme.min.js></script></body></html>
