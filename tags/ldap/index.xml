@@ -10,6 +10,7 @@
     <pubDate>Sun, 13 Oct 2019 14:52:31 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://echowings.github.io/freeradius-on-debian-10/</guid>
-    <description><![CDATA[How to install and configure FreeRADIUS with Active Directory allow specific group of users to authenticate in Debian 10 serval years ago,I built freeradius server in centos 6 work with active directory. It works perfect with wifi authortication and ikev2 vpn authortication. But recently days, I found a bug that the radius server can not limit user access to a group in AD. So I&rsquo;m trying to build a new freeradius server in debian 10.]]></description>
+    <description><![CDATA[{% raw %}
+How to install and configure FreeRADIUS with Active Directory allow specific group of users to authenticate in Debian 10 serval years ago,I built freeradius server in centos 6 work with active directory. It works perfect with wifi authortication and ikev2 vpn authortication. But recently days, I found a bug that the radius server can not limit user access to a group in AD. So I&rsquo;m trying to build a new freeradius server in debian 10.]]></description>
 </item></channel>
 </rss>

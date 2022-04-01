@@ -1,6 +1,7 @@
 # How to Install and Configure Freeradius With Active Directory Allow Allow Specific Group of Users to Authenticate in Debian 10
 
 
+{% raw %}
 # How to install and configure FreeRADIUS with Active Directory allow specific group of users to authenticate in Debian 10
 
 serval years ago,I built freeradius server in centos 6 work with active directory. It works perfect with wifi authortication  and ikev2 vpn authortication. But recently days, I found a bug that the radius server can not limit user access  to a group in AD. So I'm trying to build a new freeradius server in debian 10. After a week work.At last I figure it out.
@@ -208,7 +209,6 @@ to
    change 
    
 
-{% raw %}
   ```bash
   program = "/usr/bin/ntlm_auth --request-nt-key --domain=TESTING --username=%{mschap:User-Name} --password=%{User-Password}"
   
@@ -216,7 +216,6 @@ to
   program = "/usr/bin/ntlm_auth --request-nt-key --domain=$DOMAINNAME  --require-membership-of='$DOMAINNAME\$DOMAIN_GROUP'  --username=%{mschap:User-Name} --password=%{User-Password}"
   ```
 
-{% ednraw %}
 
 - Change module mschap
  
@@ -486,6 +485,7 @@ We purchased godaddy certification, so we will replace ssl certification
   systemctl restart freeradius
   ```
 
+{% endraw %}
 ## Reference 
 
 1. [WPA2 Enterprise with FreeRADIUS and AD integration on Ubuntu16.04](https://www.dangtrinh.com/2017/03/wpa2-enterprise-with-freeradius-and-ad.html)
