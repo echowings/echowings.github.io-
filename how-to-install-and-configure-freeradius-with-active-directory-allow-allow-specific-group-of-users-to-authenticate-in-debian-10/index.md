@@ -214,17 +214,18 @@ to
   program = "/usr/bin/ntlm_auth --request-nt-key --domain=$DOMAINNAME  --require-membership-of='$DOMAINNAME\$DOMAIN_GROUP'  --username=%{mschap:User-Name} --password=%{User-Password}"
   ```
  
- # - Change module mschap
- #
- # ```bash
- # vi /etc/freeradius/3.0/mods-available/mschap
- # ```
+- Change module mschap
+ 
+```bash
+vi /etc/freeradius/3.0/mods-available/mschap
+```
+change
 
-  ```bash
-  mschap { 
-  ...
-      ntlm_auth = "/usr/bin/ntlm_auth --request-nt-key --domain=TESTING --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
-  ```
+```bash
+mschap {
+ ... 
+    ntlm_auth = "/usr/bin/ntlm_auth --request-nt-key --domain=TESTING --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
+```
 
 - Change eap config.
 
