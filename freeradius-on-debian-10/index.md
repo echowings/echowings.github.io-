@@ -207,13 +207,17 @@ to
   ```
    change 
    
+
+{% raw %}
   ```bash
   program = "/usr/bin/ntlm_auth --request-nt-key --domain=TESTING --username=%{mschap:User-Name} --password=%{User-Password}"
   
   #if you want to limted to a specific domain group please modified as this:
   program = "/usr/bin/ntlm_auth --request-nt-key --domain=$DOMAINNAME  --require-membership-of='$DOMAINNAME\$DOMAIN_GROUP'  --username=%{mschap:User-Name} --password=%{User-Password}"
   ```
- 
+
+{% ednraw %}
+
 - Change module mschap
  
 ```bash
