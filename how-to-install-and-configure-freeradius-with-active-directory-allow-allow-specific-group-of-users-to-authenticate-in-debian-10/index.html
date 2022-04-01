@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/echowings.github.io\/how-to-install-and-configure-freeradius-with-active-directory-allow-allow-specific-group-of-users-to-authenticate-in-debian-10\/"
-        },"image": ["https:\/\/echowings.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "freeradius, debian, linux, ldap","wordcount":  1280 ,
+        },"image": ["https:\/\/echowings.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "freeradius, debian, linux, ldap","wordcount":  1282 ,
         "url": "https:\/\/echowings.github.io\/how-to-install-and-configure-freeradius-with-active-directory-allow-allow-specific-group-of-users-to-authenticate-in-debian-10\/","datePublished": "2019-10-13T14:52:31+08:00","dateModified": "2022-04-01T13:48:22+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/echowings.github.io\/images\/avatar.png"},"author": {
@@ -108,7 +108,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">How to Install and Configure Freeradius With Active Directory Allow Allow Specific Group of Users to Authenticate in Debian 10</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>echowings</a></span>&nbsp;<span class="post-category">included in <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-10-13">2019-10-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1280 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-10-13">2019-10-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1282 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -123,6 +123,13 @@
         <li><a href="#change-debian-settings">Change Debian settings</a></li>
         <li><a href="#install-samba-and-winbind-and-let-debian-host-joined-domain">Install samba and winbind and let Debian Host joined domain</a></li>
         <li><a href="#install-freeradius">Install freeradius</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
         <li><a href="#configure-freeradius-ldap-auth-with-ad">Configure freeradius-ldap Auth with AD</a>
           <ul>
             <li><a href="#edit-config">Edit config</a></li>
@@ -522,17 +529,13 @@ Install chrony</li>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
-<li>
-<p>Change module mschap</p>
+</ul>
+<h1 id="--change-module-mschap">- Change module mschap</h1>
+<h1 id="heading"></h1>
+<h1 id="bash">```bash</h1>
+<h1 id="vi-etcfreeradius30mods-availablemschap">vi /etc/freeradius/3.0/mods-available/mschap</h1>
+<h1 id="heading-1">```</h1>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /etc/freeradius/3.0/mods-available/mschap
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -544,7 +547,7 @@ Install chrony</li>
 </span></span><span class="line"><span class="cl">    <span class="nv">ntlm_auth</span> <span class="o">=</span> <span class="s2">&#34;/usr/bin/ntlm_auth --request-nt-key --domain=TESTING --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><ul>
 <li>
 <p>Change eap config.</p>
 <div class="highlight"><div class="chroma">
