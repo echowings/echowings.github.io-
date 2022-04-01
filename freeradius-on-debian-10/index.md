@@ -222,10 +222,11 @@ vi /etc/freeradius/3.0/mods-available/mschap
 change
 
 ```bash
+{% raw %}
 mschap {
     ntlm_auth = "/usr/bin/ntlm_auth --request-nt-key --domain=TESTING --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
+{% ednraw %}
 ```
-
 - Change eap config.
 
   ```bash
