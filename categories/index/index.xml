@@ -4,25 +4,7 @@
         <link>https://echowings.github.io/categories/index/</link>
         <description>index - Category - echowings</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
-            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Apr 2022 01:51:22 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/index/" rel="self" type="application/rss+xml" /><item>
-    <title>Mermaid.zh Cn Hello World Bingobingo</title>
-    <link>https://echowings.github.io/mermaid.zh-cn-hello-world-bingobingo/</link>
-    <pubDate>Fri, 01 Apr 2022 01:51:22 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://echowings.github.io/mermaid.zh-cn-hello-world-bingobingo/</guid>
-    <description><![CDATA[Insert Lead paragraph here.
-New Cool Posts    ]]></description>
-</item><item>
-    <title>Mermaid.zh Cn Hello World</title>
-    <link>https://echowings.github.io/mermaid.zh-cn-hello-world/</link>
-    <pubDate>Fri, 01 Apr 2022 01:41:11 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://echowings.github.io/mermaid.zh-cn-hello-world/</guid>
-    <description><![CDATA[Day nn. {title} 前言 write something cool&hellip;
-主要內容 write something cool&hellip;
-小結 write something cool&hellip;
-參考連結    ]]></description>
-</item><item>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 12 Jul 2019 14:04:03 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/index/" rel="self" type="application/rss+xml" /><item>
     <title>How to Setup Cloud Init in Proxmoxve</title>
     <link>https://echowings.github.io/how-to-setup-cloud-init-in-proxmoxve/</link>
     <pubDate>Fri, 12 Jul 2019 14:04:03 &#43;0800</pubDate>
