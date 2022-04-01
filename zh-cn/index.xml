@@ -1,17 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>echowings</title>
-        <link>https://echowings.github.io/zh-cn/</link>
-        <description>echowings</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
-            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Feb 2021 11:27:59 &#43;0800</lastBuildDate>
-            <atom:link href="https://echowings.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>奥林岛财务软件在win7/win8/win10安装</title>
-    <link>https://echowings.github.io/zh-cn/how-to-install-aolindao/</link>
-    <pubDate>Fri, 05 Feb 2021 11:27:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://echowings.github.io/zh-cn/how-to-install-aolindao/</guid>
-    <description><![CDATA[奥林岛财务软件在win7/win8/win10安装 安装32bit的Office Office 2007. office 2013、office 2016,office2 019的32bit版本皆可！不可]]></description>
-</item></channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>echowings</title><link>https://echowings.github.io/zh-cn/</link><description>Recent content on echowings</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor><webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Feb 2021 11:27:59 +0800</lastBuildDate><atom:link href="https://echowings.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml"/><item><title>奥林岛财务软件在win7/win8/win10安装</title><link>https://echowings.github.io/zh-cn/how-to-install-aolindao/</link><pubDate>Fri, 05 Feb 2021 11:27:59 +0800</pubDate><author>echo.wings@gmail.com (echowings)</author><guid>https://echowings.github.io/zh-cn/how-to-install-aolindao/</guid><description>奥林岛财务软件在win7/win8/win10安装 安装32bit的Office Office 2007. office 2013、office 2016,office2 019的32bit版本皆可！不可</description></item><item><title>echowings</title><link>https://echowings.github.io/zh-cn/about/</link><pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><author>echo.wings@gmail.com (echowings)</author><guid>https://echowings.github.io/zh-cn/about/</guid><description/></item></channel></rss>

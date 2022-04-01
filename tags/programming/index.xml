@@ -1,18 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>programming - Tag - echowings</title>
-        <link>https://echowings.github.io/tags/programming/</link>
-        <description>programming - Tag - echowings</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
-            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 07 Apr 2021 18:07:23 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/programming/" rel="self" type="application/rss+xml" /><item>
-    <title>Learning Golang 01</title>
-    <link>https://echowings.github.io/learning-golang-01/</link>
-    <pubDate>Wed, 07 Apr 2021 18:07:23 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://echowings.github.io/learning-golang-01/</guid>
-    <description><![CDATA[#Learning Golang notebook &ndash;001
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>programming on echowings</title><link>https://echowings.github.io/tags/programming/</link><description>Recent content in programming on echowings</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor><webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 07 Apr 2021 18:07:23 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning Golang 01</title><link>https://echowings.github.io/learning-golang-01/</link><pubDate>Wed, 07 Apr 2021 18:07:23 +0800</pubDate><author>echo.wings@gmail.com (echowings)</author><guid>https://echowings.github.io/learning-golang-01/</guid><description>#Learning Golang notebook &amp;ndash;001
 How to install golang Set go workspace Go still expects there to be a single workspace for third-party Go tools installe via go install.By default,this workspace is located in $HOME/go.
-1 2 3  $HOME/go/src $HOME/go/bin $HOME    Install golang with homebrew  1  brew install go   2 set GOPATH on unix like os.
-1 2 3  cat &lt;&lt; EOF &gt;&gt; ~/.]]></description>
-</item></channel>
-</rss>
+1 2 3 $HOME/go/src $HOME/go/bin $HOME Install golang with homebrew 1 brew install go 2 set GOPATH on unix like os.
+1 2 3 cat &amp;lt;&amp;lt; EOF &amp;gt;&amp;gt; ~/.</description></item></channel></rss>
