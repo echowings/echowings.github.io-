@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>How to configure cisco catalyst switch - echowings</title><meta name="Description" content="echowings"><meta property="og:title" content="How to configure cisco catalyst switch" />
+<meta property="og:description" content="How to configure cisco catalyst switch Clean session 1 2 3 4 5  #Show current login users show users # terminal a user clear line vty 0   Set Session timeout exec timeout command is sused to specify the timeout for exec sessions[telnet/ssh] whereas session timeout command specifies the idle timeout period for all the sessions.
+1 2 3 4 5 6 7  config t line vty 0 15 exec-timeout 10 session-timeout 10 #Check configure sh run | be line vty   How to fix %Error opening tftp://255." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" /><meta property="og:image" content="https://echowings.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-11T11:29:28+08:00" />
+<meta property="article:modified_time" content="2022-04-01T13:43:11+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://echowings.github.io/logo.png"/>
+
+<meta name="twitter:title" content="How to configure cisco catalyst switch"/>
+<meta name="twitter:description" content="How to configure cisco catalyst switch Clean session 1 2 3 4 5  #Show current login users show users # terminal a user clear line vty 0   Set Session timeout exec timeout command is sused to specify the timeout for exec sessions[telnet/ssh] whereas session timeout command specifies the idle timeout period for all the sessions.
+1 2 3 4 5 6 7  config t line vty 0 15 exec-timeout 10 session-timeout 10 #Check configure sh run | be line vty   How to fix %Error opening tftp://255."/>
+<meta name="application-name" content="echowings">
+<meta name="apple-mobile-web-app-title" content="echowings"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="canonical" href="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" /><link rel="prev" href="https://echowings.github.io/how-to-install-k8s1.18-in-ha-mode/" /><link rel="next" href="https://echowings.github.io/how-to-let-a-new-server-join-hci-system/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to configure cisco catalyst switch",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/echowings.github.io\/how-to-clear-ssh-session-on-ios\/"
+        },"image": ["https:\/\/echowings.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "ios, cisco, catalyst, network","wordcount":  508 ,
+        "url": "https:\/\/echowings.github.io\/how-to-clear-ssh-session-on-ios\/","datePublished": "2021-05-11T11:29:28+08:00","dateModified": "2022-04-01T13:43:11+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/echowings.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "echowings"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="echowings"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>echowings</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/echowings" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/how-to-clear-ssh-session-on-ios/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="echowings"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>echowings</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/echowings" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/how-to-clear-ssh-session-on-ios/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">How to configure cisco catalyst switch</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>echowings</a></span>&nbsp;<span class="post-category">included in <a href="/categories/network/"><i class="far fa-folder fa-fw"></i>network</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-11">2021-05-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;508 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#clean-session">Clean session</a></li>
+    <li><a href="#set-session-timeout">Set Session timeout</a></li>
+    <li><a href="#how-to-fix-error-opening-tftp255255255255network-confg-timed-out">How to fix <code>%Error opening tftp://255.255.255.255/network-confg (Timed out)</code></a></li>
+    <li><a href="#set-ip-address-and-default-gateway">Set ip address and default gateway</a></li>
+    <li><a href="#set-hostname-and-domain-name">Set hostname and domain-name</a></li>
+    <li><a href="#enable-ssh-login">Enable ssh login</a>
+      <ul>
+        <li><a href="#generate-the-rsa-keys">Generate the RSA keys</a></li>
+        <li><a href="#setup-the-line-vty-configurations">Setup the line vty configurations</a></li>
+        <li><a href="#set-the-console-line">Set the console line</a></li>
+        <li><a href="#create-the-username-password">Create the username password</a></li>
+        <li><a href="#enable-service-password-encryption">enable service password-encryption</a></li>
+        <li><a href="#verify-ssh-access">Verify SSH access</a></li>
+      </ul>
+    </li>
+    <li><a href="#configure">Configure</a>
+      <ul>
+        <li><a href="#port-channel">port-channel</a></li>
+        <li><a href="#access-mode">Access mode</a></li>
+        <li><a href="#snmp">SNMP</a></li>
+        <li><a href="#ntp">NTP</a></li>
+        <li><a href="#pbr">PBR</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="how-to-configure-cisco-catalyst-switch">How to configure cisco catalyst switch</h1>
+<h2 id="clean-session">Clean session</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Show current login users</span>
+</span></span><span class="line"><span class="cl">show users
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># terminal a user</span>
+</span></span><span class="line"><span class="cl">clear line vty <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="set-session-timeout">Set Session timeout</h2>
+<p>exec timeout command is sused to specify the timeout for exec sessions[telnet/ssh] whereas session timeout command specifies the idle timeout period for all the sessions.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">config t
+</span></span><span class="line"><span class="cl">line vty <span class="m">0</span> <span class="m">15</span>
+</span></span><span class="line"><span class="cl">exec-timeout <span class="m">10</span>
+</span></span><span class="line"><span class="cl">session-timeout <span class="m">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Check configure</span>
+</span></span><span class="line"><span class="cl">sh run <span class="p">|</span> be line vty
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="how-to-fix-error-opening-tftp255255255255network-confg-timed-out">How to fix <code>%Error opening tftp://255.255.255.255/network-confg (Timed out)</code></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">no service config
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="set-ip-address-and-default-gateway">Set ip address and default gateway</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip default-gateway 192.168.0.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">interface vlan <span class="m">1</span>
+</span></span><span class="line"><span class="cl">ip address 192.168.0.2 255.255.255.0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="set-hostname-and-domain-name">Set hostname and domain-name</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">config t
+</span></span><span class="line"><span class="cl">hostname myswitch
+</span></span><span class="line"><span class="cl">ip domain-name mydomain.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="enable-ssh-login">Enable ssh login</h2>
+<h3 id="generate-the-rsa-keys">Generate the RSA keys</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">myswitch<span class="o">(</span>config<span class="o">)</span><span class="c1"># crypto key generate rsa</span>
+</span></span><span class="line"><span class="cl"> The name <span class="k">for</span> the keys will be: myswitch.thegeekstuff.com
+</span></span><span class="line"><span class="cl"> Choose the size of the key modulus in the range of <span class="m">360</span> to <span class="m">2048</span> <span class="k">for</span> your
+</span></span><span class="line"><span class="cl">   General Purpose Keys. Choosing a key modulus greater than <span class="m">512</span> may take
+</span></span><span class="line"><span class="cl">   a few minutes.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">How many bits in the modulus <span class="o">[</span>512<span class="o">]</span>: <span class="m">1024</span>
+</span></span><span class="line"><span class="cl"> % Generating <span class="m">1024</span> bit RSA keys, keys will be non-exportable...<span class="o">[</span>OK<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="setup-the-line-vty-configurations">Setup the line vty configurations</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">line vty <span class="m">0</span> <span class="m">4</span>
+</span></span><span class="line"><span class="cl">session-timeout <span class="m">10</span>
+</span></span><span class="line"><span class="cl">transport input ssh
+</span></span><span class="line"><span class="cl">login <span class="nb">local</span>
+</span></span><span class="line"><span class="cl">password <span class="m">7</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="set-the-console-line">Set the console line</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">line console <span class="m">0</span>
+</span></span><span class="line"><span class="cl">logging synchronus
+</span></span><span class="line"><span class="cl">login <span class="nb">local</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="create-the-username-password">Create the username password</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">config t
+</span></span><span class="line"><span class="cl">username <span class="nv">$USERNAME</span> password <span class="nv">$MYPASSWORD</span>
+</span></span><span class="line"><span class="cl"><span class="nb">enable</span> secret <span class="nv">$MYENABLEPASSWORD</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="enable-service-password-encryption">enable service password-encryption</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service password-encryption
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="verify-ssh-access">Verify SSH access</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">show ip ssh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="configure">Configure</h2>
+<h3 id="port-channel">port-channel</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">interface Port-channel1
+</span></span><span class="line"><span class="cl"> description testing
+</span></span><span class="line"><span class="cl"> switchport trunk allowed vlan 4-12
+</span></span><span class="line"><span class="cl"> switchport trunk encapsulation dot1q
+</span></span><span class="line"><span class="cl"> switchport mode trunk
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="c1"># network port settings</span>
+</span></span><span class="line"><span class="cl"> interface GigabitEthernet1/0/27
+</span></span><span class="line"><span class="cl"> description lacp-wifi-network
+</span></span><span class="line"><span class="cl"> switchport trunk encapsulation dot1q
+</span></span><span class="line"><span class="cl"> switchport mode trunk
+</span></span><span class="line"><span class="cl"> channel-protocol lacp
+</span></span><span class="line"><span class="cl"> channel-group <span class="m">3</span> mode active
+</span></span><span class="line"><span class="cl">!
+</span></span><span class="line"><span class="cl">interface GigabitEthernet1/0/28
+</span></span><span class="line"><span class="cl"> description lacp-wifi-network
+</span></span><span class="line"><span class="cl"> switchport trunk encapsulation dot1q
+</span></span><span class="line"><span class="cl"> switchport mode trunk
+</span></span><span class="line"><span class="cl"> channel-protocol lacp
+</span></span><span class="line"><span class="cl"> channel-group <span class="m">3</span> mode active
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="access-mode">Access mode</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">interface GigabitEthernet1/0/29
+</span></span><span class="line"><span class="cl"> switchport access vlan <span class="m">60</span>
+</span></span><span class="line"><span class="cl"> switchport mode access
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="snmp">SNMP</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">snmp-server community public RO
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ntp">NTP</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ntp <span class="nb">source</span> vlan <span class="m">20</span>
+</span></span><span class="line"><span class="cl">ntp server 10.32.0.2 <span class="nb">source</span> vlan <span class="m">20</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pbr">PBR</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Enable PBR on cisco 3750x</span>
+</span></span><span class="line"><span class="cl">sdm prefer routing
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#save configuration</span>
+</span></span><span class="line"><span class="cl">write
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Reload switch to let it works.</span>
+</span></span><span class="line"><span class="cl">reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#check sdm status</span>
+</span></span><span class="line"><span class="cl">show sdm prefer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define access list</span>
+</span></span><span class="line"><span class="cl">ip access-list extended wifi
+</span></span><span class="line"><span class="cl"> permit ip 10.32.200.0 0.0.0.255 any
+</span></span><span class="line"><span class="cl"> deny   ip any any
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#define reout-map and set routing policy</span>
+</span></span><span class="line"><span class="cl">route-map wifi-2rd-gw permit <span class="m">10</span>
+</span></span><span class="line"><span class="cl"> match ip address wifi
+</span></span><span class="line"><span class="cl"> <span class="nb">set</span> ip next-hop 192.168.99.2
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="c1">#select a vlan to apply PBR</span>
+</span></span><span class="line"><span class="cl"> interface Vlan30
+</span></span><span class="line"><span class="cl"> ip policy route-map wifi-2rd-gw
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="reference">Reference:</h2>
+<hr>
+<ol>
+<li><a href="https://community.cisco.com/t5/other-network-architecture/error-opening-tftp-255-255-255-255-network-confg-timed-out/td-p/258876" target="_blank" rel="noopener noreffer">%Error opening tftp://255.255.255.255/network-confg (Timed out)</a></li>
+<li><a href="https://community.cisco.com/t5/wireless/to-increase-ssh-session-timeout/td-p/3098020" target="_blank" rel="noopener noreffer">to increase SSH session timeout</a></li>
+<li><a href="https://www.thegeekstuff.com/2013/08/enable-ssh-cisco/" target="_blank" rel="noopener noreffer">How to Enable SSH on Cisco Switch, Router and ASA</a></li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-04-01&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/d89eeee1cd72aee0fbd9dbd92ddeea4f3206fd63" target="_blank" title="commit by stevedong(dongjunbo@gmail.com) d89eeee1cd72aee0fbd9dbd92ddeea4f3206fd63: init">
+                                    <i class="fas fa-hashtag fa-fw"></i>d89eeee</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/how-to-clear-ssh-session-on-ios/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" data-title="How to configure cisco catalyst switch" data-via="xxxx" data-hashtags="ios,cisco,catalyst,network"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" data-hashtag="ios"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" data-title="How to configure cisco catalyst switch"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" data-title="How to configure cisco catalyst switch"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://echowings.github.io/how-to-clear-ssh-session-on-ios/" data-title="How to configure cisco catalyst switch"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ios/">ios</a>,&nbsp;<a href="/tags/cisco/">cisco</a>,&nbsp;<a href="/tags/catalyst/">catalyst</a>,&nbsp;<a href="/tags/network/">network</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/how-to-install-k8s1.18-in-ha-mode/" class="prev" rel="prev" title="How to Install K8S"><i class="fas fa-angle-left fa-fw"></i>How to Install K8S</a>
+            <a href="/how-to-let-a-new-server-join-hci-system/" class="next" rel="next" title="How to Let a New Server Join Hci System">How to Let a New Server Join Hci System<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">echowings</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"echowings/blogcomment"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
