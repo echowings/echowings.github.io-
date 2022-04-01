@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pass through - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/pass-through/</link>
+        <description>pass through - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 24 Dec 2018 16:01:23 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/pass-through/" rel="self" type="application/rss+xml" /><item>
+    <title>Proxmox Ve Network Adapter Pass Through</title>
+    <link>https://echowings.github.io/proxmox-ve-network-adapter-pass-through/</link>
+    <pubDate>Mon, 24 Dec 2018 16:01:23 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/proxmox-ve-network-adapter-pass-through/</guid>
+    <description><![CDATA[Proxmox Network Adapter Pass Through Long time ago, I konw virtualization is go very good solution to server. But how about router build in virtualization? After tried to do it, I was failed. because virtual switch made networking very slow. So i just use dedicate server as a router.
+Recently days, I just learn proxmox and find pci-e pass through function. I think maybe it is way to make routing virtualization.]]></description>
+</item></channel>
+</rss>

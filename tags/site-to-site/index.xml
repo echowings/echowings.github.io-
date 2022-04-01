@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>site-to-site - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/site-to-site/</link>
+        <description>site-to-site - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 19 Dec 2019 14:36:09 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/site-to-site/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Build Ipsec Site to Site Vpn With Vyos and Pfsense</title>
+    <link>https://echowings.github.io/how-to-build-ipsec-site-to-site-vpn-with-vyos-and-pfsense/</link>
+    <pubDate>Thu, 19 Dec 2019 14:36:09 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-build-ipsec-site-to-site-vpn-with-vyos-and-pfsense/</guid>
+    <description><![CDATA[How to build ipse site-to-site VPN with vyos and pfsense Vyos VS pfsense For build all kinds of network functions like nat,firewall, site-to-site vpn , dial in vpn with pfsense.It works well. But it has some Crons:
+ Hard to upgrade version, it manybe crashed Didn&rsquo;t support API. Heavy loading and low performance.  After try to replace pfsense to build all functions with vyos. It has a lot of pros:]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>reverse proxy - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/reverse-proxy/</link>
+        <description>reverse proxy - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 06 Nov 2018 23:26:18 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/reverse-proxy/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Setup Reverse Proxy With Iis</title>
+    <link>https://echowings.github.io/how-to-setup-reverse-proxy-with-iis/</link>
+    <pubDate>Tue, 06 Nov 2018 23:26:18 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-setup-reverse-proxy-with-iis/</guid>
+    <description><![CDATA[How to Setup Reverse proxy with IIS I testing it on Server 2016 with IIS 10
+Install IIS,URL _REWRITE, ARR  Install IIS. Download and install URL Rewrite Module 2.1 Download and install ARR-Application-request-routing  Setting Reverse Proxy   Select Root level in IIS management
+  Click ‘Application Request Routing Cache’,then in the right side, click “proxy | Server proxy Settings | Check on “Enable proxy” | save config.]]></description>
+</item></channel>
+</rss>

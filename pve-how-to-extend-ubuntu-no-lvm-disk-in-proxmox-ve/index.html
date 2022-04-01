@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>How to Extend Ubuntu No Lvm Disk in Proxmox VE - echowings</title><meta name="Description" content="echowings"><meta property="og:title" content="How to Extend Ubuntu No Lvm Disk in Proxmox VE" />
+<meta property="og:description" content="How to resize disk(no lvm) in proxmox ve Today I met a problem that I need to extend disk image for a ubuntu server which is a virtual machine hosted in proxmox ve.
+Resizing disk images First thing first, I need resize the disk images of the virtual machine.I can do it both in command line or via web management interface.
+ Extend disk size of virtual machine via shell command  1 2  # Extend disk size of virtual machine with vid 136 with 100G qm resize 136 virtio0 &#43;100G    Extend disk size of virtual machien via web interface  &quot;Datacenter&quot; | &quot;$Node&quot; | $VIRTUAL_MACHINE | &quot;HARDWARE&quot; | &quot;HARD DISK(SCSI0)&quot; | &quot;RESIZE DISK&quot; | &quot;size Increment(GiB) | &quot;100&quot; | &quot;Resize disk&quot;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" /><meta property="og:image" content="https://echowings.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-05-28T15:20:53+08:00" />
+<meta property="article:modified_time" content="2022-04-01T13:43:11+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://echowings.github.io/logo.png"/>
+
+<meta name="twitter:title" content="How to Extend Ubuntu No Lvm Disk in Proxmox VE"/>
+<meta name="twitter:description" content="How to resize disk(no lvm) in proxmox ve Today I met a problem that I need to extend disk image for a ubuntu server which is a virtual machine hosted in proxmox ve.
+Resizing disk images First thing first, I need resize the disk images of the virtual machine.I can do it both in command line or via web management interface.
+ Extend disk size of virtual machine via shell command  1 2  # Extend disk size of virtual machine with vid 136 with 100G qm resize 136 virtio0 &#43;100G    Extend disk size of virtual machien via web interface  &quot;Datacenter&quot; | &quot;$Node&quot; | $VIRTUAL_MACHINE | &quot;HARDWARE&quot; | &quot;HARD DISK(SCSI0)&quot; | &quot;RESIZE DISK&quot; | &quot;size Increment(GiB) | &quot;100&quot; | &quot;Resize disk&quot;"/>
+<meta name="application-name" content="echowings">
+<meta name="apple-mobile-web-app-title" content="echowings"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="canonical" href="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" /><link rel="prev" href="https://echowings.github.io/how-to-install-overture-on-vyos1.2/" /><link rel="next" href="https://echowings.github.io/how-to-install-mellanox-connetcx-3-10gbps-network-adpater-in-promxo-ve-5.x-or-debian9.x/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Extend Ubuntu No Lvm Disk in Proxmox VE",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/echowings.github.io\/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve\/"
+        },"image": ["https:\/\/echowings.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "pve, storage","wordcount":  361 ,
+        "url": "https:\/\/echowings.github.io\/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve\/","datePublished": "2019-05-28T15:20:53+08:00","dateModified": "2022-04-01T13:43:11+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/echowings.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "echowings"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="echowings"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>echowings</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/echowings" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="echowings"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>echowings</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/echowings" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">How to Extend Ubuntu No Lvm Disk in Proxmox VE</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>echowings</a></span>&nbsp;<span class="post-category">included in <a href="/categories/virtualization/"><i class="far fa-folder fa-fw"></i>virtualization</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-05-28">2019-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;361 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#resizing-disk-images">Resizing disk images</a></li>
+    <li><a href="#enlarge-the-partition-in-the-virtual-disk">Enlarge the partition in the virtual disk</a></li>
+    <li><a href="#enlarge-partition-with-resize2f">Enlarge partition with <code>resize2f</code></a></li>
+    <li><a href="#swell">Swell</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="how-to-resize--diskno-lvm-in-proxmox-ve">How to resize  disk(no lvm) in proxmox ve</h1>
+<p>Today I met a problem that I need to extend disk image for a ubuntu server which is a virtual machine hosted in proxmox ve.</p>
+<h2 id="resizing-disk-images">Resizing disk images</h2>
+<p>First thing first, I need resize the disk images of the virtual machine.I can do it both in command line or via web management interface.</p>
+<ul>
+<li>Extend disk size of virtual machine via shell command</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Extend disk size of virtual machine with vid 136 with 100G</span>
+</span></span><span class="line"><span class="cl">qm resize <span class="m">136</span> virtio0 +100G
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Extend disk size of virtual machien via web interface</li>
+</ul>
+<p><code>&quot;Datacenter&quot; | &quot;$Node&quot; | $VIRTUAL_MACHINE | &quot;HARDWARE&quot; | &quot;HARD DISK(SCSI0)&quot; | &quot;RESIZE DISK&quot; | &quot;size Increment(GiB) | &quot;100&quot;  | &quot;Resize disk&quot;</code></p>
+<h2 id="enlarge-the-partition-in-the-virtual-disk">Enlarge the partition in the virtual disk</h2>
+<p>Login the virtual machine and run command as show below:</p>
+<ul>
+<li>Show disk partition</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># show disk device</span>
+</span></span><span class="line"><span class="cl">ls -al /dev/sda*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Run parted with command <code>parted /dev/sda</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">root@xxx-xxxx-server:~# parted /dev/sda
+</span></span><span class="line"><span class="cl">GNU Parted 3.2
+</span></span><span class="line"><span class="cl">Using /dev/sda
+</span></span><span class="line"><span class="cl">Welcome to GNU Parted! Type <span class="s1">&#39;help&#39;</span> to view a list of commands.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>print partitions. <code>print</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> print
+</span></span><span class="line"><span class="cl">Model: QEMU QEMU HARDDISK <span class="o">(</span>scsi<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Disk /dev/sda: 389GB
+</span></span><span class="line"><span class="cl">Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: 512B/512B
+</span></span><span class="line"><span class="cl">Partition Table: gpt
+</span></span><span class="line"><span class="cl">Disk Flags:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Number  Start   End     Size    File system  Name  Flags
+</span></span><span class="line"><span class="cl"> <span class="m">1</span>      1049kB  2097kB  1049kB                     bios_grub
+</span></span><span class="line"><span class="cl"> <span class="m">2</span>      30720kB  30GB   30GB   ext4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Resize partition with command <code>resizepart</code>.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> resizepart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>select partition which I wanted to resize. <code>2</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Partition number? <span class="m">2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Enter <code>y</code> to continue.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Warning: Partition /dev/sda2 is being used. Are you sure you want to <span class="k">continue</span>?
+</span></span><span class="line"><span class="cl">Yes/No? y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Enter size <code>200GB</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">End?  <span class="o">[</span>30GB<span class="o">]</span>? 200GB
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> print
+</span></span><span class="line"><span class="cl">Model: QEMU QEMU HARDDISK <span class="o">(</span>scsi<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Disk /dev/sda: 389GB
+</span></span><span class="line"><span class="cl">Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: 512B/512B
+</span></span><span class="line"><span class="cl">Partition Table: gpt
+</span></span><span class="line"><span class="cl">Disk Flags:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Number  Start   End     Size    File system  Name  Flags
+</span></span><span class="line"><span class="cl"> <span class="m">1</span>      1049kB  2097kB  1049kB                     bios_grub
+</span></span><span class="line"><span class="cl"> <span class="m">2</span>      2097kB  200GB   200GB   ext4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Quit parted with <code>quit</code>.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> :quit
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="enlarge-partition-with-resize2f">Enlarge partition with <code>resize2f</code></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">resize2f /dev/sda2 99G
+</span></span><span class="line"><span class="cl"><span class="c1"># Show size of partition</span>
+</span></span><span class="line"><span class="cl">df -h 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="swell">Swell</h2>
+<ul>
+<li><a href="https://pve.proxmox.com/wiki/Shrink_Qcow2_Disk_Files" target="_blank" rel="noopener noreffer">Shrink Qcow2 Disk Files</a></li>
+<li><a href="https://pve.proxmox.com/wiki/Resize_disks" target="_blank" rel="noopener noreffer">Resize disks</a></li>
+<li><a href="https://superuser.com/questions/441379/how-to-extend-primary-partition-dev-sda1-in-linux" target="_blank" rel="noopener noreffer">How to Extend primary partition(/dev/sda1) in linux?
+</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-04-01&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/d89eeee1cd72aee0fbd9dbd92ddeea4f3206fd63" target="_blank" title="commit by stevedong(dongjunbo@gmail.com) d89eeee1cd72aee0fbd9dbd92ddeea4f3206fd63: init">
+                                    <i class="fas fa-hashtag fa-fw"></i>d89eeee</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" data-title="How to Extend Ubuntu No Lvm Disk in Proxmox VE" data-via="xxxx" data-hashtags="pve,storage"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" data-hashtag="pve"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" data-title="How to Extend Ubuntu No Lvm Disk in Proxmox VE"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" data-title="How to Extend Ubuntu No Lvm Disk in Proxmox VE"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/" data-title="How to Extend Ubuntu No Lvm Disk in Proxmox VE"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">pve</a>,&nbsp;<a href="/tags/storage/">storage</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/how-to-install-overture-on-vyos1.2/" class="prev" rel="prev" title="How to Install Overture on VYOS 1.2.1 release"><i class="fas fa-angle-left fa-fw"></i>How to Install Overture on VYOS 1.2.1 release</a>
+            <a href="/how-to-install-mellanox-connetcx-3-10gbps-network-adpater-in-promxo-ve-5.x-or-debian9.x/" class="next" rel="next" title="How to Install driver of Mellanox ConnetcX 3 10Gbps Network Adpater in Promxox-VE 5.x or Debian 9">How to Install driver of Mellanox ConnetcX 3 10Gbps Network Adpater in Promxox-VE 5.x or Debian 9<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">echowings</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"echowings/blogcomment"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

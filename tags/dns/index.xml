@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>dns - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/dns/</link>
+        <description>dns - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Dec 2018 00:44:13 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/dns/" rel="self" type="application/rss+xml" /><item>
+    <title>Deploy Overture With Docker and Freebsd</title>
+    <link>https://echowings.github.io/deploy-overture-with-docker-and-freebsd/</link>
+    <pubDate>Tue, 18 Dec 2018 00:44:13 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/deploy-overture-with-docker-and-freebsd/</guid>
+    <description><![CDATA[Run overture on Docker and FreeBSD 12 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  ENV foo /overtureWORKDIR${foo}RUN apt-get update &amp;&amp; apt-get install -y ca-certificatesRUN printf &#34;deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse\n deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse\n deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse\n deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse\n deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse\n deb-src https://mirrors.]]></description>
+</item></channel>
+</rss>

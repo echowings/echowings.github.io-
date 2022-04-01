@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>storage - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/storage/</link>
+        <description>storage - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Jun 2019 11:52:23 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/storage/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Install driver of Mellanox ConnetcX 3 10Gbps Network Adpater in Promxox-VE 5.x or Debian 9</title>
+    <link>https://echowings.github.io/how-to-install-mellanox-connetcx-3-10gbps-network-adpater-in-promxo-ve-5.x-or-debian9.x/</link>
+    <pubDate>Wed, 05 Jun 2019 11:52:23 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-install-mellanox-connetcx-3-10gbps-network-adpater-in-promxo-ve-5.x-or-debian9.x/</guid>
+    <description><![CDATA[How to install dirver of mellanox ConnectX 3 10Gbps netowrk adapter in proxmox-ve 5.x or diban 9 To 
+Install dependencies software 1 2 3  #dependencies apt-get -y install debhelper autotools-dev dkms zlib1g-dev python wget quilt python-libxml2 swig dpatch graphviz chrpath pve-headers   Download driver for mellanox connectx 3 for debian 9.6 1  wget http://content.mellanox.com/ofed/MLNX_EN-4.6-1.0.1.1/mlnx-en-4.6-1.0.1.1-debian9.6-x86_64.tgz   Install drivers 1 2 3 4  tar -zxvf mlnx-en-4.6-1.0.1.1-debian9.6-x86_64.tgz cd mlnx-en-4.]]></description>
+</item><item>
+    <title>How to Extend Ubuntu No Lvm Disk in Proxmox VE</title>
+    <link>https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/</link>
+    <pubDate>Tue, 28 May 2019 15:20:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/pve-how-to-extend-ubuntu-no-lvm-disk-in-proxmox-ve/</guid>
+    <description><![CDATA[How to resize disk(no lvm) in proxmox ve Today I met a problem that I need to extend disk image for a ubuntu server which is a virtual machine hosted in proxmox ve.
+Resizing disk images First thing first, I need resize the disk images of the virtual machine.I can do it both in command line or via web management interface.
+ Extend disk size of virtual machine via shell command  1 2  # Extend disk size of virtual machine with vid 136 with 100G qm resize 136 virtio0 +100G    Extend disk size of virtual machien via web interface  &quot;Datacenter&quot; | &quot;$Node&quot; | $VIRTUAL_MACHINE | &quot;HARDWARE&quot; | &quot;HARD DISK(SCSI0)&quot; | &quot;RESIZE DISK&quot; | &quot;size Increment(GiB) | &quot;100&quot; | &quot;Resize disk&quot;]]></description>
+</item></channel>
+</rss>

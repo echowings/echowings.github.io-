@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>iperf - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/iperf/</link>
+        <description>iperf - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 29 Nov 2018 23:52:57 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/iperf/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Testing Network Bandwith With Iperf</title>
+    <link>https://echowings.github.io/how-to-testing-network-bandwith-with-iperf/</link>
+    <pubDate>Thu, 29 Nov 2018 23:52:57 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-testing-network-bandwith-with-iperf/</guid>
+    <description><![CDATA[How to test network speed with iperf Install iperf 1  sudo apt-get install iperf3   Testing network speed Testing network speed with UDP   Run command on server
+1  iperf -s -u     Run command on client
+1  iperf -c -u     Testing network speed with TCP
+ Server side.  1  iperf -s    Client side.]]></description>
+</item></channel>
+</rss>

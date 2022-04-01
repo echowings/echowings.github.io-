@@ -1,0 +1,83 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vyos - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/vyos/</link>
+        <description>vyos - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 02 Mar 2021 12:19:36 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/vyos/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Install Vlmcsd on Debian</title>
+    <link>https://echowings.github.io/how-to-install-vlmcsd-on-debian/</link>
+    <pubDate>Tue, 02 Mar 2021 12:19:36 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-install-vlmcsd-on-debian/</guid>
+    <description><![CDATA[How to Install VLMCSD on debian VLMCSD  vlmcsd-1113-2020-03-28-Hotbird64  Download and install 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34  VLMCSD_VERSION=svn113 curl -fsSLO https://github.com/Wind4/vlmcsd/releases/download/$VLMCSD_VERSION/binaries.tar.gz tar -zxvf binaries.tar.gz sudo cp -af ./binaries/Linux/intel/glibc/vlmcsd-x64-glibc /usr/local/bin/ chown root:root /usr/local/bin/vlmcsd-x64-glibc chmod +x /usr/local/bin/vlmcsd-64-glibc sudo bash -c &#39;cat &gt; /lib/systemd/system/vlmcsd.]]></description>
+</item><item>
+    <title>How to Install Freedns Go on Vyos</title>
+    <link>https://echowings.github.io/how-to-install-freedns-go-on-vyos/</link>
+    <pubDate>Mon, 11 Jan 2021 01:13:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-install-freedns-go-on-vyos/</guid>
+    <description><![CDATA[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  #Switch to root mode sudo su #Define freedns version freedns_version=v2020.9.17 #Create dcompass temp folder sudo mkdir -p /tmp/freedns # Swich to folder just we created.]]></description>
+</item><item>
+    <title>How to Install Dcompass on Vyos</title>
+    <link>https://echowings.github.io/how-to-install-dcompass-on-vyos/</link>
+    <pubDate>Tue, 22 Dec 2020 02:57:46 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-install-dcompass-on-vyos/</guid>
+    <description><![CDATA[Dcompass github address  Dcompass Address Dcompass Release bianry  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106  #Switch to root mode sudo su #Define dcompass version dcompass_version=build-20210803_1007 #Create dcompass temp folder sudo mkdir -p /tmp/dcompass # Swich to folder just we created.]]></description>
+</item><item>
+    <title>How to Reset Vyos to Default Settings</title>
+    <link>https://echowings.github.io/how-to-reset-vyos-to-default-settings/</link>
+    <pubDate>Fri, 04 Sep 2020 22:48:34 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-reset-vyos-to-default-settings/</guid>
+    <description><![CDATA[How to reset VyOS to default settings 1 2 3 4  configure load /opt/vyatta/etc/config.boot.default commit save   ]]></description>
+</item><item>
+    <title>How to make Destination Base Routing With Vyos</title>
+    <link>https://echowings.github.io/how-to-make-destination-policy-base-routing-with-vyos/</link>
+    <pubDate>Thu, 03 Sep 2020 16:36:31 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-make-destination-policy-base-routing-with-vyos/</guid>
+    <description><![CDATA[How to make Destination Base Routing with Vyos I have 2 network interfaces. one for user access inboard network,another for user to access network aboard. How to make it work with vyos?
+Make a network group 1 2 3 4 5  #Define a netwrok-group set firewall group network-group china-ip-ranges #Define lan network group set firewall group network-group lan-net-group network &#39;192.168.11.0/24&#39;   set policy 1 2 3 4 5  set policy route network-shunt rule 20 destination group network-group &#39;china-ip-ranges&#39; set policy route network-shunt rule 20 set table &#39;20&#39; set policy route network-shunt rule 20 source group network-group &#39;lan-net-group&#39; set policy route network-shunt rule 30 set table &#39;30&#39; set policy route network-shunt rule 30 source group network-group &#39;lan-net-group&#39;   Download and set the network-group with ipset  Download and make a list for network-group loading when booting.]]></description>
+</item><item>
+    <title>How to Config Ddns for Vyos With Dns.he.net</title>
+    <link>https://echowings.github.io/how-to-config-ddns-for-vyos-with-dns.he.net/</link>
+    <pubDate>Wed, 05 Aug 2020 16:26:46 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-config-ddns-for-vyos-with-dns.he.net/</guid>
+    <description><![CDATA[How to config DDNS for vyos with dns.he.net Register A Recored  Register a domian host.mydomain.com on your https://dns.he.net Generate a key 64LGiLiuoiuoiuoi  Run command to setup the ddns service 1 2 3 4 5 6 7 8  configure set service dns dynamic interface pppoe0 service dyndns host-name &#39;host.mydomain.com&#39; set service dns dynamic interface pppoe0 service dyndns login &#39;host.mydomain.com&#39; set service dns dynamic interface pppoe0 service dyndns password &#39;64LGiLiuoiuoiuoi&#39; set service dns dynamic interface pppoe0 service dyndns server &#39;dyn.]]></description>
+</item><item>
+    <title>How to Build L2tp Over Ipsec VPN With Vyos</title>
+    <link>https://echowings.github.io/how-to-build-l2tp-over-ipsec-vpn-with-vyos/</link>
+    <pubDate>Wed, 05 Aug 2020 10:57:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-build-l2tp-over-ipsec-vpn-with-vyos/</guid>
+    <description><![CDATA[How to build L2tp over ipsec vpn with vyos Today, I will show you how to build a l2tp over ipsec vpn with adsl wan address.
+Setup vpn on vyos  Generate a preshare key  1 2  $ generate wireguard preshared-key uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=   With authentication local   configuration VPN     Key Value     WAN interface pppoe0   l2tp vpn network 172.]]></description>
+</item><item>
+    <title>How to Build Ipsec Site to Site Vpn With Vyos and Pfsense</title>
+    <link>https://echowings.github.io/how-to-build-ipsec-site-to-site-vpn-with-vyos-and-pfsense/</link>
+    <pubDate>Thu, 19 Dec 2019 14:36:09 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-build-ipsec-site-to-site-vpn-with-vyos-and-pfsense/</guid>
+    <description><![CDATA[How to build ipse site-to-site VPN with vyos and pfsense Vyos VS pfsense For build all kinds of network functions like nat,firewall, site-to-site vpn , dial in vpn with pfsense.It works well. But it has some Crons:
+ Hard to upgrade version, it manybe crashed Didn&rsquo;t support API. Heavy loading and low performance.  After try to replace pfsense to build all functions with vyos. It has a lot of pros:]]></description>
+</item><item>
+    <title>How to Setup Vyos as a Firewall</title>
+    <link>https://echowings.github.io/how-to-setup-vyos-as-a-firewall/</link>
+    <pubDate>Thu, 08 Aug 2019 13:58:35 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-setup-vyos-as-a-firewall/</guid>
+    <description><![CDATA[How to Setup Vyos as a Firewall Setup interface    Interface IP Address Description     eth0 pppoe WAN   eth1 192.168.68.1 / 24 DMZ   eth2 10.0.0.1 / 24 LAN    1 2 3 4 5 6 7 8 9 10  set interface ethernet eth0 pppoe 0 user-id &#39;&lt;pppoe accout&gt;&#39; set interface ethernet eth0 pppoe 0 password &#39;&lt;pppoe password&gt;&#39; set interface ethernet eth0 pppoe 0 name-server &#39;none&#39; set interface ethernet eth0 description &#39;WAN&#39; set interface ethernet eth1 address 192.]]></description>
+</item><item>
+    <title>How to Install Overture on VYOS 1.2.1 release</title>
+    <link>https://echowings.github.io/how-to-install-overture-on-vyos1.2/</link>
+    <pubDate>Sat, 18 May 2019 01:35:52 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-install-overture-on-vyos1.2/</guid>
+    <description><![CDATA[How to install overture on Vyos 1.2 I need to build a dns forwarding server to anti dns cache pollution.overture is a good choice for me. it writen in go with good performance. Here we go!
+Download ovrture you can check overture version from here
+ Login vyos .  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121  sudo su overture_version=v1.]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>gitlab - Tag - echowings</title>
+        <link>https://echowings.github.io/tags/gitlab/</link>
+        <description>gitlab - Tag - echowings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor>
+            <webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 Nov 2019 12:24:57 &#43;0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/gitlab/" rel="self" type="application/rss+xml" /><item>
+    <title>How to Install Gitlab With Docker-Compose</title>
+    <link>https://echowings.github.io/how-to-install-gitlab-with-docker-compose/</link>
+    <pubDate>Wed, 27 Nov 2019 12:24:57 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/how-to-install-gitlab-with-docker-compose/</guid>
+    <description><![CDATA[How to Install gitlab with docer-compose 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  version:&#34;3.5&#34;services:gitlab:image:gitlab/gitlab-ce:latestcontainer_name:gitlabrestart:alwayshostname:&#39;xa-gitlab&#39;environment:GITLAB_OMNIBUS_CONFIG:|external_url &#39;http://xa-gitlab&#39; gitlab_rails[&#39;backup_keep_time&#39;] = 604800 gitlab_rails[&#39;time_zone&#39;] = &#39;Asia/Shanghai&#39; gitlab_rails[&#39;gitlab_shell_ssh_port&#39;] = 1022 #gitlab_rails[&#39;ldap_enabled&#39;] = true #gitlab_rails[&#39;ldap_servers&#39;] = YAML.load &lt;&lt;-EOS #main: # label: &#39;LDAP&#39; # host: &#39;192.]]></description>
+</item></channel>
+</rss>
