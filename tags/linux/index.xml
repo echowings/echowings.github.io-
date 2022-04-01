@@ -50,6 +50,13 @@
 How to deploy debian 10 colud image on pve I perfer to debian as my first choice between all of the linux distributes. since it has light footprinting and more stable.
    ]]></description>
 </item><item>
+    <title>How to Install and Configure Freeradius With Active Directory Allow Allow Specific Group of Users to Authenticate in Debian 10</title>
+    <link>https://echowings.github.io/freeradius-on-debian-10/</link>
+    <pubDate>Sun, 13 Oct 2019 14:52:31 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://echowings.github.io/freeradius-on-debian-10/</guid>
+    <description><![CDATA[How to install and configure FreeRADIUS with Active Directory allow specific group of users to authenticate in Debian 10 serval years ago,I built freeradius server in centos 6 work with active directory. It works perfect with wifi authortication and ikev2 vpn authortication. But recently days, I found a bug that the radius server can not limit user access to a group in AD. So I&rsquo;m trying to build a new freeradius server in debian 10.]]></description>
+</item><item>
     <title>How to Change Default Swap Settings for Proxmox Ve</title>
     <link>https://echowings.github.io/how-to-change-default-swap-settings-for-proxmox-ve/</link>
     <pubDate>Fri, 09 Aug 2019 16:16:39 &#43;0800</pubDate>
@@ -74,15 +81,5 @@ After install deiban 10  Change source list  1 2 3 4 5 6 7  mv /etc/apt/sources.
     <description><![CDATA[How to upgrade RHEL6 with yum repo of centos Today I will show you how to setup rhel6 at proxmox VE.
 After installed REHL6.8,We didn&rsquo;t have RHEL subscription,but how to get update and install software via yum ? The right answer is to change yum repo.
 Fix perl error 1 2 3 4 5 6 7 8  export LANGUAGE=en_US.UTF-8 export LANG=en_US.UTF-8 export LC_ALL=en_US.UTF-8 #locale-gen en_US.UTF-8 cat &gt;&gt; /etc/environment &lt;&lt;EOF LC_ALL=en_US.]]></description>
-</item><item>
-    <title>How to Setup Cloud Init in Proxmoxve</title>
-    <link>https://echowings.github.io/how-to-setup-cloud-init-in-proxmoxve/</link>
-    <pubDate>Fri, 12 Jul 2019 14:04:03 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://echowings.github.io/how-to-setup-cloud-init-in-proxmoxve/</guid>
-    <description><![CDATA[How to setup cloud-init in prxmox ve Cloud-init can help us to deploy or change settings of linux virutal machine via api or manually by ourself.
-There are two ways to setup cloud-init: command line or change settings in GUI.
-Option 1: Download cloud-init image and setup with shell Please reference my blog Build Ubuntu 18.04 server with cloudinit support
-Option 2: Manually Setup cloud-init We can do this with 2 steps.]]></description>
 </item></channel>
 </rss>
