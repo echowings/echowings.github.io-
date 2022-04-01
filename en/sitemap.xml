@@ -36,6 +36,10 @@
             <loc>https://echowings.github.io/tags/kms/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://echowings.github.io/posts/</loc><lastmod>2022-04-01T15:07:55&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://echowings.github.io/zh-cn/posts/"
+                        /><xhtml:link
+                        rel="alternate"
                         hreflang="ja-jp"
                         href="https://echowings.github.io/ja-jp/posts/"
                         /><xhtml:link
@@ -106,11 +110,6 @@
             <loc>https://echowings.github.io/tags/vyos/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://echowings.github.io/how-to-install-proxmox-ve-6-on-debian-10/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://echowings.github.io/categories/virtualization/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://echowings.github.io/categories/helpdesk/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://echowings.github.io/tags/helpdesk/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://echowings.github.io/tags/%E5%A5%A5%E6%9E%97%E5%B2%9B/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://echowings.github.io/how-to-install-aolindao/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://echowings.github.io/tags/%E8%B4%A2%E5%8A%A1/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://echowings.github.io/install-and-configure-snmp-on-debian-10/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://echowings.github.io/tags/snmp/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://echowings.github.io/tags/freedns/</loc><lastmod>2022-04-01T13:43:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
