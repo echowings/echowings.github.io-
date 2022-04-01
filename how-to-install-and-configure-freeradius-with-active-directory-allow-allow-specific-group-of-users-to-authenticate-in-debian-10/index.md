@@ -215,7 +215,6 @@ to
   ```
  
 - Change module mschap 
-
   ```bash
   vi /etc/freeradius/3.0/mods-available/mschap
   ```
