@@ -1,1 +1,68 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>zsh - Category - echowings</title><link>https://echowings.github.io/categories/zsh/</link><description>zsh - Category - echowings</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor><webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 10 Apr 2019 12:18:04 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/zsh/" rel="self" type="application/rss+xml"/><item><title>How to Setup Oh My Zsh</title><link>https://echowings.github.io/how-to-setup-oh-my-zsh/</link><pubDate>Wed, 10 Apr 2019 12:18:04 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-setup-oh-my-zsh/</guid><description><![CDATA[How to setup Oh-My-Zsh Install support application 1  apt install git curl wget zsh   Install zsh  via curl  1  sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34;    via wget  1  sh -c &#34;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&#34;   Change zsh settings  change theme  1 2  #change theme froy robbyrussell to agnoster sed -i &#39;s/ZSH_THEME=\&#34;robbyrussell\&#34;/ZSH_THEME=\&#34;agnoster\&#34;/g&#39; ~/.zshrc    change plugin support  1  sed -i &#39;s/plugins=(git)/plugin=(\n\tgit\n\tboundler\n\tdotenv\n\trake\n\trbenv\n\truby\n\tpython\n)/g&#39; ~/.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zsh on Steve's Blog</title><link>https://echowings.github.io/categories/zsh/</link><description>Recent content in zsh on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 10 Apr 2019 12:18:04 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/zsh/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Oh My Zsh</title><link>https://echowings.github.io/p/how-to-setup-oh-my-zsh/</link><pubDate>Wed, 10 Apr 2019 12:18:04 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-oh-my-zsh/</guid><description>&lt;h1 id="how-to-setup-oh-my-zsh">How to setup Oh-My-Zsh&lt;/h1>
+&lt;h2 id="install-support-application">Install support application&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt install git curl wget zsh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="install-zsh">Install zsh&lt;/h2>
+&lt;ul>
+&lt;li>via curl&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>via wget&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="change-zsh-settings">Change zsh settings&lt;/h2>
+&lt;ul>
+&lt;li>change theme&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#change theme froy robbyrussell to agnoster&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/ZSH_THEME=\&amp;#34;robbyrussell\&amp;#34;/ZSH_THEME=\&amp;#34;agnoster\&amp;#34;/g&amp;#39;&lt;/span> ~/.zshrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>change plugin support&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/plugins=(git)/plugin=(\n\tgit\n\tboundler\n\tdotenv\n\trake\n\trbenv\n\truby\n\tpython\n)/g&amp;#39;&lt;/span> ~/.zshrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="switch-default-bash-to-zsh">Switch default bash to zsh&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">chsh -s /bin/zsh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

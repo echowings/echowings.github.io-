@@ -1,4 +1,565 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>pve - Category - echowings</title><link>https://echowings.github.io/categories/pve/</link><description>pve - Category - echowings</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor><webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 14:06:58 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/pve/" rel="self" type="application/rss+xml"/><item><title>How to Delete Ghost Monitor in Ceph Cluster</title><link>https://echowings.github.io/how-to-delete-ghost-monitor-in-ceph-cluster/</link><pubDate>Thu, 01 Jul 2021 14:06:58 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-delete-ghost-monitor-in-ceph-cluster/</guid><description><![CDATA[How to delete ghost monitor in ceph cluster  Today , after I let a new server join pve cluster. ceph mon is stopped. I want to start or delete it , I always got a failed notification. After search and try to fix it. At last I fixed it.Here is what I had do
-Issue description 1 2 3 4  root@xa-autotest-hci04:~# pveceph createmon monitor &#39;xa-autotest-hci04&#39; already exists root@xa-autotest-hci04:~# pveceph mon destroy xa-autotest-hci04 no such monitor id &#39;xa-autotest-hci04&#39;   How to fixed it 1 2 3 4 5 6 7 8 9 10 11 12  #stop ceph-mon@xa-autotest-hci04 service systemctl stop ceph-mon@xa-autotest-hci04 #Disable ceph-mon@xa-autotest-hci04 service systemctl disable ceph-mon@xa-autotest-hci04 pveceph purge rm -rf /var/lib/ceph/mon/ceph-xa-autotest-hci04 pveceph createmon #Created symlink /etc/systemd/system/ceph-mon.]]></description></item><item><title>How to Let a New Server Join Hci System</title><link>https://echowings.github.io/how-to-let-a-new-server-join-hci-system/</link><pubDate>Thu, 01 Jul 2021 06:38:10 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-let-a-new-server-join-hci-system/</guid><description><![CDATA[##How to let a new server join the exist HCI cluster
-1. Insall the pve on the server &ndash;skip&mdash;
-2. Let the new server join the pve cluster 1 2  #ssh login the server pvecm add 10.32.4.37   3. configure NTP server 1 2 3 4 5  cat &gt;&gt; /etc/systemd/timesyncd.conf &lt;&lt; EOF NTP=192.168.0.2 192.168.0.3 EOF # Restart systemd-timesyncd service to apply settings systemctl restart systemd-timesyncd   4.]]></description></item><item><title>How to Rename Vm Id on Pve</title><link>https://echowings.github.io/how-to-rename-vm-id-on-pve/</link><pubDate>Fri, 26 Mar 2021 15:23:43 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-rename-vm-id-on-pve/</guid><description><![CDATA[How to rename VMID on PVE 1 2 3 4 5 6 7 8 9  VMID=121 &amp;&amp; \  NEW_VMID=1001 &amp;&amp; \ 	POOL_NAME=tank &amp;&amp; \ 	qm unlock $VMID &amp;&amp; \ 	qm stop $VMID &amp;&amp; \ 	sed -i &#34;s/$VMID/$NEW_VMID/g&#34; /etc/pve/qemu-server/$VMID.conf &amp;&amp; \ 	mv /etc/pve/qemu-server/$VMID.conf /etc/pve/qemu-server/$NEW_VMID.conf &amp;&amp; \ 	rbd --pool $POOL_NAME rename vm-$VMID-disk-0 vm-$NEW_VMID-disk-0 &amp;&amp;\  qm start $NEW_VMID   ]]></description></item><item><title>How to Install Pbs on Debian 10</title><link>https://echowings.github.io/how-to-install-pbs-on-debian10/</link><pubDate>Thu, 11 Mar 2021 16:58:45 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-install-pbs-on-debian10/</guid><description><![CDATA[How to Install PBS on Debian 10 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34  export LANGUAGE=en_US.UTF-8 export LANG=en_US.UTF-8 export LC_ALL=en_US.UTF-8 #locale-gen en_US.UTF-8 cat &gt;&gt; /etc/environment &lt;&lt;EOF LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 EOF cat &lt;&lt; EOF &gt; /etc/apt/sources.list deb https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free deb-src https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free deb https://mirrors.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pve on Steve's Blog</title><link>https://echowings.github.io/categories/pve/</link><description>Recent content in pve on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 01 Jul 2021 14:06:58 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/pve/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Delete Ghost Monitor in Ceph Cluster</title><link>https://echowings.github.io/p/how-to-delete-ghost-monitor-in-ceph-cluster/</link><pubDate>Thu, 01 Jul 2021 14:06:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-delete-ghost-monitor-in-ceph-cluster/</guid><description>&lt;h1 id="how-to-delete-ghost-monitor-in-ceph-cluster">How to delete ghost monitor in ceph cluster&lt;/h1>
+&lt;hr>
+&lt;p>Today , after I let a new server join pve cluster. ceph mon is stopped. I want to start or delete it , I always got a failed notification. After search and try to fix it. At last I fixed it.Here is what I had do&lt;/p>
+&lt;h2 id="issue-description">Issue description&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">root@xa-autotest-hci04:~# pveceph createmon
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">monitor &lt;span class="s1">&amp;#39;xa-autotest-hci04&amp;#39;&lt;/span> already exists
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">root@xa-autotest-hci04:~# pveceph mon destroy xa-autotest-hci04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">no such monitor id &lt;span class="s1">&amp;#39;xa-autotest-hci04&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="how-to-fixed-it">How to fixed it&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#stop ceph-mon@xa-autotest-hci04 service&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl stop ceph-mon@xa-autotest-hci04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Disable ceph-mon@xa-autotest-hci04 service&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl disable ceph-mon@xa-autotest-hci04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveceph purge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf /var/lib/ceph/mon/ceph-xa-autotest-hci04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveceph createmon
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Created symlink /etc/systemd/system/ceph-mon.target.wants/ceph-mon@xa-autotest-hci04.service -&amp;gt; /lib/systemd/system/ceph-mon@.service.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>How to Let a New Server Join Hci System</title><link>https://echowings.github.io/p/how-to-let-a-new-server-join-hci-system/</link><pubDate>Thu, 01 Jul 2021 06:38:10 +0800</pubDate><guid>https://echowings.github.io/p/how-to-let-a-new-server-join-hci-system/</guid><description>&lt;p>##How to let a new server join the exist HCI cluster&lt;/p>
+&lt;h3 id="1-insall-the-pve-on-the-server">1. Insall the pve on the server&lt;/h3>
+&lt;p>&amp;ndash;skip&amp;mdash;&lt;/p>
+&lt;h3 id="2-let-the-new-server-join-the-pve-cluster">2. Let the new server join the pve cluster&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#ssh login the server&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pvecm add 10.32.4.37
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-configure-ntp-server">3. configure NTP server&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &amp;gt;&amp;gt; /etc/systemd/timesyncd.conf &lt;span class="s">&amp;lt;&amp;lt; EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">NTP=192.168.0.2 192.168.0.3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Restart systemd-timesyncd service to apply settings&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart systemd-timesyncd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4-install-ceph">4. Install ceph&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pveceph install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="5-partition-nvme-disk">5. Partition nvme disk&lt;/h3>
+&lt;ul>
+&lt;li>partitin 1-6 for block.wal(ceph)&lt;/li>
+&lt;li>partition 7-12 for block.db(ceph)&lt;/li>
+&lt;li>partition 13-18 for bcache&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mktable gpt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 1M 10G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 10G 20G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 20G 30G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 30G 40G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 40G 50G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 50G 60G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 60G 110G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 110G 160G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 160G 210G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 210G 260G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 260G 310G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 310G 360G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 360G 433G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 433G 506G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 506G 579G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 579G 652G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 652G 725G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme1n1 mkpart primary 725G 800G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mktable gpt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 1M 10G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 10G 20G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 20G 30G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 30G 40G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 40G 50G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 50G 60G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 60G 110G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 110G 160G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 160G 210G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 210G 260G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 260G 310G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 310G 360G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 360G 433G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 433G 506G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 506G 579G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 579G 652G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 652G 725G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">parted -s /dev/nvme2n1 mkpart primary 725G 800G
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="6-list-disk-by-id">6. list disk by-id&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># list sas disk by id&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls -al &lt;span class="p">|&lt;/span> grep wwn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000c500943614ab -&amp;gt; ../../sdl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca0801eb5c8 -&amp;gt; ../../sdc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca080248ff8 -&amp;gt; ../../sdh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca08024aca8 -&amp;gt; ../../sdk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca08024f0d0 -&amp;gt; ../../sdi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca080253734 -&amp;gt; ../../sdj
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca0802601cc -&amp;gt; ../../sdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca0802735ec -&amp;gt; ../../sda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca0802747c8 -&amp;gt; ../../sdd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca0802afad0 -&amp;gt; ../../sdb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca0802ba6ac -&amp;gt; ../../sdg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">9&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 wwn-0x5000cca080326bd0 -&amp;gt; ../../sde
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#list nvme disk by uuid&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls -al &lt;span class="p">|&lt;/span> grep nvme-MT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">13&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN -&amp;gt; ../../nvme1n1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:07 nvme-MT0800KEXUU_CVFT73520058800MGN-part1 -&amp;gt; ../../nvme1n1p1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part10 -&amp;gt; ../../nvme1n1p10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part11 -&amp;gt; ../../nvme1n1p11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part12 -&amp;gt; ../../nvme1n1p12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN-part13 -&amp;gt; ../../nvme1n1p13
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN-part14 -&amp;gt; ../../nvme1n1p14
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN-part15 -&amp;gt; ../../nvme1n1p15
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN-part16 -&amp;gt; ../../nvme1n1p16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN-part17 -&amp;gt; ../../nvme1n1p17
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT73520058800MGN-part18 -&amp;gt; ../../nvme1n1p18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:07 nvme-MT0800KEXUU_CVFT73520058800MGN-part2 -&amp;gt; ../../nvme1n1p2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part3 -&amp;gt; ../../nvme1n1p3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part4 -&amp;gt; ../../nvme1n1p4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part5 -&amp;gt; ../../nvme1n1p5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part6 -&amp;gt; ../../nvme1n1p6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:07 nvme-MT0800KEXUU_CVFT73520058800MGN-part7 -&amp;gt; ../../nvme1n1p7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:07 nvme-MT0800KEXUU_CVFT73520058800MGN-part8 -&amp;gt; ../../nvme1n1p8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT73520058800MGN-part9 -&amp;gt; ../../nvme1n1p9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">13&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN -&amp;gt; ../../nvme2n1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT7352005S800MGN-part1 -&amp;gt; ../../nvme2n1p1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part10 -&amp;gt; ../../nvme2n1p10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part11 -&amp;gt; ../../nvme2n1p11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:10 nvme-MT0800KEXUU_CVFT7352005S800MGN-part12 -&amp;gt; ../../nvme2n1p12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN-part13 -&amp;gt; ../../nvme2n1p13
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN-part14 -&amp;gt; ../../nvme2n1p14
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN-part15 -&amp;gt; ../../nvme2n1p15
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN-part16 -&amp;gt; ../../nvme2n1p16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN-part17 -&amp;gt; ../../nvme2n1p17
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">16&lt;/span> Jul &lt;span class="m">1&lt;/span> 05:49 nvme-MT0800KEXUU_CVFT7352005S800MGN-part18 -&amp;gt; ../../nvme2n1p18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part2 -&amp;gt; ../../nvme2n1p2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part3 -&amp;gt; ../../nvme2n1p3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part4 -&amp;gt; ../../nvme2n1p4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part5 -&amp;gt; ../../nvme2n1p5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:10 nvme-MT0800KEXUU_CVFT7352005S800MGN-part6 -&amp;gt; ../../nvme2n1p6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:08 nvme-MT0800KEXUU_CVFT7352005S800MGN-part7 -&amp;gt; ../../nvme2n1p7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part8 -&amp;gt; ../../nvme2n1p8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lrwxrwxrwx &lt;span class="m">1&lt;/span> root root &lt;span class="m">15&lt;/span> Jul &lt;span class="m">1&lt;/span> 06:09 nvme-MT0800KEXUU_CVFT7352005S800MGN-part9 -&amp;gt; ../../nvme2n1p9
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>after sort the data ,will will got this list&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#sas disk&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca0802735ec
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca0802afad0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca0801eb5c8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca0802747c8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca080326bd0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca0802601cc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca0802ba6ac
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca080248ff8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca08024f0d0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca080253734
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000cca08024aca8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/wwn-0x5000c500943614ab
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># nvme&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part12
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="7-make-bcache-disk">7. Make Bcache disk&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part13 -B /dev/disk/by-id/wwn-0x5000cca0802735ec --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part14 -B /dev/disk/by-id/wwn-0x5000cca0802afad0 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part15 -B /dev/disk/by-id/wwn-0x5000cca0801eb5c8 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part16 -B /dev/disk/by-id/wwn-0x5000cca0802747c8 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part17 -B /dev/disk/by-id/wwn-0x5000cca080326bd0 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT73520058800MGN-part18 -B /dev/disk/by-id/wwn-0x5000cca0802601cc --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part13 -B /dev/disk/by-id/wwn-0x5000cca0802ba6ac --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part14 -B /dev/disk/by-id/wwn-0x5000cca080248ff8 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part15 -B /dev/disk/by-id/wwn-0x5000cca08024f0d0 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part16 -B /dev/disk/by-id/wwn-0x5000cca080253734 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part17 -B /dev/disk/by-id/wwn-0x5000cca08024aca8 --writeback
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make-bcache -C /dev/disk/by-id/nvme-MT0800KEXUU_CVFT7352005S800MGN-part18 -B /dev/disk/by-id/wwn-0x5000c500943614ab --writeback
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="8-reboot-to-make-bcache-works">8. Reboot to make bcache works&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">reboot now
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="9-create-osd">9. create OSD&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache0 --block.wal /dev/nvme1n1p1 --block.db /dev/nvme1n1p7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache1 --block.wal /dev/nvme1n1p2 --block.db /dev/nvme1n1p8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache2 --block.wal /dev/nvme1n1p3 --block.db /dev/nvme1n1p9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache3 --block.wal /dev/nvme1n1p4 --block.db /dev/nvme1n1p10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache4 --block.wal /dev/nvme1n1p5 --block.db /dev/nvme1n1p11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache5 --block.wal /dev/nvme1n1p6 --block.db /dev/nvme1n1p12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache6 --block.wal /dev/nvme2n1p1 --block.db /dev/nvme2n1p7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache7 --block.wal /dev/nvme2n1p2 --block.db /dev/nvme2n1p8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache8 --block.wal /dev/nvme2n1p3 --block.db /dev/nvme2n1p9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache9 --block.wal /dev/nvme2n1p4 --block.db /dev/nvme2n1p10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache10 --block.wal /dev/nvme2n1p5 --block.db /dev/nvme2n1p11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceph-volume lvm create --bluestore --data /dev/bcache11 --block.wal /dev/nvme2n1p6 --block.db /dev/nvme2n1p12
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>How to Rename Vm Id on Pve</title><link>https://echowings.github.io/p/how-to-rename-vm-id-on-pve/</link><pubDate>Fri, 26 Mar 2021 15:23:43 +0800</pubDate><guid>https://echowings.github.io/p/how-to-rename-vm-id-on-pve/</guid><description>&lt;h1 id="how-to-rename-vmid-on-pve">How to rename VMID on PVE&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">VMID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">121&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\ &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">NEW_VMID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1001&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">POOL_NAME&lt;/span>&lt;span class="o">=&lt;/span>tank &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> qm unlock &lt;span class="nv">$VMID&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> qm stop &lt;span class="nv">$VMID&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed -i &lt;span class="s2">&amp;#34;s/&lt;/span>&lt;span class="nv">$VMID&lt;/span>&lt;span class="s2">/&lt;/span>&lt;span class="nv">$NEW_VMID&lt;/span>&lt;span class="s2">/g&amp;#34;&lt;/span> /etc/pve/qemu-server/&lt;span class="nv">$VMID&lt;/span>.conf &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> mv /etc/pve/qemu-server/&lt;span class="nv">$VMID&lt;/span>.conf /etc/pve/qemu-server/&lt;span class="nv">$NEW_VMID&lt;/span>.conf &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> rbd --pool &lt;span class="nv">$POOL_NAME&lt;/span> rename vm-&lt;span class="nv">$VMID&lt;/span>-disk-0 vm-&lt;span class="nv">$NEW_VMID&lt;/span>-disk-0 &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> qm start &lt;span class="nv">$NEW_VMID&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>How to Install Pbs on Debian 10</title><link>https://echowings.github.io/p/how-to-install-pbs-on-debian-10/</link><pubDate>Thu, 11 Mar 2021 16:58:45 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-pbs-on-debian-10/</guid><description>&lt;h1 id="how-to-install-pbs-on-debian-10">How to Install PBS on Debian 10&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">LANGUAGE&lt;/span>&lt;span class="o">=&lt;/span>en_US.UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">LANG&lt;/span>&lt;span class="o">=&lt;/span>en_US.UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">LC_ALL&lt;/span>&lt;span class="o">=&lt;/span>en_US.UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#locale-gen en_US.UTF-8&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &amp;gt;&amp;gt; /etc/environment &lt;span class="s">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">LC_ALL=en_US.UTF-8
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">LANG=en_US.UTF-8
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /etc/apt/sources.list
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">deb https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">deb-src https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">deb https://mirrors.ustc.edu.cn/debian/ buster-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">deb-src https://mirrors.ustc.edu.cn/debian/ buster-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">deb https://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">deb-src https://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt dist-upgrade -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install -y net-tools dnsutils vim firmware-linux-nonfree
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CODENAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>cat /etc/os-release &lt;span class="p">|&lt;/span>grep CODENAME &lt;span class="p">|&lt;/span>cut -f &lt;span class="m">2&lt;/span> -d &lt;span class="s2">&amp;#34;=&amp;#34;&lt;/span>&lt;span class="sb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb https://mirrors.ustc.edu.cn/proxmox/debian/pbs &lt;/span>&lt;span class="nv">$CODENAME&lt;/span>&lt;span class="s2"> pbs-no-subscription&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/pbs-no-subscription.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://mirrors.ustc.edu.cn/proxmox/debian/proxmox-ve-release-6.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt full-upgrade -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install -y proxmox-backup-server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf /etc/apt/sources.list.d/pbs-enterprise.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf /etc/apt/sources.list.d/ceph.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt -y dist-ugprade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

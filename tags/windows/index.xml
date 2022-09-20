@@ -1,4 +1,180 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>windows - Tag - echowings</title><link>https://echowings.github.io/tags/windows/</link><description>windows - Tag - echowings</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor><webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 29 Dec 2020 11:50:20 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/windows/" rel="self" type="application/rss+xml"/><item><title>How to Uninstall Windows Update Which Install Failed</title><link>https://echowings.github.io/how-to-uninstall-windows-update-which-install-failed/</link><pubDate>Tue, 29 Dec 2020 11:50:20 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-uninstall-windows-update-which-install-failed/</guid><description>How to uninstlal windows update which install failed Uninstall failed windows update Reboot your pc or laptop and select troubleshoot Select to open the command prompt and stay away from any other auto repair options. Loading the software rigistry.
-1 2 3 4 5 6 7 8 #Load the softeware registry hive as follows. reg load hklm/temp c:\windows\system32\config\software #Delete the sessionPending registry key, if it exists by running: reg delete &amp;#34;HKLM\temp\Microsoft\Windows\CurrentVersion\Component Based Servicing\SessionPending&amp;#34; /v Exclusive # Unload the software registry hive: reg unload HKLM\temp Remove failed updates with DISM command List failed updated.</description></item><item><title>How to Setup Reverse Proxy With Iis</title><link>https://echowings.github.io/how-to-setup-reverse-proxy-with-iis/</link><pubDate>Tue, 06 Nov 2018 23:26:18 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/how-to-setup-reverse-proxy-with-iis/</guid><description>How to Setup Reverse proxy with IIS I testing it on Server 2016 with IIS 10
-Install IIS,URL _REWRITE, ARR Install IIS. Download and install URL Rewrite Module 2.1 Download and install ARR-Application-request-routing Setting Reverse Proxy Select Root level in IIS management
-Click ‘Application Request Routing Cache’,then in the right side, click “proxy | Server proxy Settings | Check on “Enable proxy” | save config.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>windows on Steve's Blog</title><link>https://echowings.github.io/tags/windows/</link><description>Recent content in windows on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 29 Dec 2020 11:50:20 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Uninstall Windows Update Which Install Failed</title><link>https://echowings.github.io/p/how-to-uninstall-windows-update-which-install-failed/</link><pubDate>Tue, 29 Dec 2020 11:50:20 +0800</pubDate><guid>https://echowings.github.io/p/how-to-uninstall-windows-update-which-install-failed/</guid><description>&lt;h1 id="how-to-uninstlal-windows-update-which-install-failed">How to uninstlal windows update which install failed&lt;/h1>
+&lt;hr>
+&lt;h2 id="uninstall-failed-windows-update">Uninstall failed windows update&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Reboot your pc or laptop and select &lt;code>troubleshoot&lt;/code>
+&lt;img src="https://blog.workinghardinit.work/wp-content/uploads/2017/10/image_thumb-1.png"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select to open the command prompt and stay away from any other auto repair options.
+&lt;img src="https://blog.workinghardinit.work/wp-content/uploads/2017/10/image-2.png"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Loading the software rigistry.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Load the softeware registry hive as follows.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">reg load hklm/temp c:&lt;span class="se">\w&lt;/span>indows&lt;span class="se">\s&lt;/span>ystem32&lt;span class="se">\c&lt;/span>onfig&lt;span class="se">\s&lt;/span>oftware
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Delete the sessionPending registry key, if it exists by running:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">reg delete &lt;span class="s2">&amp;#34;HKLM\temp\Microsoft\Windows\CurrentVersion\Component Based Servicing\SessionPending&amp;#34;&lt;/span> /v Exclusive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Unload the software registry hive:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">reg unload HKLM&lt;span class="se">\t&lt;/span>emp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="remove-failed-updates-with-dism-command">Remove failed updates with &lt;code>DISM&lt;/code> command&lt;/h2>
+&lt;ol>
+&lt;li>List failed updated.&lt;/li>
+&lt;/ol>
+&lt;p>The yellow one are the ones of interest and you can see the first one never even got an install time.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#List updates installed that caused issue.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dism /image:c:&lt;span class="se">\ &lt;/span>/get-packages
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://blog.workinghardinit.work/wp-content/uploads/2017/10/image-3.png"
+loading="lazy"
+>
+2. Remove error udpates with &lt;code>DISM&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dism /image:c:&lt;span class="se">\ &lt;/span>/remove-package /packagename:myproblematicpackagetoremove /scratchdir:c:&lt;span class="se">\t&lt;/span>emp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://blog.workinghardinit.work/wp-content/uploads/2017/10/image-4.png"
+loading="lazy"
+>
+3. After finished uninstall error updates,we can reboot your pc.&lt;/p>
+&lt;p>&lt;img src="https://blog.workinghardinit.work/wp-content/uploads/2017/10/image-5.png"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;hr>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://blog.workinghardinit.work/2017/10/11/quick-fix-publish-vm-wont-boot-after-october-2017-updates-for-windows-server-2016-and-windows-10-kb4041691/" target="_blank" rel="noopener"
+>Quick Fix Publish : VM won’t boot after October 2017 Updates for Windows Server 2016 and Windows 10 (KB4041691)&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>How to Setup Reverse Proxy With Iis</title><link>https://echowings.github.io/p/how-to-setup-reverse-proxy-with-iis/</link><pubDate>Tue, 06 Nov 2018 23:26:18 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-reverse-proxy-with-iis/</guid><description>&lt;h1 id="how-to-setup-reverse-proxy-with-iis">How to Setup Reverse proxy with IIS&lt;/h1>
+&lt;p>I testing it on Server 2016 with IIS 10&lt;/p>
+&lt;h2 id="install-iisurl-_rewrite-arr">Install IIS,URL _REWRITE, ARR&lt;/h2>
+&lt;ul>
+&lt;li>Install IIS.&lt;/li>
+&lt;li>Download and install &lt;a class="link" href="https://www.iis.net/downloads/microsoft/url-rewrite" target="_blank" rel="noopener"
+>URL Rewrite Module 2.1&lt;/a>&lt;/li>
+&lt;li>Download and install &lt;a class="link" href="https://www.iis.net/downloads/microsoft/application-request-routing" target="_blank" rel="noopener"
+>ARR-Application-request-routing&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="setting-reverse-proxy">Setting Reverse Proxy&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Select Root level in IIS management&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click ‘Application Request Routing Cache’,then in the right side, click “proxy | Server proxy Settings | Check on “Enable proxy” | save config.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select website in IIS.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click URL Rewrite&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add a black Rule&lt;/p>
+&lt;pre>&lt;code>* Match URL:
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Requested URL&lt;/th>
+&lt;th>Using&lt;/th>
+&lt;th>Pattern&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Matches the pattern&lt;/td>
+&lt;td>Regular Expressions&lt;/td>
+&lt;td>&lt;code>^(.*)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;pre>&lt;code> * Conditions:
+&lt;/code>&lt;/pre>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Logical grouping&lt;/td>
+&lt;td>Match ALL&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>input&lt;/td>
+&lt;td>&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Type&lt;/td>
+&lt;td>Matches the Pattern&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Patern&lt;/td>
+&lt;td>&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;pre>&lt;code> * Server Variables:
+&lt;/code>&lt;/pre>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Action Type&lt;/td>
+&lt;td>Rewrite&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Rewrite URL&lt;/td>
+&lt;td>&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://my.oschina.net/tanyixiu/blog/123832" target="_blank" rel="noopener"
+>用IIS配置反向代理&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,1 +1,117 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>nginx - Category - echowings</title><link>https://echowings.github.io/categories/nginx/</link><description>nginx - Category - echowings</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>echo.wings@gmail.com (echowings)</managingEditor><webMaster>echo.wings@gmail.com (echowings)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 29 Apr 2019 21:43:15 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/nginx/" rel="self" type="application/rss+xml"/><item><title>How to Compile Nginx With Source Code</title><link>https://echowings.github.io/nginx-how-to-compile-nginx-with-source-code/</link><pubDate>Mon, 29 Apr 2019 21:43:15 +0800</pubDate><author>Author</author><guid>https://echowings.github.io/nginx-how-to-compile-nginx-with-source-code/</guid><description>How to compile nginx with source code Download source code Access nginx.org to download latest stable version of nginx. 1 2 wget https://nginx.org/download/nginx-1.16.0.tar.gz tar -zxvf nginx-1.16.0.tar.gz Compile source code 1 2 3 4 5 cd nginx-1.16.0 apt update &amp;amp;&amp;amp; apt install -y gcc build-essential ./configure --prefix=/home/echowings/nginx make make install Trouble shooting PCRE missing error. 1 2 3 4 5 6 7 .</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nginx on Steve's Blog</title><link>https://echowings.github.io/categories/nginx/</link><description>Recent content in nginx on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 29 Apr 2019 21:43:15 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/nginx/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Compile Nginx With Source Code</title><link>https://echowings.github.io/p/how-to-compile-nginx-with-source-code/</link><pubDate>Mon, 29 Apr 2019 21:43:15 +0800</pubDate><guid>https://echowings.github.io/p/how-to-compile-nginx-with-source-code/</guid><description>&lt;h1 id="how-to-compile-nginx-with-source-code">How to compile nginx with source code&lt;/h1>
+&lt;h2 id="download-source-code">Download source code&lt;/h2>
+&lt;ul>
+&lt;li>Access &lt;a class="link" href="https://www.nginx.org" target="_blank" rel="noopener"
+>nginx.org&lt;/a> to download latest stable version of nginx.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">wget https://nginx.org/download/nginx-1.16.0.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tar -zxvf nginx-1.16.0.tar.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="compile-source-code">Compile source code&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> nginx-1.16.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y gcc build-essential
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./configure --prefix&lt;span class="o">=&lt;/span>/home/echowings/nginx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="trouble-shooting">Trouble shooting&lt;/h3>
+&lt;ul>
+&lt;li>PCRE missing error.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl"> ./configure: error: the HTTP rewrite module requires the PCRE library.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">You can either disable the module by using —without–http_rewrite_module
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">option, or install the PCRE library into the system, or build the PCRE library
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">statically from the &lt;span class="nb">source&lt;/span> with nginx by using —with–pcre&lt;span class="o">=&lt;/span>&lt;span class="p">&amp;amp;&lt;/span>lt&lt;span class="p">;&lt;/span>path&lt;span class="p">&amp;amp;&lt;/span>gt&lt;span class="p">;&lt;/span> option.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We need to install pcre library to support it.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install pcre for rhel or centos&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install pcre-devel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install pcre for debian or ubuntu&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install -y libpcre3 libpcre3-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>gzip error.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">./configure: error: the HTTP gzip module requires the zlib library.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">You can either disable the module by using --without-http_gzip_module
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">option, or install the zlib library into the system, or build the zlib library
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">statically from the &lt;span class="nb">source&lt;/span> with nginx by using --with-zlib&lt;span class="o">=&lt;/span>&amp;lt;path&amp;gt; option.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We need to install gzip library.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For rhel or centos&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install zlib-devel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For debian or ubuntu&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install zlib1g zlib1g-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.techietown.info/2017/07/install-pcre-pcre-devel-ubuntu-using-apt-get/" target="_blank" rel="noopener"
+>How to install pcre and pcre-devel on ubuntu using apt-get?&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://www.voidcn.com/article/p-oyseyqkh-gs.html" target="_blank" rel="noopener"
+>./configure: error: the HTTP gzip module requires the zlib library.&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://askubuntu.com/questions/980145/cant-add-nginx-module-requires-zlib/1081432#1081432" target="_blank" rel="noopener"
+>Can&amp;rsquo;t add nginx module - requires zlib&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
