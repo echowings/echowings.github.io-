@@ -292,7 +292,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv4 &amp;lt;MY_DOMAIN_NAME&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#update AAAA record&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv4 &amp;lt;MY_DOMAIN_NAME&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv6 &amp;lt;MY_DOMAIN_NAME&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>How to Enable Http Api Service on VyOS</title><link>https://echowings.github.io/p/how-to-enable-http-api-service-on-vyos/</link><pubDate>Tue, 26 Apr 2022 00:17:15 +0800</pubDate><guid>https://echowings.github.io/p/how-to-enable-http-api-service-on-vyos/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=71ff97d5" alt="Featured image of post How to Enable Http Api Service on VyOS" />&lt;p>&lt;strong>How to enable API serivce on VyOS&lt;/strong>&lt;/p>

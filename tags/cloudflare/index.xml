@@ -292,7 +292,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv4 &amp;lt;MY_DOMAIN_NAME&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#update AAAA record&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv4 &amp;lt;MY_DOMAIN_NAME&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv6 &amp;lt;MY_DOMAIN_NAME&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>
