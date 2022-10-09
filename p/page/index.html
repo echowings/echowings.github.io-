@@ -1,291 +1,67 @@
 <!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="How to enable API serivce on VyOS
 How to enable API serivce on VyOS After these days, I wrote some vyos shell script to auto detect network status and automatacally change some settings. In the way There will be new configuration to loading directly and hold the configuration mode for a longer time. This is not in a smart way.
-Another better option, What if we can change settings of vyos with api?"><title>How to Enable Http Api Service on VyOS</title><link rel=canonical href=https://echowings.github.io/p/page/><link rel=stylesheet href=https://echowings.github.io/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css><meta property="og:title" content="How to Enable Http Api Service on VyOS"><meta property="og:description" content="How to enable API serivce on VyOS
+Another better option, What if we can change settings of vyos with api?"><title>How to Enable Http Api Service on VyOS--copy</title><link rel=canonical href=https://echowings.github.io/p/page/><link rel=stylesheet href=https://echowings.github.io/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css><meta property="og:title" content="How to Enable Http Api Service on VyOS--copy"><meta property="og:description" content="How to enable API serivce on VyOS
 How to enable API serivce on VyOS After these days, I wrote some vyos shell script to auto detect network status and automatacally change some settings. In the way There will be new configuration to loading directly and hold the configuration mode for a longer time. This is not in a smart way.
-Another better option, What if we can change settings of vyos with api?"><meta property="og:url" content="https://echowings.github.io/p/page/"><meta property="og:site_name" content="Steve's Blog"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="ddns"><meta property="article:tag" content="cloudflare"><meta property="article:published_time" content="2022-10-09T09:49:14+08:00"><meta property="article:modified_time" content="2022-10-09T09:49:14+08:00"><meta property="og:image" content="https://picsum.photos/800/600.webp?random={{ substr (md5 (.Date)) 4 8 }}"><meta name=twitter:title content="How to Enable Http Api Service on VyOS"><meta name=twitter:description content="How to enable API serivce on VyOS
+Another better option, What if we can change settings of vyos with api?"><meta property="og:url" content="https://echowings.github.io/p/page/"><meta property="og:site_name" content="Steve's Blog"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="vyos"><meta property="article:tag" content="api"><meta property="article:published_time" content="2022-04-26T00:17:15+08:00"><meta property="article:modified_time" content="2022-10-09T03:16:32+00:00"><meta property="og:image" content="https://picsum.photos/800/600.webp?random=71ff97d5"><meta name=twitter:title content="How to Enable Http Api Service on VyOS--copy"><meta name=twitter:description content="How to enable API serivce on VyOS
 How to enable API serivce on VyOS After these days, I wrote some vyos shell script to auto detect network status and automatacally change some settings. In the way There will be new configuration to loading directly and hold the configuration mode for a longer time. This is not in a smart way.
-Another better option, What if we can change settings of vyos with api?"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://picsum.photos/800/600.webp?random={{ substr (md5 (.Date)) 4 8 }}"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-128167130-1","auto"),ga("send","pageview"))</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
-<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=https://echowings.github.io/><img src=https://echowings.github.io/img/avatar_hu49d781430fb14dff787875229fd54172_10515_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=https://echowings.github.io/>Steve's Blog</a></h1><h2 class=site-description>Steve's Blog</h2></div></header><ol class=menu id=main-menu><li><a href=https://echowings.github.io/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=https://echowings.github.io/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=https://echowings.github.io/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=https://echowings.github.io/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=https://echowings.github.io/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://echowings.github.io/ selected>English</option><option value=https://echowings.github.io/zh-cn/>中文</option><option value=https://echowings.github.io/ja/>日本語　</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></div></ol></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=https://echowings.github.io/p/page/><img src="https://picsum.photos/800/600.webp?random=%7b%7b%20substr%20%28md5%20%28.Date%29%29%204%208%20%7d%7d" loading=lazy alt="Featured image of post Shell Script to Update Cloudflare Ddns"></a></div><div class=article-details><header class=article-category><a href=https://echowings.github.io/categories/networking/>networking</a></header><div class=article-title-wrapper><h2 class=article-title><a href=https://echowings.github.io/p/page/>How to Enable Http Api Service on VyOS</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Apr 26, 2022</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>1 minute read</time></div></footer><footer class=article-translations><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><div><a href=https://echowings.github.io/zh-cn/p/page/ class=link>中文</a>
-<a href=https://echowings.github.io/ja/p/page/ class=link>日本語　</a></div></footer></div></header><section class=article-content><h1 id=shell-script-to-update-cloudflare-ddns>Shell Script to Update Cloudflare Ddns</h1><h2 id=script>Script</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
-</span><span class=lnt>  2
-</span><span class=lnt>  3
-</span><span class=lnt>  4
-</span><span class=lnt>  5
-</span><span class=lnt>  6
-</span><span class=lnt>  7
-</span><span class=lnt>  8
-</span><span class=lnt>  9
-</span><span class=lnt> 10
-</span><span class=lnt> 11
-</span><span class=lnt> 12
-</span><span class=lnt> 13
-</span><span class=lnt> 14
-</span><span class=lnt> 15
-</span><span class=lnt> 16
-</span><span class=lnt> 17
-</span><span class=lnt> 18
-</span><span class=lnt> 19
-</span><span class=lnt> 20
-</span><span class=lnt> 21
-</span><span class=lnt> 22
-</span><span class=lnt> 23
-</span><span class=lnt> 24
-</span><span class=lnt> 25
-</span><span class=lnt> 26
-</span><span class=lnt> 27
-</span><span class=lnt> 28
-</span><span class=lnt> 29
-</span><span class=lnt> 30
-</span><span class=lnt> 31
-</span><span class=lnt> 32
-</span><span class=lnt> 33
-</span><span class=lnt> 34
-</span><span class=lnt> 35
-</span><span class=lnt> 36
-</span><span class=lnt> 37
-</span><span class=lnt> 38
-</span><span class=lnt> 39
-</span><span class=lnt> 40
-</span><span class=lnt> 41
-</span><span class=lnt> 42
-</span><span class=lnt> 43
-</span><span class=lnt> 44
-</span><span class=lnt> 45
-</span><span class=lnt> 46
-</span><span class=lnt> 47
-</span><span class=lnt> 48
-</span><span class=lnt> 49
-</span><span class=lnt> 50
-</span><span class=lnt> 51
-</span><span class=lnt> 52
-</span><span class=lnt> 53
-</span><span class=lnt> 54
-</span><span class=lnt> 55
-</span><span class=lnt> 56
-</span><span class=lnt> 57
-</span><span class=lnt> 58
-</span><span class=lnt> 59
-</span><span class=lnt> 60
-</span><span class=lnt> 61
-</span><span class=lnt> 62
-</span><span class=lnt> 63
-</span><span class=lnt> 64
-</span><span class=lnt> 65
-</span><span class=lnt> 66
-</span><span class=lnt> 67
-</span><span class=lnt> 68
-</span><span class=lnt> 69
-</span><span class=lnt> 70
-</span><span class=lnt> 71
-</span><span class=lnt> 72
-</span><span class=lnt> 73
-</span><span class=lnt> 74
-</span><span class=lnt> 75
-</span><span class=lnt> 76
-</span><span class=lnt> 77
-</span><span class=lnt> 78
-</span><span class=lnt> 79
-</span><span class=lnt> 80
-</span><span class=lnt> 81
-</span><span class=lnt> 82
-</span><span class=lnt> 83
-</span><span class=lnt> 84
-</span><span class=lnt> 85
-</span><span class=lnt> 86
-</span><span class=lnt> 87
-</span><span class=lnt> 88
-</span><span class=lnt> 89
-</span><span class=lnt> 90
-</span><span class=lnt> 91
-</span><span class=lnt> 92
-</span><span class=lnt> 93
-</span><span class=lnt> 94
-</span><span class=lnt> 95
-</span><span class=lnt> 96
-</span><span class=lnt> 97
-</span><span class=lnt> 98
-</span><span class=lnt> 99
-</span><span class=lnt>100
-</span><span class=lnt>101
-</span><span class=lnt>102
-</span><span class=lnt>103
-</span><span class=lnt>104
-</span><span class=lnt>105
-</span><span class=lnt>106
-</span><span class=lnt>107
-</span><span class=lnt>108
-</span><span class=lnt>109
-</span><span class=lnt>110
-</span><span class=lnt>111
-</span><span class=lnt>112
-</span><span class=lnt>113
-</span><span class=lnt>114
-</span><span class=lnt>115
-</span><span class=lnt>116
-</span><span class=lnt>117
-</span><span class=lnt>118
-</span><span class=lnt>119
-</span><span class=lnt>120
-</span><span class=lnt>121
-</span><span class=lnt>122
-</span><span class=lnt>123
-</span><span class=lnt>124
-</span><span class=lnt>125
-</span><span class=lnt>126
-</span><span class=lnt>127
-</span><span class=lnt>128
-</span><span class=lnt>129
-</span><span class=lnt>130
-</span><span class=lnt>131
-</span><span class=lnt>132
-</span><span class=lnt>133
-</span><span class=lnt>134
-</span><span class=lnt>135
-</span><span class=lnt>136
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/bash
-</span></span></span><span class=line><span class=cl><span class=cp></span>
+Another better option, What if we can change settings of vyos with api?"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://picsum.photos/800/600.webp?random=71ff97d5"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-128167130-1","auto"),ga("send","pageview"))</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=https://echowings.github.io/><img src=https://echowings.github.io/img/avatar_hu49d781430fb14dff787875229fd54172_10515_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=https://echowings.github.io/>Steve's Blog</a></h1><h2 class=site-description>Steve's Blog</h2></div></header><ol class=menu id=main-menu><li><a href=https://echowings.github.io/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=https://echowings.github.io/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=https://echowings.github.io/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=https://echowings.github.io/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=https://echowings.github.io/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://echowings.github.io/ selected>English</option><option value=https://echowings.github.io/zh-cn/>中文</option><option value=https://echowings.github.io/ja/>日本語　</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></div></ol></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=https://echowings.github.io/p/page/><img src="https://picsum.photos/800/600.webp?random=71ff97d5" loading=lazy alt="Featured image of post How to Enable Http Api Service on VyOS--copy"></a></div><div class=article-details><header class=article-category><a href=https://echowings.github.io/categories/networking/>networking</a></header><div class=article-title-wrapper><h2 class=article-title><a href=https://echowings.github.io/p/page/>How to Enable Http Api Service on VyOS--copy</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Apr 26, 2022</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>1 minute read</time></div></footer><footer class=article-translations><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><div><a href=https://echowings.github.io/zh-cn/p/page/ class=link>中文</a>
+<a href=https://echowings.github.io/ja/p/page/ class=link>日本語　</a></div></footer></div></header><section class=article-content><p><strong>How to enable API serivce on VyOS</strong></p><h1 id=how-to-enable-api-serivce-on-vyos>How to enable API serivce on VyOS</h1><p>After these days, I wrote some vyos shell script to auto detect network status and automatacally change some settings. In the way There will be new configuration to loading directly and hold the configuration mode for a longer time. This is not in a smart way.</p><p>Another better option, What if we can change settings of vyos with api?</p><h2 id=enable-api-http-service-localy>Enable api http service localy</h2><h3 id=enable-apt-service-with-socket-mode>Enable apt service with socket mode</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>set</span> service https api socket 
+</span></span></code></pre></td></tr></table></div></div><h3 id=test-settings>Test settings</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>curl --unix-socket /run/api.sock -X POST -Fkey<span class=o>=</span>qwerty -Fdata<span class=o>=</span><span class=s1>&#39;{&#34;op&#34;: &#34;showConfig&#34;, &#34;path&#34;: []}&#39;</span> http://localhost/retrieve
+</span></span></code></pre></td></tr></table></div></div><h2 id=enable-api-https-service-with-lets-encryption-free-ssl>Enable api https service with let&rsquo;s encryption free ssl</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/vbash
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=nb>source</span> /opt/vyatta/etc/functions/script-template
+</span></span><span class=line><span class=cl>configure
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1>##############  User Configuration  ###############</span>
-</span></span><span class=line><span class=cl><span class=c1># Define programme path</span>
-</span></span><span class=line><span class=cl><span class=c1># location_path=&#34;/config/scripts/ddns&#34;</span>
-</span></span><span class=line><span class=cl><span class=nv>location_path</span><span class=o>=</span><span class=k>$(</span>dirname -- <span class=s2>&#34;</span><span class=nv>$0</span><span class=s2>&#34;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl><span class=c1># Define variable</span>
+</span></span><span class=line><span class=cl><span class=nv>ID</span><span class=o>=</span><span class=s2>&#34;my_id&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>APIKEY</span><span class=o>=</span><span class=s2>&#34;12345&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>APIPORT</span><span class=o>=</span><span class=s2>&#34;1234&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>VHOST</span><span class=o>=</span><span class=s2>&#34;myvps&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>FULL_FQDN</span><span class=o>=</span><span class=s2>&#34;xxx.xxx.xxx&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>LISTEN_ADDRESS</span><span class=o>=</span><span class=s2>&#34;IP ADDRESS&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>EMAIL</span><span class=o>=</span><span class=s2>&#34;my@emal.com&#34;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># You Registered CloudFlare  Mail Account</span>
-</span></span><span class=line><span class=cl><span class=nv>auth_email</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># CloudFlare Global API Key</span>
-</span></span><span class=line><span class=cl><span class=nv>auth_key</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1># Root Doman Name</span>
-</span></span><span class=line><span class=cl><span class=nv>zone_name</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># IP Type，Enter &#39;ipv4&#39; or &#39;ipv6&#39; ,at here we got paramter from our input</span>
-</span></span><span class=line><span class=cl><span class=nv>type</span><span class=o>=</span><span class=nv>$1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># DDNS Domain Name</span>
-</span></span><span class=line><span class=cl><span class=nv>record_name</span><span class=o>=</span><span class=nv>$2</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># WAN INTERFACE</span>
-</span></span><span class=line><span class=cl><span class=nv>INTERFACE</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1>#############  Script  ############</span>
-</span></span><span class=line><span class=cl><span class=c1># The before WAN IP </span>
-</span></span><span class=line><span class=cl><span class=nv>ip_file</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$location_path</span><span class=s2>/</span><span class=nv>$1</span><span class=s2>_</span><span class=nv>$2</span><span class=s2>_ip.txt&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Domain id information</span>
-</span></span><span class=line><span class=cl><span class=c1># Domain id information</span>
-</span></span><span class=line><span class=cl><span class=nv>id_file</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$location_path</span><span class=s2>/</span><span class=nv>$1</span><span class=s2>_</span><span class=nv>$2</span><span class=s2>_cloudflare.ids&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Log location</span>
-</span></span><span class=line><span class=cl><span class=nv>log_file</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$location_path</span><span class=s2>/cloudflare.log&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1>################  Don&#39;t change here  ###############</span>
-</span></span><span class=line><span class=cl><span class=c1>##################  Function  ####################</span>
-</span></span><span class=line><span class=cl><span class=nv>record_type</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl><span class=nv>ip</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl><span class=nv>zone_identifier</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl><span class=nv>record_identifier</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl><span class=nv>update</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Log function</span>
-</span></span><span class=line><span class=cl>log<span class=o>()</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>        <span class=nb>echo</span> -e <span class=s2>&#34;[</span><span class=k>$(</span>date<span class=k>)</span><span class=s2>] - </span><span class=nv>$1</span><span class=s2>&#34;</span> &gt;&gt; <span class=nv>$log_file</span>
-</span></span><span class=line><span class=cl>    <span class=k>fi</span>
-</span></span><span class=line><span class=cl><span class=o>}</span>
-</span></span><span class=line><span class=cl><span class=c1>#To get local IP address</span>
-</span></span><span class=line><span class=cl>get_ip<span class=o>()</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[</span> <span class=nv>$type</span> <span class=o>==</span> <span class=s2>&#34;ipv4&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>	    <span class=nv>record_type</span><span class=o>=</span><span class=s2>&#34;A&#34;</span>
-</span></span><span class=line><span class=cl>	    <span class=nv>ip</span><span class=o>=</span><span class=k>$(</span>ip addr <span class=p>|</span> grep <span class=si>${</span><span class=nv>INTERFACE</span><span class=si>}</span>  -A2 <span class=p>|</span> grep inet <span class=p>|</span> grep -v inet6  <span class=p>|</span> awk <span class=s1>&#39;{print $2}&#39;</span><span class=k>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=o>[</span> <span class=nv>$type</span> <span class=o>==</span> <span class=s2>&#34;ipv6&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>	    <span class=nv>record_type</span><span class=o>=</span><span class=s2>&#34;AAAA&#34;</span>
-</span></span><span class=line><span class=cl>	    <span class=nv>ip</span><span class=o>=</span><span class=k>$(</span>ip addr <span class=p>|</span> grep <span class=si>${</span><span class=nv>INTERFACE</span><span class=si>}</span>  -A2 <span class=p>|</span> grep inet6  <span class=p>|</span> awk <span class=s1>&#39;{print $2}&#39;</span> <span class=p>|</span> cut -d <span class=s1>&#39;/&#39;</span> -f1<span class=k>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>else</span>
-</span></span><span class=line><span class=cl>	    <span class=nb>echo</span> <span class=s2>&#34;Type wrong&#34;</span>
-</span></span><span class=line><span class=cl>	    log <span class=s2>&#34;Type wrong&#34;</span>
-</span></span><span class=line><span class=cl>        <span class=nb>exit</span> <span class=m>0</span>
-</span></span><span class=line><span class=cl>    <span class=k>fi</span>
-</span></span><span class=line><span class=cl><span class=o>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Check IP changed or not, if there&#39;s no change, then terminal programme</span>
-</span></span><span class=line><span class=cl>check_ip_change<span class=o>()</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[</span> -f <span class=nv>$ip_file</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>        <span class=nv>old_ip</span><span class=o>=</span><span class=k>$(</span>cat <span class=nv>$ip_file</span><span class=k>)</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$ip</span><span class=s2>&#34;</span> <span class=o>==</span> <span class=s2>&#34;</span><span class=nv>$old_ip</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>            <span class=nb>echo</span> <span class=s2>&#34;IP has not changed.&#34;</span>
-</span></span><span class=line><span class=cl>            log <span class=s2>&#34;IP has not changed.&#34;</span>
-</span></span><span class=line><span class=cl>            <span class=nb>exit</span> <span class=m>0</span>
-</span></span><span class=line><span class=cl>        <span class=k>fi</span>
-</span></span><span class=line><span class=cl>    <span class=k>fi</span>
-</span></span><span class=line><span class=cl><span class=o>}</span>
-</span></span><span class=line><span class=cl><span class=c1>#Get zone_id subdomain ID</span>
-</span></span><span class=line><span class=cl>get_id<span class=o>()</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[</span> -f <span class=nv>$id_file</span> <span class=o>]</span> <span class=o>&amp;&amp;</span> <span class=o>[</span> <span class=k>$(</span>wc -l <span class=nv>$id_file</span> <span class=p>|</span> cut -d <span class=s2>&#34; &#34;</span> -f 1<span class=k>)</span> <span class=o>==</span> <span class=m>2</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>        <span class=nv>zone_identifier</span><span class=o>=</span><span class=k>$(</span>head -1 <span class=nv>$id_file</span><span class=k>)</span>
-</span></span><span class=line><span class=cl>        <span class=nv>record_identifier</span><span class=o>=</span><span class=k>$(</span>tail -1 <span class=nv>$id_file</span><span class=k>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>else</span>
-</span></span><span class=line><span class=cl>        <span class=nv>zone_identifier</span><span class=o>=</span><span class=k>$(</span>curl -s -X GET <span class=s2>&#34;https://api.cloudflare.com/client/v4/zones?name=</span><span class=nv>$zone_name</span><span class=s2>&#34;</span> -H <span class=s2>&#34;X-Auth-Email: </span><span class=nv>$auth_email</span><span class=s2>&#34;</span> -H <span class=s2>&#34;X-Auth-Key: </span><span class=nv>$auth_key</span><span class=s2>&#34;</span> -H <span class=s2>&#34;Content-Type: application/json&#34;</span> <span class=p>|</span> grep -Po <span class=s1>&#39;(?&lt;=&#34;id&#34;:&#34;)[^&#34;]*&#39;</span> <span class=p>|</span> head -1 <span class=k>)</span>
-</span></span><span class=line><span class=cl>        <span class=nv>rec_response_json</span><span class=o>=</span><span class=sb>`</span>curl -X GET <span class=s2>&#34;https://api.cloudflare.com/client/v4/zones/</span><span class=nv>$zone_identifier</span><span class=s2>/dns_records?name=</span><span class=nv>$record_name</span><span class=s2>&#34;</span> -H <span class=s2>&#34;X-Auth-Email: </span><span class=nv>$auth_email</span><span class=s2>&#34;</span> -H <span class=s2>&#34;X-Auth-Key: </span><span class=nv>$auth_key</span><span class=s2>&#34;</span> -H <span class=s2>&#34;Content-Type: application/json&#34;</span><span class=sb>`</span>
-</span></span><span class=line><span class=cl>        <span class=nv>record_identifier</span><span class=o>=</span><span class=sb>`</span><span class=nb>echo</span> <span class=nv>$rec_response_json</span> <span class=p>|</span> grep -Po <span class=s1>&#39;(?&lt;=&#34;id&#34;:&#34;)[^&#34;]*&#39;</span><span class=sb>`</span>
-</span></span><span class=line><span class=cl>        <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$zone_identifier</span><span class=s2>&#34;</span> &gt; <span class=nv>$id_file</span>
-</span></span><span class=line><span class=cl>        <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$record_identifier</span><span class=s2>&#34;</span> &gt;&gt; <span class=nv>$id_file</span>
-</span></span><span class=line><span class=cl>    <span class=k>fi</span>
-</span></span><span class=line><span class=cl><span class=o>}</span>
-</span></span><span class=line><span class=cl><span class=c1>#Update DNS record</span>
-</span></span><span class=line><span class=cl>update_dns<span class=o>()</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>    <span class=nv>update</span><span class=o>=</span><span class=k>$(</span>curl -s -X PUT <span class=s2>&#34;https://api.cloudflare.com/client/v4/zones/</span><span class=nv>$zone_identifier</span><span class=s2>/dns_records/</span><span class=nv>$record_identifier</span><span class=s2>&#34;</span> -H <span class=s2>&#34;X-Auth-Email: </span><span class=nv>$auth_email</span><span class=s2>&#34;</span> -H <span class=s2>&#34;X-Auth-Key: </span><span class=nv>$auth_key</span><span class=s2>&#34;</span> -H <span class=s2>&#34;Content-Type: application/json&#34;</span> --data <span class=s2>&#34;{\&#34;id\&#34;:\&#34;</span><span class=nv>$zone_identifier</span><span class=s2>\&#34;,\&#34;type\&#34;:\&#34;</span><span class=nv>$record_type</span><span class=s2>\&#34;,\&#34;name\&#34;:\&#34;</span><span class=nv>$record_name</span><span class=s2>\&#34;,\&#34;content\&#34;:\&#34;</span><span class=nv>$ip</span><span class=s2>\&#34;}&#34;</span><span class=k>)</span>
-</span></span><span class=line><span class=cl><span class=o>}</span>
-</span></span><span class=line><span class=cl><span class=c1>###################  Main  ###################</span>
-</span></span><span class=line><span class=cl>log <span class=s2>&#34;Script start.&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1>#Got IP Address</span>
-</span></span><span class=line><span class=cl>get_ip
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Check got the right ip address</span>
-</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$ip</span><span class=s2>&#34;</span> <span class=o>==</span> <span class=s2>&#34;&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Can not get IP address.Please check your network connection.&#34;</span>
-</span></span><span class=line><span class=cl>    log <span class=s2>&#34;Can not get IP address.Please check your network connection.&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=nb>exit</span> <span class=m>0</span>
-</span></span><span class=line><span class=cl><span class=k>fi</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Check IP changed or not</span>
-</span></span><span class=line><span class=cl>check_ip_change
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Get zone_id and sumdomain record ID</span>
-</span></span><span class=line><span class=cl>get_id
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Check get ID successfully or not</span>
-</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$zone_identifier</span><span class=s2>&#34;</span> <span class=o>==</span> <span class=s2>&#34;&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Can not get zone_id.&#34;</span>
-</span></span><span class=line><span class=cl>    log <span class=s2>&#34;Can not get zone_id.&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=nb>exit</span> <span class=m>0</span>
-</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$record_identifier</span><span class=s2>&#34;</span> <span class=o>==</span> <span class=s2>&#34;&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Can not get record_id.&#34;</span>
-</span></span><span class=line><span class=cl>    log <span class=s2>&#34;Can not get record_id.&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=nb>exit</span> <span class=m>0</span>
-</span></span><span class=line><span class=cl><span class=k>fi</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Update DNS Record</span>
-</span></span><span class=line><span class=cl>update_dns
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Check DNS record updated or not</span>
-</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[[</span> <span class=nv>$update</span> <span class=o>==</span> *<span class=s2>&#34;\&#34;success\&#34;:false&#34;</span>* <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
-</span></span><span class=line><span class=cl>    log <span class=s2>&#34;API UPDATE FAILED. DUMPING RESULTS:\n</span><span class=nv>$update</span><span class=s2>&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=nb>echo</span> -e <span class=s2>&#34;API UPDATE FAILED. DUMPING RESULTS:\n</span><span class=nv>$update</span><span class=s2>&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=nb>exit</span> <span class=m>0</span>
-</span></span><span class=line><span class=cl><span class=k>else</span>
-</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$ip</span><span class=s2>&#34;</span> &gt; <span class=nv>$ip_file</span>
-</span></span><span class=line><span class=cl>    log <span class=s2>&#34;</span><span class=nv>$record_name</span><span class=s2> IP changed to: </span><span class=nv>$ip</span><span class=s2>&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$record_name</span><span class=s2> IP changed to: </span><span class=nv>$ip</span><span class=s2>&#34;</span>
-</span></span><span class=line><span class=cl><span class=k>fi</span>
-</span></span></code></pre></td></tr></table></div></div><h2 id=how-to-run-the-script>How to run the script</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo bash /config/scripts/ddns/cloudflare-ddns.sh ipv4 &lt;MY_DOMAIN_NAME&gt;
-</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=https://echowings.github.io/tags/ddns/>ddns</a>
-<a href=https://echowings.github.io/tags/cloudflare/>cloudflare</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article><a href=https://echowings.github.io/p/how-to-configure-cisco-catalyst-switch/><div class=article-details><h2 class=article-title>How to configure cisco catalyst switch</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=echowings/blogcomment issue-term=pathname crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https api key id <span class=nv>$ID</span> key <span class=nv>$APIKEY</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https certificates certbot domain-name <span class=nv>$FULL_FQDN</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https certificates certbot email <span class=nv>$EMAIL</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https api strict
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https virtual-host <span class=nv>$VHOST</span> listen-address <span class=nv>$LISTEN_ADDRESS</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https virtual-host <span class=nv>$VHOST</span> listen-port <span class=nv>$APIPORT</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> service https virtual-host <span class=nv>$VHOST</span> server-name <span class=nv>$FULL_FQDN</span>
+</span></span><span class=line><span class=cl>commit
+</span></span><span class=line><span class=cl>save
+</span></span><span class=line><span class=cl><span class=nb>exit</span>
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=https://echowings.github.io/tags/vyos/>vyos</a>
+<a href=https://echowings.github.io/tags/api/>api</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>Last updated on Oct 09, 2022 03:16 UTC</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article><a href=https://echowings.github.io/p/how-to-install-freedns-go-on-vyos/><div class=article-details><h2 class=article-title>How to Install Freedns Go on Vyos</h2></div></a></article><article><a href=https://echowings.github.io/p/how-to-reset-vyos-to-default-settings/><div class=article-details><h2 class=article-title>How to Reset Vyos to Default Settings</h2></div></a></article><article><a href=https://echowings.github.io/p/how-to-make-destination-base-routing-with-vyos/><div class=article-details><h2 class=article-title>How to make Destination Base Routing With Vyos</h2></div></a></article><article><a href=https://echowings.github.io/p/how-to-config-ddns-for-vyos-with-dns.he.net/><div class=article-details><h2 class=article-title>How to Config Ddns for Vyos With Dns.he.net</h2></div></a></article><article><a href=https://echowings.github.io/p/how-to-build-ipsec-site-to-site-vpn-with-vyos-and-pfsense/><div class=article-details><h2 class=article-title>How to Build Ipsec Site to Site Vpn With Vyos and Pfsense</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=echowings/blogcomment issue-term=pathname crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
 2018 -
 2022 Steve's Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.13.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#script>Script</a></li><li><a href=#how-to-run-the-script>How to run the script</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=https://echowings.github.io/ts/main.js defer></script>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#enable-api-http-service-localy>Enable api http service localy</a><ol><li><a href=#enable-apt-service-with-socket-mode>Enable apt service with socket mode</a></li><li><a href=#test-settings>Test settings</a></li></ol></li><li><a href=#enable-api-https-service-with-lets-encryption-free-ssl>Enable api https service with let&rsquo;s encryption free ssl</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=https://echowings.github.io/ts/main.js defer></script>
 <script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
