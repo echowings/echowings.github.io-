@@ -209,8 +209,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo server
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>``&lt;/p>
-&lt;/li>
+&lt;/div>&lt;/li>
 &lt;li>
 &lt;p>publish your website&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -248,8 +247,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>``&lt;/p>
-&lt;/li>
+&lt;/div>&lt;/li>
 &lt;/ul>
 &lt;h3 id="add-a-comment">Add a comment&lt;/h3>
 &lt;p>Since theme jane has support utterances, we just need to enable utterances apps in github and configure it in config.toml in hugo.&lt;/p>
