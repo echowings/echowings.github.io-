@@ -408,7 +408,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">A--&amp;gt;B
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>1st_blog</title><link>https://echowings.github.io/p/1st_blog/</link><pubDate>Thu, 31 Mar 2022 23:43:57 +0800</pubDate><guid>https://echowings.github.io/p/1st_blog/</guid><description/></item><item><title>How to Deploy Vlmcsd With Docker-Compose</title><link>https://echowings.github.io/p/how-to-deploy-vlmcsd-with-docker-compose/</link><pubDate>Sun, 22 Aug 2021 22:46:37 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vlmcsd-with-docker-compose/</guid><description>&lt;h1 id="how-to-deploy-vlmcsd-with-docker-compose">How to deploy vlmcsd with docker-compose&lt;/h1>
+&lt;/div></description></item><item><title>How to Deploy Vlmcsd With Docker-Compose</title><link>https://echowings.github.io/p/how-to-deploy-vlmcsd-with-docker-compose/</link><pubDate>Sun, 22 Aug 2021 22:46:37 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vlmcsd-with-docker-compose/</guid><description>&lt;h1 id="how-to-deploy-vlmcsd-with-docker-compose">How to deploy vlmcsd with docker-compose&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -14895,55 +14895,7 @@ issueTerm=&amp;ldquo;pathname&amp;rdquo;&lt;/p>
 >如何在github.io搭建Hugo博客站&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://steemkr.com/cn/@heyeshuang/chroma-typography-js" target="_blank" rel="noopener"
 >用chroma进行语法高亮&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title/><link>https://echowings.github.io/p/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://echowings.github.io/p/</guid><description>&lt;h1 id="gcvpn-settings">GCVPN Settings&lt;/h1>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Location&lt;/th>
-&lt;th>Remote Gateway&lt;/th>
-&lt;th>Key Exchange version&lt;/th>
-&lt;th>Description Phase1 Authentication method&lt;/th>
-&lt;th>Negotiation mode&lt;/th>
-&lt;th>My identifier&lt;/th>
-&lt;th>Peer identifier&lt;/th>
-&lt;th>Pre-shared key&lt;/th>
-&lt;th>Encryption algorithm&lt;/th>
-&lt;th>Hash algorithm&lt;/th>
-&lt;th>DH key group&lt;/th>
-&lt;th>Lifetime&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Shanghai&lt;/td>
-&lt;td>114.31.87.50&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item><item><title/><link>https://echowings.github.io/p/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://echowings.github.io/p/</guid><description>&lt;p>#英特尔软件和数据中心版固态硬盘的安全漏洞&lt;/p>
-&lt;p>&lt;img src="https://img.purch.com/intel-ssd-dc-s4500/w/755/aHR0cDovL21lZGlhLmJlc3RvZm1pY3JvLmNvbS8yL1QvODQ1MDkzL29yaWdpbmFsL2ludGVsLXNzZC1kYy5KUEc="
-loading="lazy"
->&lt;/p>
-&lt;blockquote>
-&lt;p>Intel SSD DC S4500. Credit: Intel&lt;/p>
-&lt;/blockquote>
-&lt;p>自从2018年被发现熔断(Meltdown)和幽灵(Spectre)漏洞以来，英特尔一直是安全研究的焦点。
-安全研究人员最近发现英特尔软件的新缺陷，其中包括来自Eclypsium的安全研究员Jesse Michael发现的处理器诊断工具的高危漏洞，以及英特尔工程师发现的数据中心版本SSD中的一个漏洞。&lt;/p>
-&lt;p>#新发现的两个英特尔软件漏洞
-处理器诊断工具（CVE-2019-11133）中的缺陷在CVSS 3.0规模上评为8.2（满分10分），这使其成为一个高危漏洞。根据英特尔最新的安全公告，该漏洞“可能允许经过身份验证的用户做到本地提权，信息泄露或
-拒绝服务”。低于4.1.2.24版本会受到影响。&lt;/p>
-&lt;p>英特尔内部团队发现的第二个漏洞是销售给数据中心客户的英特尔SSD DC S4500 / S4600系列中的中等严重性漏洞。低于版本SCV10150的SSD固件版本中发现的缺陷在CVSS 3.0规模上获得了5.3分，因此它被标记为中等严重性。该错误可能允许非特权用户通过物理访问启用权限提升。&lt;/p>
-&lt;p>由于其中一个缺陷是由英特尔本身发现的，另一个是与英特尔协调的Eclypsium研究披露，英特尔能够及时准备好这些补丁以供公众宣布。&lt;/p>
-&lt;p>sed -i &amp;rsquo;s/ZSH_THEME=&amp;quot;robbyrussell&amp;quot;/ZSH_THEME=&amp;quot;agnoster&amp;quot;/g&amp;rsquo; ~/.zshrc&lt;/p></description></item><item><title>Links</title><link>https://echowings.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://echowings.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;/ol></description></item><item><title>Links</title><link>https://echowings.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://echowings.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
 &lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
