@@ -132,7 +132,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --serial0 socket --vga serial0
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --sshkey /etc/pve/pub_keys/pub_key.pub
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --ciuser ubuntu
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --cipassword xA123456
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --cipassword MyPassW0rd
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --ipconfig0 ip=dhcp
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm resize $VMID virtio0 +50G
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
