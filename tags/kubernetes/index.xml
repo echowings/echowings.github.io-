@@ -146,7 +146,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="run-the-command-on-proxmxo-ve-server-to-create-ubuntu-server-2004-template">Run the command on proxmxo ve server to create ubuntu server 20.04 template&lt;/h2>
+&lt;/div>&lt;h3 id="run-the-command-on-proxmxo-ve-server-to-create-ubuntu-server-2004-template">Run the command on proxmxo ve server to create ubuntu server 20.04 template&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -157,7 +157,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bash create_ubuntu_20.04_template.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="12-create-3-kubernetes-nodes-from-template">1.2 Create 3 kubernetes nodes from template&lt;/h1>
+&lt;/div>&lt;h2 id="create-3-kubernetes-nodes-from-template">Create 3 kubernetes nodes from template&lt;/h2>
 &lt;p>Create ubuntu server 20.04 as kubernetes nodes from template&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
