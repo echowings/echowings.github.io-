@@ -135,7 +135,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="install-prerequest-packects">Install Prerequest packects&lt;/h2>
-&lt;h3 id="1-change-ubuntu-sourcelist-and-update-os-if-nessary">1. Change ubuntu sourcelist and update OS if nessary&lt;/h3>
+&lt;h3 id="change-ubuntu-sourcelist-and-update-os-if-nessary">Change ubuntu sourcelist and update OS if nessary&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -156,7 +156,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span> -f /var/run/reboot-requried &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> sudo reboot -f
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="2-forwarding-ipv4-and-letting-iptables-see-bridged-traffic">2. Forwarding IPv4 and letting iptables see bridged traffic&lt;/h3>
+&lt;/div>&lt;h3 id="forwarding-ipv4-and-letting-iptables-see-bridged-traffic">Forwarding IPv4 and letting iptables see bridged traffic&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -197,7 +197,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo sysctl --system
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="3-install-containerd-runtime">3. Install containerd runtime&lt;/h3>
+&lt;/div>&lt;h3 id="install-containerd-runtime">Install containerd runtime&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -240,7 +240,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install -y containerd.io
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="4-modify-containerd-configuration">4. Modify containerd configuration&lt;/h3>
+&lt;/div>&lt;h3 id="modify-containerd-configuration">Modify containerd configuration&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -263,7 +263,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> containerd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="5-disable-swap">5. Disable SWAP&lt;/h3>
+&lt;/div>&lt;h3 id="disable-swap">Disable SWAP&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -282,7 +282,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">free -h
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="6--install-kubectlkubeadmkubelet">6. Install kubectl，kubeadm,kubelet&lt;/h3>
+&lt;/div>&lt;h3 id="install-kubectlkubeadmkubelet">Install kubectl，kubeadm,kubelet&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
