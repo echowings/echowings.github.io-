@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sre on Steve's Blog</title><link>https://echowings.github.io/tags/sre/</link><description>Recent content in sre on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 18:53:31 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/sre/index.xml" rel="self" type="application/rss+xml"/><item><title>How to install kubernetes on ubuntu 20.04</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
-&lt;h2 id="1-provision-3-ubuntu-server--on-3-proxmox-ve-nodes">1. Provision 3 ubuntu server on 3 proxmox ve nodes&lt;/h2>
-&lt;h3 id="11-create-ubuntu-2004-template-on-3-proxmox-ve-nodes">1.1 Create ubuntu 20.04 template on 3 proxmox ve nodes&lt;/h3>
+&lt;p>I have 3 proxmox ve node separately. So here are the steps:&lt;/p>
+&lt;ol>
+&lt;li>Create ubuntu 20.04 cloud image on 3 proxmox ve server&lt;/li>
+&lt;li>Delpy 3 ubuntu 20.04 virtual machines on each 3 proxmox ve server.(1 for kubernetes master node, other 2 for kubernetes work nodes)&lt;/li>
+&lt;li>Install kubeadm,kubelet,kubectl,containerd on each nodes(includ master node and worker nodes)&lt;/li>
+&lt;li>Initalize Kubernetes on master node and install calico network CNI&lt;/li>
+&lt;li>Let worker nodes join kubernets cluster&lt;/li>
+&lt;/ol>
+&lt;h2 id="provision-3-ubuntu-server--on-3-proxmox-ve-nodes">Provision 3 ubuntu server on 3 proxmox ve nodes&lt;/h2>
+&lt;h3 id="create-ubuntu-2004-template-on-3-proxmox-ve-nodes">Create ubuntu 20.04 template on 3 proxmox ve nodes&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
