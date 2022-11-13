@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu on Steve's Blog</title><link>https://echowings.github.io/tags/ubuntu/</link><description>Recent content in ubuntu on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 18:53:31 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>How to install kubernetes on ubuntu 20.04</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
-&lt;p>I have 3 proxmox ve node separately. So here are the steps:&lt;/p>
+&lt;p>Kubernetes is new linux os at nowadays. This is manually install kubernetes on ubuntu 20.04 with kubeadm.
+I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on eache proxmox ve server.here are the steps:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>No.&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>OS&lt;/th>
+&lt;th>IP ADDRESS&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>01&lt;/td>
+&lt;td>ubuntu-k8s-master&lt;/td>
+&lt;td>ubuntu 20.04 LTS&lt;/td>
+&lt;td>192.168.11.71&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>02&lt;/td>
+&lt;td>ubuntu-k8s-node01&lt;/td>
+&lt;td>ubuntu 20.04 LTS&lt;/td>
+&lt;td>192.168.11.72&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>03&lt;/td>
+&lt;td>ubuntu-k8s-node02&lt;/td>
+&lt;td>ubuntu 20.04 LTS&lt;/td>
+&lt;td>192.168.11.73&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;ol>
 &lt;li>Create ubuntu 20.04 cloud image on 3 proxmox ve server&lt;/li>
 &lt;li>Delpy 3 ubuntu 20.04 virtual machines on each 3 proxmox ve server.(1 for kubernetes master node, other 2 for kubernetes work nodes)&lt;/li>
@@ -186,7 +217,7 @@
 &lt;/span>&lt;span class="lnt">17
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF | sudo tee /etc/modules-load.d/kubernetes.conf
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">overlay
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">br_netfilter
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
@@ -195,7 +226,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe br_netfilter
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sysctl params required by setup, params persist across reboots&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF | sudo tee /etc/sysctl.d/kubernetes.conf
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">net.bridge.bridge-nf-call-iptables = 1
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">net.bridge.bridge-nf-call-ip6tables = 1
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">net.ipv4.ip_forward = 1
