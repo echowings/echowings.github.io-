@@ -368,6 +368,9 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;span class="lnt">21
 &lt;/span>&lt;span class="lnt">22
 &lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get install -y ca-certificates curl apt-transport-https vim git curl wget
@@ -382,11 +385,14 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span> ! -f /etc/apt/sources.list.d/kubernetes.list &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> sudo tee /etc/apt/sources.list.d/kubernetes.list
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Chek kubeadm version for us to select the right version of kubernete to install&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt-cache madison kubeadm
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#1.23.10-00&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get install -y &lt;span class="nv">kubelet&lt;/span>&lt;span class="o">=&lt;/span>1.23.10-00 &lt;span class="nv">kubeadm&lt;/span>&lt;span class="o">=&lt;/span>1.23.10-00 &lt;span class="nv">kubectl&lt;/span>&lt;span class="o">=&lt;/span>1.23.10-00
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Provent auto update new version&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Hold the current version&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-mark hold kubelet kubeadm kubectl
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Verify whether kubectl has been successfully installed by running the following command upon the completion of the previous steps: &lt;/span>
