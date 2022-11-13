@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Steve's Blog</title><link>https://echowings.github.io/post/</link><description>Recent content in Posts on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 18:53:31 +0800</lastBuildDate><atom:link href="https://echowings.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How to install kubernetes on ubuntu 20.04</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
-&lt;h2 id="provision-3-ubuntu-server--on-3-proxmox-ve-nodes">Provision 3 ubuntu server on 3 proxmox ve nodes&lt;/h2>
+&lt;h2 id="1-provision-3-ubuntu-server--on-3-proxmox-ve-nodes">1. Provision 3 ubuntu server on 3 proxmox ve nodes&lt;/h2>
+&lt;h3 id="11-create-ubuntu-2004-template-on-3-proxmox-ve-nodes">1.1 Create ubuntu 20.04 template on 3 proxmox ve nodes&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -102,7 +103,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bash create_ubuntu_20.04_template.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="create-3-nodes-from-template">Create 3 nodes from template&lt;/h1>
+&lt;/div>&lt;h1 id="12-create-3-kubernetes-nodes-from-template">1.2 Create 3 kubernetes nodes from template&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -134,7 +135,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="install-prerequest-packects">Install Prerequest packects&lt;/h2>
-&lt;h3 id="1-change-debian-sourcelist--and-update-os">1. Change Debian sourcelist and update OS&lt;/h3>
+&lt;h3 id="1-change-ubuntu-sourcelist-and-update-os-if-nessary">1. Change ubuntu sourcelist and update OS if nessary&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -256,7 +257,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo rm -rf /etc/containerd/config.toml
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo containerd config default &lt;span class="p">|&lt;/span> sudo tee /etc/containerd/config.toml
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#set plugins.cri.systemd_cgroup = true in&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#set plugins.cri.systemd_cgroup = true in /etc/containerd/config.toml&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo sed -i &lt;span class="s1">&amp;#39;s/SystemdCgroup\ =\ false/SystemdCgroup\ =\ true/g&amp;#39;&lt;/span> /etc/containerd/config.toml
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl restart containerd
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> containerd
