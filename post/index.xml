@@ -193,8 +193,8 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --onboot &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="install-prerequest-packects">Install Prerequest packects&lt;/h2>
-&lt;h3 id="change-ubuntu-sourcelist-and-update-os--then-reboot-it-if-necessary">Change ubuntu sourcelist and update OS then reboot it if necessary.&lt;/h3>
+&lt;/div>&lt;h3 id="install-prerequest-packects">Install Prerequest packects&lt;/h3>
+&lt;h4 id="change-ubuntu-sourcelist-and-update-os--then-reboot-it-if-necessary">Change ubuntu sourcelist and update OS then reboot it if necessary.&lt;/h4>
 &lt;p>Change ubuntu sourcelist and update packages&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -216,7 +216,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span> -f /var/run/reboot-requried &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> sudo reboot -f
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="forwarding-ipv4-and-letting-iptables-see-bridged-traffic">Forwarding IPv4 and letting iptables see bridged traffic&lt;/h3>
+&lt;/div>&lt;h4 id="forwarding-ipv4-and-letting-iptables-see-bridged-traffic">Forwarding IPv4 and letting iptables see bridged traffic&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -257,7 +257,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo sysctl --system
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="install-containerd-runtime">Install containerd runtime&lt;/h3>
+&lt;/div>&lt;h4 id="install-containerd-runtime">Install containerd runtime&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -300,7 +300,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install -y containerd.io
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="modify-containerd-configuration">Modify containerd configuration&lt;/h3>
+&lt;/div>&lt;h4 id="modify-containerd-configuration">Modify containerd configuration&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -323,7 +323,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> containerd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="disable-swap">Disable SWAP&lt;/h3>
+&lt;/div>&lt;h4 id="disable-swap">Disable SWAP&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -342,7 +342,7 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">free -h
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="install-kubectlkubeadm-kubelet">Install kubectl，kubeadm, kubelet&lt;/h3>
+&lt;/div>&lt;h4 id="install-kubectlkubeadm-kubelet">Install kubectl，kubeadm, kubelet&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
