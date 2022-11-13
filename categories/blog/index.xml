@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Steve's Blog</title><link>https://echowings.github.io/categories/blog/</link><description>Recent content in Blog on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 18:53:31 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>How to install kubernetes on ubuntu 20.04</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
 &lt;p>Kubernetes is new linux os at nowadays. This is manually install kubernetes on ubuntu 20.04 with kubeadm.
-I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on eache proxmox ve server.here are the steps:&lt;/p>
+I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on eache proxmox ve server.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -31,15 +31,17 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>Here is my plan to install kubernetes:&lt;/p>
 &lt;ol>
 &lt;li>Create ubuntu 20.04 cloud image on 3 proxmox ve server&lt;/li>
 &lt;li>Delpy 3 ubuntu 20.04 virtual machines on each 3 proxmox ve server.(1 for kubernetes master node, other 2 for kubernetes work nodes)&lt;/li>
-&lt;li>Install kubeadm,kubelet,kubectl,containerd on each nodes(includ master node and worker nodes)&lt;/li>
+&lt;li>Install kubeadm,kubelet,kubectl,containerd on each nodes(include master node and worker nodes)&lt;/li>
 &lt;li>Initalize Kubernetes on master node and install calico network CNI&lt;/li>
-&lt;li>Let worker nodes join kubernets cluster&lt;/li>
+&lt;li>Let worker nodes join kubernets cluster.&lt;/li>
 &lt;/ol>
 &lt;h2 id="provision-3-ubuntu-server--on-3-proxmox-ve-nodes">Provision 3 ubuntu server on 3 proxmox ve nodes&lt;/h2>
 &lt;h3 id="create-ubuntu-2004-template-on-3-proxmox-ve-nodes">Create ubuntu 20.04 template on 3 proxmox ve nodes&lt;/h3>
+&lt;p>Run following command on eache proxmox ve server to create ubuntu 20.04 server template with cloudinit enabled.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -88,8 +90,6 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/span>&lt;span class="lnt">44
 &lt;/span>&lt;span class="lnt">45
 &lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; | tee create_ubuntu_20.04_template.sh
@@ -138,11 +138,21 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">rm -rf ${STORAGE_FULL_PATH}/${STORAGE}/images/${VMID}/*.raw
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">qm set $VMID --template
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run script to create ubuntu 20.04 template&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="run-the-command-on-proxmxo-ve-server-to-create-ubuntu-server-2004-template">Run the command on proxmxo ve server to create ubuntu server 20.04 template&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run script to create ubuntu 20.04 template&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bash create_ubuntu_20.04_template.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="12-create-3-kubernetes-nodes-from-template">1.2 Create 3 kubernetes nodes from template&lt;/h1>
+&lt;p>Create ubuntu server 20.04 as kubernetes nodes from template&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -157,24 +167,29 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/span>&lt;span class="lnt">10
 &lt;/span>&lt;span class="lnt">11
 &lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run commands on proxmox ve server 01&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm clone &lt;span class="m">9003&lt;/span> &lt;span class="m">113&lt;/span> --full --name ubuntu-k8s-master
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --ipconfig0 &lt;span class="nv">ip&lt;/span>&lt;span class="o">=&lt;/span>192.168.11.71/24,gw&lt;span class="o">=&lt;/span>192.168.11.1
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --onboot &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run commands on proxmox ve server 02&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm clone &lt;span class="m">9003&lt;/span> &lt;span class="m">113&lt;/span> --full --name ubuntu-k8s-node01
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --ipconfig0 &lt;span class="nv">ip&lt;/span>&lt;span class="o">=&lt;/span>192.168.11.72/24,gw&lt;span class="o">=&lt;/span>192.168.11.1
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --onboot &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run commands on proxmox ve server 03&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm clone &lt;span class="m">9003&lt;/span> &lt;span class="m">113&lt;/span> --full --name ubuntu-k8s-node02
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --ipconfig0 &lt;span class="nv">ip&lt;/span>&lt;span class="o">=&lt;/span>192.168.11.73/24,gw&lt;span class="o">=&lt;/span>192.168.11.1
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">qm &lt;span class="nb">set&lt;/span> &lt;span class="m">113&lt;/span> --onboot &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="install-prerequest-packects">Install Prerequest packects&lt;/h2>
-&lt;h3 id="change-ubuntu-sourcelist-and-update-os-if-nessary">Change ubuntu sourcelist and update OS if nessary&lt;/h3>
+&lt;h3 id="change-ubuntu-sourcelist-and-update-os--then-reboot-it-if-necessary">Change ubuntu sourcelist and update OS then reboot it if necessary.&lt;/h3>
+&lt;p>Change ubuntu sourcelist and update packages&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -313,15 +328,15 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo sed -i &lt;span class="s1">&amp;#39;/swap/d&amp;#39;&lt;/span> /etc/fstab
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sudo sed -i &amp;#39;/swap/d&amp;#39; /etc/fstab&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Search for a swap line and add # (hashtag) sign in front of the line.&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sudo sed -i &amp;#39;/ swap / s/^\(.*\)$/#\1/g&amp;#39; /etc/fstab&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo sed -i &lt;span class="s1">&amp;#39;/ swap / s/^\(.*\)$/#\1/g&amp;#39;&lt;/span> /etc/fstab
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo swapoff -a
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mount -a
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">free -h
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="install-kubectlkubeadmkubelet">Install kubectl，kubeadm,kubelet&lt;/h3>
+&lt;/div>&lt;h3 id="install-kubectlkubeadm-kubelet">Install kubectl，kubeadm, kubelet&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -396,7 +411,7 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chown &lt;span class="k">$(&lt;/span>id -u&lt;span class="k">)&lt;/span>:&lt;span class="k">$(&lt;/span>id -g&lt;span class="k">)&lt;/span> &lt;span class="nv">$HOME&lt;/span>/.kube/config
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="install-calico">Install calico&lt;/h3>
+&lt;/div>&lt;h3 id="install-network-cni-calico-on-master-node">Install network CNI calico on master node&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -437,7 +452,18 @@ I have 3 proxmox ve server. So I plan to install 3 ubuntu virtual machines on ea
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubeadm token create --print-join-command
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="setup-worker-node">Setup Worker Node&lt;/h2>
+&lt;/div>&lt;h4 id="option-reset-nodes-and-try-it-agaion">&lt;strong>Option:&lt;/strong> Reset nodes and try it agaion&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo su
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubeadm reset -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="setup-worker-nodes">Setup Worker Nodes&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
