@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devops on Steve's Blog</title><link>https://echowings.github.io/categories/devops/</link><description>Recent content in devops on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 14 Nov 2022 15:19:53 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Upgrade Kubernetes</title><link>https://echowings.github.io/p/how-to-upgrade-kubernetes/</link><pubDate>Mon, 14 Nov 2022 15:19:53 +0800</pubDate><guid>https://echowings.github.io/p/how-to-upgrade-kubernetes/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=50442c4a" alt="Featured image of post How to Upgrade Kubernetes" />&lt;h1 id="how-to-upgrade-kubernetes">How to upgrade kubernetes&lt;/h1>
-&lt;p>To upgrade kuberetes I will 2 steps to implement it.&lt;/p>
+&lt;p>To upgrade kubernetes I will 2 steps to implement it.&lt;/p>
+&lt;ol>
+&lt;li>Upgrade master node&lt;/li>
+&lt;li>Upgrade worker nodes&lt;/li>
+&lt;/ol>
 &lt;h2 id="master-node-upgrade-process">Master node upgrade process&lt;/h2>
 &lt;h3 id="check-out-the-current-kubeadm-and-kubelet-version">Check out the current kubeadm and kubelet version&lt;/h3>
 &lt;p>First thing first, login the master node with ssh.&lt;/p>
