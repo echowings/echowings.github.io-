@@ -268,9 +268,23 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -n kube-system -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table member list&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -n kube-system &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --endpoints=https://127.0.0.1:2379 \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --cert=/etc/kubernetes/pki/etcd/server.crt \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --key=/etc/kubernetes/pki/etcd/server.key \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --write-out=table \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> member list&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>output:&lt;/p>
@@ -281,11 +295,9 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">root@ubuntu-k8s-master:/home/ubuntu# kubectl &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -n kube-system -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl member list --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+------------------+---------+-------------------+-----------------------+----------------------------+------------+
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">+------------------+---------+-------------------+-----------------------+----------------------------+------------+
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> ID &lt;span class="p">|&lt;/span> STATUS &lt;span class="p">|&lt;/span> NAME &lt;span class="p">|&lt;/span> PEER ADDRS &lt;span class="p">|&lt;/span> CLIENT ADDRS &lt;span class="p">|&lt;/span> IS LEARNER &lt;span class="p">|&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+------------------+---------+-------------------+-----------------------+----------------------------+------------+
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> 8e9e05c52164694d &lt;span class="p">|&lt;/span> started &lt;span class="p">|&lt;/span> ubuntu-k8s-master &lt;span class="p">|&lt;/span> http://localhost:2380 &lt;span class="p">|&lt;/span> https://192.168.11.71:2379 &lt;span class="p">|&lt;/span> &lt;span class="nb">false&lt;/span> &lt;span class="p">|&lt;/span>
@@ -297,9 +309,23 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl --endpoints=https://192.168.11.71:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table endpoint status&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --endpoints=https://192.168.11.71:2379 \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --cert=/etc/kubernetes/pki/etcd/server.crt \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --key=/etc/kubernetes/pki/etcd/server.key \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --write-out=table \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> endpoint status&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>output:&lt;/p>
@@ -322,9 +348,23 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl --endpoints=https://192.168.11.71:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table endpoint health &amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --endpoints=https://192.168.11.71:2379 \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --cert=/etc/kubernetes/pki/etcd/server.crt\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --key=/etc/kubernetes/pki/etcd/server.key \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> --write-out=table \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> endpoint health &amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>output:&lt;/p>
@@ -363,9 +403,11 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl version&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl version&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="backing-up-etcd">Backing up etcd&lt;/h2>
