@@ -420,18 +420,36 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379 --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key restore snapshotdb
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379 &lt;span class="se">\ &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> restore snapshotdb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="restore-the-etcd-backup">Restore the etcd backup&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379 --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key --write-out&lt;span class="o">=&lt;/span>table endpoint status
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --write-out&lt;span class="o">=&lt;/span>table &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> endpoint status
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="exit-the-master-node">Exit the master node&lt;/h3>
