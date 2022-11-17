@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kubernetes on Steve's Blog</title><link>https://echowings.github.io/categories/kubernetes/</link><description>Recent content in kubernetes on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 17 Nov 2022 15:47:56 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>Application Scheduling and Lifecycle Mangement</title><link>https://echowings.github.io/p/application-scheduling-and-lifecycle-mangement/</link><pubDate>Thu, 17 Nov 2022 15:47:56 +0800</pubDate><guid>https://echowings.github.io/p/application-scheduling-and-lifecycle-mangement/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=0d188417" alt="Featured image of post Application Scheduling and Lifecycle Mangement" />&lt;p>This article describes how to use kubernetes deployments to deploy pods, scale pods, perform rolling updates and rollbacks, carry out resource management, and use ConfigMaps to configurepods using &lt;code>kubectl&lt;/code> command and YAML definitions.&lt;/p></description></item><item><title>Working With Etcd</title><link>https://echowings.github.io/p/working-with-etcd/</link><pubDate>Tue, 15 Nov 2022 18:32:33 +0800</pubDate><guid>https://echowings.github.io/p/working-with-etcd/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=78542a6a" alt="Featured image of post Working With Etcd" />&lt;h1 id="working-with-etcd">Working with Etcd&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kubernetes on Steve's Blog</title><link>https://echowings.github.io/categories/kubernetes/</link><description>Recent content in kubernetes on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 17 Nov 2022 15:47:56 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>Application Scheduling and Lifecycle Mangement</title><link>https://echowings.github.io/p/application-scheduling-and-lifecycle-mangement/</link><pubDate>Thu, 17 Nov 2022 15:47:56 +0800</pubDate><guid>https://echowings.github.io/p/application-scheduling-and-lifecycle-mangement/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=0d188417" alt="Featured image of post Application Scheduling and Lifecycle Mangement" />&lt;p>This article describes how to use kubernetes deployments to deploy pods, scale pods, perform rolling updates and rollbacks, carry out resource management, and use ConfigMaps to configurepods using &lt;code>kubectl&lt;/code> command and YAML definitions.&lt;/p>
+&lt;h2 id="run-a-container">Run a container&lt;/h2>
+&lt;h3 id="cretae-a-pod-using-am-imperative-command">Cretae a pod using am imperative command&lt;/h3>
+&lt;h4 id="create-pods-with-kubectl-command">Create pods with &lt;code>kubectl&lt;/code> command&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl run &amp;lt;pod-name&amp;gt; --image&lt;span class="o">=&lt;/span>&amp;lt;image-name:image-tag&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>for instance:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl run nginx-pod --image&lt;span class="o">=&lt;/span>nginx:alpine
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="check-the-pods-status">Check the pod&amp;rsquo;s status&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl describe pod nginx-pod
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="create-pods-with-yaml-defined">Create pods with YAML-defined&lt;/h3>
+&lt;p>Create a yaml file&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">apiVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Pod&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">metadata&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">nginx&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">spec&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">containers&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">nginx&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">nginx:alpine&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">containerPort&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">80&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>To create pods with kubectl apply -f file&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl apply -f &amp;lt;your-spec&amp;gt;.yaml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="run-busybox">run busybox&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubctl run busybox --rm -it --image&lt;span class="o">=&lt;/span>busybox /bin/sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="export-yaml-file-with---dry-run">export yaml file with &amp;ndash;dry-run&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl run nginx --image&lt;span class="o">=&lt;/span>nginx:alpine --dry-run -o yaml &amp;gt; nginx-sample.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl apply nginx-sample.yaml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="understanding-liveness-readiness-and-startup-probes">Understanding Liveness, readiness, and startup probes&lt;/h2>
+&lt;p>To ex&lt;/p></description></item><item><title>Working With Etcd</title><link>https://echowings.github.io/p/working-with-etcd/</link><pubDate>Tue, 15 Nov 2022 18:32:33 +0800</pubDate><guid>https://echowings.github.io/p/working-with-etcd/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=78542a6a" alt="Featured image of post Working With Etcd" />&lt;h1 id="working-with-etcd">Working with Etcd&lt;/h1>
 &lt;p>Today, we will learn how to interactve with etcd . to backup and restore the etcd database.
 First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes cluster. Let&amp;rsquo;s go!&lt;/p>
 &lt;h2 id="check-etcd-pod-name">Check etcd pod name&lt;/h2>
