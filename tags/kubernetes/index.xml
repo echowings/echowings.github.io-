@@ -417,10 +417,24 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;h3 id="ssh-to-the-etcd-cluster-node-1">SSH to the etcd cluster node.&lt;/h3>
 &lt;p>&amp;ndash; skip &amp;ndash;&lt;/p>
 &lt;h3 id="check-the-etcd-status">Check the etcd status&lt;/h3>
-&lt;p>sudo ETCDCTL_API=3 etcdctl &amp;ndash;endpoint https://192.168.11.71:2379 &amp;ndash;cacert=/etc/kubernetes/pki/etcd/ca.crt &amp;ndash;cert=/etc/kubernetes/pki/etcd/server.crt &amp;ndash;key=/etc/kubernetes/pki/etcd/server.key restore snapshotdb&lt;/p>
-&lt;h3 id="restore-the-etcd-backup">Restore the etcd backup&lt;/h3>
-&lt;p>sudo ETCDCTL_API=3 etcdctl &amp;ndash;endpoint https://192.168.11.71:2379 &amp;ndash;cacert=/etc/kubernetes/pki/etcd/ca.crt &amp;ndash;cert=/etc/kubernetes/pki/etcd/server.crt &amp;ndash;key=/etc/kubernetes/pki/etcd/server.key &amp;ndash;write-out=table endpoint status&lt;/p>
-&lt;h3 id="exit-the-master-node">Exit the master node&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379 --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key restore snapshotdb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="restore-the-etcd-backup">Restore the etcd backup&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379 --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key --write-out&lt;span class="o">=&lt;/span>table endpoint status
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="exit-the-master-node">Exit the master node&lt;/h3>
 &lt;p>&amp;ndash;skip&amp;ndash;&lt;/p></description></item><item><title>How to install kubernetes on ubuntu 20.04 with kubeadm</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04-with-kubeadm/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04-with-kubeadm/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04 with kubeadm" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
 &lt;p>Kubernetes is new linux os at nowadays. This is manually install kubernetes on ubuntu 20.04 with kubeadm.
 I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on eache proxmox ve server.&lt;/p>
