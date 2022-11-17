@@ -270,7 +270,7 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -n kube-system -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl member list --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -n kube-system -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table member list&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>output:&lt;/p>
@@ -299,7 +299,7 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl endpoint status --endpoints=https://192.168.11.71:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl --endpoints=https://192.168.11.71:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table endpoint status&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>output:&lt;/p>
@@ -324,7 +324,7 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl endpoint health --endpoints=https://192.168.11.71:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">kubectl -n kube-system &lt;span class="nb">exec&lt;/span> etcd-ubuntu-k8s-master -- sh -c &lt;span class="s2">&amp;#34;ETCDCTL_API=3 etcdctl --endpoints=https://192.168.11.71:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --write-out=table endpoint health &amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>output:&lt;/p>
@@ -412,7 +412,16 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">{&amp;#34;&lt;/span>level&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>info&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>ts&lt;span class="s2">&amp;#34;:1668525609.3941526,&amp;#34;&lt;/span>caller&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>snapshot/v3_snapshot.go:100&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>msg&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>saved&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>path&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>snapshotdb&lt;span class="s2">&amp;#34;}
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="exit-the-master-nodes">Exit the master nodes&lt;/h3></description></item><item><title>How to Upgrade Kubernetes</title><link>https://echowings.github.io/p/how-to-upgrade-kubernetes/</link><pubDate>Mon, 14 Nov 2022 15:19:53 +0800</pubDate><guid>https://echowings.github.io/p/how-to-upgrade-kubernetes/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=50442c4a" alt="Featured image of post How to Upgrade Kubernetes" />&lt;h1 id="how-to-upgrade-kubernetes">How to upgrade kubernetes&lt;/h1>
+&lt;/div>&lt;h3 id="exit-the-master-nodes">Exit the master nodes&lt;/h3>
+&lt;h2 id="restoring-etcd">Restoring etcd&lt;/h2>
+&lt;h3 id="ssh-to-the-etcd-cluster-node-1">SSH to the etcd cluster node.&lt;/h3>
+&lt;p>&amp;ndash; skip &amp;ndash;&lt;/p>
+&lt;h3 id="check-the-etcd-status">Check the etcd status&lt;/h3>
+&lt;p>sudo ETCDCTL_API=3 etcdctl &amp;ndash;endpoint https://192.168.11.71:2379 &amp;ndash;cacert=/etc/kubernetes/pki/etcd/ca.crt &amp;ndash;cert=/etc/kubernetes/pki/etcd/server.crt &amp;ndash;key=/etc/kubernetes/pki/etcd/server.key restore snapshotdb&lt;/p>
+&lt;h3 id="restore-the-etcd-backup">Restore the etcd backup&lt;/h3>
+&lt;p>sudo ETCDCTL_API=3 etcdctl &amp;ndash;endpoint https://192.168.11.71:2379 &amp;ndash;cacert=/etc/kubernetes/pki/etcd/ca.crt &amp;ndash;cert=/etc/kubernetes/pki/etcd/server.crt &amp;ndash;key=/etc/kubernetes/pki/etcd/server.key &amp;ndash;write-out=table endpoint status&lt;/p>
+&lt;h3 id="exit-the-master-node">Exit the master node&lt;/h3>
+&lt;p>&amp;ndash;skip&amp;ndash;&lt;/p></description></item><item><title>How to Upgrade Kubernetes</title><link>https://echowings.github.io/p/how-to-upgrade-kubernetes/</link><pubDate>Mon, 14 Nov 2022 15:19:53 +0800</pubDate><guid>https://echowings.github.io/p/how-to-upgrade-kubernetes/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=50442c4a" alt="Featured image of post How to Upgrade Kubernetes" />&lt;h1 id="how-to-upgrade-kubernetes">How to upgrade kubernetes&lt;/h1>
 &lt;p>To upgrade kubernetes I will 2 steps to implement it.&lt;/p>
 &lt;ol>
 &lt;li>Upgrade master node&lt;/li>
