@@ -424,9 +424,11 @@ First thing first, let&amp;rsquo;s check the etcd pod name in our kubernetes clu
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl --endpoint https://192.168.11.71:2379 &lt;span class="se">\ &lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="nv">ETCDCTL_API&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> etcdctl &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --endpoint https://192.168.11.71:2379 &lt;span class="se">\ &lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --cacert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/ca.crt &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --cert&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.crt &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --key&lt;span class="o">=&lt;/span>/etc/kubernetes/pki/etcd/server.key &lt;span class="se">\
