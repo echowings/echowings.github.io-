@@ -2069,15 +2069,28 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>How to Batch Rename Filesname</title><link>https://echowings.github.io/p/how-to-batch-rename-filesname/</link><pubDate>Sun, 01 Aug 2021 21:51:14 +0800</pubDate><guid>https://echowings.github.io/p/how-to-batch-rename-filesname/</guid><description>&lt;p>#How to batch rename filesname&lt;/p>
+&lt;h2 id="rename-a-file">Rename a file&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ls *.mp4&lt;span class="p">|&lt;/span> awk -F&lt;span class="s2">&amp;#34; 【中文 www.zhongwen.zw 】&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> bash:
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ls *.mp4&lt;span class="p">|&lt;/span> awk -F &lt;span class="s2">&amp;#34;TEXT_TO_DELETE&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> bash
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>How to Delete Ghost Monitor in Ceph Cluster</title><link>https://echowings.github.io/p/how-to-delete-ghost-monitor-in-ceph-cluster/</link><pubDate>Thu, 01 Jul 2021 14:06:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-delete-ghost-monitor-in-ceph-cluster/</guid><description>&lt;h1 id="how-to-delete-ghost-monitor-in-ceph-cluster">How to delete ghost monitor in ceph cluster&lt;/h1>
+&lt;/div>&lt;h2 id="rename-a--folder">Rename a folder&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ls -d * &lt;span class="p">|&lt;/span> awk -F &lt;span class="s2">&amp;#34;TEXT_TO_DELETE&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>demo&lt;/li>
+&lt;/ul></description></item><item><title>How to Delete Ghost Monitor in Ceph Cluster</title><link>https://echowings.github.io/p/how-to-delete-ghost-monitor-in-ceph-cluster/</link><pubDate>Thu, 01 Jul 2021 14:06:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-delete-ghost-monitor-in-ceph-cluster/</guid><description>&lt;h1 id="how-to-delete-ghost-monitor-in-ceph-cluster">How to delete ghost monitor in ceph cluster&lt;/h1>
 &lt;hr>
 &lt;p>Today , after I let a new server join pve cluster. ceph mon is stopped. I want to start or delete it , I always got a failed notification. After search and try to fix it. At last I fixed it.Here is what I had do&lt;/p>
 &lt;h2 id="issue-description">Issue description&lt;/h2>
