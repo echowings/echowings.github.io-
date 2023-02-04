@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shell on Steve的博客</title><link>https://echowings.github.io/zh-cn/categories/shell/</link><description>Recent content in shell on Steve的博客</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 04 Feb 2023 08:43:35 +0800</lastBuildDate><atom:link href="https://echowings.github.io/zh-cn/categories/shell/index.xml" rel="self" type="application/rss+xml"/><item><title>Shell编程学习 01</title><link>https://echowings.github.io/zh-cn/p/shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0-01/</link><pubDate>Sat, 04 Feb 2023 08:43:35 +0800</pubDate><guid>https://echowings.github.io/zh-cn/p/shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0-01/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=bcffb920" alt="Featured image of post Shell编程学习 01" />&lt;h1 id="01shell">01.shell&lt;/h1>
+&lt;h2 id="shell-脚本的建立和执行">Shell 脚本的建立和执行&lt;/h2>
+&lt;ol>
+&lt;li>脚本第一行指定脚本的解释器&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>
+&lt;p>&lt;code>source script-name&lt;/code> 或者&amp;quot;.&amp;ldquo;读入或加载知道那个的 shell 脚本文件&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>shell 脚本的变量继承关系
+使用 shell 脚本来加载脚本中的变量，使用 source ./file 或者&lt;code>. ./file&lt;/code>来加载。直接使用 sh 来执行是无法加载的。原因是 sh file 启动了新的 shell 来执行脚本，当执行结束，新的 shell 退出导致变量无法被继承下来。使用 source 或者.来运行程序，是在当前 shell 中运行，所以脚本中的变量是可以被继承下来的。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="shell-编程归还">shell 编程归还&lt;/h2>
+&lt;ol>
+&lt;li>shell 脚本的第一行指定脚本解释器&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>shell 脚本开头加上版本、版权等信息：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Date: 17:25 CST 2023-2-3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Author: Create by Steve Dong&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Blog: https://echowings.github.io&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Description: This scriptes funciton is ...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Version 1.0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>环境变量初始化与对应文件的生效顺序&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>通过系统用户登录后默认运行的 shell&lt;/li>
+&lt;/ul>
+&lt;script async type="application/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+var config = {
+startOnLoad:true,
+theme:'neutral',
+align:'left'
+};
+mermaid.initialize(config);
+&lt;/script>
+&lt;div class="mermaid">
+graph TD
+A[ /etc/profile ] --> B( /etc/profile.d )
+B --> C[ $HOME/.bash_profile ]
+C --> D[ $HOME/.bashrc ]
+D --> E[ /etc/bashrc ]
+&lt;/div>
+&lt;ul>
+&lt;li>非登录交互运行的 shell&lt;/li>
+&lt;li>执行脚本运行非交互式 shell
+&lt;script async type="application/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+var config = {
+startOnLoad:true,
+theme:'neutral',
+align:'left'
+};
+mermaid.initialize(config);
+&lt;/script>
+&lt;div class="mermaid">
+graph TD
+A[ $HOME/.bashrc ] --> B[ /etc/bashrc ]
+&lt;/div>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
