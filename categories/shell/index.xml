@@ -117,6 +117,7 @@ A[ $HOME/.bashrc ] --> B[ /etc/bashrc ]
 &lt;/div>&lt;h2 id="batch-rename-file">Batch rename file&lt;/h2>
 &lt;ul>
 &lt;li>bash file&lt;/li>
+&lt;li>&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -137,24 +138,22 @@ A[ $HOME/.bashrc ] --> B[ /etc/bashrc ]
 &lt;/span>&lt;span class="lnt">15
 &lt;/span>&lt;span class="lnt">16
 &lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">#&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> dir in &lt;span class="sb">`&lt;/span>ls .&lt;span class="sb">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">do&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -d &lt;span class="nv">$dir&lt;/span> &lt;span class="o">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">then&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$dir&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">cd&lt;/span> &lt;span class="nv">$dir&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> file in &lt;span class="sb">`&lt;/span>ls . &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span>&lt;span class="sb">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">do&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$file&lt;/span> &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> awk -F &lt;span class="s2">&amp;#34;【瑞客论坛 www.ruike1.com】&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1&amp;#34;&amp;#34;$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> bash
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> dir in &lt;span class="sb">`&lt;/span>ls . &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span> &lt;span class="sb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">new_dir&lt;/span>&lt;span class="o">=(&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$dir&lt;/span> &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -d &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="nv">$new_dir&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$new_dir&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">cd&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="nv">$new_dir&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ls &lt;span class="p">|&lt;/span> awk -F &lt;span class="s2">&amp;#34;【瑞客论坛 www.ruike1.com】&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1&amp;#34;&amp;#34;$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>bash
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">cd&lt;/span> ..
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
@@ -168,7 +167,7 @@ A[ $HOME/.bashrc ] --> B[ /etc/bashrc ]
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> dir in &lt;span class="sb">`&lt;/span>ls .&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -d &lt;span class="nv">$dir&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$dir&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> &lt;span class="nv">$dir&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="k">for&lt;/span> file in &lt;span class="sb">`&lt;/span>ls . &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$file&lt;/span> &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> awk -F &lt;span class="s2">&amp;#34;【瑞客论坛 www.ruike1.com】&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1&amp;#34;&amp;#34;$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> bash&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="nb">cd&lt;/span> ..&lt;span class="p">;&lt;/span>&lt;span class="k">fi&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">done&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> dir in &lt;span class="sb">`&lt;/span>ls . &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span> &lt;span class="nv">new_dir&lt;/span>&lt;span class="o">=(&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$dir&lt;/span> &lt;span class="p">|&lt;/span> tr &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="o">)&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -d &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="nv">$new_dir&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$new_dir&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="nb">cd&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="nv">$new_dir&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>ls &lt;span class="p">|&lt;/span> awk -F &lt;span class="s2">&amp;#34;【瑞客论坛 www.ruike1.com】&amp;#34;&lt;/span> &lt;span class="s1">&amp;#39;{print &amp;#34;mv \&amp;#34;&amp;#34;$0&amp;#34;\&amp;#34; \&amp;#34;&amp;#34;$1&amp;#34;&amp;#34;$2&amp;#34;\&amp;#34;&amp;#34;}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>bash &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> .. &lt;span class="p">;&lt;/span>&lt;span class="k">fi&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
