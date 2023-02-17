@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>debian11 on Steve's Blog</title><link>https://echowings.github.io/tags/debian11/</link><description>Recent content in debian11 on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Feb 2023 11:44:11 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/debian11/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Vagrant on Debian 11</title><link>https://echowings.github.io/p/how-to-install-vagrant-on-debian-11/</link><pubDate>Thu, 16 Feb 2023 11:44:11 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-vagrant-on-debian-11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=75d08484" alt="Featured image of post How to Install Vagrant on Debian 11" />&lt;h2 id="install-vagrant">Install vagrant&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>debian11 on Steve's Blog</title><link>https://echowings.github.io/tags/debian11/</link><description>Recent content in debian11 on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Feb 2023 11:44:11 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/debian11/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Vagrant on Debian 11</title><link>https://echowings.github.io/p/how-to-install-vagrant-on-debian-11/</link><pubDate>Thu, 16 Feb 2023 11:44:11 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-vagrant-on-debian-11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=75d08484" alt="Featured image of post How to Install Vagrant on Debian 11" />&lt;h2 id="install-vagrant-work-with-libervit">Install vagrant work with libervit&lt;/h2>
 &lt;h3 id="update-apt-sourcelist">Update apt sourcelist&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -17,7 +17,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install apt-transport-https ca-certificates curl software-properties-common
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="add-vagrant-repository">Add vagrant repository&lt;/h4>
+&lt;/div>&lt;h3 id="add-vagrant-repository">Add vagrant repository&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -32,7 +32,42 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant version
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="heading">&lt;/h3>
+&lt;/div>&lt;h3 id="add-vagrant-provider">Add vagrant provider&lt;/h3>
+&lt;h4 id="option-1-install-libvirt-as-vagrant-provider">Option 1: Install libvirt as vagrant provider&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install -y libvirt-dev
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl stop nfs-kernel-server.service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl disable nfs-kernel-server.service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl &lt;span class="nb">enable&lt;/span> nfs-kernel-server.service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl start nfs-kernel-server.service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant plugin install vagrant-libvirt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Create a virtual machine&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir playbooks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> playbooks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant init debian/bullseye64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant up --provider&lt;span class="o">=&lt;/span>libvirt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="option-2-install-virtualbox-as-provider">Option 2: Install virtualbox as provider&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -44,13 +79,28 @@
 &lt;/span>&lt;span class="lnt">7
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install -y libvirt-dev
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl stop nfs-kernel-server.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl disable nfs-kernel-server.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl &lt;span class="nb">enable&lt;/span> nfs-kernel-server.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl start nfs-kernel-server.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant plugin install vagrant-libvirt
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant up --provider&lt;span class="o">=&lt;/span>libvirt
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install curl wget gnupg2 lsb-release -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc&lt;span class="p">|&lt;/span>sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/vbox.gpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -fsSL https://www.virtualbox.org/download/oracle_vbox.asc&lt;span class="p">|&lt;/span>sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/oracle_vbox.gpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian &lt;/span>&lt;span class="k">$(&lt;/span>lsb_release -cs&lt;span class="k">)&lt;/span>&lt;span class="s2"> contrib&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> sudo tee /etc/apt/sources.list.d/virtualbox.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install linux-headers-&lt;span class="k">$(&lt;/span>uname -r&lt;span class="k">)&lt;/span> dkms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install virtualbox-7.0 -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Create a virtual machine&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir playbooks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> playbooks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant init ubuntu/focal64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vagrant up --provider&lt;span class="o">=&lt;/span>virtualbox
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="vagrant-stop">Vagrant Stop&lt;/h3>
@@ -94,4 +144,6 @@
 >Vagrant-libvirt install unsuccessful on Debian 11 Bullseye? &amp;ldquo;The provider &amp;rsquo;libvirt&amp;rsquo; could not be found&amp;rdquo;&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://wiki.debian.org/Vagrant" target="_blank" rel="noopener"
 >Vagrant&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linuxtechi.com/how-to-install-virtualbox-on-debian/" target="_blank" rel="noopener"
+>How to Install VirtualBox on Debian 11 (Bullseye)&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>
