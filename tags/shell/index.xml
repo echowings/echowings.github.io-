@@ -115,6 +115,8 @@
 &lt;/span>&lt;span class="lnt">113
 &lt;/span>&lt;span class="lnt">114
 &lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
@@ -221,11 +223,13 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;**********************************************************************&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;* Add &lt;/span>&lt;span class="nv">$ip_address&lt;/span>&lt;span class="s2"> into network group &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">domain_group&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2"> on remote VyOS *&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;**********************************************************************&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Update ip address to the network group&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -k -s --connect-timeout &lt;span class="si">${&lt;/span>&lt;span class="nv">TIMEOUT&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -X POST -F &lt;span class="nv">key&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">REMOTE_API_KEY&lt;/span>&lt;span class="si">}&lt;/span> -F &lt;span class="nv">data&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;{&amp;#34;op&amp;#34;: &amp;#34;set&amp;#34;, &amp;#34;path&amp;#34;: [&amp;#34;firewall&amp;#34;,&amp;#34;group&amp;#34;,&amp;#34;network-group&amp;#34;,&amp;#34;&amp;#39;&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">domain_group&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="s1">&amp;#39;&amp;#34;,&amp;#34;network&amp;#34;, &amp;#34;&amp;#39;&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">ip_address&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="s1">&amp;#39;&amp;#34;]}&amp;#39;&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> https://&lt;span class="si">${&lt;/span>&lt;span class="nv">REMOTE_SERVER&lt;/span>&lt;span class="si">}&lt;/span>:&lt;span class="si">${&lt;/span>&lt;span class="nv">REMOTE_PORT&lt;/span>&lt;span class="si">}&lt;/span>/configure
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;/nsave configure./n&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Save configure to vyos&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -k -s --connect-timeout &lt;span class="si">${&lt;/span>&lt;span class="nv">TIMEOUT&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -X POST -F &lt;span class="nv">key&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">REMOTE_API_KEY&lt;/span>&lt;span class="si">}&lt;/span> -F &lt;span class="nv">data&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;{&amp;#34;op&amp;#34;: &amp;#34;save&amp;#34;}&amp;#39;&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="s2">&amp;#34;https://&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">REMOTE_SERVER&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">:&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">REMOTE_PORT&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">/config-file&amp;#34;&lt;/span>
