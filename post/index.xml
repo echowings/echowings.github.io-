@@ -162,20 +162,6 @@
 &lt;li>&lt;a class="link" href="https://dannyda.com/2020/11/13/how-to-remove-you-do-not-have-a-valid-subscription-for-this-server-from-proxmox-backup-server-pbs-1-0-1/" target="_blank" rel="noopener"
 >How to: Remove “You do not have a valid subscription for this server….” from Proxmox Backup Server (PBS) 1.0-1 to 2.3-2 and up&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>How to Install Pve7 on Debian11</title><link>https://echowings.github.io/p/how-to-install-pve7-on-debian11/</link><pubDate>Fri, 24 Mar 2023 11:07:19 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-pve7-on-debian11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=24e0a3fc" alt="Featured image of post How to Install Pve7 on Debian11" />&lt;h1 id="how-to-install-pve-on-debian11">how-to-install-pve-on-debian11&lt;/h1>
-&lt;h2 id="change-network-name-from-enp-to-eth">Change network name from enp* to eth*&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cp /etc/default/grub /etc/default/grub-bak
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;/GRUB_CMDLINE_LINUX=/s/&amp;#34;$/ net.ifnames=0 biosdevname=0&amp;#34;/&amp;#39;&lt;/span> /etc/default/grub
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/enp1s0/eth0/&amp;#39;&lt;/span> /etc/network/interfaces
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Then reboot your server&lt;/p>
 &lt;h2 id="change-sourcelist-to-utsc">change sourcelist to utsc&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -195,7 +181,29 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install -y neovim net-tools
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="change-network-name-from-enp-to-eth">Change network name from enp* to eth*&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$PATH&lt;/span>:/usr/sbin:/home/&lt;span class="k">$(&lt;/span>whoami&lt;span class="k">)&lt;/span>/.local/bin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;export PATH=&lt;/span>&lt;span class="nv">$PATH&lt;/span>&lt;span class="s2">:/usr/sbin:/home/&lt;/span>&lt;span class="k">$(&lt;/span>whoami&lt;span class="k">)&lt;/span>&lt;span class="s2">/.local/bin&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/default/grub /etc/default/grub-bak
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;/GRUB_CMDLINE_LINUX=/s/&amp;#34;$/net.ifnames=0 biosdevname=0&amp;#34;/&amp;#39;&lt;/span> /etc/default/grub
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/enp2s0/eth0/&amp;#39;&lt;/span> /etc/network/interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">update-grub
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Then reboot your server&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
