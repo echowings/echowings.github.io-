@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ansible on Steve's Blog</title><link>https://echowings.github.io/tags/ansible/</link><description>Recent content in ansible on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Apr 2023 18:20:02 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Ansible on Debian 11</title><link>https://echowings.github.io/p/how-to-install-ansible-on-debian-11/</link><pubDate>Fri, 14 Apr 2023 18:20:02 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-ansible-on-debian-11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e642d07c" alt="Featured image of post How to Install Ansible on Debian 11" />&lt;h1 id="install-ansible-on-debian11">Install ansible on debian11&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ansible on Steve's Blog</title><link>https://echowings.github.io/tags/ansible/</link><description>Recent content in ansible on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 14 Apr 2023 18:20:02 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Ansible on Debian 11</title><link>https://echowings.github.io/p/how-to-install-ansible-on-debian-11/</link><pubDate>Fri, 14 Apr 2023 18:20:02 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-ansible-on-debian-11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e642d07c" alt="Featured image of post How to Install Ansible on Debian 11" />&lt;h1 id="install-ansible-on-debian11">Install ansible on debian11&lt;/h1>
 &lt;h2 id="install-ansible-with-apt">Install ansible with apt&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -18,7 +18,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 93C4A3FD7BB9C367
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install ansible -y
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ansible --version
