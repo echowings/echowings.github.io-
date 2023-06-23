@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pve pve8 on Steve's Blog</title><link>https://echowings.github.io/tags/pve-pve8/</link><description>Recent content in pve pve8 on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 23 Jun 2023 10:02:06 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/pve-pve8/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Upgrade Pve7.4 to Pve8</title><link>https://echowings.github.io/p/how-to-upgrade-pve7.4-to-pve8/</link><pubDate>Fri, 23 Jun 2023 10:02:06 +0800</pubDate><guid>https://echowings.github.io/p/how-to-upgrade-pve7.4-to-pve8/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=078d942e" alt="Featured image of post How to Upgrade Pve7.4 to Pve8" />&lt;h1 id="how-to-upgrade-pve74-to-pve8">How to Upgrade Pve7.4 to Pve8&lt;/h1>
+&lt;p>Last night, When I relized that proxmox ve 8 has been released. Then I want to try it and I do it immediately&lt;/p>
+&lt;p>Here is how to&lt;/p>
+&lt;h2 id="1-backup">1 Backup&lt;/h2>
+&lt;h3 id="12-backup-vms-and-containers">1.2 backup vms and containers&lt;/h3>
+&lt;p>&amp;ndash;skip&amp;ndash;&lt;/p>
+&lt;h3 id="12-backup-etc-folder">1.2 Backup /etc/ folder&lt;/h3>
+&lt;p>&amp;ndash;skip&amp;ndash;&lt;/p>
+&lt;h2 id="check-upgrade-statsu">Check upgrade statsu&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Upgrade to latest pve 7.4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt -y dist-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Reboot&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">reboot
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pve7to8 checklist script&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pve7to8 --full
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="change-sourcelist-for-debian-12">Change Sourcelist for debian 12&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Backup debian 11 sourcelist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv /etc/apt/sources.list /etc/apt/sources.list.debian11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Downlaod and Install debian 12 sourcelist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -fsSL https://mirrors.ustc.edu.cn/repogen/conf/debian-https-4-bookworm -o /etc/apt/sources.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Change sourcelist for pve 8&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### Update pve 8 sourcelist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#### Option 1: PVE Offical sourcelist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">```&lt;/span>bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="option-2-mirrors-utsc">Option 2: mirrors utsc&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="downlaod-and-install--gpg-key">Downlaod and install gpg key&lt;/h3>
+&lt;h4 id="option-1-download-gpg-key-from-pve-offical-site">Option 1. Download gpg key from pve offical site&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget http://download.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="option-2-install-with-mirrors-utsc">Option 2. Install with mirrors UTSC&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://mirrors.ustc.edu.cn/proxmox/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="change-ceph">Change Ceph&lt;/h3>
+&lt;h4 id="option-1-offical">Option 1: Offical&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/ceph.list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="option-2-utsc">Option 2: utsc&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/ceph.list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="upgrade">Upgrade&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt -y full-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveversion
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Reboot server&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Disable no valid subscription alert&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -Ezi.bak &lt;span class="s2">&amp;#34;s/(Ext.Msg.show\(\{\s+title: gettext\(&amp;#39;No valid sub)/void\(\{ \/\/\1/g&amp;#34;&lt;/span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> systemctl restart pveproxy.service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Delete enterprise soucelist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf /etc/apt/sources.list.d/pve-enterprise.list.dpkg-dist
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://pve.proxmox.com/wiki/Upgrade_from_7_to_8" target="_blank" rel="noopener"
+>https://pve.proxmox.com/wiki/Upgrade_from_7_to_8&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
