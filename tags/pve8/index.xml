@@ -95,7 +95,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="change-ceph">Change Ceph&lt;/h3>
-&lt;h4 id="option-1-offical">Option 1: Offical&lt;/h4>
+&lt;h4 id="option-1-pve-offical">Option 1: pve offical&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -104,13 +104,13 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/ceph.list
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="option-2-utsc">Option 2: utsc&lt;/h4>
+&lt;/div>&lt;h4 id="option-2-mirrorsustceducn">Option 2: mirrors.ustc.edu.cn&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/ceph.list
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb http://https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/ceph.list
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="upgrade">Upgrade&lt;/h2>
