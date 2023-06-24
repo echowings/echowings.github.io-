@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pve on Steve的博客</title><link>https://echowings.github.io/zh-cn/tags/pve/</link><description>Recent content in pve on Steve的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 24 Jun 2023 18:17:00 +0800</lastBuildDate><atom:link href="https://echowings.github.io/zh-cn/tags/pve/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在debian 12 上安装 proxmox ve 8</title><link>https://echowings.github.io/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8debian-12-%E4%B8%8A%E5%AE%89%E8%A3%85-proxmox-ve-8/</link><pubDate>Sat, 24 Jun 2023 18:17:00 +0800</pubDate><guid>https://echowings.github.io/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8debian-12-%E4%B8%8A%E5%AE%89%E8%A3%85-proxmox-ve-8/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=aa27590c" alt="Featured image of post 如何在debian 12 上安装 proxmox ve 8" />&lt;h2 id="更改deiban-12的apt安装源">更改deiban 12的apt安装源&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pve on Steve的博客</title><link>https://echowings.github.io/zh-cn/tags/pve/</link><description>Recent content in pve on Steve的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 24 Jun 2023 18:17:00 +0800</lastBuildDate><atom:link href="https://echowings.github.io/zh-cn/tags/pve/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在Debian 12上安装Proxmox VE 8</title><link>https://echowings.github.io/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8debian-12%E4%B8%8A%E5%AE%89%E8%A3%85proxmox-ve-8/</link><pubDate>Sat, 24 Jun 2023 18:17:00 +0800</pubDate><guid>https://echowings.github.io/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8debian-12%E4%B8%8A%E5%AE%89%E8%A3%85proxmox-ve-8/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=aa27590c" alt="Featured image of post 如何在Debian 12上安装Proxmox VE 8" />&lt;h2 id="更改debian-12的apt安装源">更改Debian 12的apt安装源&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -51,8 +51,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install -y neovim net-tools
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="网卡更名把网卡名字还原为ethx">网卡更名，把网卡名字还原为ethx&lt;/h2>
-&lt;p>&lt;strong>可选操作&lt;/strong>&lt;/p>
+&lt;/div>&lt;h2 id="网卡更名把网卡名字还原为ethx可选操作">网卡更名，把网卡名字还原为ethx(&lt;strong>可选操作&lt;/strong>)&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -66,6 +65,8 @@
 &lt;/span>&lt;span class="lnt"> 9
 &lt;/span>&lt;span class="lnt">10
 &lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$PATH&lt;/span>:/usr/sbin:/home/&lt;span class="k">$(&lt;/span>whoami&lt;span class="k">)&lt;/span>/.local/bin
@@ -73,6 +74,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/default/grub /etc/default/grub-bak
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;/GRUB_CMDLINE_LINUX=/s/&amp;#34;$/net.ifnames=0 biosdevname=0&amp;#34;/&amp;#39;&lt;/span> /etc/default/grub
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#更改网卡名字 enp2s0 更改为eth0，根据你实际网卡名字更改&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/enp2s0/eth0/&amp;#39;&lt;/span> /etc/network/interfaces
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">update-grub
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
