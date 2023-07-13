@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>network on Steve's Blog</title><link>https://echowings.github.io/tags/network/</link><description>Recent content in network on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 14 Jul 2023 01:00:20 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Fix Http Api Async Not Support</title><link>https://echowings.github.io/p/how-to-fix-http-api-async-not-support/</link><pubDate>Fri, 14 Jul 2023 01:00:20 +0800</pubDate><guid>https://echowings.github.io/p/how-to-fix-http-api-async-not-support/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=660e7c8f" alt="Featured image of post How to Fix Http Api Async Not Support" />&lt;p>For a long time ago, When I try to implement some automation job with vyos api, when mutiple client call a server side api, will make the server &lt;code>config.boot&lt;/code> cut off.
-When the server of vyos reboot, the configuration will broken and not working well.&lt;/p>
-&lt;p>After report the bug to vyos developer team. They tell me that this is the miss configration of http-api issue. But it can be patch by change some code of &lt;code>/usr/libexec/vyos/services/vyos-http-api-server&lt;/code>.&lt;/p>
-&lt;p>After patch the api source code. it works well. Here is the solution to modify the code.&lt;/p>
+When the server of vyos reboot, the configuration will broken and not working anymore.&lt;/p>
+&lt;p>After report the bug to vyos developer team. They tell me that this is the miss configration of http-api issue. But it can be patch by modify the file&lt;code>/usr/libexec/vyos/services/vyos-http-api-server&lt;/code>.&lt;/p>
+&lt;p>After patch the api source code. it works well. Here is the solution.&lt;/p>
 &lt;h2 id="create-script">Create Script&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
