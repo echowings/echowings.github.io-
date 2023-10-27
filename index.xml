@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Fix Http Api Async Not Support</title><link>https://echowings.github.io/p/how-to-fix-http-api-async-not-support/</link><pubDate>Fri, 14 Jul 2023 01:00:20 +0800</pubDate><guid>https://echowings.github.io/p/how-to-fix-http-api-async-not-support/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=660e7c8f" alt="Featured image of post How to Fix Http Api Async Not Support" />&lt;p>For a long time ago, When I try to implement some automation job with vyos api, when mutiple client call a server side api, will make the server &lt;code>config.boot&lt;/code> cut off.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Fix Git Push Error</title><link>https://echowings.github.io/p/how-to-fix-git-push-error/</link><pubDate>Fri, 27 Oct 2023 17:25:57 +0800</pubDate><guid>https://echowings.github.io/p/how-to-fix-git-push-error/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=80a2a303" alt="Featured image of post How to Fix Git Push Error" />&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rm -rf .git/refs/remotes/origin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir .git/refs/remotes/orgin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git gc --prune&lt;span class="o">=&lt;/span>now
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://blog.csdn.net/weixin_43979544/article/details/121696000" target="_blank" rel="noopener"
+>git push 遇到 error: cannot update the ref ‘refs/remotes/origin/master‘: Permission denied&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to Fix Http Api Async Not Support</title><link>https://echowings.github.io/p/how-to-fix-http-api-async-not-support/</link><pubDate>Fri, 14 Jul 2023 01:00:20 +0800</pubDate><guid>https://echowings.github.io/p/how-to-fix-http-api-async-not-support/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=660e7c8f" alt="Featured image of post How to Fix Http Api Async Not Support" />&lt;p>For a long time ago, When I try to implement some automation job with vyos api, when mutiple client call a server side api, will make the server &lt;code>config.boot&lt;/code> cut off.
 When the server of vyos reboot, the configuration will broken and not working anymore.&lt;/p>
 &lt;p>After report the bug to vyos developer team. They tell me that this is the miss configration of http-api issue. But it can be patch by modify the file&lt;code>/usr/libexec/vyos/services/vyos-http-api-server&lt;/code>.&lt;/p>
 &lt;p>After patch the api source code. it works well. Here is the solution.&lt;/p>
@@ -15714,13 +15731,13 @@ then run the commands:&lt;/p>
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">cat&lt;/span> &lt;span class="p">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">~&lt;/span>/.&lt;span class="nx">vimrc&lt;/span> &lt;span class="p">&amp;lt;&amp;lt;&lt;/span>&lt;span class="nx">EOF&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">colorscheme&lt;/span> &lt;span class="nx">gruvbox&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">set&lt;/span> &lt;span class="nx">background&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nb">dark&lt;/span> &lt;span class="c">&amp;#34; Setting dark mode&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">gruvbox_contrast_dark&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;hard&amp;#39;&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">airline_theme&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;simple&amp;#39;&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">EOF&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">cat&lt;/span> &lt;span class="p">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">~&lt;/span>/.&lt;span class="nx">vimrc&lt;/span> &lt;span class="p">&amp;lt;&amp;lt;&lt;/span>&lt;span class="nx">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">colorscheme&lt;/span> &lt;span class="nx">gruvbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">set&lt;/span> &lt;span class="nx">background&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nb">dark&lt;/span> &lt;span class="c">&amp;#34; Setting dark mode&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">gruvbox_contrast_dark&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;hard&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">airline_theme&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;simple&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="let-vim-support-nginx-syntax-highlight">Let vim support nginx syntax highlight&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -18311,18 +18328,18 @@ Bingo! Here we go:&lt;/p>
 &lt;/span>&lt;span class="lnt">11
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”替换为“空格”&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">expandtab&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">&amp;#34; 将“Tab”的“缩进幅度”改为 4&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">tabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span> &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 自动缩进时的“缩进幅度”改为 &lt;span class="m">4&lt;/span> &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">shiftwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span> &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 按下键盘“&lt;span class="nx">Tab&lt;/span>”键时插入的空格数 “ 这里设置为 &lt;span class="m">0&lt;/span> 就可以插入“&lt;span class="nx">tabstop&lt;/span>”中设置的空格数了 &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">softtabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 保存时删除行尾的空格 &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">autocmd&lt;/span> &lt;span class="nx">BufWritePre&lt;/span> * :%&lt;span class="nx">s&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>/&lt;span class="nx">ge&lt;/span> &lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“&lt;span class="m">80&lt;/span> 个字符换行 &lt;span class="nx">setlocal&lt;/span> &lt;span class="nx">textwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">80&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”替换为“空格”&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">expandtab&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”的“缩进幅度”改为 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">tabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">自动缩进时的&lt;/span>“&lt;span class="nx">缩进幅度&lt;/span>”&lt;span class="nx">改为&lt;/span> &lt;span class="m">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">shiftwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">按下键盘&lt;/span>“&lt;span class="nx">Tab&lt;/span>”&lt;span class="nx">键时插入的空格数&lt;/span> “ &lt;span class="nx">这里设置为&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="nx">就可以插入&lt;/span>“&lt;span class="nx">tabstop&lt;/span>”&lt;span class="nx">中设置的空格数了&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">softtabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">保存时删除行尾的空格&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">autocmd&lt;/span> &lt;span class="nx">BufWritePre&lt;/span> * :%&lt;span class="nx">s&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>/&lt;span class="nx">ge&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“&lt;span class="m">80&lt;/span> &lt;span class="nx">个字符换行&lt;/span> &lt;span class="nx">setlocal&lt;/span> &lt;span class="nx">textwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">80&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ul>
 &lt;li>install neobundle.vim&lt;/li>
@@ -19269,16 +19286,16 @@ issueTerm=&amp;ldquo;pathname&amp;rdquo;&lt;/p>
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">###&lt;/span> &lt;span class="nc">Download&lt;/span> &lt;span class="nv">git&lt;/span> &lt;span class="nv">and&lt;/span> &lt;span class="nv">rebuild&lt;/span> &lt;span class="nv">blog&lt;/span> &lt;span class="nv">environment&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">### Download git and rebuild blog environment
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">``` zsh
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">git pulll git@github.com:echowings/blogs.git
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">#if public already exsited run `&lt;/span>&lt;span class="nv">rm&lt;/span> &lt;span class="nv">public&lt;/span>&lt;span class="sc">`
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">git submodule add --force -b master git@github.com:echowings/echowings.github.io.git public
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">``` zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git pulll git@github.com:echowings/blogs.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#if public already exsited run `rm public`
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git submodule add --force -b master git@github.com:echowings/echowings.github.io.git public
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
 &lt;ol>

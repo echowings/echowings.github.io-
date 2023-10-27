@@ -290,16 +290,16 @@ issueTerm=&amp;ldquo;pathname&amp;rdquo;&lt;/p>
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">###&lt;/span> &lt;span class="nc">Download&lt;/span> &lt;span class="nv">git&lt;/span> &lt;span class="nv">and&lt;/span> &lt;span class="nv">rebuild&lt;/span> &lt;span class="nv">blog&lt;/span> &lt;span class="nv">environment&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">### Download git and rebuild blog environment
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">``` zsh
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">git pulll git@github.com:echowings/blogs.git
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">#if public already exsited run `&lt;/span>&lt;span class="nv">rm&lt;/span> &lt;span class="nv">public&lt;/span>&lt;span class="sc">`
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">git submodule add --force -b master git@github.com:echowings/echowings.github.io.git public
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">``` zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git pulll git@github.com:echowings/blogs.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#if public already exsited run `rm public`
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git submodule add --force -b master git@github.com:echowings/echowings.github.io.git public
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
 &lt;ol>
