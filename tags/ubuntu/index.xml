@@ -603,10 +603,10 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt-get autoremove
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export LC_ALL=en_US.UTF-8
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo &amp;#34;en_US.UTF-8 UTF-8&amp;#34; &amp;gt;&amp;gt; /etc/locale.gen
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">locale-gen
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">apt&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">get&lt;/span> &lt;span class="n">autoremove&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">export&lt;/span> &lt;span class="n">LC_ALL&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">en_US&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">UTF&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">8&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">echo&lt;/span> &lt;span class="s2">&amp;#34;en_US.UTF-8 UTF-8&amp;#34;&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">etc&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">locale&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gen&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">locale&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gen&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>

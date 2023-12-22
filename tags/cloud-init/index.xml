@@ -12,7 +12,7 @@
 &lt;p>Cloud-init can help us to deploy or change settings of linux virutal machine via api or manually by ourself.&lt;/p>
 &lt;p>There are two ways to setup cloud-init: command line or change settings in GUI.&lt;/p>
 &lt;h2 id="option-1-download-cloud-init-image-and-setup-with-shell">Option 1: Download cloud-init image and setup with shell&lt;/h2>
-&lt;p>Please reference my blog &lt;a class="link" href="https://echowings.github.io/post/build-ubuntu18.04-with-cloudinit-support" >Build Ubuntu 18.04 server with cloudinit support&lt;/a>&lt;/p>
+&lt;p>Please reference my blog &lt;a class="link" href="../../post/build-ubuntu18.04-with-cloudinit-support" >Build Ubuntu 18.04 server with cloudinit support&lt;/a>&lt;/p>
 &lt;h2 id="option-2-manually-setup-cloud-init">Option 2: Manually Setup cloud-init&lt;/h2>
 &lt;p>We can do this with 2 steps. 1st step is to install linux(centos,debian,ubunt etc).&lt;/p>
 &lt;h3 id="install-a-linux">Install a linux&lt;/h3>

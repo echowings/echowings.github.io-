@@ -335,71 +335,71 @@ Here we go!&lt;/p>
 &lt;/span>&lt;span class="lnt">65
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">#FROM alpine:edge
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FROM alpine:latest
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MAINTAINER steve dong &amp;lt;dongjunbo@gmail.com?
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#FROM alpine:edge&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">FROM&lt;/span> &lt;span class="n">alpine&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">latest&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">MAINTAINER&lt;/span> &lt;span class="n">steve&lt;/span> &lt;span class="n">dong&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">dongjunbo&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="n">gmail&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="err">?&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Environment variables
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">##########################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Environment variables&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##########################&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENV VERSION v1.4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ENV&lt;/span> &lt;span class="n">VERSION&lt;/span> &lt;span class="n">v1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="mi">4&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Change this cron rule to what fits best for you.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Change this cron rule to what fits best for you.&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENV CRONTAB_TIME &amp;#39;0 0 * * *&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ENV&lt;/span> &lt;span class="n">CRONTAB_TIME&lt;/span> &lt;span class="s1">&amp;#39;0 0 * * *&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Create Volume entry points
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">############################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Create Volume entry points&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">############################&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VOLUME [&amp;#34;/config&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">VOLUME&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/config&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Set the work directory
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#########################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Set the work directory&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#########################&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WORKDIR /srv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">WORKDIR&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Fix permissions
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Fix permissions&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#################&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Install required packages
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###########################
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">RUN set -xe &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mkdir -p /config &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> apk add --no-cache unzip curl &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -fsSLO --compressed &amp;#34;https://github.com/shawn1m/overture/releases/download/${VERSION}/overture-linux-amd64.zip&amp;#34; &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> unzip -o &amp;#34;overture-linux-amd64.zip&amp;#34; -d /srv &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt | base64 -d | sort -u | sed &amp;#39;/^$\|@@/d&amp;#39;| sed &amp;#39;s#!.\+##; s#|##g; s#@##g; s#http:\/\/##; s#https:\/\/##;&amp;#39; | sed &amp;#39;/\*/d; / apple\.com/d; /sina\.cn/d; /sina\.com\.cn/d; /baidu\.com/d; /qq\.com/d&amp;#39; | sed &amp;#39;/^[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+$/d&amp;#39; | grep &amp;#39;^[0-9a-zA-Z\.-]\+$&amp;#39; | grep &amp;#39;\.&amp;#39; | sed &amp;#39;s#^\.\+##&amp;#39; | sort -u &amp;gt; temp_gfwlist.txt &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl https://raw.githubusercontent.com/hq450/fancyss/master/rules/gfwlist.conf | sed &amp;#39;s/ipset=\/\.//g; s/\/gfwlist//g; /^server/d&amp;#39; &amp;gt; temp_koolshare.txt &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cat temp_gfwlist.txt temp_koolshare.txt | sort -u &amp;gt; gfw_all_domain.txt &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -fsSLO --compressed &amp;#34;https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt&amp;#34; &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;11s/disable/manual/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;24s/disable/manual/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;12s/&amp;#34;&amp;#34;/&amp;#34;222.90.74.60&amp;#34;/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;25s/&amp;#34;&amp;#34;/&amp;#34;202.60.225.114&amp;#34;/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;s/&amp;#34;.\/ip_network_primary_sample&amp;#34;/&amp;#34;\/config\/china_ip_list.txt&amp;#34;/g&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;s/&amp;#34;.\/domain_alternative_sample&amp;#34;/&amp;#34;\/config\/gfw_all_domain.txt&amp;#34;/g&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rm -rf temp_koolshare.txt temp_gfwlist.txt &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rm -rf &amp;#34;overture-linux-amd64.zip&amp;#34; &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> chmod 0644 /config/ &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp /srv/config.json /config/ &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp /srv/*.txt /config/ &amp;amp;&amp;amp; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> apk del unzip curl
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Expose required ports
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#######################
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EXPOSE 53/udp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install required packages&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">RUN&lt;/span> &lt;span class="n">set&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">xe&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mkdir&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">apk&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">no&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">cache&lt;/span> &lt;span class="n">unzip&lt;/span> &lt;span class="n">curl&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">fsSLO&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">compressed&lt;/span> &lt;span class="s2">&amp;#34;https://github.com/shawn1m/overture/releases/download/${VERSION}/overture-linux-amd64.zip&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">unzip&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">o&lt;/span> &lt;span class="s2">&amp;#34;overture-linux-amd64.zip&amp;#34;&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">raw&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">githubusercontent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">master&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">base64&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sort&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;/^$\|@@/d&amp;#39;&lt;/span>&lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;s#!.\+##; s#|##g; s#@##g; s#http:\/\/##; s#https:\/\/##;&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;/\*/d; / apple\.com/d; /sina\.cn/d; /sina\.com\.cn/d; /baidu\.com/d; /qq\.com/d&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;/^[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+$/d&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">grep&lt;/span> &lt;span class="s1">&amp;#39;^[0-9a-zA-Z\.-]\+$&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">grep&lt;/span> &lt;span class="s1">&amp;#39;\.&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;s#^\.\+##&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sort&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">temp_gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">raw&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">githubusercontent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">hq450&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">fancyss&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">master&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">rules&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">conf&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;s/ipset=\/\.//g; s/\/gfwlist//g; /^server/d&amp;#39;&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">temp_koolshare&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cat&lt;/span> &lt;span class="n">temp_gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="n">temp_koolshare&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sort&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">gfw_all_domain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">fsSLO&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">compressed&lt;/span> &lt;span class="s2">&amp;#34;https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;11s/disable/manual/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;24s/disable/manual/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;12s/&amp;#34;&amp;#34;/&amp;#34;222.90.74.60&amp;#34;/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;25s/&amp;#34;&amp;#34;/&amp;#34;202.60.225.114&amp;#34;/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;s/&amp;#34;.\/ip_network_primary_sample&amp;#34;/&amp;#34;\/config\/china_ip_list.txt&amp;#34;/g&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;s/&amp;#34;.\/domain_alternative_sample&amp;#34;/&amp;#34;\/config\/gfw_all_domain.txt&amp;#34;/g&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rm&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">rf&lt;/span> &lt;span class="n">temp_koolshare&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="n">temp_gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rm&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">rf&lt;/span> &lt;span class="s2">&amp;#34;overture-linux-amd64.zip&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">chmod&lt;/span> &lt;span class="mi">0644&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">/&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cp&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">/&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cp&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/*.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">/&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">apk&lt;/span> &lt;span class="n">del&lt;/span> &lt;span class="n">unzip&lt;/span> &lt;span class="n">curl&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#VOLUME [ &amp;#34;/config&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Expose required ports&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#######################&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Change Shell
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">##############
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SHELL [&amp;#34;/bin/bash&amp;#34;, &amp;#34;-c&amp;#34;]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMD [&amp;#34;if [ \&amp;#34;`ls -A /config`\&amp;#34; = \&amp;#34;\&amp;#34; ]; then cp /srv/config.json /config/ &amp;amp;&amp;amp; cp /srv/*.txt /config/; fi&amp;#34;]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENTRYPOINT [ &amp;#34;/srv/overture-linux-amd64&amp;#34;, &amp;#34;-c&amp;#34;, &amp;#34;/config/config.json&amp;#34; ]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#CMD /srv/overture-linux-amd64 -c /config/config.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">EXPOSE&lt;/span> &lt;span class="mi">53&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">udp&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#VOLUME [ &amp;#34;/config&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Change Shell&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">SHELL&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/bin/bash&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;-c&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">CMD&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;if [ &lt;/span>&lt;span class="se">\&amp;#34;&lt;/span>&lt;span class="s2">`ls -A /config`&lt;/span>&lt;span class="se">\&amp;#34;&lt;/span>&lt;span class="s2"> = &lt;/span>&lt;span class="se">\&amp;#34;\&amp;#34;&lt;/span>&lt;span class="s2"> ]; then cp /srv/config.json /config/ &amp;amp;&amp;amp; cp /srv/*.txt /config/; fi&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="s2">&amp;#34;/srv/overture-linux-amd64&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;-c&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;/config/config.json&amp;#34;&lt;/span> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#CMD /srv/overture-linux-amd64 -c /config/config.json&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="docker-run-command">Docker run Command&lt;/h2>

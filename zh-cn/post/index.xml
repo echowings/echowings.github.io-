@@ -940,10 +940,10 @@ Since vyos 1.3.x base on debian 10, so we can install sshpass 1.06 for debian on
 &lt;li>
 &lt;p>管理员权限打开CMD.&lt;!-- raw HTML omitted -->在如下图所示图标右键。在“CommandPrompt“点击右键。然后在弹出的菜单 ”Run as Administror”，单击打开。
 如下图
-&lt;img src="https://echowings.github.io/zh-cn/p/post/2016-09-14_101553.jpg"
+&lt;img src="../../zh-cn/p/post/2016-09-14_101553.jpg"
 width="840"
 height="728"
-srcset="https://echowings.github.io/zh-cn/p/post/2016-09-14_101553_hu7810971e8a628346888e63335bad77f5_88259_480x0_resize_q75_box.jpg 480w, https://echowings.github.io/zh-cn/p/post/2016-09-14_101553_hu7810971e8a628346888e63335bad77f5_88259_1024x0_resize_q75_box.jpg 1024w"
+srcset="../../zh-cn/p/post/2016-09-14_101553_hu7810971e8a628346888e63335bad77f5_88259_480x0_resize_q75_box.jpg 480w, ../../zh-cn/p/post/2016-09-14_101553_hu7810971e8a628346888e63335bad77f5_88259_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"

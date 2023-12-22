@@ -1,182 +1,182 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Steve's Blog"><title>Tag: proxmox - Steve's Blog</title><link rel=canonical href=https://echowings.github.io/tags/proxmox/><link rel=stylesheet href=https://echowings.github.io/scss/style.min.ff300df33b80e2ac49809c825614392ed1c7b27591d65d3c4043602cd162e25f.css><meta property="og:title" content="Tag: proxmox - Steve's Blog"><meta property="og:description" content="Steve's Blog"><meta property="og:url" content="https://echowings.github.io/tags/proxmox/"><meta property="og:site_name" content="Steve's Blog"><meta property="og:type" content="website"><meta property="og:updated_time" content=" 2023-10-27T09:38:29+00:00 "><meta name=twitter:title content="Tag: proxmox - Steve's Blog"><meta name=twitter:description content="Steve's Blog"><link rel=alternate type=application/rss+xml href=https://echowings.github.io/tags/proxmox/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-128167130-1","auto"),ga("send","pageview"))</script><style>:root{--article-font-family:"Merriweather", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></head><body><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
-<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=https://echowings.github.io/><img src=https://echowings.github.io/img/avatar_hu49d781430fb14dff787875229fd54172_10515_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=https://echowings.github.io/>Steve's Blog</a></h1><h2 class=site-description>Steve's Blog</h2></div></header><ol class=menu id=main-menu><li><a href=https://echowings.github.io/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=https://echowings.github.io/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=https://echowings.github.io/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=https://echowings.github.io/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=https://echowings.github.io/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://echowings.github.io/ selected>English</option><option value=https://echowings.github.io/zh-cn/>中文</option><option value=https://echowings.github.io/ja/>日本語　</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><form action=https://echowings.github.io/search/ class="search-form widget"><p><label>Search</label>
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Steve's Blog"><title>Tag: proxmox - Steve's Blog</title>
+<link rel=canonical href=https://echowings.github.io/tags/proxmox/><link rel=stylesheet href=../../scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css><meta property="og:title" content="Tag: proxmox - Steve's Blog"><meta property="og:description" content="Steve's Blog"><meta property="og:url" content="https://echowings.github.io/tags/proxmox/"><meta property="og:site_name" content="Steve's Blog"><meta property="og:type" content="website"><meta property="og:updated_time" content=" 2023-12-22T09:22:43+00:00 "><meta name=twitter:title content="Tag: proxmox - Steve's Blog"><meta name=twitter:description content="Steve's Blog"><link rel=alternate type=application/rss+xml href=https://echowings.github.io/tags/proxmox/index.xml><script>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-128167130-1","auto"),ga("send","pageview"))</script><style>:root{--article-font-family:"Merriweather", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></head><body><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=../../><img src=../../img/avatar_hu49d781430fb14dff787875229fd54172_10515_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=../../>Steve's Blog</a></h1><h2 class=site-description>Steve's Blog</h2></div></header><ol class=menu id=main-menu><li><a href=../../><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=../../about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=../../archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=../../search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=../../links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://echowings.github.io/ selected>English</option><option value=https://echowings.github.io/zh-cn/>中文</option><option value=https://echowings.github.io/ja/>日本語　</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><form action=../../search/ class="search-form widget"><p><label>Search</label>
 <input name=keyword required placeholder="Type something...">
-<button title=Search><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></button></p></form><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9.828 9.172a4 4 0 100 5.656A10 10 0 0012 12a10 10 0 012.172-2.828 4 4 0 110 5.656A10 10 0 0112 12 10 10 0 009.828 9.172"/></svg></div><h2 class="widget-title section-title">Archives</h2><div class=widget-archive--list><div class=archives-year><a href=https://echowings.github.io/archives/#2023><span class=year>2023</span>
-<span class=count>16</span></a></div><div class=archives-year><a href=https://echowings.github.io/archives/#2022><span class=year>2022</span>
-<span class=count>9</span></a></div><div class=archives-year><a href=https://echowings.github.io/archives/#2021><span class=year>2021</span>
-<span class=count>18</span></a></div><div class=archives-year><a href=https://echowings.github.io/archives/#2020><span class=year>2020</span>
-<span class=count>12</span></a></div><div class=archives-year><a href=https://echowings.github.io/archives/#2019><span class=year>2019</span>
-<span class=count>45</span></a></div><div class=archives-year><a href=https://echowings.github.io/archives/#2018><span class=year>2018</span>
-<span class=count>21</span></a></div></div></section><section class="widget tagCloud"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags><a href=https://echowings.github.io/categories/linux/ class=font_size_23>linux</a>
-<a href=https://echowings.github.io/categories/virtualization/ class=font_size_23>virtualization</a>
-<a href=https://echowings.github.io/categories/networking/ class=font_size_15>networking</a>
-<a href=https://echowings.github.io/categories/devops/ class=font_size_12>devops</a>
-<a href=https://echowings.github.io/categories/pve/ class=font_size_6>pve</a>
-<a href=https://echowings.github.io/categories/blog/ class=font_size_4>Blog</a>
-<a href=https://echowings.github.io/categories/docker/ class=font_size_4>docker</a>
-<a href=https://echowings.github.io/categories/macos/ class=font_size_4>macos</a>
-<a href=https://echowings.github.io/categories/network/ class=font_size_3>network</a>
-<a href=https://echowings.github.io/categories/kubernetes/ class=font_size_2>kubernetes</a>
-<a href=https://echowings.github.io/categories/nginx/ class=font_size_2>nginx</a>
-<a href=https://echowings.github.io/categories/programming/ class=font_size_2>programming</a>
-<a href=https://echowings.github.io/categories/shell/ class=font_size_2>shell</a>
-<a href=https://echowings.github.io/categories/vyos/ class=font_size_2>vyos</a>
-<a href=https://echowings.github.io/categories/zsh/ class=font_size_2>zsh</a>
-<a href=https://echowings.github.io/categories/ansible/ class=font_size_1>ansible</a>
-<a href=https://echowings.github.io/categories/container/ class=font_size_1>container</a>
-<a href=https://echowings.github.io/categories/containers/ class=font_size_1>containers</a>
-<a href=https://echowings.github.io/categories/develop/ class=font_size_1>develop</a>
-<a href=https://echowings.github.io/categories/devop/ class=font_size_1>devop</a>
-<a href=https://echowings.github.io/categories/dns/ class=font_size_1>dns</a>
-<a href=https://echowings.github.io/categories/freebsd/ class=font_size_1>freebsd</a>
-<a href=https://echowings.github.io/categories/graylog/ class=font_size_1>graylog</a>
-<a href=https://echowings.github.io/categories/hardware/ class=font_size_1>Hardware</a>
-<a href=https://echowings.github.io/categories/hugo/ class=font_size_1>hugo</a>
-<a href=https://echowings.github.io/categories/index/ class=font_size_1>index</a>
-<a href=https://echowings.github.io/categories/kubernets/ class=font_size_1>kubernets</a>
-<a href=https://echowings.github.io/categories/monitoring/ class=font_size_1>monitoring</a>
-<a href=https://echowings.github.io/categories/perl/ class=font_size_1>perl</a>
-<a href=https://echowings.github.io/categories/powerdns/ class=font_size_1>powerdns</a>
-<a href=https://echowings.github.io/categories/python/ class=font_size_1>python</a>
-<a href=https://echowings.github.io/categories/reverse-proxy/ class=font_size_1>reverse proxy</a>
-<a href=https://echowings.github.io/categories/ssh/ class=font_size_1>ssh</a>
-<a href=https://echowings.github.io/categories/vim/ class=font_size_1>vim</a>
-<a href=https://echowings.github.io/categories/vlmcsd/ class=font_size_1>vlmcsd</a>
-<a href=https://echowings.github.io/categories/windows/ class=font_size_1>windows</a></div></section><section class="widget tagCloud"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg></div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags><a href=https://echowings.github.io/tags/pve/ class=font_size_41>pve</a>
-<a href=https://echowings.github.io/tags/debian/ class=font_size_25>debian</a>
-<a href=https://echowings.github.io/tags/linux/ class=font_size_24>linux</a>
-<a href=https://echowings.github.io/tags/docker/ class=font_size_20>docker</a>
-<a href=https://echowings.github.io/tags/vyos/ class=font_size_17>vyos</a>
-<a href=https://echowings.github.io/tags/devops/ class=font_size_11>devops</a>
-<a href=https://echowings.github.io/tags/docker-compose/ class=font_size_9>docker-compose</a>
-<a href=https://echowings.github.io/tags/networking/ class=font_size_9>networking</a>
-<a href=https://echowings.github.io/tags/ceph/ class=font_size_5>ceph</a>
-<a href=https://echowings.github.io/tags/macos/ class=font_size_5>macos</a>
-<a href=https://echowings.github.io/tags/shell/ class=font_size_5>shell</a>
-<a href=https://echowings.github.io/tags/hci/ class=font_size_4>hci</a>
-<a href=https://echowings.github.io/tags/k8s/ class=font_size_4>k8s</a>
-<a href=https://echowings.github.io/tags/ansible/ class=font_size_3>ansible</a>
-<a href=https://echowings.github.io/tags/centos/ class=font_size_3>centos</a>
-<a href=https://echowings.github.io/tags/chinese/ class=font_size_3>chinese</a>
-<a href=https://echowings.github.io/tags/debian10/ class=font_size_3>debian10</a>
-<a href=https://echowings.github.io/tags/git/ class=font_size_3>git</a>
-<a href=https://echowings.github.io/tags/kms/ class=font_size_3>kms</a>
-<a href=https://echowings.github.io/tags/kubernetes/ class=font_size_3>kubernetes</a>
-<a href=https://echowings.github.io/tags/librenms/ class=font_size_3>librenms</a>
-<a href=https://echowings.github.io/tags/network/ class=font_size_3>network</a>
-<a href=https://echowings.github.io/tags/nginx/ class=font_size_3>nginx</a>
-<a href=https://echowings.github.io/tags/overture/ class=font_size_3>overture</a>
-<a href=https://echowings.github.io/tags/proxmox-ve/ class=font_size_3>proxmox ve</a>
-<a href=https://echowings.github.io/tags/ubuntu/ class=font_size_3>ubuntu</a>
-<a href=https://echowings.github.io/tags/api/ class=font_size_2>api</a>
-<a href=https://echowings.github.io/tags/automation/ class=font_size_2>automation</a>
-<a href=https://echowings.github.io/tags/bash/ class=font_size_2>bash</a>
-<a href=https://echowings.github.io/tags/bcache/ class=font_size_2>bcache</a>
-<a href=https://echowings.github.io/tags/cisco/ class=font_size_2>cisco</a>
-<a href=https://echowings.github.io/tags/cloud-init/ class=font_size_2>cloud-init</a>
-<a href=https://echowings.github.io/tags/ddns/ class=font_size_2>ddns</a>
-<a href=https://echowings.github.io/tags/debian-10/ class=font_size_2>debian 10</a>
-<a href=https://echowings.github.io/tags/dns/ class=font_size_2>dns</a>
-<a href=https://echowings.github.io/tags/dotnetcore/ class=font_size_2>dotnetcore</a>
-<a href=https://echowings.github.io/tags/freebsd/ class=font_size_2>freebsd</a>
-<a href=https://echowings.github.io/tags/go/ class=font_size_2>go</a>
-<a href=https://echowings.github.io/tags/kvm/ class=font_size_2>KVM</a>
-<a href=https://echowings.github.io/tags/lvm/ class=font_size_2>lvm</a>
-<a href=https://echowings.github.io/tags/openssl/ class=font_size_2>openssl</a>
-<a href=https://echowings.github.io/tags/pbs/ class=font_size_2>pbs</a>
-<a href=https://echowings.github.io/tags/pppoe/ class=font_size_2>pppoe</a>
-<a href=https://echowings.github.io/tags/proxmox/ class=font_size_2>proxmox</a>
-<a href=https://echowings.github.io/tags/python/ class=font_size_2>python</a>
-<a href=https://echowings.github.io/tags/snmp/ class=font_size_2>snmp</a>
-<a href=https://echowings.github.io/tags/ssh/ class=font_size_2>ssh</a>
-<a href=https://echowings.github.io/tags/storage/ class=font_size_2>storage</a>
-<a href=https://echowings.github.io/tags/vlmcsd/ class=font_size_2>vlmcsd</a>
-<a href=https://echowings.github.io/tags/windows/ class=font_size_2>windows</a>
-<a href=https://echowings.github.io/tags/zsh/ class=font_size_2>zsh</a>
-<a href=https://echowings.github.io/tags/adsl/ class=font_size_1>adsl</a>
-<a href=https://echowings.github.io/tags/backup/ class=font_size_1>backup</a>
-<a href=https://echowings.github.io/tags/blue-screen/ class=font_size_1>blue screen</a>
-<a href=https://echowings.github.io/tags/bookstack/ class=font_size_1>bookstack</a>
-<a href=https://echowings.github.io/tags/catalina/ class=font_size_1>catalina</a>
-<a href=https://echowings.github.io/tags/catalyst/ class=font_size_1>catalyst</a>
-<a href=https://echowings.github.io/tags/cka/ class=font_size_1>cka</a>
-<a href=https://echowings.github.io/tags/cloudflare/ class=font_size_1>cloudflare</a>
-<a href=https://echowings.github.io/tags/cloudinit/ class=font_size_1>cloudinit</a>
-<a href=https://echowings.github.io/tags/cluster/ class=font_size_1>cluster</a>
-<a href=https://echowings.github.io/tags/container/ class=font_size_1>container</a>
-<a href=https://echowings.github.io/tags/crontab/ class=font_size_1>crontab</a>
-<a href=https://echowings.github.io/tags/dcompass/ class=font_size_1>dcompass</a>
-<a href=https://echowings.github.io/tags/debian-11/ class=font_size_1>debian 11</a>
-<a href=https://echowings.github.io/tags/debian-12/ class=font_size_1>debian 12</a>
-<a href=https://echowings.github.io/tags/debian11/ class=font_size_1>debian11</a>
-<a href=https://echowings.github.io/tags/dev/ class=font_size_1>dev</a>
-<a href=https://echowings.github.io/tags/diskutil/ class=font_size_1>diskutil</a>
-<a href=https://echowings.github.io/tags/diy/ class=font_size_1>DIY</a>
-<a href=https://echowings.github.io/tags/dockerfile/ class=font_size_1>dockerfile</a>
-<a href=https://echowings.github.io/tags/document/ class=font_size_1>document</a>
-<a href=https://echowings.github.io/tags/domain/ class=font_size_1>domain</a>
-<a href=https://echowings.github.io/tags/elasticflow/ class=font_size_1>elasticflow</a>
-<a href=https://echowings.github.io/tags/etcd/ class=font_size_1>etcd</a>
-<a href=https://echowings.github.io/tags/firewall/ class=font_size_1>firewall</a>
-<a href=https://echowings.github.io/tags/flask/ class=font_size_1>flask</a>
-<a href=https://echowings.github.io/tags/freedns/ class=font_size_1>freedns</a>
-<a href=https://echowings.github.io/tags/freeradius/ class=font_size_1>freeradius</a>
-<a href=https://echowings.github.io/tags/git_action/ class=font_size_1>git_action</a>
-<a href=https://echowings.github.io/tags/gitea/ class=font_size_1>gitea</a>
-<a href=https://echowings.github.io/tags/github-pag/ class=font_size_1>github pag</a>
-<a href=https://echowings.github.io/tags/gitlab/ class=font_size_1>gitlab</a>
-<a href=https://echowings.github.io/tags/golang/ class=font_size_1>golang</a>
-<a href=https://echowings.github.io/tags/graylog/ class=font_size_1>graylog</a>
-<a href=https://echowings.github.io/tags/hardware/ class=font_size_1>hardware</a>
-<a href=https://echowings.github.io/tags/he.net/ class=font_size_1>he.net</a>
-<a href=https://echowings.github.io/tags/hugo/ class=font_size_1>hugo</a>
-<a href=https://echowings.github.io/tags/iis/ class=font_size_1>iis</a>
-<a href=https://echowings.github.io/tags/ios/ class=font_size_1>ios</a>
-<a href=https://echowings.github.io/tags/iperf/ class=font_size_1>iperf</a>
-<a href=https://echowings.github.io/tags/ipsec/ class=font_size_1>ipsec</a>
-<a href=https://echowings.github.io/tags/jenkins/ class=font_size_1>jenkins</a>
-<a href=https://echowings.github.io/tags/jitsi/ class=font_size_1>jitsi</a>
-<a href=https://echowings.github.io/tags/kubrenetes/ class=font_size_1>kubrenetes</a>
-<a href=https://echowings.github.io/tags/ldap/ class=font_size_1>ldap</a>
-<a href=https://echowings.github.io/tags/loveit/ class=font_size_1>loveit</a>
-<a href=https://echowings.github.io/tags/lxc/ class=font_size_1>lxc</a>
-<a href=https://echowings.github.io/tags/mellanox/ class=font_size_1>mellanox</a>
-<a href=https://echowings.github.io/tags/monitoring/ class=font_size_1>monitoring</a>
-<a href=https://echowings.github.io/tags/mosdns/ class=font_size_1>mosdns</a>
-<a href=https://echowings.github.io/tags/mysql/ class=font_size_1>mysql</a>
-<a href=https://echowings.github.io/tags/netflow/ class=font_size_1>netflow</a>
-<a href=https://echowings.github.io/tags/network_shunt/ class=font_size_1>network_shunt</a>
-<a href=https://echowings.github.io/tags/ntfs/ class=font_size_1>ntfs</a>
-<a href=https://echowings.github.io/tags/ntp/ class=font_size_1>ntp</a>
-<a href=https://echowings.github.io/tags/opencase/ class=font_size_1>opencase</a>
-<a href=https://echowings.github.io/tags/pass-through/ class=font_size_1>pass through</a>
-<a href=https://echowings.github.io/tags/pbr/ class=font_size_1>PBR</a>
-<a href=https://echowings.github.io/tags/per-lc_all_error/ class=font_size_1>per-lc_all_error</a>
-<a href=https://echowings.github.io/tags/pfsense/ class=font_size_1>pfsense</a>
-<a href=https://echowings.github.io/tags/pipline/ class=font_size_1>pipline</a>
-<a href=https://echowings.github.io/tags/powerdns/ class=font_size_1>powerdns</a>
-<a href=https://echowings.github.io/tags/programming/ class=font_size_1>programming</a>
-<a href=https://echowings.github.io/tags/proxmox-backup-server/ class=font_size_1>proxmox backup server</a>
-<a href=https://echowings.github.io/tags/pve8/ class=font_size_1>pve8</a>
-<a href=https://echowings.github.io/tags/repair-boot/ class=font_size_1>repair boot</a>
-<a href=https://echowings.github.io/tags/reverse-proxy/ class=font_size_1>reverse proxy</a>
-<a href=https://echowings.github.io/tags/rhel/ class=font_size_1>rhel</a>
-<a href=https://echowings.github.io/tags/site-to-site/ class=font_size_1>site-to-site</a>
-<a href=https://echowings.github.io/tags/speedtest/ class=font_size_1>speedtest</a>
-<a href=https://echowings.github.io/tags/squirrel/ class=font_size_1>squirrel</a>
-<a href=https://echowings.github.io/tags/sre/ class=font_size_1>sre</a>
-<a href=https://echowings.github.io/tags/sshpass/ class=font_size_1>sshpass</a>
-<a href=https://echowings.github.io/tags/ssl/ class=font_size_1>ssl</a>
-<a href=https://echowings.github.io/tags/translate/ class=font_size_1>translate</a>
-<a href=https://echowings.github.io/tags/upgrade/ class=font_size_1>upgrade</a>
-<a href=https://echowings.github.io/tags/vagrant/ class=font_size_1>vagrant</a>
-<a href=https://echowings.github.io/tags/vbash/ class=font_size_1>vbash</a>
-<a href=https://echowings.github.io/tags/vim/ class=font_size_1>vim</a>
-<a href=https://echowings.github.io/tags/virtualbox/ class=font_size_1>virtualbox</a>
-<a href=https://echowings.github.io/tags/vmid/ class=font_size_1>vmid</a>
-<a href=https://echowings.github.io/tags/vpn/ class=font_size_1>vpn</a>
-<a href=https://echowings.github.io/tags/weak/ class=font_size_1>weak</a>
-<a href=https://echowings.github.io/tags/wireguard/ class=font_size_1>wireguard</a></div></section></aside><main class="main full-width"><header><h3 class=section-title>Tags</h3><div class=section-card><div class=section-details><h3 class=section-count>2 pages</h3><h1 class=section-term>proxmox</h1></div></div></header><section class=article-list--compact><article><a href=https://echowings.github.io/p/how-to-install-pbs2.3-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pbs2.3 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:10:21+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=244bc190" loading=lazy alt="Featured image of post How to Install Pbs2.3 on Debian11"></div></a></article><article><a href=https://echowings.github.io/p/how-to-install-pve7-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pve7 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:07:19+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=24e0a3fc" loading=lazy alt="Featured image of post How to Install Pve7 on Debian11"></div></a></article></section><footer class=site-footer><section class=copyright>&copy;
+<button title=Search><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></button></p></form><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9.828 9.172a4 4 0 100 5.656A10 10 0 0012 12a10 10 0 012.172-2.828 4 4 0 110 5.656A10 10 0 0112 12 10 10 0 009.828 9.172"/></svg></div><h2 class="widget-title section-title">Archives</h2><div class=widget-archive--list><div class=archives-year><a href=../../archives/#2023><span class=year>2023</span>
+<span class=count>16</span></a></div><div class=archives-year><a href=../../archives/#2022><span class=year>2022</span>
+<span class=count>9</span></a></div><div class=archives-year><a href=../../archives/#2021><span class=year>2021</span>
+<span class=count>18</span></a></div><div class=archives-year><a href=../../archives/#2020><span class=year>2020</span>
+<span class=count>12</span></a></div><div class=archives-year><a href=../../archives/#2019><span class=year>2019</span>
+<span class=count>45</span></a></div><div class=archives-year><a href=../../archives/#2018><span class=year>2018</span>
+<span class=count>21</span></a></div></div></section><section class="widget tagCloud"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags><a href=../../categories/linux/ class=font_size_23>linux
+</a><a href=../../categories/virtualization/ class=font_size_23>virtualization
+</a><a href=../../categories/networking/ class=font_size_15>networking
+</a><a href=../../categories/devops/ class=font_size_12>devops
+</a><a href=../../categories/pve/ class=font_size_6>pve
+</a><a href=../../categories/blog/ class=font_size_4>Blog
+</a><a href=../../categories/docker/ class=font_size_4>docker
+</a><a href=../../categories/macos/ class=font_size_4>macos
+</a><a href=../../categories/network/ class=font_size_3>network
+</a><a href=../../categories/kubernetes/ class=font_size_2>kubernetes
+</a><a href=../../categories/nginx/ class=font_size_2>nginx
+</a><a href=../../categories/programming/ class=font_size_2>programming
+</a><a href=../../categories/shell/ class=font_size_2>shell
+</a><a href=../../categories/vyos/ class=font_size_2>vyos
+</a><a href=../../categories/zsh/ class=font_size_2>zsh
+</a><a href=../../categories/ansible/ class=font_size_1>ansible
+</a><a href=../../categories/container/ class=font_size_1>container
+</a><a href=../../categories/containers/ class=font_size_1>containers
+</a><a href=../../categories/develop/ class=font_size_1>develop
+</a><a href=../../categories/devop/ class=font_size_1>devop
+</a><a href=../../categories/dns/ class=font_size_1>dns
+</a><a href=../../categories/freebsd/ class=font_size_1>freebsd
+</a><a href=../../categories/graylog/ class=font_size_1>graylog
+</a><a href=../../categories/hardware/ class=font_size_1>Hardware
+</a><a href=../../categories/hugo/ class=font_size_1>hugo
+</a><a href=../../categories/index/ class=font_size_1>index
+</a><a href=../../categories/kubernets/ class=font_size_1>kubernets
+</a><a href=../../categories/monitoring/ class=font_size_1>monitoring
+</a><a href=../../categories/perl/ class=font_size_1>perl
+</a><a href=../../categories/powerdns/ class=font_size_1>powerdns
+</a><a href=../../categories/python/ class=font_size_1>python
+</a><a href=../../categories/reverse-proxy/ class=font_size_1>reverse proxy
+</a><a href=../../categories/ssh/ class=font_size_1>ssh
+</a><a href=../../categories/vim/ class=font_size_1>vim
+</a><a href=../../categories/vlmcsd/ class=font_size_1>vlmcsd
+</a><a href=../../categories/windows/ class=font_size_1>windows</a></div></section><section class="widget tagCloud"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg></div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags><a href=../../tags/pve/ class=font_size_41>pve
+</a><a href=../../tags/debian/ class=font_size_25>debian
+</a><a href=../../tags/linux/ class=font_size_24>linux
+</a><a href=../../tags/docker/ class=font_size_20>docker
+</a><a href=../../tags/vyos/ class=font_size_17>vyos
+</a><a href=../../tags/devops/ class=font_size_11>devops
+</a><a href=../../tags/docker-compose/ class=font_size_9>docker-compose
+</a><a href=../../tags/networking/ class=font_size_9>networking
+</a><a href=../../tags/ceph/ class=font_size_5>ceph
+</a><a href=../../tags/macos/ class=font_size_5>macos
+</a><a href=../../tags/shell/ class=font_size_5>shell
+</a><a href=../../tags/hci/ class=font_size_4>hci
+</a><a href=../../tags/k8s/ class=font_size_4>k8s
+</a><a href=../../tags/ansible/ class=font_size_3>ansible
+</a><a href=../../tags/centos/ class=font_size_3>centos
+</a><a href=../../tags/chinese/ class=font_size_3>chinese
+</a><a href=../../tags/debian10/ class=font_size_3>debian10
+</a><a href=../../tags/git/ class=font_size_3>git
+</a><a href=../../tags/kms/ class=font_size_3>kms
+</a><a href=../../tags/kubernetes/ class=font_size_3>kubernetes
+</a><a href=../../tags/librenms/ class=font_size_3>librenms
+</a><a href=../../tags/network/ class=font_size_3>network
+</a><a href=../../tags/nginx/ class=font_size_3>nginx
+</a><a href=../../tags/overture/ class=font_size_3>overture
+</a><a href=../../tags/proxmox-ve/ class=font_size_3>proxmox ve
+</a><a href=../../tags/ubuntu/ class=font_size_3>ubuntu
+</a><a href=../../tags/api/ class=font_size_2>api
+</a><a href=../../tags/automation/ class=font_size_2>automation
+</a><a href=../../tags/bash/ class=font_size_2>bash
+</a><a href=../../tags/bcache/ class=font_size_2>bcache
+</a><a href=../../tags/cisco/ class=font_size_2>cisco
+</a><a href=../../tags/cloud-init/ class=font_size_2>cloud-init
+</a><a href=../../tags/ddns/ class=font_size_2>ddns
+</a><a href=../../tags/debian-10/ class=font_size_2>debian 10
+</a><a href=../../tags/dns/ class=font_size_2>dns
+</a><a href=../../tags/dotnetcore/ class=font_size_2>dotnetcore
+</a><a href=../../tags/freebsd/ class=font_size_2>freebsd
+</a><a href=../../tags/go/ class=font_size_2>go
+</a><a href=../../tags/kvm/ class=font_size_2>KVM
+</a><a href=../../tags/lvm/ class=font_size_2>lvm
+</a><a href=../../tags/openssl/ class=font_size_2>openssl
+</a><a href=../../tags/pbs/ class=font_size_2>pbs
+</a><a href=../../tags/pppoe/ class=font_size_2>pppoe
+</a><a href=../../tags/proxmox/ class=font_size_2>proxmox
+</a><a href=../../tags/python/ class=font_size_2>python
+</a><a href=../../tags/snmp/ class=font_size_2>snmp
+</a><a href=../../tags/ssh/ class=font_size_2>ssh
+</a><a href=../../tags/storage/ class=font_size_2>storage
+</a><a href=../../tags/vlmcsd/ class=font_size_2>vlmcsd
+</a><a href=../../tags/windows/ class=font_size_2>windows
+</a><a href=../../tags/zsh/ class=font_size_2>zsh
+</a><a href=../../tags/adsl/ class=font_size_1>adsl
+</a><a href=../../tags/backup/ class=font_size_1>backup
+</a><a href=../../tags/blue-screen/ class=font_size_1>blue screen
+</a><a href=../../tags/bookstack/ class=font_size_1>bookstack
+</a><a href=../../tags/catalina/ class=font_size_1>catalina
+</a><a href=../../tags/catalyst/ class=font_size_1>catalyst
+</a><a href=../../tags/cka/ class=font_size_1>cka
+</a><a href=../../tags/cloudflare/ class=font_size_1>cloudflare
+</a><a href=../../tags/cloudinit/ class=font_size_1>cloudinit
+</a><a href=../../tags/cluster/ class=font_size_1>cluster
+</a><a href=../../tags/container/ class=font_size_1>container
+</a><a href=../../tags/crontab/ class=font_size_1>crontab
+</a><a href=../../tags/dcompass/ class=font_size_1>dcompass
+</a><a href=../../tags/debian-11/ class=font_size_1>debian 11
+</a><a href=../../tags/debian-12/ class=font_size_1>debian 12
+</a><a href=../../tags/debian11/ class=font_size_1>debian11
+</a><a href=../../tags/dev/ class=font_size_1>dev
+</a><a href=../../tags/diskutil/ class=font_size_1>diskutil
+</a><a href=../../tags/diy/ class=font_size_1>DIY
+</a><a href=../../tags/dockerfile/ class=font_size_1>dockerfile
+</a><a href=../../tags/document/ class=font_size_1>document
+</a><a href=../../tags/domain/ class=font_size_1>domain
+</a><a href=../../tags/elasticflow/ class=font_size_1>elasticflow
+</a><a href=../../tags/etcd/ class=font_size_1>etcd
+</a><a href=../../tags/firewall/ class=font_size_1>firewall
+</a><a href=../../tags/flask/ class=font_size_1>flask
+</a><a href=../../tags/freedns/ class=font_size_1>freedns
+</a><a href=../../tags/freeradius/ class=font_size_1>freeradius
+</a><a href=../../tags/git_action/ class=font_size_1>git_action
+</a><a href=../../tags/gitea/ class=font_size_1>gitea
+</a><a href=../../tags/github-pag/ class=font_size_1>github pag
+</a><a href=../../tags/gitlab/ class=font_size_1>gitlab
+</a><a href=../../tags/golang/ class=font_size_1>golang
+</a><a href=../../tags/graylog/ class=font_size_1>graylog
+</a><a href=../../tags/hardware/ class=font_size_1>hardware
+</a><a href=../../tags/he.net/ class=font_size_1>he.net
+</a><a href=../../tags/hugo/ class=font_size_1>hugo
+</a><a href=../../tags/iis/ class=font_size_1>iis
+</a><a href=../../tags/ios/ class=font_size_1>ios
+</a><a href=../../tags/iperf/ class=font_size_1>iperf
+</a><a href=../../tags/ipsec/ class=font_size_1>ipsec
+</a><a href=../../tags/jenkins/ class=font_size_1>jenkins
+</a><a href=../../tags/jitsi/ class=font_size_1>jitsi
+</a><a href=../../tags/kubrenetes/ class=font_size_1>kubrenetes
+</a><a href=../../tags/ldap/ class=font_size_1>ldap
+</a><a href=../../tags/loveit/ class=font_size_1>loveit
+</a><a href=../../tags/lxc/ class=font_size_1>lxc
+</a><a href=../../tags/mellanox/ class=font_size_1>mellanox
+</a><a href=../../tags/monitoring/ class=font_size_1>monitoring
+</a><a href=../../tags/mosdns/ class=font_size_1>mosdns
+</a><a href=../../tags/mysql/ class=font_size_1>mysql
+</a><a href=../../tags/netflow/ class=font_size_1>netflow
+</a><a href=../../tags/network_shunt/ class=font_size_1>network_shunt
+</a><a href=../../tags/ntfs/ class=font_size_1>ntfs
+</a><a href=../../tags/ntp/ class=font_size_1>ntp
+</a><a href=../../tags/opencase/ class=font_size_1>opencase
+</a><a href=../../tags/pass-through/ class=font_size_1>pass through
+</a><a href=../../tags/pbr/ class=font_size_1>PBR
+</a><a href=../../tags/per-lc_all_error/ class=font_size_1>per-lc_all_error
+</a><a href=../../tags/pfsense/ class=font_size_1>pfsense
+</a><a href=../../tags/pipline/ class=font_size_1>pipline
+</a><a href=../../tags/powerdns/ class=font_size_1>powerdns
+</a><a href=../../tags/programming/ class=font_size_1>programming
+</a><a href=../../tags/proxmox-backup-server/ class=font_size_1>proxmox backup server
+</a><a href=../../tags/pve8/ class=font_size_1>pve8
+</a><a href=../../tags/repair-boot/ class=font_size_1>repair boot
+</a><a href=../../tags/reverse-proxy/ class=font_size_1>reverse proxy
+</a><a href=../../tags/rhel/ class=font_size_1>rhel
+</a><a href=../../tags/site-to-site/ class=font_size_1>site-to-site
+</a><a href=../../tags/speedtest/ class=font_size_1>speedtest
+</a><a href=../../tags/squirrel/ class=font_size_1>squirrel
+</a><a href=../../tags/sre/ class=font_size_1>sre
+</a><a href=../../tags/sshpass/ class=font_size_1>sshpass
+</a><a href=../../tags/ssl/ class=font_size_1>ssl
+</a><a href=../../tags/translate/ class=font_size_1>translate
+</a><a href=../../tags/upgrade/ class=font_size_1>upgrade
+</a><a href=../../tags/vagrant/ class=font_size_1>vagrant
+</a><a href=../../tags/vbash/ class=font_size_1>vbash
+</a><a href=../../tags/vim/ class=font_size_1>vim
+</a><a href=../../tags/virtualbox/ class=font_size_1>virtualbox
+</a><a href=../../tags/vmid/ class=font_size_1>vmid
+</a><a href=../../tags/vpn/ class=font_size_1>vpn
+</a><a href=../../tags/weak/ class=font_size_1>weak
+</a><a href=../../tags/wireguard/ class=font_size_1>wireguard</a></div></section></aside><main class="main full-width"><header><h3 class=section-title>Tags</h3><div class=section-card><div class=section-details><h3 class=section-count>2 pages</h3><h1 class=section-term>proxmox</h1></div></div></header><section class=article-list--compact><article><a href=../../p/how-to-install-pbs2.3-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pbs2.3 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:10:21+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=244bc190" loading=lazy alt="Featured image of post How to Install Pbs2.3 on Debian11"></div></a></article><article><a href=../../p/how-to-install-pve7-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pve7 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:07:19+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=24e0a3fc" loading=lazy alt="Featured image of post How to Install Pve7 on Debian11"></div></a></article></section><footer class=site-footer><section class=copyright>&copy;
 2018 -
-2023 Steve's Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=https://echowings.github.io/ts/main.js defer></script>
-<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
+2023 Steve's Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.21.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=../../ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
