@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Build Vyos Image 1.3.5</title><link>https://echowings.github.io/p/how-to-build-vyos-image-1.3.5/</link><pubDate>Fri, 22 Dec 2023 17:41:27 +0800</pubDate><guid>https://echowings.github.io/p/how-to-build-vyos-image-1.3.5/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=9b164b10" alt="Featured image of post How to Build Vyos Image 1.3.5" />&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Crack Sublime Text</title><link>https://echowings.github.io/p/how-to-crack-sublime-text/</link><pubDate>Fri, 22 Dec 2023 22:21:07 +0800</pubDate><guid>https://echowings.github.io/p/how-to-crack-sublime-text/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=07a5b7d2" alt="Featured image of post How to Crack Sublime Text" />&lt;h1 id="how-to-crack-sublime-text">How to crack sublime text&lt;/h1>
+&lt;ol>
+&lt;li>Backup original sublime_text.exe to sublime_text.exe.bak (COPY)&lt;/li>
+&lt;li>go to &lt;a class="link" href="https://hexed.it/" target="_blank" rel="noopener"
+>https://hexed.it/&lt;/a> -&amp;gt; Click Open File (Location sublime_text.exe)&lt;/li>
+&lt;li>Find in Hex: &lt;code>80 78 05 00 0f 94 c1&lt;/code>&lt;/li>
+&lt;li>Replace with &lt;code>c6 40 05 01 48 85 c9&lt;/code>&lt;/li>
+&lt;li>Save or Save As to (Location sublime_text.exe) Done&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff" target="_blank" rel="noopener"
+>https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to Build Vyos Image 1.3.5</title><link>https://echowings.github.io/p/how-to-build-vyos-image-1.3.5/</link><pubDate>Fri, 22 Dec 2023 17:41:27 +0800</pubDate><guid>https://echowings.github.io/p/how-to-build-vyos-image-1.3.5/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=9b164b10" alt="Featured image of post How to Build Vyos Image 1.3.5" />&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
