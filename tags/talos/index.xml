@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>talos on Steve's Blog</title><link>https://echowings.github.io/tags/talos/</link><description>Recent content in talos on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 Dec 2023 15:31:54 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/talos/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Single Kubernetes Cluster With Talos on Bare Metal</title><link>https://echowings.github.io/p/how-to-create-single-kubernetes-cluster-with-talos-on-bare-metal/</link><pubDate>Tue, 26 Dec 2023 15:31:54 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-single-kubernetes-cluster-with-talos-on-bare-metal/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=24352ced" alt="Featured image of post How to Create Single Kubernetes Cluster With Talos on Bare Metal" />&lt;h2 id="install-talosctl-on-your-laptop-or-client">Install talosctl on your laptop or client&lt;/h2>
+&lt;h3 id="install-talosctl-on-your-system">Install talosctl on your system&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sL https://talos.dev/install &lt;span class="p">|&lt;/span> sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="setup-the-talos-linux-nodes">Setup the Talos Linux Nodes&lt;/h2>
+&lt;h3 id="download-latest-talos-iso">Download latest talos iso&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##For amd64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">VER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://api.github.com/repos/siderolabs/talos/releases/latest&lt;span class="p">|&lt;/span>grep tag_name&lt;span class="p">|&lt;/span>cut -d &lt;span class="s1">&amp;#39;&amp;#34;&amp;#39;&lt;/span> -f 4&lt;span class="p">|&lt;/span>sed &lt;span class="s1">&amp;#39;s/v//&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$VER&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://github.com/siderolabs/talos/releases/download/v&lt;span class="si">${&lt;/span>&lt;span class="nv">VER&lt;/span>&lt;span class="si">}&lt;/span>/talos-amd64.iso
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##For RM64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://github.com/siderolabs/talos/releases/download/v&lt;span class="si">${&lt;/span>&lt;span class="nv">VER&lt;/span>&lt;span class="si">}&lt;/span>/talos-arm64.iso
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="boot-talos-iso-on-bare-metal-server">Boot talos iso on bare metal server&lt;/h3>
+&lt;p>write talos on usb and boot it on usb live mode&lt;/p>
+&lt;p>Then setup the static ip with &lt;code>F3&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Hostname&lt;/td>
+&lt;td>talos-k8s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DNS Servers&lt;/td>
+&lt;td>192.168.11.10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Time Servers&lt;/td>
+&lt;td>0.pool.ntp.org&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Interface&lt;/td>
+&lt;td>enp1s0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mode&lt;/td>
+&lt;td>Static&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Addresses&lt;/td>
+&lt;td>192.168.11.61/24&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway&lt;/td>
+&lt;td>192.168.11.1&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="setup-talos">setup talos&lt;/h2>
+&lt;h3 id="delete-exist-configure">Delete exist configure&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl"> rm -rf secrets.yaml worker.yaml controlplane.yaml talosconfig ~/.talos ~/_out ~/.kube
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="generate-configure">Generate configure&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;span class="lnt">81
+&lt;/span>&lt;span class="lnt">82
+&lt;/span>&lt;span class="lnt">83
+&lt;/span>&lt;span class="lnt">84
+&lt;/span>&lt;span class="lnt">85
+&lt;/span>&lt;span class="lnt">86
+&lt;/span>&lt;span class="lnt">87
+&lt;/span>&lt;span class="lnt">88
+&lt;/span>&lt;span class="lnt">89
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CONTROL_PLANE_IP&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;192.168.11.61&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl gen secrets -o secrets.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl gen config --with-secrets secrets.yaml my-cluster https://&lt;span class="nv">$CONTROL_PLANE_IP&lt;/span>:6443 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --output-dir _out
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> talosctl -n &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span> disks --insecure
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#modify disk&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#/dev/mmcblk0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/sda/mmcblk0/g&amp;#39;&lt;/span> _out/controlplane.yaml _out/worker.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &lt;span class="s1">&amp;#39;s/\#\ allowSchedulingOnControlPlanes\:\ true/allowSchedulingOnControlPlanes\:\ true/g&amp;#39;&lt;/span> _out/worker.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/^\s*# allowSchedulingOnControlPlanes: true/ allowSchedulingOnControlPlanes: true/&amp;#39;&lt;/span> _out/controlplane.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Save the file and fire up the control plane first:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl apply-config --insecure -n &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span> --file _out/controlplane.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 2. Run the Worker Nodes&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl apply-config --insecure -n &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span> --file _out/worker.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 3. Bootstrap Etcd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># export CONTROL_PLANE_IP=$TALOS_IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">TALOSCONFIG&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;_out/talosconfig&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl config endpoint &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl config node &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Now we will set the endpoints and nodes.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl --talosconfig _out/talosconfig config endpoint &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl --talosconfig _out/talosconfig config node &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Bootstrap etcd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl --talosconfig _out/talosconfig bootstrap -n &lt;span class="nv">$CONTROL_PLANE_IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#4. Access Talos Powered Kubernetes Cluster&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Once the cluster is up, you can access and use it as desired to run the containerized workloads. But first, obtain the admin kubeconfig&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">talosctl --talosconfig _out/talosconfig kubeconfig .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -LO &lt;span class="s2">&amp;#34;https://storage.googleapis.com/kubernetes-release/release/&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt&lt;span class="k">)&lt;/span>&lt;span class="s2">/bin/linux/amd64/kubectl&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x kubectl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mv kubectl /usr/local/bin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir -p &lt;span class="nv">$HOME&lt;/span>/.kube
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo cp -i kubeconfig &lt;span class="nv">$HOME&lt;/span>/.kube/config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chown &lt;span class="k">$(&lt;/span>id -u&lt;span class="k">)&lt;/span>:&lt;span class="k">$(&lt;/span>id -g&lt;span class="k">)&lt;/span> &lt;span class="nv">$HOME&lt;/span>/.kube/config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># View the nodes in the cluster&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get nodes -o wide
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># View the pods:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get pods -A
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5. Deploy a Test Application on Kubernetes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">To verify &lt;span class="k">if&lt;/span> the cluster is working properly, we can deploy a sample Nginx application. To achieve that, we can use the below manifest:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl apply -f - &lt;span class="s">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">apiVersion: apps/v1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">kind: Deployment
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">metadata:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> name: nginx-deployment
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">spec:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> selector:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> matchLabels:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> app: nginx
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> replicas: 2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> template:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> metadata:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> labels:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> app: nginx
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> spec:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> containers:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> - name: nginx
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> image: nginx:latest
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> ports:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> - containerPort: 80
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#View if the pods are running:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get pods
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Expose the app with NodePort:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl expose deployment nginx-deployment --type&lt;span class="o">=&lt;/span>NodePort --port&lt;span class="o">=&lt;/span>&lt;span class="m">80&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Get the service port:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get svc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://computingforgeeks.com/install-kubernetes-using-talos-container-linux/" target="_blank" rel="noopener"
+>Install Kubernetes Cluster using Talos Container Linux&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.talos.dev/v1.6/talos-guides/howto/workers-on-controlplane/" target="_blank" rel="noopener"
+>How to enable workers on your control plane nodes&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
