@@ -266,12 +266,79 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get svc
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div>&lt;h3 id="install-kubevirt">Install kubevirt&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">RELEASE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>curl https://storage.googleapis.com/kubevirt-prow/release/kubevirt/kubevirt/stable.txt&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/&lt;span class="nv">$RELEASE&lt;/span>/kubevirt-operator.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/&lt;span class="nv">$RELEASE&lt;/span>/kubevirt-cr.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl -n kubevirt &lt;span class="nb">wait&lt;/span> kv kubevirt --for &lt;span class="nv">condition&lt;/span>&lt;span class="o">=&lt;/span>Available
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get po -n kubevirt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="install-virtctl">Install virtctl&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">VERSION&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>kubectl get kubevirt.kubevirt.io/kubevirt -n kubevirt -o&lt;span class="o">=&lt;/span>&lt;span class="nv">jsonpath&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;{.status.observedKubeVirtVersion}&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ARCH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>uname -s &lt;span class="p">|&lt;/span> tr A-Z a-z&lt;span class="k">)&lt;/span>-&lt;span class="k">$(&lt;/span>uname -m &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/x86_64/amd64/&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="o">||&lt;/span> windows-amd64.exe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">ARCH&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -L -o virtctl https://github.com/kubevirt/kubevirt/releases/download/&lt;span class="si">${&lt;/span>&lt;span class="nv">VERSION&lt;/span>&lt;span class="si">}&lt;/span>/virtctl-&lt;span class="si">${&lt;/span>&lt;span class="nv">VERSION&lt;/span>&lt;span class="si">}&lt;/span>-&lt;span class="si">${&lt;/span>&lt;span class="nv">ARCH&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x virtctl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo install virtctl /usr/local/bin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">virtctl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="deploy-vm">Deploy VM&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl apply -f https://kubevirt.io/labs/manifests/vm.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get vms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">virtctl start testvm
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get vmi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get pods -n default &lt;span class="p">|&lt;/span> grep -i launcher
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">virtctl console --kubeconfig&lt;span class="o">=&lt;/span>&lt;span class="nv">$KUBECONFIG&lt;/span> testvm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
 &lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://computingforgeeks.com/install-kubernetes-using-talos-container-linux/" target="_blank" rel="noopener"
 >Install Kubernetes Cluster using Talos Container Linux&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://www.talos.dev/v1.6/talos-guides/howto/workers-on-controlplane/" target="_blank" rel="noopener"
 >How to enable workers on your control plane nodes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gist.github.com/usrbinkat/4dfe24590a56434139744fb7d1bc6ce9" target="_blank" rel="noopener"
+>Talos + Kubevirt Bare Metal &amp;amp; Nested Tenant Cluster&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://medium.com/@arbnair97/virtual-machine-orchestration-in-kubernetes-using-kubevirt-91bd0e81a5bd" target="_blank" rel="noopener"
+>Virtual Machine Orchestration in Kubernetes using KubeVirt&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Application Scheduling and Lifecycle Mangement</title><link>https://echowings.github.io/p/application-scheduling-and-lifecycle-mangement/</link><pubDate>Thu, 17 Nov 2022 15:47:56 +0800</pubDate><guid>https://echowings.github.io/p/application-scheduling-and-lifecycle-mangement/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=0d188417" alt="Featured image of post Application Scheduling and Lifecycle Mangement" />&lt;p>This article describs how to use kubernetes deployments to deploy pods, scale pods, perform rolling updates and rollbacks, carry out resource management, and use ConfigMaps to configurepods using &lt;code>kubectl&lt;/code> command and YAML definitions.&lt;/p>
 &lt;h2 id="run-a-container">Run a container&lt;/h2>
 &lt;h3 id="cretae-a-pod-using-am-imperative-command">Cretae a pod using am imperative command&lt;/h3>
