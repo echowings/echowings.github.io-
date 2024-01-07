@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Steve's Blog</title><link>https://echowings.github.io/categories/linux/</link><description>Recent content in linux on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 28 Dec 2023 19:03:56 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Enable Ntp in Debian 12</title><link>https://echowings.github.io/p/how-to-enable-ntp-in-debian-12/</link><pubDate>Thu, 28 Dec 2023 19:03:56 +0800</pubDate><guid>https://echowings.github.io/p/how-to-enable-ntp-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=242a325a" alt="Featured image of post How to Enable Ntp in Debian 12" />&lt;h2 id="install-system-timesyncd">Install &lt;code>system-timesyncd&lt;/code>&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Steve's Blog</title><link>https://echowings.github.io/categories/linux/</link><description>Recent content in linux on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 28 Dec 2023 19:03:56 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Enable NTP in Debian 12</title><link>https://echowings.github.io/p/how-to-enable-ntp-in-debian-12/</link><pubDate>Thu, 28 Dec 2023 19:03:56 +0800</pubDate><guid>https://echowings.github.io/p/how-to-enable-ntp-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=242a325a" alt="Featured image of post How to Enable NTP in Debian 12" />&lt;h2 id="install-system-timesyncd">Install &lt;code>system-timesyncd&lt;/code>&lt;/h2>
 &lt;ol>
 &lt;li>Uninstall &lt;code>ntpd&lt;/code>&lt;/li>
 &lt;/ol>
@@ -71,12 +71,28 @@
 &lt;/ol>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo sed -i &lt;span class="s1">&amp;#39;/ConditionVirtualization/c\ConditionVirtualization=&amp;#39;&lt;/span> /etc/systemd/sys
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tem/sysinit.target.wants/systemd-timesyncd.service
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#sudo sed -i &amp;#39;/ConditionVirtualization/c\ConditionVirtualization=&amp;#39; /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Fix time sync issues in WSL&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mkdir -p /etc/systemd/system/systemd-timesyncd.service.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/systemd/system/systemd-timesyncd.service.d/override.conf &amp;gt; /dev/null &lt;span class="s">&amp;lt;&amp;lt;&amp;#39;EOF&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">[Unit]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">ConditionVirtualization=
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start systemd-timesyncd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> systemd-timesyncd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol start="2">
@@ -101,6 +117,51 @@
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo systemctl status systemd-timesyncd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="with-script">with script&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">systemd_timesyncd_exist&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>sudo systemctl is-active systemd-timesyncd &lt;span class="p">|&lt;/span> grep active &lt;span class="p">|&lt;/span> wc -l&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$systemd_timesyncd_exist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="nv">$systemd_timesyncd_exist&lt;/span> -ne &lt;span class="m">1&lt;/span> &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt update -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt purget ntp -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt install -y systemd-timesyncd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo systemctl start systemd-timesyncd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo systemctl &lt;span class="nb">enable&lt;/span> systemd-timesyncd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mkdir -p /etc/systemd/system/systemd-timesyncd.service.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;hello&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/systemd/system/systemd-timesyncd.service.d/override.conf &amp;gt; /dev/null &lt;span class="s">&amp;lt;&amp;lt;&amp;#39;EOF&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">[Unit]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">ConditionVirtualization=
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl daemon-reload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl restart systemd-timesyncd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>How to Setup Opencase on Pve6</title><link>https://echowings.github.io/p/how-to-setup-opencase-on-pve6/</link><pubDate>Sat, 13 Mar 2021 14:49:17 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-opencase-on-pve6/</guid><description>&lt;h1 id="how-to-setup-open-cas-on-pve-6x">How to setup open cas on pve 6.x&lt;/h1>
