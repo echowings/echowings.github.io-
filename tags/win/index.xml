@@ -2,10 +2,13 @@
 &lt;p>&lt;a class="link" href="https://github.com/Iorest/rime-setting" target="_blank" rel="noopener"
 >rime-setting&lt;/a>&lt;/p>
 &lt;h2 id="install-rime-squirrel-on-macwindowslinux">Install rime /squirrel on mac/windows/linux&lt;/h2>
+&lt;hr>
 &lt;h3 id="windows">Windows&lt;/h3>
+&lt;hr>
 &lt;p>Install &lt;a class="link" href="https://rime.im/" target="_blank" rel="noopener"
 >RIME&lt;/a>&lt;/p>
 &lt;h3 id="macos">MacOS&lt;/h3>
+&lt;hr>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -15,6 +18,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="linux">Linux&lt;/h3>
+&lt;hr>
 &lt;h2 id="clone-git-repo-to-local">Clone git repo to local&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -25,10 +29,13 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="install-configuration">Install configuration&lt;/h2>
+&lt;hr>
 &lt;h3 id="install-configuration-on-windows">Install configuration on windows&lt;/h3>
+&lt;hr>
 &lt;p>copy all files except &lt;code>font&lt;/code> folder into
 &lt;code>%APPDATA%\Rime&lt;/code>&lt;/p>
 &lt;h3 id="install-configuration-on-macos">Install configuration on macos&lt;/h3>
+&lt;hr>
 &lt;p>Copy all files except &lt;code>font&lt;/code> folder inot
 &lt;code>~/Library/Rime&lt;/code>&lt;/p>
 &lt;h2 id="change-defaultcustomyaml">change &lt;code>default.custom.yaml&lt;/code>&lt;/h2>
@@ -45,6 +52,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="change-fonts-in-file-weaselcustomyaml">Change fonts in file &lt;code>weasel.custom.yaml&lt;/code>&lt;/h2>
+&lt;hr>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -53,4 +61,5 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">&amp;#34;style/font_face&amp;#34;: &lt;/span>&lt;span class="s2">&amp;#34;LXGW WenKai GB Screen R&amp;#34;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="click-redeploy-on-rime">Click redeploy on rime&lt;/h2></description></item></channel></rss>
+&lt;/div>&lt;h2 id="click-redeploy-on-rime">Click redeploy on rime&lt;/h2>
+&lt;hr></description></item></channel></rss>
