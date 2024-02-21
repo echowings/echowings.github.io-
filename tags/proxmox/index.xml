@@ -1,4 +1,226 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Proxmox on Steve's Blog</title><link>https://echowings.github.io/tags/proxmox/</link><description>Recent content in Proxmox on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 24 Mar 2023 11:10:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/proxmox/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Pbs2.3 on Debian11</title><link>https://echowings.github.io/p/how-to-install-pbs2.3-on-debian11/</link><pubDate>Fri, 24 Mar 2023 11:10:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-pbs2.3-on-debian11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=244bc190" alt="Featured image of post How to Install Pbs2.3 on Debian11" />&lt;h1 id="how-to-install-pbs-on-debian-11">How-to-install-PBS-on-debian-11&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Proxmox on Steve's Blog</title><link>https://echowings.github.io/tags/proxmox/</link><description>Recent content in Proxmox on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Feb 2024 17:24:06 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/proxmox/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Vyos Template on Proxmox</title><link>https://echowings.github.io/p/how-to-create-vyos-template-on-proxmox/</link><pubDate>Wed, 21 Feb 2024 17:24:06 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-vyos-template-on-proxmox/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=16de454a" alt="Featured image of post How to Create Vyos Template on Proxmox" />&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -x
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Create template&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#args:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># vm_id&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># vm_name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># file name in the current directory&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> create_template&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Print all of the configuration&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Creating template &lt;/span>&lt;span class="nv">$2&lt;/span>&lt;span class="s2"> (&lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="k">$(&lt;/span>qm list &lt;span class="p">|&lt;/span> grep &lt;span class="nv">$1&lt;/span> &lt;span class="p">|&lt;/span> wc -l&lt;span class="k">)&lt;/span> -eq &lt;span class="m">1&lt;/span> &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;VM already exist&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Will delete the vm&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm destroy &lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="nv">$?&lt;/span> -eq &lt;span class="m">0&lt;/span> &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;delete vm successfully!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;delete failed!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;VM didn&amp;#39;t exist&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;will create it&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Create new VM &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Feel free to change any of these to your liking&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm create &lt;span class="nv">$1&lt;/span> --name &lt;span class="nv">$2&lt;/span> --ostype l26
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Set networking to default bridge&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --net0 virtio,bridge&lt;span class="o">=&lt;/span>vmbr0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Set display to serial&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --serial0 socket --vga serial0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Set memory, cpu, type defaults&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#If you are in a cluster, you might need to change cpu type&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --memory &lt;span class="m">1024&lt;/span> --cores &lt;span class="m">4&lt;/span> --cpu host
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Set boot device to new file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --scsi0 &lt;span class="si">${&lt;/span>&lt;span class="nv">storage&lt;/span>&lt;span class="si">}&lt;/span>:0,import-from&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">pwd&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">/&lt;/span>&lt;span class="nv">$3&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>,discard&lt;span class="o">=&lt;/span>on
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Set scsi hardware as default boot disk using virtio scsi single&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --boot &lt;span class="nv">order&lt;/span>&lt;span class="o">=&lt;/span>scsi0 --scsihw virtio-scsi-single
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Enable Qemu guest agent in case the guest has it available&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --agent &lt;span class="nv">enabled&lt;/span>&lt;span class="o">=&lt;/span>1,fstrim_cloned_disks&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Add cloud-init device&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --ide2 &lt;span class="si">${&lt;/span>&lt;span class="nv">storage&lt;/span>&lt;span class="si">}&lt;/span>:cloudinit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Set CI ip config&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#IP6 = auto means SLAAC (a reliable default with no bad effects on non-IPv6 networks)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#IP = DHCP means what it says, so leave that out entirely on non-IPv4 networks to avoid DHCP delays&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --ipconfig0 &lt;span class="s2">&amp;#34;ip6=auto,ip=dhcp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Import the ssh keyfile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --sshkeys &lt;span class="si">${&lt;/span>&lt;span class="nv">ssh_keyfile&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#If you want to do password-based auth instaed&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Then use this option and comment out the line above&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#qm set $1 --cipassword password&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Add the user&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm &lt;span class="nb">set&lt;/span> &lt;span class="nv">$1&lt;/span> --ciuser &lt;span class="si">${&lt;/span>&lt;span class="nv">username&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Resize the disk to 8G, a reasonable minimum. You can expand it more later.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#If the disk is already bigger than 8G, this will fail, and that is okay.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#qm disk resize $1 scsi0 8G&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Convert raw disk to qcow2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">VM_FOLDER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;/var/lib/vz/images&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qemu-img convert -f raw &lt;span class="nv">$VM_FOLDER&lt;/span>/&lt;span class="nv">$1&lt;/span>/vm-&lt;span class="nv">$1&lt;/span>-disk-0.raw -O qcow2 &lt;span class="nv">$VM_FOLDER&lt;/span>/&lt;span class="nv">$1&lt;/span>/vm-&lt;span class="nv">$1&lt;/span>-disk-0.qcow2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rm -rf &lt;span class="nv">$VM_FOLDER&lt;/span>/&lt;span class="nv">$1&lt;/span>/vm-&lt;span class="nv">$1&lt;/span>-disk-0.raw
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &lt;span class="s1">&amp;#39;s/.raw/.qcow2/g&amp;#39;&lt;/span> /etc/pve/qemu-server/&lt;span class="nv">$1&lt;/span>.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Make it a template&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qm template &lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Remove file when done&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rm &lt;span class="nv">$3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Path to your ssh authorized_keys file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Alternatively, use /etc/pve/priv/authorized_keys if you are already authorized&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#on the Proxmox system&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">ssh_keyfile&lt;/span>&lt;span class="o">=&lt;/span>/root/id_rsa.pub
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Username to create on VM template&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>echowings
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Name of your storage&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">storage&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">local&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">ID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;9001&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">TEMPLATE_VM_NAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;template-vyos-1.3.6&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">VYOS_QEMU_IMAGE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;vyos-1.3.6-cloud-init-2G-qemu.qcow2&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">VM_IMAGE_FOLDER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;/var/lib/vz/template&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">VM_DOWNLOAD_URL&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://xxxxx.xxxx.xxx/vyos-1.3.5-amd64.qcow2&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee &lt;span class="nv">$ssh_keyfile&lt;/span> &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-rsa MODIFY_TO_YOUR_SSH.PUB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls -al &lt;span class="nv">$VM_IMAGE_FOLDER&lt;/span>/&lt;span class="nv">$VYOS_QEMU_IMAGE&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> ! -f &lt;span class="nv">$VM_IMAGE_FOLDER&lt;/span>/&lt;span class="nv">$VYOS_QEMU_IMAGE&lt;/span> &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wget &lt;span class="nv">$VM_DOWNLOAD_URL&lt;/span> -O &lt;span class="nv">$VM_IMAGE_FOLDER&lt;/span>/&lt;span class="nv">$VYOS_QEMU_IMAGE&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$VM_IMAGE_FOLDER&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">create_template &lt;span class="nv">$ID&lt;/span> &lt;span class="nv">$TEMPLATE_VM_NAME&lt;/span> &lt;span class="nv">$VYOS_QEMU_IMAGE&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>How to Install Pbs2.3 on Debian11</title><link>https://echowings.github.io/p/how-to-install-pbs2.3-on-debian11/</link><pubDate>Fri, 24 Mar 2023 11:10:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-pbs2.3-on-debian11/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=244bc190" alt="Featured image of post How to Install Pbs2.3 on Debian11" />&lt;h1 id="how-to-install-pbs-on-debian-11">How-to-install-PBS-on-debian-11&lt;/h1>
 &lt;h2 id="change-network-name-from-enp-to-eth">Change network name from enp* to eth*&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
