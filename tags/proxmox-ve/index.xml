@@ -1,4 +1,251 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Proxmox Ve on Steve's Blog</title><link>https://echowings.github.io/tags/proxmox-ve/</link><description>Recent content in Proxmox Ve on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Feb 2024 17:24:06 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/proxmox-ve/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Vyos Template on Proxmox</title><link>https://echowings.github.io/p/how-to-create-vyos-template-on-proxmox/</link><pubDate>Wed, 21 Feb 2024 17:24:06 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-vyos-template-on-proxmox/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=16de454a" alt="Featured image of post How to Create Vyos Template on Proxmox" />&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Proxmox Ve on Steve's Blog</title><link>https://echowings.github.io/tags/proxmox-ve/</link><description>Recent content in Proxmox Ve on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Feb 2024 17:30:09 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/proxmox-ve/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Vyos With Terraform on Proxmox Ve</title><link>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</link><pubDate>Wed, 21 Feb 2024 17:30:09 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e7e0ad45" alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve" />&lt;h2 id="install-terraform">Install Terraform&lt;/h2>
+&lt;h2 id="generate-tf-login-token-on-pve-node">Generate tf login token on pve node&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pveum role delete TerraformProv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveum user delete terraform-prov@pve
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveum role add TerraformProv -privs &lt;span class="s2">&amp;#34;Datastore.AllocateSpace Datastore.Audit Pool.Allocate Sys.Audit Sys.Console Sys.Modify VM.Allocate VM.Audit VM.Clone VM.Config.CDROM VM.Config.Cloudinit VM.Config.CPU VM.Config.Disk VM.Config.HWType VM.Config.Memory VM.Config.Network VM.Config.Options VM.Migrate VM.Monitor VM.PowerMgmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveum user add terraform-prov@pve
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveum aclmod / -user terraform-prov@pve -role TerraformProv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pveum user token add terraform-prov@pve terraform-token --privsep&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Output:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">┌──────────────┬──────────────────────────────────────┐
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ key │ value │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">╞══════════════╪══════════════════════════════════════╡
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ full-tokenid │ terraform-prov@pve!terraform-token │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├──────────────┼──────────────────────────────────────┤
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ info │ {&amp;#34;privsep&amp;#34;:&amp;#34;0&amp;#34;} │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├──────────────┼──────────────────────────────────────┤
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ value │ b092fe96-4c36-46c6-a477-b0bb5919e653 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└──────────────┴──────────────────────────────────────┘
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="create-maintf-file">Create &lt;code>main.tf&lt;/code> file&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">terraform &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> required_providers &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">proxmox&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">source&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;telmate/proxmox&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">provider &lt;span class="s2">&amp;#34;proxmox&amp;#34;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">pm_tls_insecure&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">pm_api_url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://192.168.11.53:8006/api2/json&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">pm_api_token_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;terraform-prov@pve!terraform-token&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">pm_api_token_secret&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">resource &lt;span class="s2">&amp;#34;proxmox_vm_qemu&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;proxmox-vyos&amp;#34;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">count&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;vyos-&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">count&lt;/span>&lt;span class="p">.index + 1&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">desc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;vyos Iac Test environment&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># PVE Node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">target_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;debian&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># cloud-init template&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">clone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;template-vyos-1.3.6&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># guest agent&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">agent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">os_type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;cloudinit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">onboot&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># CPU&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">cores&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">sockets&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">cpu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;host&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># mem&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">memory&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">512&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">scsihw&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;virtio-scsi-single&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">bootdisk&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;scsi0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># disk &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> disk &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">slot&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">size&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;2G&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;scsi&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">storage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;SSD&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">iothread&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># newtork&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> network &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;virtio&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">bridge&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;vmbr0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> network &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;virtio&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">bridge&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;vmbr1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lifecycle &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">ignore_changes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> network,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># set fix ip address&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">ipconfig0&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;ip=192.168.11.9&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">count&lt;/span>&lt;span class="p">.index + 1&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">/24,gw=192.168.11.1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">ipconfig1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;ip=192.168.110.9&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">count&lt;/span>&lt;span class="p">.index + 1&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">/24,gw=192.168.110.1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># ssh key SSH key&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">ciuser&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;user&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">sshkeys&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> %%YOUR_SSH_KEY%%
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="apply">Apply&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># init&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">terraform init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># format tf file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">terraform fmt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># validate&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">terraform validate
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">terraform plan
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">terraform apply
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="destroy">Destroy&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">terraform destroy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://atbug.com/deploy-vm-on-proxmox-with-terraform/" target="_blank" rel="noopener"
+>快速搭建实验环境：使用 Terraform 部署 Proxmox 虚拟机&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://ronamosa.io/docs/engineer/LAB/proxmox-terraform/" target="_blank" rel="noopener"
+>Proxmox: Deploying Infrastructure with Terraform | Ron Amosa&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://registry.terraform.io/providers/Telmate/proxmox/latest/docs#enable-debug-mode-in-proxmox-api-go" target="_blank" rel="noopener"
+>Terraform Registry&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bboy.app/2023/08/14/%E4%BD%BF%E7%94%A8terraform%E5%88%9B%E5%BB%BApve%E8%99%9A%E6%8B%9F%E6%9C%BA/" target="_blank" rel="noopener"
+>使用terraform创建pve虚拟机&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to Create Vyos Template on Proxmox</title><link>https://echowings.github.io/p/how-to-create-vyos-template-on-proxmox/</link><pubDate>Wed, 21 Feb 2024 17:24:06 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-vyos-template-on-proxmox/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=16de454a" alt="Featured image of post How to Create Vyos Template on Proxmox" />&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
