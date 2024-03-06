@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Vyos With Terraform on Proxmox Ve</title><link>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</link><pubDate>Wed, 21 Feb 2024 17:30:09 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e7e0ad45" alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve" />&lt;h2 id="prerequest">Prerequest&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Login Aks in Debian 12</title><link>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</link><pubDate>Wed, 06 Mar 2024 14:45:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=090962a2" alt="Featured image of post How to Login Aks in Debian 12" />&lt;h2 id="install-az-cli">Install az-cli&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sL https://aka.ms/InstallAzureCLIDeb &lt;span class="p">|&lt;/span> sudo bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zsh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="install-kubectl">Install kubectl&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Install Kubectl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> ! -f /usr/local/bin/kubectl &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo curl -fsSL --progress-bar &lt;span class="s2">&amp;#34;https://dl.k8s.io/release/&lt;/span>&lt;span class="k">$(&lt;/span>curl -L -s https://dl.k8s.io/release/stable.txt&lt;span class="k">)&lt;/span>&lt;span class="s2">/bin/linux/amd64/kubectl&amp;#34;&lt;/span> -o /usr/local/bin/kubectl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod +x /usr/local/bin/kubectl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Reload zsh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#add alias into ~/.zshrd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> ! sudo grep -q &lt;span class="s2">&amp;#34;kubectl&amp;#34;&lt;/span> ~/.zshrc&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cat &lt;span class="s">&amp;lt;&amp;lt; EOF |sudo tee -a ~/.zshrc
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">alias k=kubectl
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat ~/.zshrc &lt;span class="p">|&lt;/span> grep kubectl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="get-contributer-privilege-with-pim">Get Contributer Privilege with PIM&lt;/h2>
+&lt;p>Get the Contributer PIM firstly on azure portal&lt;/p>
+&lt;h2 id="login-aks">Login aks&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">az login --use-device-code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">az account &lt;span class="nb">set&lt;/span> --subscription YOUR_SUBSCRIPTION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">az aks get-credentials --resource-group RESOURCE-GROUP --name AKS-NAME --admin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl config current-context
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get po -A
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt" target="_blank" rel="noopener"
+>Install the Azure CLI on Linux | Microsoft Learn&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank" rel="noopener"
+>Install and Set Up kubectl on Linux | Kubernetes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/66033629/azure-kubernetes-error-when-running-az-aks-get-credentials-command" target="_blank" rel="noopener"
+>Azure Kubernetes Error when running &amp;ldquo;az aks get-credentials&amp;rdquo; command - Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to Deploy Vyos With Terraform on Proxmox Ve</title><link>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</link><pubDate>Wed, 21 Feb 2024 17:30:09 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e7e0ad45" alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve" />&lt;h2 id="prerequest">Prerequest&lt;/h2>
 &lt;p>Since PVE 8 has bug with terraform. so I highly recommand use pve 7&lt;/p>
 &lt;h2 id="install-terraform">Install Terraform&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
