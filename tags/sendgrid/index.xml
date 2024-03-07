@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sendgrid on Steve's Blog</title><link>https://echowings.github.io/tags/sendgrid/</link><description>Recent content in Sendgrid on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Mar 2024 14:47:50 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/sendgrid/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Send Email With Sendgrid Api</title><link>https://echowings.github.io/p/how-to-send-email-with-sendgrid-api/</link><pubDate>Thu, 07 Mar 2024 14:47:50 +0800</pubDate><guid>https://echowings.github.io/p/how-to-send-email-with-sendgrid-api/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=240a31f5" alt="Featured image of post How to Send Email With Sendgrid Api" />&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">sendgrid&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#import os&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">sendgrid.helpers.mail&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Mail&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Email&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">To&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Content&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#export SENDGRID_API_KEY=&amp;#34;API_KEY&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#echo $SENDGRID_API_KEY&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">SENDGRID_API_KEY&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;API_KEY&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SENDGRID_API_KEY&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#sg = sendgrid.SendGridAPIClient(api_key=os.environ.get(SENDGRID_API_KEY))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sendgrid&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">SendGridAPIClient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">api_key&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">SENDGRID_API_KEY&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">from_email&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Email&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;sender@sender.com&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># Change to your verified sender&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">to_email&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">To&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;receiver@receiver.com&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># Change to your recipient&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">subject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Sending with SendGrid is Fun&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Content&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;text/plain&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;and easy to do anywhere, even with Python&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">mail&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Mail&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">from_email&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">to_email&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">subject&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">content&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Get a JSON-ready representation of the Mail object&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">mail_json&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mail&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Send an HTTP POST request to /mail/send&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mail&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">post&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">request_body&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">mail_json&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">status_code&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
