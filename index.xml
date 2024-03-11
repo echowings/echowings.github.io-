@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Send Email With Sendgrid Api</title><link>https://echowings.github.io/p/how-to-send-email-with-sendgrid-api/</link><pubDate>Thu, 07 Mar 2024 14:47:50 +0800</pubDate><guid>https://echowings.github.io/p/how-to-send-email-with-sendgrid-api/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=240a31f5" alt="Featured image of post How to Send Email With Sendgrid Api" />&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting</title><link>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</link><pubDate>Mon, 11 Mar 2024 16:16:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d8d1c543" alt="Featured image of post How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting" />&lt;h2 id="download--file-configscriptschinaiprangestxt">Download file &lt;code>/config/scripts/chinaipranges.txt&lt;/code>&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl https://raw.githubusercontent.com/pmkol/easymosdns/rules/china_ip_list.txt &lt;span class="p">|&lt;/span> sed -En &lt;span class="s1">&amp;#39;/([0-9]+\.){3}[0-9]+/{s,,&amp;amp;,p}&amp;#39;&lt;/span> &amp;gt; /config/scripts/chinaipranges.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="create-file-configscriptsadd-firewall-grouppy">Create file &lt;code>/config/scripts/add-firewall-group.py&lt;/code>&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee /config/scripts/add-firewall-group.py &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import subprocess
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import sys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def add_networks_in_batches&lt;span class="o">(&lt;/span>set_name, filename, &lt;span class="nv">batch_size&lt;/span>&lt;span class="o">=&lt;/span>1000&lt;span class="o">)&lt;/span>:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">table_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;vyos_filter&amp;#34;&lt;/span> &lt;span class="c1"># Fixed table name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">total_added&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1"># Initialize counter for total added IPs&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">start_time&lt;/span> &lt;span class="o">=&lt;/span> time.time&lt;span class="o">()&lt;/span> &lt;span class="c1"># Record the start time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> try:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with open&lt;span class="o">(&lt;/span>filename, &lt;span class="s1">&amp;#39;r&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span> as file:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">networks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">[&lt;/span>line.strip&lt;span class="o">()&lt;/span> &lt;span class="k">for&lt;/span> line in file &lt;span class="k">if&lt;/span> line.strip&lt;span class="o">()]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> i in range&lt;span class="o">(&lt;/span>0, len&lt;span class="o">(&lt;/span>networks&lt;span class="o">)&lt;/span>, batch_size&lt;span class="o">)&lt;/span>:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">batch_networks&lt;/span> &lt;span class="o">=&lt;/span> networks&lt;span class="o">[&lt;/span>i:i+batch_size&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">networks_string&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;, &amp;#39;&lt;/span>.join&lt;span class="o">(&lt;/span>batch_networks&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">command&lt;/span> &lt;span class="o">=&lt;/span> f&lt;span class="s2">&amp;#34;nft add element ip {table_name} {set_name} {{ {networks_string} }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> subprocess.run&lt;span class="o">(&lt;/span>command, &lt;span class="nv">check&lt;/span>&lt;span class="o">=&lt;/span>True, &lt;span class="nv">shell&lt;/span>&lt;span class="o">=&lt;/span>True&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>f&lt;span class="s2">&amp;#34;Successfully added batch of networks to {set_name}&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">total_added&lt;/span> &lt;span class="o">+=&lt;/span> len&lt;span class="o">(&lt;/span>batch_networks&lt;span class="o">)&lt;/span> &lt;span class="c1"># Update count of added IPs&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> except subprocess.CalledProcessError as e:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>f&lt;span class="s2">&amp;#34;Error adding networks to {set_name}: {e}&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> except FileNotFoundError:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>f&lt;span class="s2">&amp;#34;File {filename} not found&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> except Exception as e:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>f&lt;span class="s2">&amp;#34;An error occurred: {e}&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">end_time&lt;/span> &lt;span class="o">=&lt;/span> time.time&lt;span class="o">()&lt;/span> &lt;span class="c1"># Record the end time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">elapsed_time&lt;/span> &lt;span class="o">=&lt;/span> end_time - start_time &lt;span class="c1"># Calculate elapsed time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Print summary&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>f&lt;span class="s2">&amp;#34;\nTotal of {total_added} networks were added to {set_name}.&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>f&lt;span class="s2">&amp;#34;Process took {elapsed_time:.2f} seconds.&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def main&lt;span class="o">()&lt;/span>:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> len&lt;span class="o">(&lt;/span>sys.argv&lt;span class="o">)&lt;/span> !&lt;span class="o">=&lt;/span> 3:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;Usage: python3 test.py &amp;lt;set name&amp;gt; &amp;lt;filename&amp;gt;&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sys.exit&lt;span class="o">(&lt;/span>1&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">set_name&lt;/span> &lt;span class="o">=&lt;/span> sys.argv&lt;span class="o">[&lt;/span>1&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">filename&lt;/span> &lt;span class="o">=&lt;/span> sys.argv&lt;span class="o">[&lt;/span>2&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> add_networks_in_batches&lt;span class="o">(&lt;/span>set_name, filename&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="nv">__name__&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;__main__&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main&lt;span class="o">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="add-loading-ip-script-in--configscriptsvyos-postconfig-bootupscript">Add loading ip script in &lt;code>/config/scripts/vyos-postconfig-bootup.script&lt;/code>&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee /config/scripts/vyos-postconfig-bootup.script &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /config/scripts &lt;span class="se">\ &lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">python3 add-firewall-group.py N_china-ip-ranges chinaipranges.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>How to Send Email With Sendgrid Api</title><link>https://echowings.github.io/p/how-to-send-email-with-sendgrid-api/</link><pubDate>Thu, 07 Mar 2024 14:47:50 +0800</pubDate><guid>https://echowings.github.io/p/how-to-send-email-with-sendgrid-api/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=240a31f5" alt="Featured image of post How to Send Email With Sendgrid Api" />&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
