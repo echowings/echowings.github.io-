@@ -148,7 +148,11 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo nft list &lt;span class="nb">set&lt;/span> ip vyos_filter N_china-ip-ranges
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Learning Shell Programming 1</title><link>https://echowings.github.io/p/learning-shell-programming-1/</link><pubDate>Sat, 04 Feb 2023 08:43:35 +0800</pubDate><guid>https://echowings.github.io/p/learning-shell-programming-1/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=bcffb920" alt="Featured image of post Learning Shell Programming 1" />&lt;h1 id="01shell-programming">01.Shell programming&lt;/h1>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://forum.vyos.io/t/how-to-load-networks-from-a-file-to-add-them-into-the-firewall-group-in-vyos-1-4-with-ntf-command-to-replace-removed-ipset/13997/2" target="_blank" rel="noopener"
+>How to load networks from a file to add them into the firewall group in vyos 1.4 with ntf command to replace removed ipset &lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Learning Shell Programming 1</title><link>https://echowings.github.io/p/learning-shell-programming-1/</link><pubDate>Sat, 04 Feb 2023 08:43:35 +0800</pubDate><guid>https://echowings.github.io/p/learning-shell-programming-1/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=bcffb920" alt="Featured image of post Learning Shell Programming 1" />&lt;h1 id="01shell-programming">01.Shell programming&lt;/h1>
 &lt;h2 id="shell-create-and-running">Shell create and running&lt;/h2>
 &lt;ol>
 &lt;li>The first line of the shell script is to set the shell interpter.&lt;/li>

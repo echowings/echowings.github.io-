@@ -148,7 +148,11 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo nft list &lt;span class="nb">set&lt;/span> ip vyos_filter N_china-ip-ranges
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Shell Script to Update Cloudflare Ddns</title><link>https://echowings.github.io/p/shell-script-to-update-cloudflare-ddns/</link><pubDate>Sun, 09 Oct 2022 09:50:14 +0800</pubDate><guid>https://echowings.github.io/p/shell-script-to-update-cloudflare-ddns/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=7257319e" alt="Featured image of post Shell Script to Update Cloudflare Ddns" />&lt;h1 id="shell-script-to-update-cloudflare-ddns">Shell Script to Update Cloudflare Ddns&lt;/h1>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://forum.vyos.io/t/how-to-load-networks-from-a-file-to-add-them-into-the-firewall-group-in-vyos-1-4-with-ntf-command-to-replace-removed-ipset/13997/2" target="_blank" rel="noopener"
+>How to load networks from a file to add them into the firewall group in vyos 1.4 with ntf command to replace removed ipset &lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Shell Script to Update Cloudflare Ddns</title><link>https://echowings.github.io/p/shell-script-to-update-cloudflare-ddns/</link><pubDate>Sun, 09 Oct 2022 09:50:14 +0800</pubDate><guid>https://echowings.github.io/p/shell-script-to-update-cloudflare-ddns/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=7257319e" alt="Featured image of post Shell Script to Update Cloudflare Ddns" />&lt;h1 id="shell-script-to-update-cloudflare-ddns">Shell Script to Update Cloudflare Ddns&lt;/h1>
 &lt;h2 id="script">Script&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
