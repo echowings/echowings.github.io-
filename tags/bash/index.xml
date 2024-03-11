@@ -125,12 +125,27 @@
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee /config/scripts/vyos-postconfig-bootup.script &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /config/scripts &lt;span class="se">\ &lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">python3 add-firewall-group.py N_china-ip-ranges chinaipranges.txt
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> ! grep -q &lt;span class="s2">&amp;#34;cd /config/scripts &amp;amp;&amp;amp;python3 add-firewall-group.py N_china-ip-ranges chinaipranges.txt&amp;#34;&lt;/span> /config/scripts/vyos-postconfig-bootup.script
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Not existed, append file&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;cd /config/scripts &amp;amp;&amp;amp;python3 add-firewall-group.py N_china-ip-ranges chinaipranges.txt&amp;#34;&lt;/span> &amp;gt;&amp;gt; /config/scripts/vyos-postconfig-bootup.script
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Already existed&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="check--network-group-command">Check network group command&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo nft list &lt;span class="nb">set&lt;/span> ip vyos_filter N_china-ip-ranges
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>Learning Shell Programming 1</title><link>https://echowings.github.io/p/learning-shell-programming-1/</link><pubDate>Sat, 04 Feb 2023 08:43:35 +0800</pubDate><guid>https://echowings.github.io/p/learning-shell-programming-1/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=bcffb920" alt="Featured image of post Learning Shell Programming 1" />&lt;h1 id="01shell-programming">01.Shell programming&lt;/h1>
