@@ -1,4 +1,191 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting</title><link>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</link><pubDate>Mon, 11 Mar 2024 16:16:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d8d1c543" alt="Featured image of post How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting" />&lt;h2 id="download--file-configscriptschinaiprangestxt">Download file &lt;code>/config/scripts/chinaipranges.txt&lt;/code>&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steve's Blog</title><link>https://echowings.github.io/</link><description>Recent content on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://echowings.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Depoy Flask App on Docker With Pulumi</title><link>https://echowings.github.io/p/how-to-depoy-flask-app-on-docker-with-pulumi/</link><pubDate>Wed, 13 Mar 2024 16:08:20 +0800</pubDate><guid>https://echowings.github.io/p/how-to-depoy-flask-app-on-docker-with-pulumi/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=99bb0d91" alt="Featured image of post How to Depoy Flask App on Docker With Pulumi" />&lt;h2 id="create-flask-app">Create flask app&lt;/h2>
+&lt;h3 id="create-project-directory">Create project directory&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">mkdir -p pulumi-docker/flask-first-steps/app
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="create-dockerfile">create Dockerfile&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee pulumi-docker/flask-first-steps/Dockerfile &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FROM tiangolo/uwsgi-nginx-flask:python3.8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY ./app /app
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="create-mainpy">Create main.py&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee pulumi-docker/flask-first-steps/app/main.py &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from flask import Flask
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">app&lt;/span> &lt;span class="o">=&lt;/span> Flask&lt;span class="o">(&lt;/span>__name__&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@app.route&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def hello_world&lt;span class="o">()&lt;/span>:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="s1">&amp;#39;Hello, World!&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="nv">__name__&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;__main__&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Only for debugging while developing&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> app.run&lt;span class="o">(&lt;/span>&lt;span class="nv">host&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;0.0.0.0&amp;#39;&lt;/span>, &lt;span class="nv">debug&lt;/span>&lt;span class="o">=&lt;/span>True, &lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>80&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="option-run-app-in-docker">Option: Run app in docker&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker build -t myflaskservice .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run -d --name myflaskservice -p 8080:80 myflaskservice
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl 127.0.0.1:8080
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="create-pulumi-project">Create Pulumi project&lt;/h2>
+&lt;h3 id="create-pulumi-project-at-the-same-folder-level">Create pulumi project at the same folder level&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p pulumi-docker/pulumi-first-steps/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> pulumi-docker/pulumi-first-steps/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi login --local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi new python
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="change-requirementstxt">change requirements.txt&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee requirements.txt &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi&amp;gt;&lt;span class="o">=&lt;/span>2.0.0,&amp;lt;3.0.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi-docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">protobuf&lt;/span>&lt;span class="o">==&lt;/span>3.20.*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="active-venv-and-install-python-modules">Active venv and install python modules&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> venv/bin/activate
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip3 install -r requirements.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="modify-__main__py">Modify &lt;code>__main__.py&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">tee __main__.py &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;A Python Pulumi program&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import pulumi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import pulumi_docker as docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">myapp_build&lt;/span> &lt;span class="o">=&lt;/span> docker.DockerBuild&lt;span class="o">(&lt;/span>&lt;span class="nv">context&lt;/span>&lt;span class="o">=&lt;/span>f&lt;span class="s1">&amp;#39;../flask-first-steps&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">myapp_image&lt;/span> &lt;span class="o">=&lt;/span> docker.Image&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;myapp_image&amp;#34;&lt;/span>, &lt;span class="nv">image_name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;myapp&amp;#39;&lt;/span>, &lt;span class="nv">build&lt;/span>&lt;span class="o">=&lt;/span>myapp_build, &lt;span class="nv">skip_push&lt;/span>&lt;span class="o">=&lt;/span>True&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">container_ports&lt;/span> &lt;span class="o">=&lt;/span> docker.ContainerPortArgs&lt;span class="o">(&lt;/span>&lt;span class="nv">internal&lt;/span>&lt;span class="o">=&lt;/span>80, &lt;span class="nv">external&lt;/span>&lt;span class="o">=&lt;/span>8080&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">myapp_container&lt;/span> &lt;span class="o">=&lt;/span> docker.Container&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;myapp_container&amp;#34;&lt;/span>, &lt;span class="nv">image&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;myapp&amp;#34;&lt;/span>, &lt;span class="nv">ports&lt;/span>&lt;span class="o">=[&lt;/span> container_ports&lt;span class="o">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="container-get-started">container get started&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">PULUMI_CONFIG_PASSPHRASE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi up --yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="check-docker">Check docker&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker ps
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl localhost:8080
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="clean-up">Clean up&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pulumi destroy --yes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi stack rm dev --yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://readmedium.com/en/https:/levelup.gitconnected.com/first-steps-with-pulumi-e6025eecece4" target="_blank" rel="noopener"
+>First Steps with Pulumi&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://levelup.gitconnected.com/first-steps-with-pulumi-e6025eecece4" target="_blank" rel="noopener"
+>First Steps with Pulumi. The most minimal and functional… | by Tobias Wissmueller | Level Up Coding&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting</title><link>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</link><pubDate>Mon, 11 Mar 2024 16:16:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d8d1c543" alt="Featured image of post How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting" />&lt;h2 id="download--file-configscriptschinaiprangestxt">Download file &lt;code>/config/scripts/chinaipranges.txt&lt;/code>&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
