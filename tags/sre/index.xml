@@ -1,4 +1,159 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sre on Steve's Blog</title><link>https://echowings.github.io/tags/sre/</link><description>Recent content in Sre on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Nov 2022 18:53:31 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/sre/index.xml" rel="self" type="application/rss+xml"/><item><title>How to install kubernetes on ubuntu 20.04 with kubeadm</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04-with-kubeadm/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04-with-kubeadm/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04 with kubeadm" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sre on Steve's Blog</title><link>https://echowings.github.io/tags/sre/</link><description>Recent content in Sre on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Mar 2024 11:39:49 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/sre/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Synthetic Monitor With Pulumi Python</title><link>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</link><pubDate>Sun, 17 Mar 2024 11:39:49 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d16575c4" alt="Featured image of post How to Create Synthetic Monitor With Pulumi Python" />&lt;h2 id="prepared-environment">Prepared environment&lt;/h2>
+&lt;h3 id="install-pulumi">Install pulumi&lt;/h3>
+&lt;h3 id="install-python">install python&lt;/h3>
+&lt;h3 id="install-poetry">install poetry&lt;/h3>
+&lt;h2 id="create-pulumi-project">Create pulumi project&lt;/h2>
+&lt;h3 id="create-pulumi-project-1">Create pulumi project&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## create folder&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir newrelic-pulumi-example &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> newrelic-plumi-example
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># crate pulumi project without active python venv&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi new python --name pulumi-newrelic-simple-mintor --stack dev --description &lt;span class="s2">&amp;#34;implement new relic sythetic simple monitoring&amp;#34;&lt;/span> -y --generate-only --force
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Chang python virtual environment path &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/venv/.venv/g&amp;#39;&lt;/span> Pulumi.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># init poetry&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">poetry init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># install pulumi-newrelic module&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">poetry add pulumi-newrelic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install poetry&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">poetry install --no-root
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># active virtual environment&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span> poetry env list --full-path &lt;span class="p">|&lt;/span> grep Activated &lt;span class="p">|&lt;/span> cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f1 &lt;span class="k">)&lt;/span>&lt;span class="s2">/bin/activate&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="modify-__main__py">Modify &lt;strong>main&lt;/strong>.py&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tee __main__.py &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;A Python Pulumi program&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import pulumi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import pulumi_newrelic as newrelic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Create a New Relic Synthetic Monitor&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">synthetic_monitor&lt;/span> &lt;span class="o">=&lt;/span> newrelic.synthetics.Monitor&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;example-monitor&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">uri&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://echowings.github.io&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;SIMPLE&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">period&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;EVERY_MINUTE&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;ENABLED&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">locations_publics&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;AWS_US_WEST_1&amp;#34;&lt;/span>, &lt;span class="s2">&amp;#34;AWS_EU_WEST_2&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span> &lt;span class="c1"># Locations from where thechecks are mode&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Export the ID of the monitor&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi.export&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;monitor_id&amp;#39;&lt;/span>, synthetic_monitor.id&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="set-pulumi-api">Set pulumi api&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pulumi config &lt;span class="nb">set&lt;/span> newrelic:apiKey xxxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pulumi config &lt;span class="nb">set&lt;/span> newrelic:accountId xxxx
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="create-dev-stack">Create dev stack&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pulumi stack init dev --yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="preview-and-check-pulumi-code">Preview and check pulumi code&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pulumi preview
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="pulumi-deploy">Pulumi deploy&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pulumi up --yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="pulumi-destroy">Pulumi destroy&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pulumi destroy --yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="pulumi-delete-stack">Pulumi delete stack&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pulumi stack rm dev --yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/60580332/poetry-virtual-environment-already-activated" target="_blank" rel="noopener"
+>how to active poetry venv&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.pulumi.com/registry/packages/newrelic/api-docs/synthetics/monitor/" target="_blank" rel="noopener"
+>pulumi synthetics example&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.pulumi.com/ai/answers/5MKZJ3agrJDTQQuXEsNFD6/creating-a-new-relic-monitor-using-python" target="_blank" rel="noopener"
+>create a new relic monitor using python&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to install kubernetes on ubuntu 20.04 with kubeadm</title><link>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04-with-kubeadm/</link><pubDate>Sun, 13 Nov 2022 18:53:31 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-kubernetes-on-ubuntu-20.04-with-kubeadm/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=dddca1a9" alt="Featured image of post How to install kubernetes on ubuntu 20.04 with kubeadm" />&lt;h1 id="how-to-install-kubernetes-on-ubuntu-2004">How to install kubernetes on ubuntu 20.04&lt;/h1>
 &lt;p>Kubernetes is new linux os at nowadays. This is manually install kubernetes on ubuntu 20.04 with kubeadm.
 I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on eache proxmox ve server.&lt;/p>
 &lt;table>
