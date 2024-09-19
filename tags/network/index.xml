@@ -456,26 +456,26 @@ When the server of vyos reboot, the configuration will broken and not working an
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Interface&lt;/th>
-&lt;th>IP Address&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Interface&lt;/th>
+&lt;th style="text-align: left">IP Address&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>eth0&lt;/td>
-&lt;td>pppoe&lt;/td>
-&lt;td>WAN&lt;/td>
+&lt;td style="text-align: left">eth0&lt;/td>
+&lt;td style="text-align: left">pppoe&lt;/td>
+&lt;td style="text-align: left">WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>eth1&lt;/td>
-&lt;td>192.168.68.1 / 24&lt;/td>
-&lt;td>DMZ&lt;/td>
+&lt;td style="text-align: left">eth1&lt;/td>
+&lt;td style="text-align: left">192.168.68.1 / 24&lt;/td>
+&lt;td style="text-align: left">DMZ&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>eth2&lt;/td>
-&lt;td>10.0.0.1 / 24&lt;/td>
-&lt;td>LAN&lt;/td>
+&lt;td style="text-align: left">eth2&lt;/td>
+&lt;td style="text-align: left">10.0.0.1 / 24&lt;/td>
+&lt;td style="text-align: left">LAN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

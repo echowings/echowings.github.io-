@@ -39,30 +39,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>value&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Librenms host name&lt;/td>
-&lt;td>&lt;code>mylibrenms&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Librenms host name&lt;/td>
+&lt;td style="text-align: left">&lt;code>mylibrenms&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Domain name&lt;/td>
-&lt;td>&lt;code>private.local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Domain name&lt;/td>
+&lt;td style="text-align: left">&lt;code>private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Name&lt;/td>
-&lt;td>&lt;code>myname&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Name&lt;/td>
+&lt;td style="text-align: left">&lt;code>myname&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>mail account&lt;/td>
-&lt;td>&lt;code>myname@private.local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">mail account&lt;/td>
+&lt;td style="text-align: left">&lt;code>myname@private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>snmp community&lt;/td>
-&lt;td>&lt;code>public&lt;/code>&lt;/td>
+&lt;td style="text-align: left">snmp community&lt;/td>
+&lt;td style="text-align: left">&lt;code>public&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -398,18 +398,18 @@ After systemd migration starting from Debian 9 Stretch, you need to change &lt;c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>hostname&lt;/td>
-&lt;td>mylibrenms&lt;/td>
+&lt;td style="text-align: left">hostname&lt;/td>
+&lt;td style="text-align: left">mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>domainname&lt;/td>
-&lt;td>mydomain.net&lt;/td>
+&lt;td style="text-align: left">domainname&lt;/td>
+&lt;td style="text-align: left">mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -419,18 +419,18 @@ After systemd migration starting from Debian 9 Stretch, you need to change &lt;c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>hostname&lt;/td>
-&lt;td>mylibrenms&lt;/td>
+&lt;td style="text-align: left">hostname&lt;/td>
+&lt;td style="text-align: left">mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>domainname&lt;/td>
-&lt;td>mydomain.net&lt;/td>
+&lt;td style="text-align: left">domainname&lt;/td>
+&lt;td style="text-align: left">mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

@@ -2,10 +2,12 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Hostname&lt;/th>
-&lt;th>my-graylog&lt;/th>
+&lt;th style="text-align: left">Hostname&lt;/th>
+&lt;th style="text-align: left">my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
+&lt;tbody>
+&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">

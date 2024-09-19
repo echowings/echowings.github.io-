@@ -41,18 +41,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>hostname&lt;/td>
-&lt;td>mylibrenms&lt;/td>
+&lt;td style="text-align: left">hostname&lt;/td>
+&lt;td style="text-align: left">mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>domainname&lt;/td>
-&lt;td>mydomain.net&lt;/td>
+&lt;td style="text-align: left">domainname&lt;/td>
+&lt;td style="text-align: left">mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -62,18 +62,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>hostname&lt;/td>
-&lt;td>mylibrenms&lt;/td>
+&lt;td style="text-align: left">hostname&lt;/td>
+&lt;td style="text-align: left">mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>domainname&lt;/td>
-&lt;td>mydomain.net&lt;/td>
+&lt;td style="text-align: left">domainname&lt;/td>
+&lt;td style="text-align: left">mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

@@ -1034,30 +1034,30 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>No.&lt;/th>
-&lt;th>Name&lt;/th>
-&lt;th>OS&lt;/th>
-&lt;th>IP ADDRESS&lt;/th>
+&lt;th style="text-align: left">No.&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">OS&lt;/th>
+&lt;th style="text-align: left">IP ADDRESS&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>01&lt;/td>
-&lt;td>ubuntu-k8s-master&lt;/td>
-&lt;td>ubuntu 20.04 LTS&lt;/td>
-&lt;td>192.168.11.71&lt;/td>
+&lt;td style="text-align: left">01&lt;/td>
+&lt;td style="text-align: left">ubuntu-k8s-master&lt;/td>
+&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
+&lt;td style="text-align: left">192.168.11.71&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>02&lt;/td>
-&lt;td>ubuntu-k8s-node01&lt;/td>
-&lt;td>ubuntu 20.04 LTS&lt;/td>
-&lt;td>192.168.11.72&lt;/td>
+&lt;td style="text-align: left">02&lt;/td>
+&lt;td style="text-align: left">ubuntu-k8s-node01&lt;/td>
+&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
+&lt;td style="text-align: left">192.168.11.72&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>03&lt;/td>
-&lt;td>ubuntu-k8s-node02&lt;/td>
-&lt;td>ubuntu 20.04 LTS&lt;/td>
-&lt;td>192.168.11.73&lt;/td>
+&lt;td style="text-align: left">03&lt;/td>
+&lt;td style="text-align: left">ubuntu-k8s-node02&lt;/td>
+&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
+&lt;td style="text-align: left">192.168.11.73&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

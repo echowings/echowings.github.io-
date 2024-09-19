@@ -1796,38 +1796,38 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Hostname&lt;/td>
-&lt;td>talos-k8s&lt;/td>
+&lt;td style="text-align: left">Hostname&lt;/td>
+&lt;td style="text-align: left">talos-k8s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DNS Servers&lt;/td>
-&lt;td>192.168.11.10&lt;/td>
+&lt;td style="text-align: left">DNS Servers&lt;/td>
+&lt;td style="text-align: left">192.168.11.10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Time Servers&lt;/td>
-&lt;td>0.pool.ntp.org&lt;/td>
+&lt;td style="text-align: left">Time Servers&lt;/td>
+&lt;td style="text-align: left">0.pool.ntp.org&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Interface&lt;/td>
-&lt;td>enp1s0&lt;/td>
+&lt;td style="text-align: left">Interface&lt;/td>
+&lt;td style="text-align: left">enp1s0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mode&lt;/td>
-&lt;td>Static&lt;/td>
+&lt;td style="text-align: left">Mode&lt;/td>
+&lt;td style="text-align: left">Static&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Addresses&lt;/td>
-&lt;td>192.168.11.61/24&lt;/td>
+&lt;td style="text-align: left">Addresses&lt;/td>
+&lt;td style="text-align: left">192.168.11.61/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Gateway&lt;/td>
-&lt;td>192.168.11.1&lt;/td>
+&lt;td style="text-align: left">Gateway&lt;/td>
+&lt;td style="text-align: left">192.168.11.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2611,12 +2611,14 @@
 &lt;li>Backup original sublime_text.exe to sublime_text.exe.bak (COPY)&lt;/li>
 &lt;li>go to &lt;a class="link" href="https://hexed.it/" target="_blank" rel="noopener"
 >https://hexed.it/&lt;/a> -&amp;gt; Click Open File (Location sublime_text.exe)&lt;/li>
-&lt;li>Find in Hex: &lt;code>80 78 05 00 0f 94 c1&lt;/code>&lt;/li>
-&lt;li>Replace with &lt;code>c6 40 05 01 48 85 c9&lt;/code>&lt;/li>
+&lt;li>Find in Hex: &lt;code>80 79 05 00 0F 94 C2&lt;/code>&lt;/li>
+&lt;li>Replace with &lt;code>C6 41 05 01 B2 00 90&lt;/code>&lt;/li>
 &lt;li>Save or Save As to (Location sublime_text.exe) Done&lt;/li>
 &lt;/ol>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff" target="_blank" rel="noopener"
+>https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff" target="_blank" rel="noopener"
 >https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>How to Build Vyos Image 1.3.5</title><link>https://echowings.github.io/p/how-to-build-vyos-image-1.3.5/</link><pubDate>Fri, 22 Dec 2023 17:41:27 +0800</pubDate><guid>https://echowings.github.io/p/how-to-build-vyos-image-1.3.5/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=9b164b10" alt="Featured image of post How to Build Vyos Image 1.3.5" />&lt;div class="highlight">&lt;div class="chroma">
@@ -4358,14 +4360,14 @@ When the server of vyos reboot, the configuration will broken and not working an
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>USERNAME&lt;/th>
-&lt;th>PASSWORD&lt;/th>
+&lt;th style="text-align: left">USERNAME&lt;/th>
+&lt;th style="text-align: left">PASSWORD&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>admin&lt;/td>
-&lt;td>xA123456&lt;/td>
+&lt;td style="text-align: left">admin&lt;/td>
+&lt;td style="text-align: left">xA123456&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5214,30 +5216,30 @@ When the server of vyos reboot, the configuration will broken and not working an
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Package&lt;/td>
-&lt;td>Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
+&lt;td style="text-align: left">Package&lt;/td>
+&lt;td style="text-align: left">Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>copy&lt;/td>
-&lt;td>Copies a file from the machine where you run Ansible to the web servers&lt;/td>
+&lt;td style="text-align: left">copy&lt;/td>
+&lt;td style="text-align: left">Copies a file from the machine where you run Ansible to the web servers&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>file&lt;/td>
-&lt;td>Sets the attribute of a file, symlink, or directory&lt;/td>
+&lt;td style="text-align: left">file&lt;/td>
+&lt;td style="text-align: left">Sets the attribute of a file, symlink, or directory&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>service&lt;/td>
-&lt;td>Starts, stop, or restarts a service&lt;/td>
+&lt;td style="text-align: left">service&lt;/td>
+&lt;td style="text-align: left">Starts, stop, or restarts a service&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>template&lt;/td>
-&lt;td>Geenerates a file from a template and copies it to the hosts&lt;/td>
+&lt;td style="text-align: left">template&lt;/td>
+&lt;td style="text-align: left">Geenerates a file from a template and copies it to the hosts&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -6755,30 +6757,30 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>No.&lt;/th>
-&lt;th>Name&lt;/th>
-&lt;th>OS&lt;/th>
-&lt;th>IP ADDRESS&lt;/th>
+&lt;th style="text-align: left">No.&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">OS&lt;/th>
+&lt;th style="text-align: left">IP ADDRESS&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>01&lt;/td>
-&lt;td>ubuntu-k8s-master&lt;/td>
-&lt;td>ubuntu 20.04 LTS&lt;/td>
-&lt;td>192.168.11.71&lt;/td>
+&lt;td style="text-align: left">01&lt;/td>
+&lt;td style="text-align: left">ubuntu-k8s-master&lt;/td>
+&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
+&lt;td style="text-align: left">192.168.11.71&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>02&lt;/td>
-&lt;td>ubuntu-k8s-node01&lt;/td>
-&lt;td>ubuntu 20.04 LTS&lt;/td>
-&lt;td>192.168.11.72&lt;/td>
+&lt;td style="text-align: left">02&lt;/td>
+&lt;td style="text-align: left">ubuntu-k8s-node01&lt;/td>
+&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
+&lt;td style="text-align: left">192.168.11.72&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>03&lt;/td>
-&lt;td>ubuntu-k8s-node02&lt;/td>
-&lt;td>ubuntu 20.04 LTS&lt;/td>
-&lt;td>192.168.11.73&lt;/td>
+&lt;td style="text-align: left">03&lt;/td>
+&lt;td style="text-align: left">ubuntu-k8s-node02&lt;/td>
+&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
+&lt;td style="text-align: left">192.168.11.73&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -10995,30 +10997,30 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>WAN interface&lt;/td>
-&lt;td>pppoe0&lt;/td>
+&lt;td style="text-align: left">WAN interface&lt;/td>
+&lt;td style="text-align: left">pppoe0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>l2tp vpn network&lt;/td>
-&lt;td>172.16.100.0/24&lt;/td>
+&lt;td style="text-align: left">l2tp vpn network&lt;/td>
+&lt;td style="text-align: left">172.16.100.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>PRESHARE KEY&lt;/td>
-&lt;td>uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
+&lt;td style="text-align: left">PRESHARE KEY&lt;/td>
+&lt;td style="text-align: left">uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DNS server 01&lt;/td>
-&lt;td>192.168.0.1&lt;/td>
+&lt;td style="text-align: left">DNS server 01&lt;/td>
+&lt;td style="text-align: left">192.168.0.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DNS Server 02&lt;/td>
-&lt;td>1921.68.0.2&lt;/td>
+&lt;td style="text-align: left">DNS Server 02&lt;/td>
+&lt;td style="text-align: left">1921.68.0.2&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11590,10 +11592,12 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Hostname&lt;/th>
-&lt;th>my-graylog&lt;/th>
+&lt;th style="text-align: left">Hostname&lt;/th>
+&lt;th style="text-align: left">my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
+&lt;tbody>
+&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -11756,46 +11760,46 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;/th>
-&lt;th>SITE A&lt;/th>
-&lt;th>SITE B&lt;/th>
+&lt;th style="text-align: left">&lt;/th>
+&lt;th style="text-align: left">SITE A&lt;/th>
+&lt;th style="text-align: left">SITE B&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>WAN ADDRESS&lt;/td>
-&lt;td>&lt;code>1.1.1.1&lt;/code>&lt;/td>
-&lt;td>&lt;code>2.2.2.2&lt;/code>&lt;/td>
+&lt;td style="text-align: left">WAN ADDRESS&lt;/td>
+&lt;td style="text-align: left">&lt;code>1.1.1.1&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>2.2.2.2&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>WAN Interface&lt;/td>
-&lt;td>&lt;code>eth0&lt;/code>&lt;/td>
-&lt;td>&lt;code>eth0&lt;/code>&lt;/td>
+&lt;td style="text-align: left">WAN Interface&lt;/td>
+&lt;td style="text-align: left">&lt;code>eth0&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>eth0&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>LAN ADDRESS&lt;/td>
-&lt;td>&lt;code>192.168.1.1/24&lt;/code>&lt;/td>
-&lt;td>&lt;code>192.168.2.1/24&lt;/code>&lt;/td>
+&lt;td style="text-align: left">LAN ADDRESS&lt;/td>
+&lt;td style="text-align: left">&lt;code>192.168.1.1/24&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>192.168.2.1/24&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>LAN NETWORK&lt;/td>
-&lt;td>&lt;code>192.168.1.0/24&lt;/code>&lt;/td>
-&lt;td>&lt;code>192.168.2.0/24&lt;/code>&lt;/td>
+&lt;td style="text-align: left">LAN NETWORK&lt;/td>
+&lt;td style="text-align: left">&lt;code>192.168.1.0/24&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>192.168.2.0/24&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>LAN Interface&lt;/td>
-&lt;td>&lt;code>eth1&lt;/code>&lt;/td>
-&lt;td>&lt;code>eth1&lt;/code>&lt;/td>
+&lt;td style="text-align: left">LAN Interface&lt;/td>
+&lt;td style="text-align: left">&lt;code>eth1&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>eth1&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>OS&lt;/td>
-&lt;td>&lt;code>Vyos&lt;/code>&lt;/td>
-&lt;td>&lt;code>pfsense&lt;/code>&lt;/td>
+&lt;td style="text-align: left">OS&lt;/td>
+&lt;td style="text-align: left">&lt;code>Vyos&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pfsense&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Pre-Shared Key&lt;/td>
-&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
-&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Pre-Shared Key&lt;/td>
+&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11881,34 +11885,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>Disabled&lt;/code>&lt;/td>
-&lt;td>uncheck&lt;/td>
+&lt;td style="text-align: left">&lt;code>Disabled&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>Key Exchange version&lt;/code>&lt;/td>
-&lt;td>IKEv2&lt;/td>
+&lt;td style="text-align: left">&lt;code>Key Exchange version&lt;/code>&lt;/td>
+&lt;td style="text-align: left">IKEv2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Internet Protocol&lt;/td>
-&lt;td>IPv4&lt;/td>
+&lt;td style="text-align: left">Internet Protocol&lt;/td>
+&lt;td style="text-align: left">IPv4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Interfae&lt;/td>
-&lt;td>WAN&lt;/td>
+&lt;td style="text-align: left">Interfae&lt;/td>
+&lt;td style="text-align: left">WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Remote Gateway&lt;/td>
-&lt;td>1.1.1.1&lt;/td>
+&lt;td style="text-align: left">Remote Gateway&lt;/td>
+&lt;td style="text-align: left">1.1.1.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Description&lt;/td>
-&lt;td>SITE-A-VPN&lt;/td>
+&lt;td style="text-align: left">Description&lt;/td>
+&lt;td style="text-align: left">SITE-A-VPN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11916,26 +11920,26 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Authentication Method&lt;/td>
-&lt;td>Mutual PSK&lt;/td>
+&lt;td style="text-align: left">Authentication Method&lt;/td>
+&lt;td style="text-align: left">Mutual PSK&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>My identifier&lt;/td>
-&lt;td>My IP address&lt;/td>
+&lt;td style="text-align: left">My identifier&lt;/td>
+&lt;td style="text-align: left">My IP address&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Peer identifier&lt;/td>
-&lt;td>Peer IP address&lt;/td>
+&lt;td style="text-align: left">Peer identifier&lt;/td>
+&lt;td style="text-align: left">Peer IP address&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Pre-Shared Key&lt;/td>
-&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Pre-Shared Key&lt;/td>
+&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11943,34 +11947,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Algorithm&lt;/th>
-&lt;th>Key length&lt;/th>
-&lt;th>Hash&lt;/th>
-&lt;th>DH Group&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Algorithm&lt;/th>
+&lt;th style="text-align: left">Key length&lt;/th>
+&lt;th style="text-align: left">Hash&lt;/th>
+&lt;th style="text-align: left">DH Group&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Encryption Algorithm&lt;/td>
-&lt;td>AES256-GCM&lt;/td>
-&lt;td>128 bits&lt;/td>
-&lt;td>SHA256&lt;/td>
-&lt;td>14(2048bit)&lt;/td>
+&lt;td style="text-align: left">Encryption Algorithm&lt;/td>
+&lt;td style="text-align: left">AES256-GCM&lt;/td>
+&lt;td style="text-align: left">128 bits&lt;/td>
+&lt;td style="text-align: left">SHA256&lt;/td>
+&lt;td style="text-align: left">14(2048bit)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Lifetime(Seconds)&lt;/td>
-&lt;td>28800&lt;/td>
+&lt;td style="text-align: left">Lifetime(Seconds)&lt;/td>
+&lt;td style="text-align: left">28800&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11978,46 +11982,46 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Disable rekey&lt;/td>
-&lt;td>uncheck&lt;/td>
+&lt;td style="text-align: left">Disable rekey&lt;/td>
+&lt;td style="text-align: left">uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Margintime(Seconds&lt;/td>
-&lt;td>black&lt;/td>
+&lt;td style="text-align: left">Margintime(Seconds&lt;/td>
+&lt;td style="text-align: left">black&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Disable Reauth&lt;/td>
-&lt;td>uncheck&lt;/td>
+&lt;td style="text-align: left">Disable Reauth&lt;/td>
+&lt;td style="text-align: left">uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Responder Only&lt;/td>
-&lt;td>Uncheck&lt;/td>
+&lt;td style="text-align: left">Responder Only&lt;/td>
+&lt;td style="text-align: left">Uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>MOBIKE&lt;/td>
-&lt;td>Disable&lt;/td>
+&lt;td style="text-align: left">MOBIKE&lt;/td>
+&lt;td style="text-align: left">Disable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Split connections&lt;/td>
-&lt;td>uncheck&lt;/td>
+&lt;td style="text-align: left">Split connections&lt;/td>
+&lt;td style="text-align: left">uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Dead Peer Dection&lt;/td>
-&lt;td>&amp;lsquo;Check on&amp;rsquo; Enable DPD&lt;/td>
+&lt;td style="text-align: left">Dead Peer Dection&lt;/td>
+&lt;td style="text-align: left">&amp;lsquo;Check on&amp;rsquo; Enable DPD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Delay&lt;/td>
-&lt;td>120&lt;/td>
+&lt;td style="text-align: left">Delay&lt;/td>
+&lt;td style="text-align: left">120&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Max failures&lt;/td>
-&lt;td>30&lt;/td>
+&lt;td style="text-align: left">Max failures&lt;/td>
+&lt;td style="text-align: left">30&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12026,34 +12030,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Disable&lt;/td>
-&lt;td>unchecked&lt;/td>
+&lt;td style="text-align: left">Disable&lt;/td>
+&lt;td style="text-align: left">unchecked&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mode&lt;/td>
-&lt;td>Tunnel IPv4&lt;/td>
+&lt;td style="text-align: left">Mode&lt;/td>
+&lt;td style="text-align: left">Tunnel IPv4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Local network&lt;/td>
-&lt;td>Network 192.168.2.0/24&lt;/td>
+&lt;td style="text-align: left">Local network&lt;/td>
+&lt;td style="text-align: left">Network 192.168.2.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>NAT/BINAT translation&lt;/td>
-&lt;td>None&lt;/td>
+&lt;td style="text-align: left">NAT/BINAT translation&lt;/td>
+&lt;td style="text-align: left">None&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Remote Network&lt;/td>
-&lt;td>Network 192.168.1.0/24&lt;/td>
+&lt;td style="text-align: left">Remote Network&lt;/td>
+&lt;td style="text-align: left">Network 192.168.1.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Description&lt;/td>
-&lt;td>Site A&lt;/td>
+&lt;td style="text-align: left">Description&lt;/td>
+&lt;td style="text-align: left">Site A&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12061,30 +12065,30 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Protocol&lt;/td>
-&lt;td>ESP&lt;/td>
+&lt;td style="text-align: left">Protocol&lt;/td>
+&lt;td style="text-align: left">ESP&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Encryption Algorithms&lt;/td>
-&lt;td>AES256-GCM 128 bit&lt;/td>
+&lt;td style="text-align: left">Encryption Algorithms&lt;/td>
+&lt;td style="text-align: left">AES256-GCM 128 bit&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Hash Algorithms&lt;/td>
-&lt;td>SHA256&lt;/td>
+&lt;td style="text-align: left">Hash Algorithms&lt;/td>
+&lt;td style="text-align: left">SHA256&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>PFS key group&lt;/td>
-&lt;td>14(2048 bit)&lt;/td>
+&lt;td style="text-align: left">PFS key group&lt;/td>
+&lt;td style="text-align: left">14(2048 bit)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Lifttime&lt;/td>
-&lt;td>3600&lt;/td>
+&lt;td style="text-align: left">Lifttime&lt;/td>
+&lt;td style="text-align: left">3600&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12092,14 +12096,14 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Automatically ping host&lt;/td>
-&lt;td>192.168.1.1&lt;/td>
+&lt;td style="text-align: left">Automatically ping host&lt;/td>
+&lt;td style="text-align: left">192.168.1.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12107,34 +12111,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Protocol&lt;/th>
-&lt;th>Source&lt;/th>
-&lt;th>Port&lt;/th>
-&lt;th>Destination&lt;/th>
-&lt;th>Port&lt;/th>
+&lt;th style="text-align: left">Protocol&lt;/th>
+&lt;th style="text-align: left">Source&lt;/th>
+&lt;th style="text-align: left">Port&lt;/th>
+&lt;th style="text-align: left">Destination&lt;/th>
+&lt;th style="text-align: left">Port&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Ipv4 UDP&lt;/td>
-&lt;td>1.1.1.1&lt;/td>
-&lt;td>*&lt;/td>
-&lt;td>WAN address&lt;/td>
-&lt;td>500(ISAKMP)&lt;/td>
+&lt;td style="text-align: left">Ipv4 UDP&lt;/td>
+&lt;td style="text-align: left">1.1.1.1&lt;/td>
+&lt;td style="text-align: left">*&lt;/td>
+&lt;td style="text-align: left">WAN address&lt;/td>
+&lt;td style="text-align: left">500(ISAKMP)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>IPv4 UDP&lt;/td>
-&lt;td>1.1.1.1&lt;/td>
-&lt;td>*&lt;/td>
-&lt;td>WAN address&lt;/td>
-&lt;td>4500(IPsec NAT-T)&lt;/td>
+&lt;td style="text-align: left">IPv4 UDP&lt;/td>
+&lt;td style="text-align: left">1.1.1.1&lt;/td>
+&lt;td style="text-align: left">*&lt;/td>
+&lt;td style="text-align: left">WAN address&lt;/td>
+&lt;td style="text-align: left">4500(IPsec NAT-T)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Ipv4 ESP&lt;/td>
-&lt;td>1.1.1.1&lt;/td>
-&lt;td>*&lt;/td>
-&lt;td>WAN address&lt;/td>
-&lt;td>*&lt;/td>
+&lt;td style="text-align: left">Ipv4 ESP&lt;/td>
+&lt;td style="text-align: left">1.1.1.1&lt;/td>
+&lt;td style="text-align: left">*&lt;/td>
+&lt;td style="text-align: left">WAN address&lt;/td>
+&lt;td style="text-align: left">*&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12528,34 +12532,34 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Domain Name&lt;/td>
-&lt;td>TESTING.LOCAL&lt;/td>
+&lt;td style="text-align: left">Domain Name&lt;/td>
+&lt;td style="text-align: left">TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>NTDomain Name&lt;/td>
-&lt;td>TESTING&lt;/td>
+&lt;td style="text-align: left">NTDomain Name&lt;/td>
+&lt;td style="text-align: left">TESTING&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>RADIUS HOSTNAME&lt;/td>
-&lt;td>MYRADIUS&lt;/td>
+&lt;td style="text-align: left">RADIUS HOSTNAME&lt;/td>
+&lt;td style="text-align: left">MYRADIUS&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DOMAIN CONTROLLER&lt;/td>
-&lt;td>MYDC02.TESTING.LOCAL&lt;/td>
+&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
+&lt;td style="text-align: left">MYDC02.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DOMAIN CONTROLLER&lt;/td>
-&lt;td>MYDC03.TESTING.LOCAL&lt;/td>
+&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
+&lt;td style="text-align: left">MYDC03.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DOMAIN GROUP&lt;/td>
-&lt;td>VPN_GROUP&lt;/td>
+&lt;td style="text-align: left">DOMAIN GROUP&lt;/td>
+&lt;td style="text-align: left">VPN_GROUP&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -13483,26 +13487,26 @@ ca-file = /etc/freeradius/3.0/certs/vpn.grapecity.com.cn/mycerts-ca.pem&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Interface&lt;/th>
-&lt;th>IP Address&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Interface&lt;/th>
+&lt;th style="text-align: left">IP Address&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>eth0&lt;/td>
-&lt;td>pppoe&lt;/td>
-&lt;td>WAN&lt;/td>
+&lt;td style="text-align: left">eth0&lt;/td>
+&lt;td style="text-align: left">pppoe&lt;/td>
+&lt;td style="text-align: left">WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>eth1&lt;/td>
-&lt;td>192.168.68.1 / 24&lt;/td>
-&lt;td>DMZ&lt;/td>
+&lt;td style="text-align: left">eth1&lt;/td>
+&lt;td style="text-align: left">192.168.68.1 / 24&lt;/td>
+&lt;td style="text-align: left">DMZ&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>eth2&lt;/td>
-&lt;td>10.0.0.1 / 24&lt;/td>
-&lt;td>LAN&lt;/td>
+&lt;td style="text-align: left">eth2&lt;/td>
+&lt;td style="text-align: left">10.0.0.1 / 24&lt;/td>
+&lt;td style="text-align: left">LAN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -13831,30 +13835,30 @@ ca-file = /etc/freeradius/3.0/certs/vpn.grapecity.com.cn/mycerts-ca.pem&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;strong>Hostname&lt;/strong>&lt;/td>
-&lt;td>mybookstack&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Hostname&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">mybookstack&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;strong>Domainame&lt;/strong>&lt;/td>
-&lt;td>mydomain.local&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Domainame&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">mydomain.local&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;strong>AD Auth User&lt;/strong>&lt;/td>
-&lt;td>stevedong&lt;/td>
+&lt;td style="text-align: left">&lt;strong>AD Auth User&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">stevedong&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;strong>Domain Controller IP&lt;/strong>&lt;/td>
-&lt;td>&amp;lt;domain contoller IP&amp;gt;&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Domain Controller IP&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">&amp;lt;domain contoller IP&amp;gt;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;strong>Time Zone&lt;/strong>&lt;/td>
-&lt;td>Asia/Shanghai&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Time Zone&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">Asia/Shanghai&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -15228,30 +15232,30 @@ repository file generator&lt;/a>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>value&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Librenms host name&lt;/td>
-&lt;td>&lt;code>mylibrenms&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Librenms host name&lt;/td>
+&lt;td style="text-align: left">&lt;code>mylibrenms&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Domain name&lt;/td>
-&lt;td>&lt;code>private.local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Domain name&lt;/td>
+&lt;td style="text-align: left">&lt;code>private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Name&lt;/td>
-&lt;td>&lt;code>myname&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Name&lt;/td>
+&lt;td style="text-align: left">&lt;code>myname&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>mail account&lt;/td>
-&lt;td>&lt;code>myname@private.local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">mail account&lt;/td>
+&lt;td style="text-align: left">&lt;code>myname@private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>snmp community&lt;/td>
-&lt;td>&lt;code>public&lt;/code>&lt;/td>
+&lt;td style="text-align: left">snmp community&lt;/td>
+&lt;td style="text-align: left">&lt;code>public&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -16773,30 +16777,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Host name&lt;/th>
-&lt;th>Host IP&lt;/th>
-&lt;th>Disk01 for install PVE&lt;/th>
-&lt;th>Disk02 for ceph&lt;/th>
+&lt;th style="text-align: left">Host name&lt;/th>
+&lt;th style="text-align: left">Host IP&lt;/th>
+&lt;th style="text-align: left">Disk01 for install PVE&lt;/th>
+&lt;th style="text-align: left">Disk02 for ceph&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>pve-test01&lt;/td>
-&lt;td>192.168.0.85&lt;/td>
-&lt;td>/dev/sda&lt;/td>
-&lt;td>/dev/sdb&lt;/td>
+&lt;td style="text-align: left">pve-test01&lt;/td>
+&lt;td style="text-align: left">192.168.0.85&lt;/td>
+&lt;td style="text-align: left">/dev/sda&lt;/td>
+&lt;td style="text-align: left">/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>pve-test02&lt;/td>
-&lt;td>192.168.0.86&lt;/td>
-&lt;td>/dev/sda&lt;/td>
-&lt;td>/dev/sdb&lt;/td>
+&lt;td style="text-align: left">pve-test02&lt;/td>
+&lt;td style="text-align: left">192.168.0.86&lt;/td>
+&lt;td style="text-align: left">/dev/sda&lt;/td>
+&lt;td style="text-align: left">/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>pve-test03&lt;/td>
-&lt;td>192.168.0.87&lt;/td>
-&lt;td>/dev/sda&lt;/td>
-&lt;td>/dev/sdb&lt;/td>
+&lt;td style="text-align: left">pve-test03&lt;/td>
+&lt;td style="text-align: left">192.168.0.87&lt;/td>
+&lt;td style="text-align: left">/dev/sda&lt;/td>
+&lt;td style="text-align: left">/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -17011,30 +17015,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>value&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>VM:&lt;/td>
-&lt;td>${VM-you-created}&lt;/td>
+&lt;td style="text-align: left">VM:&lt;/td>
+&lt;td style="text-align: left">${VM-you-created}&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Max Restart:&lt;/td>
-&lt;td>1&lt;/td>
+&lt;td style="text-align: left">Max Restart:&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Max Relocate:&lt;/td>
-&lt;td>1&lt;/td>
+&lt;td style="text-align: left">Max Relocate:&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Group&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Group&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>request State:&lt;/td>
-&lt;td>started&lt;/td>
+&lt;td style="text-align: left">request State:&lt;/td>
+&lt;td style="text-align: left">started&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -17171,112 +17175,112 @@ After systemd migration starting from Debian 9 Stretch, you need to change &lt;c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>No.&lt;/th>
-&lt;th>type&lt;/th>
-&lt;th>details&lt;/th>
-&lt;th>quantity&lt;/th>
-&lt;th>UnitPrice&lt;/th>
-&lt;th>Total Price&lt;/th>
+&lt;th style="text-align: left">No.&lt;/th>
+&lt;th style="text-align: left">type&lt;/th>
+&lt;th style="text-align: left">details&lt;/th>
+&lt;th style="text-align: left">quantity&lt;/th>
+&lt;th style="text-align: left">UnitPrice&lt;/th>
+&lt;th style="text-align: left">Total Price&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>01&lt;/td>
-&lt;td>机箱&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
+&lt;td style="text-align: left">01&lt;/td>
+&lt;td style="text-align: left">机箱&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
 >立人E-T4超薄迷你Thin-ITX立式台式机HTPC电脑空机箱支持VESA背挂&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥90(90.00*1.04)&lt;/td>
-&lt;td>93.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥90(90.00*1.04)&lt;/td>
+&lt;td style="text-align: left">93.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>02&lt;/td>
-&lt;td>CPU&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/4167802.html?jd_pop=68e8eedb-d94b-4d9b-90e5-f45e43cd1f59&amp;amp;abt=3#crumb-wrap" target="_blank" rel="noopener"
+&lt;td style="text-align: left">02&lt;/td>
+&lt;td style="text-align: left">CPU&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/4167802.html?jd_pop=68e8eedb-d94b-4d9b-90e5-f45e43cd1f59&amp;amp;abt=3#crumb-wrap" target="_blank" rel="noopener"
 >英特尔（Intel）奔腾双核G4560 盒装CPU处理器 &lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥599.00&lt;/td>
-&lt;td>599.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥599.00&lt;/td>
+&lt;td style="text-align: left">599.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>03&lt;/td>
-&lt;td>视频转换接头&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td style="text-align: left">03&lt;/td>
+&lt;td style="text-align: left">视频转换接头&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
 >山泽(SAMZHE)HDMI转VGA转换器带音频供电接口 高清视频转接头 电脑华为小米盒子接电视投影仪1080p 黑 ZH-22&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥35.90&lt;/td>
-&lt;td>35.90&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥35.90&lt;/td>
+&lt;td style="text-align: left">35.90&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>04&lt;/td>
-&lt;td>键鼠套装&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
+&lt;td style="text-align: left">04&lt;/td>
+&lt;td style="text-align: left">键鼠套装&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
 >罗技（Logitech）MK275 无线光电键鼠套装 无线鼠标无线键盘套装&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>99.00&lt;/td>
-&lt;td>99&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">99.00&lt;/td>
+&lt;td style="text-align: left">99&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>05&lt;/td>
-&lt;td>主板&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
+&lt;td style="text-align: left">05&lt;/td>
+&lt;td style="text-align: left">主板&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
 >ASUS/华硕PRIME H310T2 R2.0 THIN ITX小主板 迷你主机一体机HTPC&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥ 699&lt;/td>
-&lt;td>755&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥ 699&lt;/td>
+&lt;td style="text-align: left">755&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>06&lt;/td>
-&lt;td>电源适配器&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
+&lt;td style="text-align: left">06&lt;/td>
+&lt;td style="text-align: left">电源适配器&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
 >酷鱼19V-7.1A足135W电源适配器/技嘉华硕微星ITX主板通用7.4X5.0&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥129.00&lt;/td>
-&lt;td>139.32(129 * 1.08)&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥129.00&lt;/td>
+&lt;td style="text-align: left">139.32(129 * 1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>07&lt;/td>
-&lt;td>内存&lt;/td>
-&lt;td>&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
+&lt;td style="text-align: left">07&lt;/td>
+&lt;td style="text-align: left">内存&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
 >三星内存条8g DDR4 2666 8G 16G笔记本内存条四代吃鸡内存原厂兼容戴尔华硕联想苹果笔记本内存条&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥ 319.00&lt;/td>
-&lt;td>¥319.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥ 319.00&lt;/td>
+&lt;td style="text-align: left">¥319.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>08&lt;/td>
-&lt;td>WiFi套件&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
+&lt;td style="text-align: left">08&lt;/td>
+&lt;td style="text-align: left">WiFi套件&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
 >INTELAC7265 M.2 NGFF1000M/5G/2.4G/4.0网卡华硕H110T技嘉H110TN&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥135.00&lt;/td>
-&lt;td>￥145.80(135*1.08)&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥135.00&lt;/td>
+&lt;td style="text-align: left">￥145.80(135*1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>09&lt;/td>
-&lt;td>cpu散热器&lt;/td>
-&lt;td>&lt;a class="link" href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.76bf523MbXdki&amp;amp;id=43878066181&amp;amp;cm_id=140105335569ed55e27b&amp;amp;abbucket=14" target="_blank" rel="noopener"
+&lt;td style="text-align: left">09&lt;/td>
+&lt;td style="text-align: left">cpu散热器&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.76bf523MbXdki&amp;amp;id=43878066181&amp;amp;cm_id=140105335569ed55e27b&amp;amp;abbucket=14" target="_blank" rel="noopener"
 >ID-COOLING IS-20i 26 Intel平台CPU散热器8CM HTP超薄温控风扇&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥ 38.00&lt;/td>
-&lt;td>¥ 38.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥ 38.00&lt;/td>
+&lt;td style="text-align: left">¥ 38.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>10&lt;/td>
-&lt;td>SSD&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td style="text-align: left">10&lt;/td>
+&lt;td style="text-align: left">SSD&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
 >三星（SAMSUNG）1TB SSD固态硬盘 M.2接口(NVMe协议) 970 EVO Plus（MZ-V7S1T0B）&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥1899.00&lt;/td>
-&lt;td>￥1899.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥1899.00&lt;/td>
+&lt;td style="text-align: left">￥1899.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Sum&lt;/td>
-&lt;td>￥4123.02&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">Sum&lt;/td>
+&lt;td style="text-align: left">￥4123.02&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -17284,112 +17288,112 @@ After systemd migration starting from Debian 9 Stretch, you need to change &lt;c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>No.&lt;/th>
-&lt;th>type&lt;/th>
-&lt;th>details&lt;/th>
-&lt;th>quantity&lt;/th>
-&lt;th>UnitPrice&lt;/th>
-&lt;th>Total Price&lt;/th>
+&lt;th style="text-align: left">No.&lt;/th>
+&lt;th style="text-align: left">type&lt;/th>
+&lt;th style="text-align: left">details&lt;/th>
+&lt;th style="text-align: left">quantity&lt;/th>
+&lt;th style="text-align: left">UnitPrice&lt;/th>
+&lt;th style="text-align: left">Total Price&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>01&lt;/td>
-&lt;td>机箱&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
+&lt;td style="text-align: left">01&lt;/td>
+&lt;td style="text-align: left">机箱&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
 >立人E-T4超薄迷你Thin-ITX立式台式机HTPC电脑空机箱支持VESA背挂&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥90(90.00*1.04)&lt;/td>
-&lt;td>93.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥90(90.00*1.04)&lt;/td>
+&lt;td style="text-align: left">93.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>02&lt;/td>
-&lt;td>CPU&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/5008397.html" target="_blank" rel="noopener"
+&lt;td style="text-align: left">02&lt;/td>
+&lt;td style="text-align: left">CPU&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/5008397.html" target="_blank" rel="noopener"
 >英特尔（Intel） i5 8400 酷睿六核 盒装CPU处理器 &lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥1549.00&lt;/td>
-&lt;td>1549.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥1549.00&lt;/td>
+&lt;td style="text-align: left">1549.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>03&lt;/td>
-&lt;td>视频转换接头&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td style="text-align: left">03&lt;/td>
+&lt;td style="text-align: left">视频转换接头&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
 >山泽(SAMZHE)HDMI转VGA转换器带音频供电接口 高清视频转接头 电脑华为小米盒子接电视投影仪1080p 黑 ZH-22&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥35.90&lt;/td>
-&lt;td>35.90&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥35.90&lt;/td>
+&lt;td style="text-align: left">35.90&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>04&lt;/td>
-&lt;td>键鼠套装&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
+&lt;td style="text-align: left">04&lt;/td>
+&lt;td style="text-align: left">键鼠套装&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
 >罗技（Logitech）MK275 无线光电键鼠套装 无线鼠标无线键盘套装&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>99.00&lt;/td>
-&lt;td>99&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">99.00&lt;/td>
+&lt;td style="text-align: left">99&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>05&lt;/td>
-&lt;td>主板&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
+&lt;td style="text-align: left">05&lt;/td>
+&lt;td style="text-align: left">主板&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
 >ASUS/华硕PRIME H310T2 R2.0 THIN ITX小主板 迷你主机一体机HTPC&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥ 699&lt;/td>
-&lt;td>755&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥ 699&lt;/td>
+&lt;td style="text-align: left">755&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>06&lt;/td>
-&lt;td>电源适配器&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
+&lt;td style="text-align: left">06&lt;/td>
+&lt;td style="text-align: left">电源适配器&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
 >酷鱼19V-7.1A足135W电源适配器/技嘉华硕微星ITX主板通用7.4X5.0&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥129.00&lt;/td>
-&lt;td>139.32(129 * 1.08)&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥129.00&lt;/td>
+&lt;td style="text-align: left">139.32(129 * 1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>07&lt;/td>
-&lt;td>内存&lt;/td>
-&lt;td>&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
+&lt;td style="text-align: left">07&lt;/td>
+&lt;td style="text-align: left">内存&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
 >三星内存条8g DDR4 2666 8G 16G笔记本内存条四代吃鸡内存原厂兼容戴尔华硕联想苹果笔记本内存条&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥ 319.00&lt;/td>
-&lt;td>¥319.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥ 319.00&lt;/td>
+&lt;td style="text-align: left">¥319.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>08&lt;/td>
-&lt;td>WiFi套件&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
+&lt;td style="text-align: left">08&lt;/td>
+&lt;td style="text-align: left">WiFi套件&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
 >INTELAC7265 M.2 NGFF1000M/5G/2.4G/4.0网卡华硕H110T技嘉H110TN&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>135.00&lt;/td>
-&lt;td>￥145.80(135*1.08)&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">135.00&lt;/td>
+&lt;td style="text-align: left">￥145.80(135*1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>09&lt;/td>
-&lt;td>cpu散热器&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=527079297198&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
+&lt;td style="text-align: left">09&lt;/td>
+&lt;td style="text-align: left">cpu散热器&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=527079297198&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
 >超薄21mm 1150/1151/ CPU散热器 CPU风扇 适用于立人T3机箱&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>¥ 89.00&lt;/td>
-&lt;td>93.45（89*1.05）&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">¥ 89.00&lt;/td>
+&lt;td style="text-align: left">93.45（89*1.05）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>10&lt;/td>
-&lt;td>SSD&lt;/td>
-&lt;td>&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td style="text-align: left">10&lt;/td>
+&lt;td style="text-align: left">SSD&lt;/td>
+&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
 >三星（SAMSUNG）1TB SSD固态硬盘 M.2接口(NVMe协议) 970 EVO Plus（MZ-V7S1T0B）&lt;/a>&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>￥1899.00&lt;/td>
-&lt;td>￥1899.00&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">￥1899.00&lt;/td>
+&lt;td style="text-align: left">￥1899.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Sum&lt;/td>
-&lt;td>￥5128.47&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">Sum&lt;/td>
+&lt;td style="text-align: left">￥5128.47&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Proxmox Ve How to Chang Network of Hosting Without Reboot Proxmox Ve</title><link>https://echowings.github.io/p/proxmox-ve-how-to-chang-network-of-hosting-without-reboot-proxmox-ve/</link><pubDate>Sat, 27 Apr 2019 11:36:16 +0800</pubDate><guid>https://echowings.github.io/p/proxmox-ve-how-to-chang-network-of-hosting-without-reboot-proxmox-ve/</guid><description>&lt;h1 id="how-to-change-network-settings-of-proxmox-ve-host-without-rebooting">How to change Network settings of proxmox-ve host without rebooting.&lt;/h1>
@@ -18211,18 +18215,18 @@ Uninstall vmware tools and reboot vm.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>hostname&lt;/td>
-&lt;td>mylibrenms&lt;/td>
+&lt;td style="text-align: left">hostname&lt;/td>
+&lt;td style="text-align: left">mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>domainname&lt;/td>
-&lt;td>mydomain.net&lt;/td>
+&lt;td style="text-align: left">domainname&lt;/td>
+&lt;td style="text-align: left">mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -18232,18 +18236,18 @@ Uninstall vmware tools and reboot vm.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>KEY&lt;/th>
-&lt;th>VALUE&lt;/th>
+&lt;th style="text-align: left">KEY&lt;/th>
+&lt;th style="text-align: left">VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>hostname&lt;/td>
-&lt;td>mylibrenms&lt;/td>
+&lt;td style="text-align: left">hostname&lt;/td>
+&lt;td style="text-align: left">mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>domainname&lt;/td>
-&lt;td>mydomain.net&lt;/td>
+&lt;td style="text-align: left">domainname&lt;/td>
+&lt;td style="text-align: left">mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -21505,16 +21509,16 @@ Bingo! Here we go:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Requested URL&lt;/th>
-&lt;th>Using&lt;/th>
-&lt;th>Pattern&lt;/th>
+&lt;th style="text-align: left">Requested URL&lt;/th>
+&lt;th style="text-align: left">Using&lt;/th>
+&lt;th style="text-align: left">Pattern&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Matches the pattern&lt;/td>
-&lt;td>Regular Expressions&lt;/td>
-&lt;td>&lt;code>^(.*)&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Matches the pattern&lt;/td>
+&lt;td style="text-align: left">Regular Expressions&lt;/td>
+&lt;td style="text-align: left">&lt;code>^(.*)&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -21523,26 +21527,26 @@ Bingo! Here we go:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Logical grouping&lt;/td>
-&lt;td>Match ALL&lt;/td>
+&lt;td style="text-align: left">Logical grouping&lt;/td>
+&lt;td style="text-align: left">Match ALL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>input&lt;/td>
-&lt;td>&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
+&lt;td style="text-align: left">input&lt;/td>
+&lt;td style="text-align: left">&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Type&lt;/td>
-&lt;td>Matches the Pattern&lt;/td>
+&lt;td style="text-align: left">Type&lt;/td>
+&lt;td style="text-align: left">Matches the Pattern&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Patern&lt;/td>
-&lt;td>&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Patern&lt;/td>
+&lt;td style="text-align: left">&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -21551,18 +21555,18 @@ Bingo! Here we go:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Action Type&lt;/td>
-&lt;td>Rewrite&lt;/td>
+&lt;td style="text-align: left">Action Type&lt;/td>
+&lt;td style="text-align: left">Rewrite&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Rewrite URL&lt;/td>
-&lt;td>&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Rewrite URL&lt;/td>
+&lt;td style="text-align: left">&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

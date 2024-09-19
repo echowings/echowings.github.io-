@@ -589,14 +589,14 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>USERNAME&lt;/th>
-&lt;th>PASSWORD&lt;/th>
+&lt;th style="text-align: left">USERNAME&lt;/th>
+&lt;th style="text-align: left">PASSWORD&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>admin&lt;/td>
-&lt;td>xA123456&lt;/td>
+&lt;td style="text-align: left">admin&lt;/td>
+&lt;td style="text-align: left">xA123456&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

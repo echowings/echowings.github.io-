@@ -1339,10 +1339,12 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Hostname&lt;/th>
-&lt;th>my-graylog&lt;/th>
+&lt;th style="text-align: left">Hostname&lt;/th>
+&lt;th style="text-align: left">my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
+&lt;tbody>
+&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1504,34 +1506,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Domain Name&lt;/td>
-&lt;td>TESTING.LOCAL&lt;/td>
+&lt;td style="text-align: left">Domain Name&lt;/td>
+&lt;td style="text-align: left">TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>NTDomain Name&lt;/td>
-&lt;td>TESTING&lt;/td>
+&lt;td style="text-align: left">NTDomain Name&lt;/td>
+&lt;td style="text-align: left">TESTING&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>RADIUS HOSTNAME&lt;/td>
-&lt;td>MYRADIUS&lt;/td>
+&lt;td style="text-align: left">RADIUS HOSTNAME&lt;/td>
+&lt;td style="text-align: left">MYRADIUS&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DOMAIN CONTROLLER&lt;/td>
-&lt;td>MYDC02.TESTING.LOCAL&lt;/td>
+&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
+&lt;td style="text-align: left">MYDC02.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DOMAIN CONTROLLER&lt;/td>
-&lt;td>MYDC03.TESTING.LOCAL&lt;/td>
+&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
+&lt;td style="text-align: left">MYDC03.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DOMAIN GROUP&lt;/td>
-&lt;td>VPN_GROUP&lt;/td>
+&lt;td style="text-align: left">DOMAIN GROUP&lt;/td>
+&lt;td style="text-align: left">VPN_GROUP&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

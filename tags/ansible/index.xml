@@ -493,30 +493,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Package&lt;/td>
-&lt;td>Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
+&lt;td style="text-align: left">Package&lt;/td>
+&lt;td style="text-align: left">Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>copy&lt;/td>
-&lt;td>Copies a file from the machine where you run Ansible to the web servers&lt;/td>
+&lt;td style="text-align: left">copy&lt;/td>
+&lt;td style="text-align: left">Copies a file from the machine where you run Ansible to the web servers&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>file&lt;/td>
-&lt;td>Sets the attribute of a file, symlink, or directory&lt;/td>
+&lt;td style="text-align: left">file&lt;/td>
+&lt;td style="text-align: left">Sets the attribute of a file, symlink, or directory&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>service&lt;/td>
-&lt;td>Starts, stop, or restarts a service&lt;/td>
+&lt;td style="text-align: left">service&lt;/td>
+&lt;td style="text-align: left">Starts, stop, or restarts a service&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>template&lt;/td>
-&lt;td>Geenerates a file from a template and copies it to the hosts&lt;/td>
+&lt;td style="text-align: left">template&lt;/td>
+&lt;td style="text-align: left">Geenerates a file from a template and copies it to the hosts&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

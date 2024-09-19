@@ -121,38 +121,38 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Value&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Hostname&lt;/td>
-&lt;td>talos-k8s&lt;/td>
+&lt;td style="text-align: left">Hostname&lt;/td>
+&lt;td style="text-align: left">talos-k8s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>DNS Servers&lt;/td>
-&lt;td>192.168.11.10&lt;/td>
+&lt;td style="text-align: left">DNS Servers&lt;/td>
+&lt;td style="text-align: left">192.168.11.10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Time Servers&lt;/td>
-&lt;td>0.pool.ntp.org&lt;/td>
+&lt;td style="text-align: left">Time Servers&lt;/td>
+&lt;td style="text-align: left">0.pool.ntp.org&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Interface&lt;/td>
-&lt;td>enp1s0&lt;/td>
+&lt;td style="text-align: left">Interface&lt;/td>
+&lt;td style="text-align: left">enp1s0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mode&lt;/td>
-&lt;td>Static&lt;/td>
+&lt;td style="text-align: left">Mode&lt;/td>
+&lt;td style="text-align: left">Static&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Addresses&lt;/td>
-&lt;td>192.168.11.61/24&lt;/td>
+&lt;td style="text-align: left">Addresses&lt;/td>
+&lt;td style="text-align: left">192.168.11.61/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Gateway&lt;/td>
-&lt;td>192.168.11.1&lt;/td>
+&lt;td style="text-align: left">Gateway&lt;/td>
+&lt;td style="text-align: left">192.168.11.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

@@ -5011,30 +5011,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Host name&lt;/th>
-&lt;th>Host IP&lt;/th>
-&lt;th>Disk01 for install PVE&lt;/th>
-&lt;th>Disk02 for ceph&lt;/th>
+&lt;th style="text-align: left">Host name&lt;/th>
+&lt;th style="text-align: left">Host IP&lt;/th>
+&lt;th style="text-align: left">Disk01 for install PVE&lt;/th>
+&lt;th style="text-align: left">Disk02 for ceph&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>pve-test01&lt;/td>
-&lt;td>192.168.0.85&lt;/td>
-&lt;td>/dev/sda&lt;/td>
-&lt;td>/dev/sdb&lt;/td>
+&lt;td style="text-align: left">pve-test01&lt;/td>
+&lt;td style="text-align: left">192.168.0.85&lt;/td>
+&lt;td style="text-align: left">/dev/sda&lt;/td>
+&lt;td style="text-align: left">/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>pve-test02&lt;/td>
-&lt;td>192.168.0.86&lt;/td>
-&lt;td>/dev/sda&lt;/td>
-&lt;td>/dev/sdb&lt;/td>
+&lt;td style="text-align: left">pve-test02&lt;/td>
+&lt;td style="text-align: left">192.168.0.86&lt;/td>
+&lt;td style="text-align: left">/dev/sda&lt;/td>
+&lt;td style="text-align: left">/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>pve-test03&lt;/td>
-&lt;td>192.168.0.87&lt;/td>
-&lt;td>/dev/sda&lt;/td>
-&lt;td>/dev/sdb&lt;/td>
+&lt;td style="text-align: left">pve-test03&lt;/td>
+&lt;td style="text-align: left">192.168.0.87&lt;/td>
+&lt;td style="text-align: left">/dev/sda&lt;/td>
+&lt;td style="text-align: left">/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5249,30 +5249,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>value&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>VM:&lt;/td>
-&lt;td>${VM-you-created}&lt;/td>
+&lt;td style="text-align: left">VM:&lt;/td>
+&lt;td style="text-align: left">${VM-you-created}&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Max Restart:&lt;/td>
-&lt;td>1&lt;/td>
+&lt;td style="text-align: left">Max Restart:&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Max Relocate:&lt;/td>
-&lt;td>1&lt;/td>
+&lt;td style="text-align: left">Max Relocate:&lt;/td>
+&lt;td style="text-align: left">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Group&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Group&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>request State:&lt;/td>
-&lt;td>started&lt;/td>
+&lt;td style="text-align: left">request State:&lt;/td>
+&lt;td style="text-align: left">started&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
