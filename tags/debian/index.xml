@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Debian on Steve's Blog</title><link>https://echowings.github.io/tags/debian/</link><description>Recent content in Debian on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 06 Mar 2024 14:45:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/debian/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Login Aks in Debian 12</title><link>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</link><pubDate>Wed, 06 Mar 2024 14:45:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=090962a2" alt="Featured image of post How to Login Aks in Debian 12" />&lt;h2 id="install-az-cli">Install az-cli&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>debian on Steve's Blog</title><link>https://echowings.github.io/tags/debian/</link><description>Recent content in debian on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 06 Mar 2024 14:45:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/debian/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Login Aks in Debian 12</title><link>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</link><pubDate>Wed, 06 Mar 2024 14:45:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=090962a2" alt="Featured image of post How to Login Aks in Debian 12" />&lt;h2 id="install-az-cli">Install az-cli&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -405,7 +405,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Option 2: mirrors utsc&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Downlaod and install gpg key&lt;/span>
@@ -2502,34 +2502,34 @@ make-bcache -C /dev/nvme1n1 -B /dev/sd{a..f} &amp;ndash;writeback&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Domain Name&lt;/td>
-&lt;td style="text-align: left">TESTING.LOCAL&lt;/td>
+&lt;td>Domain Name&lt;/td>
+&lt;td>TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">NTDomain Name&lt;/td>
-&lt;td style="text-align: left">TESTING&lt;/td>
+&lt;td>NTDomain Name&lt;/td>
+&lt;td>TESTING&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">RADIUS HOSTNAME&lt;/td>
-&lt;td style="text-align: left">MYRADIUS&lt;/td>
+&lt;td>RADIUS HOSTNAME&lt;/td>
+&lt;td>MYRADIUS&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
-&lt;td style="text-align: left">MYDC02.TESTING.LOCAL&lt;/td>
+&lt;td>DOMAIN CONTROLLER&lt;/td>
+&lt;td>MYDC02.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
-&lt;td style="text-align: left">MYDC03.TESTING.LOCAL&lt;/td>
+&lt;td>DOMAIN CONTROLLER&lt;/td>
+&lt;td>MYDC03.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN GROUP&lt;/td>
-&lt;td style="text-align: left">VPN_GROUP&lt;/td>
+&lt;td>DOMAIN GROUP&lt;/td>
+&lt;td>VPN_GROUP&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4091,10 +4091,10 @@ ca-file = /etc/freeradius/3.0/certs/vpn.grapecity.com.cn/mycerts-ca.pem&lt;/p>
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">apt&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">get&lt;/span> &lt;span class="n">autoremove&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">export&lt;/span> &lt;span class="n">LC_ALL&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">en_US&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">UTF&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">8&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">echo&lt;/span> &lt;span class="s2">&amp;#34;en_US.UTF-8 UTF-8&amp;#34;&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">etc&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">locale&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gen&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">locale&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gen&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt-get autoremove
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export LC_ALL=en_US.UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo &amp;#34;en_US.UTF-8 UTF-8&amp;#34; &amp;gt;&amp;gt; /etc/locale.gen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">locale-gen
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>

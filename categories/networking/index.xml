@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Networking on Steve's Blog</title><link>https://echowings.github.io/categories/networking/</link><description>Recent content in Networking on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 17 Mar 2023 21:01:28 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab</title><link>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</link><pubDate>Fri, 17 Mar 2023 21:01:28 +0800</pubDate><guid>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d4706f3e" alt="Featured image of post How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab" />&lt;h2 id="create-vbash-script">Create vbash script&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>networking on Steve's Blog</title><link>https://echowings.github.io/categories/networking/</link><description>Recent content in networking on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 17 Mar 2023 21:01:28 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab</title><link>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</link><pubDate>Fri, 17 Mar 2023 21:01:28 +0800</pubDate><guid>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d4706f3e" alt="Featured image of post How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab" />&lt;h2 id="create-vbash-script">Create vbash script&lt;/h2>
 &lt;h3 id="create-folder">Create folder&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -494,14 +494,14 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">USERNAME&lt;/th>
-&lt;th style="text-align: left">PASSWORD&lt;/th>
+&lt;th>USERNAME&lt;/th>
+&lt;th>PASSWORD&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">admin&lt;/td>
-&lt;td style="text-align: left">xA123456&lt;/td>
+&lt;td>admin&lt;/td>
+&lt;td>xA123456&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1546,30 +1546,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">WAN interface&lt;/td>
-&lt;td style="text-align: left">pppoe0&lt;/td>
+&lt;td>WAN interface&lt;/td>
+&lt;td>pppoe0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">l2tp vpn network&lt;/td>
-&lt;td style="text-align: left">172.16.100.0/24&lt;/td>
+&lt;td>l2tp vpn network&lt;/td>
+&lt;td>172.16.100.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">PRESHARE KEY&lt;/td>
-&lt;td style="text-align: left">uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
+&lt;td>PRESHARE KEY&lt;/td>
+&lt;td>uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS server 01&lt;/td>
-&lt;td style="text-align: left">192.168.0.1&lt;/td>
+&lt;td>DNS server 01&lt;/td>
+&lt;td>192.168.0.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS Server 02&lt;/td>
-&lt;td style="text-align: left">1921.68.0.2&lt;/td>
+&lt;td>DNS Server 02&lt;/td>
+&lt;td>1921.68.0.2&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1820,46 +1820,46 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">SITE A&lt;/th>
-&lt;th style="text-align: left">SITE B&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>SITE A&lt;/th>
+&lt;th>SITE B&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">WAN ADDRESS&lt;/td>
-&lt;td style="text-align: left">&lt;code>1.1.1.1&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>2.2.2.2&lt;/code>&lt;/td>
+&lt;td>WAN ADDRESS&lt;/td>
+&lt;td>&lt;code>1.1.1.1&lt;/code>&lt;/td>
+&lt;td>&lt;code>2.2.2.2&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">WAN Interface&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth0&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth0&lt;/code>&lt;/td>
+&lt;td>WAN Interface&lt;/td>
+&lt;td>&lt;code>eth0&lt;/code>&lt;/td>
+&lt;td>&lt;code>eth0&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">LAN ADDRESS&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.1.1/24&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.2.1/24&lt;/code>&lt;/td>
+&lt;td>LAN ADDRESS&lt;/td>
+&lt;td>&lt;code>192.168.1.1/24&lt;/code>&lt;/td>
+&lt;td>&lt;code>192.168.2.1/24&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">LAN NETWORK&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.1.0/24&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.2.0/24&lt;/code>&lt;/td>
+&lt;td>LAN NETWORK&lt;/td>
+&lt;td>&lt;code>192.168.1.0/24&lt;/code>&lt;/td>
+&lt;td>&lt;code>192.168.2.0/24&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">LAN Interface&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth1&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth1&lt;/code>&lt;/td>
+&lt;td>LAN Interface&lt;/td>
+&lt;td>&lt;code>eth1&lt;/code>&lt;/td>
+&lt;td>&lt;code>eth1&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">OS&lt;/td>
-&lt;td style="text-align: left">&lt;code>Vyos&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>pfsense&lt;/code>&lt;/td>
+&lt;td>OS&lt;/td>
+&lt;td>&lt;code>Vyos&lt;/code>&lt;/td>
+&lt;td>&lt;code>pfsense&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Pre-Shared Key&lt;/td>
-&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td>Pre-Shared Key&lt;/td>
+&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1945,34 +1945,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>Disabled&lt;/code>&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>&lt;code>Disabled&lt;/code>&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>Key Exchange version&lt;/code>&lt;/td>
-&lt;td style="text-align: left">IKEv2&lt;/td>
+&lt;td>&lt;code>Key Exchange version&lt;/code>&lt;/td>
+&lt;td>IKEv2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Internet Protocol&lt;/td>
-&lt;td style="text-align: left">IPv4&lt;/td>
+&lt;td>Internet Protocol&lt;/td>
+&lt;td>IPv4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Interfae&lt;/td>
-&lt;td style="text-align: left">WAN&lt;/td>
+&lt;td>Interfae&lt;/td>
+&lt;td>WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Remote Gateway&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
+&lt;td>Remote Gateway&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Description&lt;/td>
-&lt;td style="text-align: left">SITE-A-VPN&lt;/td>
+&lt;td>Description&lt;/td>
+&lt;td>SITE-A-VPN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1980,26 +1980,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Authentication Method&lt;/td>
-&lt;td style="text-align: left">Mutual PSK&lt;/td>
+&lt;td>Authentication Method&lt;/td>
+&lt;td>Mutual PSK&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">My identifier&lt;/td>
-&lt;td style="text-align: left">My IP address&lt;/td>
+&lt;td>My identifier&lt;/td>
+&lt;td>My IP address&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Peer identifier&lt;/td>
-&lt;td style="text-align: left">Peer IP address&lt;/td>
+&lt;td>Peer identifier&lt;/td>
+&lt;td>Peer IP address&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Pre-Shared Key&lt;/td>
-&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td>Pre-Shared Key&lt;/td>
+&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2007,34 +2007,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Algorithm&lt;/th>
-&lt;th style="text-align: left">Key length&lt;/th>
-&lt;th style="text-align: left">Hash&lt;/th>
-&lt;th style="text-align: left">DH Group&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Algorithm&lt;/th>
+&lt;th>Key length&lt;/th>
+&lt;th>Hash&lt;/th>
+&lt;th>DH Group&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Encryption Algorithm&lt;/td>
-&lt;td style="text-align: left">AES256-GCM&lt;/td>
-&lt;td style="text-align: left">128 bits&lt;/td>
-&lt;td style="text-align: left">SHA256&lt;/td>
-&lt;td style="text-align: left">14(2048bit)&lt;/td>
+&lt;td>Encryption Algorithm&lt;/td>
+&lt;td>AES256-GCM&lt;/td>
+&lt;td>128 bits&lt;/td>
+&lt;td>SHA256&lt;/td>
+&lt;td>14(2048bit)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Lifetime(Seconds)&lt;/td>
-&lt;td style="text-align: left">28800&lt;/td>
+&lt;td>Lifetime(Seconds)&lt;/td>
+&lt;td>28800&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2042,46 +2042,46 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">KEY&lt;/th>
-&lt;th style="text-align: left">VALUE&lt;/th>
+&lt;th>KEY&lt;/th>
+&lt;th>VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Disable rekey&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>Disable rekey&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Margintime(Seconds&lt;/td>
-&lt;td style="text-align: left">black&lt;/td>
+&lt;td>Margintime(Seconds&lt;/td>
+&lt;td>black&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Disable Reauth&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>Disable Reauth&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Responder Only&lt;/td>
-&lt;td style="text-align: left">Uncheck&lt;/td>
+&lt;td>Responder Only&lt;/td>
+&lt;td>Uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">MOBIKE&lt;/td>
-&lt;td style="text-align: left">Disable&lt;/td>
+&lt;td>MOBIKE&lt;/td>
+&lt;td>Disable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Split connections&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>Split connections&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Dead Peer Dection&lt;/td>
-&lt;td style="text-align: left">&amp;lsquo;Check on&amp;rsquo; Enable DPD&lt;/td>
+&lt;td>Dead Peer Dection&lt;/td>
+&lt;td>&amp;lsquo;Check on&amp;rsquo; Enable DPD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Delay&lt;/td>
-&lt;td style="text-align: left">120&lt;/td>
+&lt;td>Delay&lt;/td>
+&lt;td>120&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max failures&lt;/td>
-&lt;td style="text-align: left">30&lt;/td>
+&lt;td>Max failures&lt;/td>
+&lt;td>30&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2090,34 +2090,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Disable&lt;/td>
-&lt;td style="text-align: left">unchecked&lt;/td>
+&lt;td>Disable&lt;/td>
+&lt;td>unchecked&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mode&lt;/td>
-&lt;td style="text-align: left">Tunnel IPv4&lt;/td>
+&lt;td>Mode&lt;/td>
+&lt;td>Tunnel IPv4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Local network&lt;/td>
-&lt;td style="text-align: left">Network 192.168.2.0/24&lt;/td>
+&lt;td>Local network&lt;/td>
+&lt;td>Network 192.168.2.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">NAT/BINAT translation&lt;/td>
-&lt;td style="text-align: left">None&lt;/td>
+&lt;td>NAT/BINAT translation&lt;/td>
+&lt;td>None&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Remote Network&lt;/td>
-&lt;td style="text-align: left">Network 192.168.1.0/24&lt;/td>
+&lt;td>Remote Network&lt;/td>
+&lt;td>Network 192.168.1.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Description&lt;/td>
-&lt;td style="text-align: left">Site A&lt;/td>
+&lt;td>Description&lt;/td>
+&lt;td>Site A&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2125,30 +2125,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Protocol&lt;/td>
-&lt;td style="text-align: left">ESP&lt;/td>
+&lt;td>Protocol&lt;/td>
+&lt;td>ESP&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Encryption Algorithms&lt;/td>
-&lt;td style="text-align: left">AES256-GCM 128 bit&lt;/td>
+&lt;td>Encryption Algorithms&lt;/td>
+&lt;td>AES256-GCM 128 bit&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Hash Algorithms&lt;/td>
-&lt;td style="text-align: left">SHA256&lt;/td>
+&lt;td>Hash Algorithms&lt;/td>
+&lt;td>SHA256&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">PFS key group&lt;/td>
-&lt;td style="text-align: left">14(2048 bit)&lt;/td>
+&lt;td>PFS key group&lt;/td>
+&lt;td>14(2048 bit)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Lifttime&lt;/td>
-&lt;td style="text-align: left">3600&lt;/td>
+&lt;td>Lifttime&lt;/td>
+&lt;td>3600&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2156,14 +2156,14 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Automatically ping host&lt;/td>
-&lt;td style="text-align: left">192.168.1.1&lt;/td>
+&lt;td>Automatically ping host&lt;/td>
+&lt;td>192.168.1.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2171,34 +2171,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Protocol&lt;/th>
-&lt;th style="text-align: left">Source&lt;/th>
-&lt;th style="text-align: left">Port&lt;/th>
-&lt;th style="text-align: left">Destination&lt;/th>
-&lt;th style="text-align: left">Port&lt;/th>
+&lt;th>Protocol&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Port&lt;/th>
+&lt;th>Destination&lt;/th>
+&lt;th>Port&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Ipv4 UDP&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
-&lt;td style="text-align: left">WAN address&lt;/td>
-&lt;td style="text-align: left">500(ISAKMP)&lt;/td>
+&lt;td>Ipv4 UDP&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
+&lt;td>*&lt;/td>
+&lt;td>WAN address&lt;/td>
+&lt;td>500(ISAKMP)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">IPv4 UDP&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
-&lt;td style="text-align: left">WAN address&lt;/td>
-&lt;td style="text-align: left">4500(IPsec NAT-T)&lt;/td>
+&lt;td>IPv4 UDP&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
+&lt;td>*&lt;/td>
+&lt;td>WAN address&lt;/td>
+&lt;td>4500(IPsec NAT-T)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Ipv4 ESP&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
-&lt;td style="text-align: left">WAN address&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
+&lt;td>Ipv4 ESP&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
+&lt;td>*&lt;/td>
+&lt;td>WAN address&lt;/td>
+&lt;td>*&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2264,26 +2264,26 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Interface&lt;/th>
-&lt;th style="text-align: left">IP Address&lt;/th>
-&lt;th style="text-align: left">Description&lt;/th>
+&lt;th>Interface&lt;/th>
+&lt;th>IP Address&lt;/th>
+&lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">eth0&lt;/td>
-&lt;td style="text-align: left">pppoe&lt;/td>
-&lt;td style="text-align: left">WAN&lt;/td>
+&lt;td>eth0&lt;/td>
+&lt;td>pppoe&lt;/td>
+&lt;td>WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">eth1&lt;/td>
-&lt;td style="text-align: left">192.168.68.1 / 24&lt;/td>
-&lt;td style="text-align: left">DMZ&lt;/td>
+&lt;td>eth1&lt;/td>
+&lt;td>192.168.68.1 / 24&lt;/td>
+&lt;td>DMZ&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">eth2&lt;/td>
-&lt;td style="text-align: left">10.0.0.1 / 24&lt;/td>
-&lt;td style="text-align: left">LAN&lt;/td>
+&lt;td>eth2&lt;/td>
+&lt;td>10.0.0.1 / 24&lt;/td>
+&lt;td>LAN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

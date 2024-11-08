@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Document on Steve's Blog</title><link>https://echowings.github.io/tags/document/</link><description>Recent content in Document on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 30 Jul 2019 16:22:52 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/document/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Bookstack With Docker Compose</title><link>https://echowings.github.io/p/how-to-deploy-bookstack-with-docker-compose/</link><pubDate>Tue, 30 Jul 2019 16:22:52 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-bookstack-with-docker-compose/</guid><description>&lt;h1 id="how-to-deploy-bookstack-with-docker-compose">How to Deploy Bookstack with Docker Compose&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>document on Steve's Blog</title><link>https://echowings.github.io/tags/document/</link><description>Recent content in document on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 30 Jul 2019 16:22:52 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/document/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Bookstack With Docker Compose</title><link>https://echowings.github.io/p/how-to-deploy-bookstack-with-docker-compose/</link><pubDate>Tue, 30 Jul 2019 16:22:52 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-bookstack-with-docker-compose/</guid><description>&lt;h1 id="how-to-deploy-bookstack-with-docker-compose">How to Deploy Bookstack with Docker Compose&lt;/h1>
 &lt;p>Bookstack is a good opensource solution for enterprie document management with light footprinting. It support auth like ldap,active directory,google,azure,aws,slack etc. and it can export document as pdf file.&lt;/p>
 &lt;h2 id="preparation">Preparation&lt;/h2>
 &lt;ul>
@@ -9,30 +9,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Hostname&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">mybookstack&lt;/td>
+&lt;td>&lt;strong>Hostname&lt;/strong>&lt;/td>
+&lt;td>mybookstack&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Domainame&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">mydomain.local&lt;/td>
+&lt;td>&lt;strong>Domainame&lt;/strong>&lt;/td>
+&lt;td>mydomain.local&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>AD Auth User&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">stevedong&lt;/td>
+&lt;td>&lt;strong>AD Auth User&lt;/strong>&lt;/td>
+&lt;td>stevedong&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Domain Controller IP&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">&amp;lt;domain contoller IP&amp;gt;&lt;/td>
+&lt;td>&lt;strong>Domain Controller IP&lt;/strong>&lt;/td>
+&lt;td>&amp;lt;domain contoller IP&amp;gt;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Time Zone&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">Asia/Shanghai&lt;/td>
+&lt;td>&lt;strong>Time Zone&lt;/strong>&lt;/td>
+&lt;td>Asia/Shanghai&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

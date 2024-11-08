@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim on Steve's Blog</title><link>https://echowings.github.io/categories/vim/</link><description>Recent content in Vim on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 09 Apr 2019 10:02:33 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Vim</title><link>https://echowings.github.io/p/how-to-setup-vim/</link><pubDate>Tue, 09 Apr 2019 10:02:33 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-vim/</guid><description>&lt;h1 id="how-to-setup-vim">How to setup vim&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Steve's Blog</title><link>https://echowings.github.io/categories/vim/</link><description>Recent content in vim on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Apr 2019 10:02:33 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Vim</title><link>https://echowings.github.io/p/how-to-setup-vim/</link><pubDate>Tue, 09 Apr 2019 10:02:33 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-vim/</guid><description>&lt;h1 id="how-to-setup-vim">How to setup vim&lt;/h1>
 &lt;h2 id="install-vundle">Install vundle&lt;/h2>
 &lt;p>vundle is a plugin manage tools for vim&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -129,13 +129,13 @@ then run the commands:&lt;/p>
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">cat&lt;/span> &lt;span class="p">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">~&lt;/span>/.&lt;span class="nx">vimrc&lt;/span> &lt;span class="p">&amp;lt;&amp;lt;&lt;/span>&lt;span class="nx">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">colorscheme&lt;/span> &lt;span class="nx">gruvbox&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">set&lt;/span> &lt;span class="nx">background&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nb">dark&lt;/span> &lt;span class="c">&amp;#34; Setting dark mode&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">gruvbox_contrast_dark&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;hard&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">airline_theme&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;simple&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">cat&lt;/span> &lt;span class="p">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">~&lt;/span>/.&lt;span class="nx">vimrc&lt;/span> &lt;span class="p">&amp;lt;&amp;lt;&lt;/span>&lt;span class="nx">EOF&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">colorscheme&lt;/span> &lt;span class="nx">gruvbox&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">set&lt;/span> &lt;span class="nx">background&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nb">dark&lt;/span> &lt;span class="c">&amp;#34; Setting dark mode&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">gruvbox_contrast_dark&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;hard&amp;#39;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">airline_theme&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;simple&amp;#39;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">EOF&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="let-vim-support-nginx-syntax-highlight">Let vim support nginx syntax highlight&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">

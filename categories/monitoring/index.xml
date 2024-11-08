@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitoring on Steve's Blog</title><link>https://echowings.github.io/categories/monitoring/</link><description>Recent content in Monitoring on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 05 Jun 2019 21:47:54 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/monitoring/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Librenms With Docker-compose</title><link>https://echowings.github.io/p/how-to-deploy-librenms-with-docker-compose/</link><pubDate>Wed, 05 Jun 2019 21:47:54 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-librenms-with-docker-compose/</guid><description>&lt;h1 id="how-to-deploy-librenms-with-docker-compsoe">How to deploy librenms with docker-compsoe&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>monitoring on Steve's Blog</title><link>https://echowings.github.io/categories/monitoring/</link><description>Recent content in monitoring on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2019 21:47:54 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/monitoring/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Librenms With Docker-compose</title><link>https://echowings.github.io/p/how-to-deploy-librenms-with-docker-compose/</link><pubDate>Wed, 05 Jun 2019 21:47:54 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-librenms-with-docker-compose/</guid><description>&lt;h1 id="how-to-deploy-librenms-with-docker-compsoe">How to deploy librenms with docker-compsoe&lt;/h1>
 &lt;p>Librenms is a very light and easy handle moniting software. It is suitable for us to monitoring server,network device, printers etc. via snmp.&lt;/p>
 &lt;p>At now, docker is easy for software deployment. After deploy librenms in ubuntu vm, I have a try to deploy librenms with docker-compose.&lt;/p>
 &lt;h2 id="download-config-files">Download config files&lt;/h2>
@@ -39,30 +39,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Librenms host name&lt;/td>
-&lt;td style="text-align: left">&lt;code>mylibrenms&lt;/code>&lt;/td>
+&lt;td>Librenms host name&lt;/td>
+&lt;td>&lt;code>mylibrenms&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Domain name&lt;/td>
-&lt;td style="text-align: left">&lt;code>private.local&lt;/code>&lt;/td>
+&lt;td>Domain name&lt;/td>
+&lt;td>&lt;code>private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Name&lt;/td>
-&lt;td style="text-align: left">&lt;code>myname&lt;/code>&lt;/td>
+&lt;td>Name&lt;/td>
+&lt;td>&lt;code>myname&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">mail account&lt;/td>
-&lt;td style="text-align: left">&lt;code>myname@private.local&lt;/code>&lt;/td>
+&lt;td>mail account&lt;/td>
+&lt;td>&lt;code>myname@private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">snmp community&lt;/td>
-&lt;td style="text-align: left">&lt;code>public&lt;/code>&lt;/td>
+&lt;td>snmp community&lt;/td>
+&lt;td>&lt;code>public&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

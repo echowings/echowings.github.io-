@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ansible on Steve's Blog</title><link>https://echowings.github.io/tags/ansible/</link><description>Recent content in Ansible on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 22 Dec 2023 22:55:42 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Generate Windows Reboot Task Scheduler</title><link>https://echowings.github.io/p/how-to-generate-windows-reboot-task-scheduler/</link><pubDate>Fri, 22 Dec 2023 22:55:42 +0800</pubDate><guid>https://echowings.github.io/p/how-to-generate-windows-reboot-task-scheduler/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=78edc0d0" alt="Featured image of post How to Generate Windows Reboot Task Scheduler" />&lt;h2 id="powershell">Powershell&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ansible on Steve's Blog</title><link>https://echowings.github.io/tags/ansible/</link><description>Recent content in ansible on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 Dec 2023 22:55:42 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Generate Windows Reboot Task Scheduler</title><link>https://echowings.github.io/p/how-to-generate-windows-reboot-task-scheduler/</link><pubDate>Fri, 22 Dec 2023 22:55:42 +0800</pubDate><guid>https://echowings.github.io/p/how-to-generate-windows-reboot-task-scheduler/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=78edc0d0" alt="Featured image of post How to Generate Windows Reboot Task Scheduler" />&lt;h2 id="powershell">Powershell&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -493,30 +493,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Package&lt;/td>
-&lt;td style="text-align: left">Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
+&lt;td>Package&lt;/td>
+&lt;td>Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">copy&lt;/td>
-&lt;td style="text-align: left">Copies a file from the machine where you run Ansible to the web servers&lt;/td>
+&lt;td>copy&lt;/td>
+&lt;td>Copies a file from the machine where you run Ansible to the web servers&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">file&lt;/td>
-&lt;td style="text-align: left">Sets the attribute of a file, symlink, or directory&lt;/td>
+&lt;td>file&lt;/td>
+&lt;td>Sets the attribute of a file, symlink, or directory&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">service&lt;/td>
-&lt;td style="text-align: left">Starts, stop, or restarts a service&lt;/td>
+&lt;td>service&lt;/td>
+&lt;td>Starts, stop, or restarts a service&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">template&lt;/td>
-&lt;td style="text-align: left">Geenerates a file from a template and copies it to the hosts&lt;/td>
+&lt;td>template&lt;/td>
+&lt;td>Geenerates a file from a template and copies it to the hosts&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

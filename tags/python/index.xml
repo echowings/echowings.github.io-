@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Steve's Blog</title><link>https://echowings.github.io/tags/python/</link><description>Recent content in Python on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Mar 2024 11:39:49 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Synthetic Monitor With Pulumi Python</title><link>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</link><pubDate>Sun, 17 Mar 2024 11:39:49 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d16575c4" alt="Featured image of post How to Create Synthetic Monitor With Pulumi Python" />&lt;h2 id="prepared-environment">Prepared environment&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on Steve's Blog</title><link>https://echowings.github.io/tags/python/</link><description>Recent content in python on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 17 Mar 2024 11:39:49 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Synthetic Monitor With Pulumi Python</title><link>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</link><pubDate>Sun, 17 Mar 2024 11:39:49 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d16575c4" alt="Featured image of post How to Create Synthetic Monitor With Pulumi Python" />&lt;h2 id="prepared-environment">Prepared environment&lt;/h2>
 &lt;h3 id="install-pulumi">Install pulumi&lt;/h3>
 &lt;h3 id="install-python">install python&lt;/h3>
 &lt;h3 id="install-poetry">install poetry&lt;/h3>
@@ -862,18 +862,18 @@
 &lt;/span>&lt;span class="lnt">11
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”替换为“空格”&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">expandtab&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”的“缩进幅度”改为 4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">tabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">自动缩进时的&lt;/span>“&lt;span class="nx">缩进幅度&lt;/span>”&lt;span class="nx">改为&lt;/span> &lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">shiftwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">按下键盘&lt;/span>“&lt;span class="nx">Tab&lt;/span>”&lt;span class="nx">键时插入的空格数&lt;/span> “ &lt;span class="nx">这里设置为&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="nx">就可以插入&lt;/span>“&lt;span class="nx">tabstop&lt;/span>”&lt;span class="nx">中设置的空格数了&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">softtabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">保存时删除行尾的空格&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">autocmd&lt;/span> &lt;span class="nx">BufWritePre&lt;/span> * :%&lt;span class="nx">s&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>/&lt;span class="nx">ge&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“&lt;span class="m">80&lt;/span> &lt;span class="nx">个字符换行&lt;/span> &lt;span class="nx">setlocal&lt;/span> &lt;span class="nx">textwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">80&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”替换为“空格”&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">expandtab&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">&amp;#34; 将“Tab”的“缩进幅度”改为 4&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">tabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 自动缩进时的“缩进幅度”改为 &lt;span class="m">4&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">shiftwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 按下键盘“&lt;span class="nx">Tab&lt;/span>”键时插入的空格数 “ 这里设置为 &lt;span class="m">0&lt;/span> 就可以插入“&lt;span class="nx">tabstop&lt;/span>”中设置的空格数了 &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">softtabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 保存时删除行尾的空格 &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">autocmd&lt;/span> &lt;span class="nx">BufWritePre&lt;/span> * :%&lt;span class="nx">s&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>/&lt;span class="nx">ge&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“&lt;span class="m">80&lt;/span> 个字符换行 &lt;span class="nx">setlocal&lt;/span> &lt;span class="nx">textwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">80&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ul>
 &lt;li>install neobundle.vim&lt;/li>

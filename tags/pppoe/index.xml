@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pppoe on Steve's Blog</title><link>https://echowings.github.io/tags/pppoe/</link><description>Recent content in Pppoe on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 17 Mar 2023 21:01:28 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/pppoe/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab</title><link>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</link><pubDate>Fri, 17 Mar 2023 21:01:28 +0800</pubDate><guid>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d4706f3e" alt="Featured image of post How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab" />&lt;h2 id="create-vbash-script">Create vbash script&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pppoe on Steve's Blog</title><link>https://echowings.github.io/tags/pppoe/</link><description>Recent content in pppoe on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 17 Mar 2023 21:01:28 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/pppoe/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab</title><link>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</link><pubDate>Fri, 17 Mar 2023 21:01:28 +0800</pubDate><guid>https://echowings.github.io/p/how-to-disconnect-and-reconnect-vyos-pppoe0-interface-with-crontab/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d4706f3e" alt="Featured image of post How to Disconnect and Reconnect Vyos Pppoe0 Interface With Crontab" />&lt;h2 id="create-vbash-script">Create vbash script&lt;/h2>
 &lt;h3 id="create-folder">Create folder&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -103,30 +103,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">WAN interface&lt;/td>
-&lt;td style="text-align: left">pppoe0&lt;/td>
+&lt;td>WAN interface&lt;/td>
+&lt;td>pppoe0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">l2tp vpn network&lt;/td>
-&lt;td style="text-align: left">172.16.100.0/24&lt;/td>
+&lt;td>l2tp vpn network&lt;/td>
+&lt;td>172.16.100.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">PRESHARE KEY&lt;/td>
-&lt;td style="text-align: left">uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
+&lt;td>PRESHARE KEY&lt;/td>
+&lt;td>uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS server 01&lt;/td>
-&lt;td style="text-align: left">192.168.0.1&lt;/td>
+&lt;td>DNS server 01&lt;/td>
+&lt;td>192.168.0.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS Server 02&lt;/td>
-&lt;td style="text-align: left">1921.68.0.2&lt;/td>
+&lt;td>DNS Server 02&lt;/td>
+&lt;td>1921.68.0.2&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

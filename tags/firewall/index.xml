@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firewall on Steve's Blog</title><link>https://echowings.github.io/tags/firewall/</link><description>Recent content in Firewall on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Aug 2019 13:58:35 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/firewall/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Vyos as a Firewall</title><link>https://echowings.github.io/p/how-to-setup-vyos-as-a-firewall/</link><pubDate>Thu, 08 Aug 2019 13:58:35 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-vyos-as-a-firewall/</guid><description>&lt;h1 id="how-to-setup-vyos-as-a-firewall">How to Setup Vyos as a Firewall&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>firewall on Steve's Blog</title><link>https://echowings.github.io/tags/firewall/</link><description>Recent content in firewall on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2019 13:58:35 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/firewall/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Vyos as a Firewall</title><link>https://echowings.github.io/p/how-to-setup-vyos-as-a-firewall/</link><pubDate>Thu, 08 Aug 2019 13:58:35 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-vyos-as-a-firewall/</guid><description>&lt;h1 id="how-to-setup-vyos-as-a-firewall">How to Setup Vyos as a Firewall&lt;/h1>
 &lt;h2 id="setup-interface">Setup interface&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Interface&lt;/th>
-&lt;th style="text-align: left">IP Address&lt;/th>
-&lt;th style="text-align: left">Description&lt;/th>
+&lt;th>Interface&lt;/th>
+&lt;th>IP Address&lt;/th>
+&lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">eth0&lt;/td>
-&lt;td style="text-align: left">pppoe&lt;/td>
-&lt;td style="text-align: left">WAN&lt;/td>
+&lt;td>eth0&lt;/td>
+&lt;td>pppoe&lt;/td>
+&lt;td>WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">eth1&lt;/td>
-&lt;td style="text-align: left">192.168.68.1 / 24&lt;/td>
-&lt;td style="text-align: left">DMZ&lt;/td>
+&lt;td>eth1&lt;/td>
+&lt;td>192.168.68.1 / 24&lt;/td>
+&lt;td>DMZ&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">eth2&lt;/td>
-&lt;td style="text-align: left">10.0.0.1 / 24&lt;/td>
-&lt;td style="text-align: left">LAN&lt;/td>
+&lt;td>eth2&lt;/td>
+&lt;td>10.0.0.1 / 24&lt;/td>
+&lt;td>LAN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

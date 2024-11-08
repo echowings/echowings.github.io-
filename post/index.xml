@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Steve's Blog</title><link>https://echowings.github.io/post/</link><description>Recent content in Posts on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Mar 2024 11:39:49 +0800</lastBuildDate><atom:link href="https://echowings.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Synthetic Monitor With Pulumi Python</title><link>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</link><pubDate>Sun, 17 Mar 2024 11:39:49 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d16575c4" alt="Featured image of post How to Create Synthetic Monitor With Pulumi Python" />&lt;h2 id="prepared-environment">Prepared environment&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Steve's Blog</title><link>https://echowings.github.io/post/</link><description>Recent content in Posts on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 17 Mar 2024 11:39:49 +0800</lastBuildDate><atom:link href="https://echowings.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Synthetic Monitor With Pulumi Python</title><link>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</link><pubDate>Sun, 17 Mar 2024 11:39:49 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-synthetic-monitor-with-pulumi-python/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d16575c4" alt="Featured image of post How to Create Synthetic Monitor With Pulumi Python" />&lt;h2 id="prepared-environment">Prepared environment&lt;/h2>
 &lt;h3 id="install-pulumi">Install pulumi&lt;/h3>
 &lt;h3 id="install-python">install python&lt;/h3>
 &lt;h3 id="install-poetry">install poetry&lt;/h3>
@@ -1796,38 +1796,38 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Hostname&lt;/td>
-&lt;td style="text-align: left">talos-k8s&lt;/td>
+&lt;td>Hostname&lt;/td>
+&lt;td>talos-k8s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS Servers&lt;/td>
-&lt;td style="text-align: left">192.168.11.10&lt;/td>
+&lt;td>DNS Servers&lt;/td>
+&lt;td>192.168.11.10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Time Servers&lt;/td>
-&lt;td style="text-align: left">0.pool.ntp.org&lt;/td>
+&lt;td>Time Servers&lt;/td>
+&lt;td>0.pool.ntp.org&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Interface&lt;/td>
-&lt;td style="text-align: left">enp1s0&lt;/td>
+&lt;td>Interface&lt;/td>
+&lt;td>enp1s0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mode&lt;/td>
-&lt;td style="text-align: left">Static&lt;/td>
+&lt;td>Mode&lt;/td>
+&lt;td>Static&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Addresses&lt;/td>
-&lt;td style="text-align: left">192.168.11.61/24&lt;/td>
+&lt;td>Addresses&lt;/td>
+&lt;td>192.168.11.61/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Gateway&lt;/td>
-&lt;td style="text-align: left">192.168.11.1&lt;/td>
+&lt;td>Gateway&lt;/td>
+&lt;td>192.168.11.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3216,7 +3216,7 @@ When the server of vyos reboot, the configuration will broken and not working an
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Option 2: mirrors utsc&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Downlaod and install gpg key&lt;/span>
@@ -4358,14 +4358,14 @@ When the server of vyos reboot, the configuration will broken and not working an
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">USERNAME&lt;/th>
-&lt;th style="text-align: left">PASSWORD&lt;/th>
+&lt;th>USERNAME&lt;/th>
+&lt;th>PASSWORD&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">admin&lt;/td>
-&lt;td style="text-align: left">xA123456&lt;/td>
+&lt;td>admin&lt;/td>
+&lt;td>xA123456&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5214,30 +5214,30 @@ When the server of vyos reboot, the configuration will broken and not working an
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Package&lt;/td>
-&lt;td style="text-align: left">Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
+&lt;td>Package&lt;/td>
+&lt;td>Installs or removes packages by using the host&amp;rsquo;s package manager&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">copy&lt;/td>
-&lt;td style="text-align: left">Copies a file from the machine where you run Ansible to the web servers&lt;/td>
+&lt;td>copy&lt;/td>
+&lt;td>Copies a file from the machine where you run Ansible to the web servers&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">file&lt;/td>
-&lt;td style="text-align: left">Sets the attribute of a file, symlink, or directory&lt;/td>
+&lt;td>file&lt;/td>
+&lt;td>Sets the attribute of a file, symlink, or directory&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">service&lt;/td>
-&lt;td style="text-align: left">Starts, stop, or restarts a service&lt;/td>
+&lt;td>service&lt;/td>
+&lt;td>Starts, stop, or restarts a service&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">template&lt;/td>
-&lt;td style="text-align: left">Geenerates a file from a template and copies it to the hosts&lt;/td>
+&lt;td>template&lt;/td>
+&lt;td>Geenerates a file from a template and copies it to the hosts&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -6755,30 +6755,30 @@ I have 3 proxmox ve servers. then I plan to install 3 ubuntu virtual machines on
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">No.&lt;/th>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">OS&lt;/th>
-&lt;th style="text-align: left">IP ADDRESS&lt;/th>
+&lt;th>No.&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>OS&lt;/th>
+&lt;th>IP ADDRESS&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">01&lt;/td>
-&lt;td style="text-align: left">ubuntu-k8s-master&lt;/td>
-&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
-&lt;td style="text-align: left">192.168.11.71&lt;/td>
+&lt;td>01&lt;/td>
+&lt;td>ubuntu-k8s-master&lt;/td>
+&lt;td>ubuntu 20.04 LTS&lt;/td>
+&lt;td>192.168.11.71&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">02&lt;/td>
-&lt;td style="text-align: left">ubuntu-k8s-node01&lt;/td>
-&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
-&lt;td style="text-align: left">192.168.11.72&lt;/td>
+&lt;td>02&lt;/td>
+&lt;td>ubuntu-k8s-node01&lt;/td>
+&lt;td>ubuntu 20.04 LTS&lt;/td>
+&lt;td>192.168.11.72&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">03&lt;/td>
-&lt;td style="text-align: left">ubuntu-k8s-node02&lt;/td>
-&lt;td style="text-align: left">ubuntu 20.04 LTS&lt;/td>
-&lt;td style="text-align: left">192.168.11.73&lt;/td>
+&lt;td>03&lt;/td>
+&lt;td>ubuntu-k8s-node02&lt;/td>
+&lt;td>ubuntu 20.04 LTS&lt;/td>
+&lt;td>192.168.11.73&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -10995,30 +10995,30 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">WAN interface&lt;/td>
-&lt;td style="text-align: left">pppoe0&lt;/td>
+&lt;td>WAN interface&lt;/td>
+&lt;td>pppoe0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">l2tp vpn network&lt;/td>
-&lt;td style="text-align: left">172.16.100.0/24&lt;/td>
+&lt;td>l2tp vpn network&lt;/td>
+&lt;td>172.16.100.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">PRESHARE KEY&lt;/td>
-&lt;td style="text-align: left">uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
+&lt;td>PRESHARE KEY&lt;/td>
+&lt;td>uND0O6RYI1O833NL2+qwSrW4htMll1hJAUM2nPQaa8k=&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS server 01&lt;/td>
-&lt;td style="text-align: left">192.168.0.1&lt;/td>
+&lt;td>DNS server 01&lt;/td>
+&lt;td>192.168.0.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS Server 02&lt;/td>
-&lt;td style="text-align: left">1921.68.0.2&lt;/td>
+&lt;td>DNS Server 02&lt;/td>
+&lt;td>1921.68.0.2&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11590,12 +11590,10 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Hostname&lt;/th>
-&lt;th style="text-align: left">my-graylog&lt;/th>
+&lt;th>Hostname&lt;/th>
+&lt;th>my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
-&lt;tbody>
-&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -11758,46 +11756,46 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">SITE A&lt;/th>
-&lt;th style="text-align: left">SITE B&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>SITE A&lt;/th>
+&lt;th>SITE B&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">WAN ADDRESS&lt;/td>
-&lt;td style="text-align: left">&lt;code>1.1.1.1&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>2.2.2.2&lt;/code>&lt;/td>
+&lt;td>WAN ADDRESS&lt;/td>
+&lt;td>&lt;code>1.1.1.1&lt;/code>&lt;/td>
+&lt;td>&lt;code>2.2.2.2&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">WAN Interface&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth0&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth0&lt;/code>&lt;/td>
+&lt;td>WAN Interface&lt;/td>
+&lt;td>&lt;code>eth0&lt;/code>&lt;/td>
+&lt;td>&lt;code>eth0&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">LAN ADDRESS&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.1.1/24&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.2.1/24&lt;/code>&lt;/td>
+&lt;td>LAN ADDRESS&lt;/td>
+&lt;td>&lt;code>192.168.1.1/24&lt;/code>&lt;/td>
+&lt;td>&lt;code>192.168.2.1/24&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">LAN NETWORK&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.1.0/24&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>192.168.2.0/24&lt;/code>&lt;/td>
+&lt;td>LAN NETWORK&lt;/td>
+&lt;td>&lt;code>192.168.1.0/24&lt;/code>&lt;/td>
+&lt;td>&lt;code>192.168.2.0/24&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">LAN Interface&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth1&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>eth1&lt;/code>&lt;/td>
+&lt;td>LAN Interface&lt;/td>
+&lt;td>&lt;code>eth1&lt;/code>&lt;/td>
+&lt;td>&lt;code>eth1&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">OS&lt;/td>
-&lt;td style="text-align: left">&lt;code>Vyos&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>pfsense&lt;/code>&lt;/td>
+&lt;td>OS&lt;/td>
+&lt;td>&lt;code>Vyos&lt;/code>&lt;/td>
+&lt;td>&lt;code>pfsense&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Pre-Shared Key&lt;/td>
-&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
-&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td>Pre-Shared Key&lt;/td>
+&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11883,34 +11881,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>Disabled&lt;/code>&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>&lt;code>Disabled&lt;/code>&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>Key Exchange version&lt;/code>&lt;/td>
-&lt;td style="text-align: left">IKEv2&lt;/td>
+&lt;td>&lt;code>Key Exchange version&lt;/code>&lt;/td>
+&lt;td>IKEv2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Internet Protocol&lt;/td>
-&lt;td style="text-align: left">IPv4&lt;/td>
+&lt;td>Internet Protocol&lt;/td>
+&lt;td>IPv4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Interfae&lt;/td>
-&lt;td style="text-align: left">WAN&lt;/td>
+&lt;td>Interfae&lt;/td>
+&lt;td>WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Remote Gateway&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
+&lt;td>Remote Gateway&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Description&lt;/td>
-&lt;td style="text-align: left">SITE-A-VPN&lt;/td>
+&lt;td>Description&lt;/td>
+&lt;td>SITE-A-VPN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11918,26 +11916,26 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Authentication Method&lt;/td>
-&lt;td style="text-align: left">Mutual PSK&lt;/td>
+&lt;td>Authentication Method&lt;/td>
+&lt;td>Mutual PSK&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">My identifier&lt;/td>
-&lt;td style="text-align: left">My IP address&lt;/td>
+&lt;td>My identifier&lt;/td>
+&lt;td>My IP address&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Peer identifier&lt;/td>
-&lt;td style="text-align: left">Peer IP address&lt;/td>
+&lt;td>Peer identifier&lt;/td>
+&lt;td>Peer IP address&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Pre-Shared Key&lt;/td>
-&lt;td style="text-align: left">&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+&lt;td>Pre-Shared Key&lt;/td>
+&lt;td>&lt;code>*#JCenaoewaoi0298J299*8&amp;amp;^(%9))_&amp;amp;&amp;amp;&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11945,34 +11943,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Algorithm&lt;/th>
-&lt;th style="text-align: left">Key length&lt;/th>
-&lt;th style="text-align: left">Hash&lt;/th>
-&lt;th style="text-align: left">DH Group&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Algorithm&lt;/th>
+&lt;th>Key length&lt;/th>
+&lt;th>Hash&lt;/th>
+&lt;th>DH Group&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Encryption Algorithm&lt;/td>
-&lt;td style="text-align: left">AES256-GCM&lt;/td>
-&lt;td style="text-align: left">128 bits&lt;/td>
-&lt;td style="text-align: left">SHA256&lt;/td>
-&lt;td style="text-align: left">14(2048bit)&lt;/td>
+&lt;td>Encryption Algorithm&lt;/td>
+&lt;td>AES256-GCM&lt;/td>
+&lt;td>128 bits&lt;/td>
+&lt;td>SHA256&lt;/td>
+&lt;td>14(2048bit)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Lifetime(Seconds)&lt;/td>
-&lt;td style="text-align: left">28800&lt;/td>
+&lt;td>Lifetime(Seconds)&lt;/td>
+&lt;td>28800&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -11980,46 +11978,46 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">KEY&lt;/th>
-&lt;th style="text-align: left">VALUE&lt;/th>
+&lt;th>KEY&lt;/th>
+&lt;th>VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Disable rekey&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>Disable rekey&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Margintime(Seconds&lt;/td>
-&lt;td style="text-align: left">black&lt;/td>
+&lt;td>Margintime(Seconds&lt;/td>
+&lt;td>black&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Disable Reauth&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>Disable Reauth&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Responder Only&lt;/td>
-&lt;td style="text-align: left">Uncheck&lt;/td>
+&lt;td>Responder Only&lt;/td>
+&lt;td>Uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">MOBIKE&lt;/td>
-&lt;td style="text-align: left">Disable&lt;/td>
+&lt;td>MOBIKE&lt;/td>
+&lt;td>Disable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Split connections&lt;/td>
-&lt;td style="text-align: left">uncheck&lt;/td>
+&lt;td>Split connections&lt;/td>
+&lt;td>uncheck&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Dead Peer Dection&lt;/td>
-&lt;td style="text-align: left">&amp;lsquo;Check on&amp;rsquo; Enable DPD&lt;/td>
+&lt;td>Dead Peer Dection&lt;/td>
+&lt;td>&amp;lsquo;Check on&amp;rsquo; Enable DPD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Delay&lt;/td>
-&lt;td style="text-align: left">120&lt;/td>
+&lt;td>Delay&lt;/td>
+&lt;td>120&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max failures&lt;/td>
-&lt;td style="text-align: left">30&lt;/td>
+&lt;td>Max failures&lt;/td>
+&lt;td>30&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12028,34 +12026,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Disable&lt;/td>
-&lt;td style="text-align: left">unchecked&lt;/td>
+&lt;td>Disable&lt;/td>
+&lt;td>unchecked&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mode&lt;/td>
-&lt;td style="text-align: left">Tunnel IPv4&lt;/td>
+&lt;td>Mode&lt;/td>
+&lt;td>Tunnel IPv4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Local network&lt;/td>
-&lt;td style="text-align: left">Network 192.168.2.0/24&lt;/td>
+&lt;td>Local network&lt;/td>
+&lt;td>Network 192.168.2.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">NAT/BINAT translation&lt;/td>
-&lt;td style="text-align: left">None&lt;/td>
+&lt;td>NAT/BINAT translation&lt;/td>
+&lt;td>None&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Remote Network&lt;/td>
-&lt;td style="text-align: left">Network 192.168.1.0/24&lt;/td>
+&lt;td>Remote Network&lt;/td>
+&lt;td>Network 192.168.1.0/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Description&lt;/td>
-&lt;td style="text-align: left">Site A&lt;/td>
+&lt;td>Description&lt;/td>
+&lt;td>Site A&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12063,30 +12061,30 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Protocol&lt;/td>
-&lt;td style="text-align: left">ESP&lt;/td>
+&lt;td>Protocol&lt;/td>
+&lt;td>ESP&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Encryption Algorithms&lt;/td>
-&lt;td style="text-align: left">AES256-GCM 128 bit&lt;/td>
+&lt;td>Encryption Algorithms&lt;/td>
+&lt;td>AES256-GCM 128 bit&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Hash Algorithms&lt;/td>
-&lt;td style="text-align: left">SHA256&lt;/td>
+&lt;td>Hash Algorithms&lt;/td>
+&lt;td>SHA256&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">PFS key group&lt;/td>
-&lt;td style="text-align: left">14(2048 bit)&lt;/td>
+&lt;td>PFS key group&lt;/td>
+&lt;td>14(2048 bit)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Lifttime&lt;/td>
-&lt;td style="text-align: left">3600&lt;/td>
+&lt;td>Lifttime&lt;/td>
+&lt;td>3600&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12094,14 +12092,14 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Automatically ping host&lt;/td>
-&lt;td style="text-align: left">192.168.1.1&lt;/td>
+&lt;td>Automatically ping host&lt;/td>
+&lt;td>192.168.1.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12109,34 +12107,34 @@ Run command in Terminal &lt;code>csrutil enble&lt;/code>.&lt;/li>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Protocol&lt;/th>
-&lt;th style="text-align: left">Source&lt;/th>
-&lt;th style="text-align: left">Port&lt;/th>
-&lt;th style="text-align: left">Destination&lt;/th>
-&lt;th style="text-align: left">Port&lt;/th>
+&lt;th>Protocol&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Port&lt;/th>
+&lt;th>Destination&lt;/th>
+&lt;th>Port&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Ipv4 UDP&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
-&lt;td style="text-align: left">WAN address&lt;/td>
-&lt;td style="text-align: left">500(ISAKMP)&lt;/td>
+&lt;td>Ipv4 UDP&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
+&lt;td>*&lt;/td>
+&lt;td>WAN address&lt;/td>
+&lt;td>500(ISAKMP)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">IPv4 UDP&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
-&lt;td style="text-align: left">WAN address&lt;/td>
-&lt;td style="text-align: left">4500(IPsec NAT-T)&lt;/td>
+&lt;td>IPv4 UDP&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
+&lt;td>*&lt;/td>
+&lt;td>WAN address&lt;/td>
+&lt;td>4500(IPsec NAT-T)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Ipv4 ESP&lt;/td>
-&lt;td style="text-align: left">1.1.1.1&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
-&lt;td style="text-align: left">WAN address&lt;/td>
-&lt;td style="text-align: left">*&lt;/td>
+&lt;td>Ipv4 ESP&lt;/td>
+&lt;td>1.1.1.1&lt;/td>
+&lt;td>*&lt;/td>
+&lt;td>WAN address&lt;/td>
+&lt;td>*&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -12530,34 +12528,34 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Domain Name&lt;/td>
-&lt;td style="text-align: left">TESTING.LOCAL&lt;/td>
+&lt;td>Domain Name&lt;/td>
+&lt;td>TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">NTDomain Name&lt;/td>
-&lt;td style="text-align: left">TESTING&lt;/td>
+&lt;td>NTDomain Name&lt;/td>
+&lt;td>TESTING&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">RADIUS HOSTNAME&lt;/td>
-&lt;td style="text-align: left">MYRADIUS&lt;/td>
+&lt;td>RADIUS HOSTNAME&lt;/td>
+&lt;td>MYRADIUS&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
-&lt;td style="text-align: left">MYDC02.TESTING.LOCAL&lt;/td>
+&lt;td>DOMAIN CONTROLLER&lt;/td>
+&lt;td>MYDC02.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
-&lt;td style="text-align: left">MYDC03.TESTING.LOCAL&lt;/td>
+&lt;td>DOMAIN CONTROLLER&lt;/td>
+&lt;td>MYDC03.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN GROUP&lt;/td>
-&lt;td style="text-align: left">VPN_GROUP&lt;/td>
+&lt;td>DOMAIN GROUP&lt;/td>
+&lt;td>VPN_GROUP&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -13485,26 +13483,26 @@ ca-file = /etc/freeradius/3.0/certs/vpn.grapecity.com.cn/mycerts-ca.pem&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Interface&lt;/th>
-&lt;th style="text-align: left">IP Address&lt;/th>
-&lt;th style="text-align: left">Description&lt;/th>
+&lt;th>Interface&lt;/th>
+&lt;th>IP Address&lt;/th>
+&lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">eth0&lt;/td>
-&lt;td style="text-align: left">pppoe&lt;/td>
-&lt;td style="text-align: left">WAN&lt;/td>
+&lt;td>eth0&lt;/td>
+&lt;td>pppoe&lt;/td>
+&lt;td>WAN&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">eth1&lt;/td>
-&lt;td style="text-align: left">192.168.68.1 / 24&lt;/td>
-&lt;td style="text-align: left">DMZ&lt;/td>
+&lt;td>eth1&lt;/td>
+&lt;td>192.168.68.1 / 24&lt;/td>
+&lt;td>DMZ&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">eth2&lt;/td>
-&lt;td style="text-align: left">10.0.0.1 / 24&lt;/td>
-&lt;td style="text-align: left">LAN&lt;/td>
+&lt;td>eth2&lt;/td>
+&lt;td>10.0.0.1 / 24&lt;/td>
+&lt;td>LAN&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -13833,30 +13831,30 @@ ca-file = /etc/freeradius/3.0/certs/vpn.grapecity.com.cn/mycerts-ca.pem&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Hostname&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">mybookstack&lt;/td>
+&lt;td>&lt;strong>Hostname&lt;/strong>&lt;/td>
+&lt;td>mybookstack&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Domainame&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">mydomain.local&lt;/td>
+&lt;td>&lt;strong>Domainame&lt;/strong>&lt;/td>
+&lt;td>mydomain.local&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>AD Auth User&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">stevedong&lt;/td>
+&lt;td>&lt;strong>AD Auth User&lt;/strong>&lt;/td>
+&lt;td>stevedong&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Domain Controller IP&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">&amp;lt;domain contoller IP&amp;gt;&lt;/td>
+&lt;td>&lt;strong>Domain Controller IP&lt;/strong>&lt;/td>
+&lt;td>&amp;lt;domain contoller IP&amp;gt;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;strong>Time Zone&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">Asia/Shanghai&lt;/td>
+&lt;td>&lt;strong>Time Zone&lt;/strong>&lt;/td>
+&lt;td>Asia/Shanghai&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -15230,30 +15228,30 @@ repository file generator&lt;/a>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Librenms host name&lt;/td>
-&lt;td style="text-align: left">&lt;code>mylibrenms&lt;/code>&lt;/td>
+&lt;td>Librenms host name&lt;/td>
+&lt;td>&lt;code>mylibrenms&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Domain name&lt;/td>
-&lt;td style="text-align: left">&lt;code>private.local&lt;/code>&lt;/td>
+&lt;td>Domain name&lt;/td>
+&lt;td>&lt;code>private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Name&lt;/td>
-&lt;td style="text-align: left">&lt;code>myname&lt;/code>&lt;/td>
+&lt;td>Name&lt;/td>
+&lt;td>&lt;code>myname&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">mail account&lt;/td>
-&lt;td style="text-align: left">&lt;code>myname@private.local&lt;/code>&lt;/td>
+&lt;td>mail account&lt;/td>
+&lt;td>&lt;code>myname@private.local&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">snmp community&lt;/td>
-&lt;td style="text-align: left">&lt;code>public&lt;/code>&lt;/td>
+&lt;td>snmp community&lt;/td>
+&lt;td>&lt;code>public&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -16775,30 +16773,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Host name&lt;/th>
-&lt;th style="text-align: left">Host IP&lt;/th>
-&lt;th style="text-align: left">Disk01 for install PVE&lt;/th>
-&lt;th style="text-align: left">Disk02 for ceph&lt;/th>
+&lt;th>Host name&lt;/th>
+&lt;th>Host IP&lt;/th>
+&lt;th>Disk01 for install PVE&lt;/th>
+&lt;th>Disk02 for ceph&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">pve-test01&lt;/td>
-&lt;td style="text-align: left">192.168.0.85&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test01&lt;/td>
+&lt;td>192.168.0.85&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">pve-test02&lt;/td>
-&lt;td style="text-align: left">192.168.0.86&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test02&lt;/td>
+&lt;td>192.168.0.86&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">pve-test03&lt;/td>
-&lt;td style="text-align: left">192.168.0.87&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test03&lt;/td>
+&lt;td>192.168.0.87&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -17013,30 +17011,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">VM:&lt;/td>
-&lt;td style="text-align: left">${VM-you-created}&lt;/td>
+&lt;td>VM:&lt;/td>
+&lt;td>${VM-you-created}&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max Restart:&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>Max Restart:&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max Relocate:&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>Max Relocate:&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Group&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>Group&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">request State:&lt;/td>
-&lt;td style="text-align: left">started&lt;/td>
+&lt;td>request State:&lt;/td>
+&lt;td>started&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -17173,112 +17171,112 @@ After systemd migration starting from Debian 9 Stretch, you need to change &lt;c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">No.&lt;/th>
-&lt;th style="text-align: left">type&lt;/th>
-&lt;th style="text-align: left">details&lt;/th>
-&lt;th style="text-align: left">quantity&lt;/th>
-&lt;th style="text-align: left">UnitPrice&lt;/th>
-&lt;th style="text-align: left">Total Price&lt;/th>
+&lt;th>No.&lt;/th>
+&lt;th>type&lt;/th>
+&lt;th>details&lt;/th>
+&lt;th>quantity&lt;/th>
+&lt;th>UnitPrice&lt;/th>
+&lt;th>Total Price&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">01&lt;/td>
-&lt;td style="text-align: left">机箱&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
+&lt;td>01&lt;/td>
+&lt;td>机箱&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
 >立人E-T4超薄迷你Thin-ITX立式台式机HTPC电脑空机箱支持VESA背挂&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥90(90.00*1.04)&lt;/td>
-&lt;td style="text-align: left">93.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥90(90.00*1.04)&lt;/td>
+&lt;td>93.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">02&lt;/td>
-&lt;td style="text-align: left">CPU&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/4167802.html?jd_pop=68e8eedb-d94b-4d9b-90e5-f45e43cd1f59&amp;amp;abt=3#crumb-wrap" target="_blank" rel="noopener"
+&lt;td>02&lt;/td>
+&lt;td>CPU&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/4167802.html?jd_pop=68e8eedb-d94b-4d9b-90e5-f45e43cd1f59&amp;amp;abt=3#crumb-wrap" target="_blank" rel="noopener"
 >英特尔（Intel）奔腾双核G4560 盒装CPU处理器 &lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥599.00&lt;/td>
-&lt;td style="text-align: left">599.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥599.00&lt;/td>
+&lt;td>599.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">03&lt;/td>
-&lt;td style="text-align: left">视频转换接头&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td>03&lt;/td>
+&lt;td>视频转换接头&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
 >山泽(SAMZHE)HDMI转VGA转换器带音频供电接口 高清视频转接头 电脑华为小米盒子接电视投影仪1080p 黑 ZH-22&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥35.90&lt;/td>
-&lt;td style="text-align: left">35.90&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥35.90&lt;/td>
+&lt;td>35.90&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">04&lt;/td>
-&lt;td style="text-align: left">键鼠套装&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
+&lt;td>04&lt;/td>
+&lt;td>键鼠套装&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
 >罗技（Logitech）MK275 无线光电键鼠套装 无线鼠标无线键盘套装&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">99.00&lt;/td>
-&lt;td style="text-align: left">99&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>99.00&lt;/td>
+&lt;td>99&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">05&lt;/td>
-&lt;td style="text-align: left">主板&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
+&lt;td>05&lt;/td>
+&lt;td>主板&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
 >ASUS/华硕PRIME H310T2 R2.0 THIN ITX小主板 迷你主机一体机HTPC&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥ 699&lt;/td>
-&lt;td style="text-align: left">755&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥ 699&lt;/td>
+&lt;td>755&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">06&lt;/td>
-&lt;td style="text-align: left">电源适配器&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
+&lt;td>06&lt;/td>
+&lt;td>电源适配器&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
 >酷鱼19V-7.1A足135W电源适配器/技嘉华硕微星ITX主板通用7.4X5.0&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥129.00&lt;/td>
-&lt;td style="text-align: left">139.32(129 * 1.08)&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥129.00&lt;/td>
+&lt;td>139.32(129 * 1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">07&lt;/td>
-&lt;td style="text-align: left">内存&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
+&lt;td>07&lt;/td>
+&lt;td>内存&lt;/td>
+&lt;td>&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
 >三星内存条8g DDR4 2666 8G 16G笔记本内存条四代吃鸡内存原厂兼容戴尔华硕联想苹果笔记本内存条&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥ 319.00&lt;/td>
-&lt;td style="text-align: left">¥319.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥ 319.00&lt;/td>
+&lt;td>¥319.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">08&lt;/td>
-&lt;td style="text-align: left">WiFi套件&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
+&lt;td>08&lt;/td>
+&lt;td>WiFi套件&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
 >INTELAC7265 M.2 NGFF1000M/5G/2.4G/4.0网卡华硕H110T技嘉H110TN&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥135.00&lt;/td>
-&lt;td style="text-align: left">￥145.80(135*1.08)&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥135.00&lt;/td>
+&lt;td>￥145.80(135*1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">09&lt;/td>
-&lt;td style="text-align: left">cpu散热器&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.76bf523MbXdki&amp;amp;id=43878066181&amp;amp;cm_id=140105335569ed55e27b&amp;amp;abbucket=14" target="_blank" rel="noopener"
+&lt;td>09&lt;/td>
+&lt;td>cpu散热器&lt;/td>
+&lt;td>&lt;a class="link" href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.76bf523MbXdki&amp;amp;id=43878066181&amp;amp;cm_id=140105335569ed55e27b&amp;amp;abbucket=14" target="_blank" rel="noopener"
 >ID-COOLING IS-20i 26 Intel平台CPU散热器8CM HTP超薄温控风扇&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥ 38.00&lt;/td>
-&lt;td style="text-align: left">¥ 38.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥ 38.00&lt;/td>
+&lt;td>¥ 38.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">10&lt;/td>
-&lt;td style="text-align: left">SSD&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td>10&lt;/td>
+&lt;td>SSD&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
 >三星（SAMSUNG）1TB SSD固态硬盘 M.2接口(NVMe协议) 970 EVO Plus（MZ-V7S1T0B）&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥1899.00&lt;/td>
-&lt;td style="text-align: left">￥1899.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥1899.00&lt;/td>
+&lt;td>￥1899.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">Sum&lt;/td>
-&lt;td style="text-align: left">￥4123.02&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Sum&lt;/td>
+&lt;td>￥4123.02&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -17286,112 +17284,112 @@ After systemd migration starting from Debian 9 Stretch, you need to change &lt;c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">No.&lt;/th>
-&lt;th style="text-align: left">type&lt;/th>
-&lt;th style="text-align: left">details&lt;/th>
-&lt;th style="text-align: left">quantity&lt;/th>
-&lt;th style="text-align: left">UnitPrice&lt;/th>
-&lt;th style="text-align: left">Total Price&lt;/th>
+&lt;th>No.&lt;/th>
+&lt;th>type&lt;/th>
+&lt;th>details&lt;/th>
+&lt;th>quantity&lt;/th>
+&lt;th>UnitPrice&lt;/th>
+&lt;th>Total Price&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">01&lt;/td>
-&lt;td style="text-align: left">机箱&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
+&lt;td>01&lt;/td>
+&lt;td>机箱&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=534857489261&amp;amp;scm=20140619.rec.2429537308.534857489261" target="_blank" rel="noopener"
 >立人E-T4超薄迷你Thin-ITX立式台式机HTPC电脑空机箱支持VESA背挂&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥90(90.00*1.04)&lt;/td>
-&lt;td style="text-align: left">93.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥90(90.00*1.04)&lt;/td>
+&lt;td>93.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">02&lt;/td>
-&lt;td style="text-align: left">CPU&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/5008397.html" target="_blank" rel="noopener"
+&lt;td>02&lt;/td>
+&lt;td>CPU&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/5008397.html" target="_blank" rel="noopener"
 >英特尔（Intel） i5 8400 酷睿六核 盒装CPU处理器 &lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥1549.00&lt;/td>
-&lt;td style="text-align: left">1549.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥1549.00&lt;/td>
+&lt;td>1549.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">03&lt;/td>
-&lt;td style="text-align: left">视频转换接头&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td>03&lt;/td>
+&lt;td>视频转换接头&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/5160386.html#crumb-wrap" target="_blank" rel="noopener"
 >山泽(SAMZHE)HDMI转VGA转换器带音频供电接口 高清视频转接头 电脑华为小米盒子接电视投影仪1080p 黑 ZH-22&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥35.90&lt;/td>
-&lt;td style="text-align: left">35.90&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥35.90&lt;/td>
+&lt;td>35.90&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">04&lt;/td>
-&lt;td style="text-align: left">键鼠套装&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
+&lt;td>04&lt;/td>
+&lt;td>键鼠套装&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/2291748.html" target="_blank" rel="noopener"
 >罗技（Logitech）MK275 无线光电键鼠套装 无线鼠标无线键盘套装&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">99.00&lt;/td>
-&lt;td style="text-align: left">99&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>99.00&lt;/td>
+&lt;td>99&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">05&lt;/td>
-&lt;td style="text-align: left">主板&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
+&lt;td>05&lt;/td>
+&lt;td>主板&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=587272133214&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
 >ASUS/华硕PRIME H310T2 R2.0 THIN ITX小主板 迷你主机一体机HTPC&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥ 699&lt;/td>
-&lt;td style="text-align: left">755&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥ 699&lt;/td>
+&lt;td>755&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">06&lt;/td>
-&lt;td style="text-align: left">电源适配器&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
+&lt;td>06&lt;/td>
+&lt;td>电源适配器&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17511240392.20.44c47365cIMEzk&amp;amp;id=18283712549" target="_blank" rel="noopener"
 >酷鱼19V-7.1A足135W电源适配器/技嘉华硕微星ITX主板通用7.4X5.0&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥129.00&lt;/td>
-&lt;td style="text-align: left">139.32(129 * 1.08)&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥129.00&lt;/td>
+&lt;td>139.32(129 * 1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">07&lt;/td>
-&lt;td style="text-align: left">内存&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
+&lt;td>07&lt;/td>
+&lt;td>内存&lt;/td>
+&lt;td>&lt;a class="link" href="https://detail.tmall.com/item.htm?id=546597769363&amp;amp;spm=0.0.0.0&amp;amp;skuId=3813291359835" target="_blank" rel="noopener"
 >三星内存条8g DDR4 2666 8G 16G笔记本内存条四代吃鸡内存原厂兼容戴尔华硕联想苹果笔记本内存条&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥ 319.00&lt;/td>
-&lt;td style="text-align: left">¥319.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥ 319.00&lt;/td>
+&lt;td>¥319.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">08&lt;/td>
-&lt;td style="text-align: left">WiFi套件&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
+&lt;td>08&lt;/td>
+&lt;td>WiFi套件&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1097dcfdM8oysD&amp;amp;id=537236266618&amp;amp;_u=iebjch9df5" target="_blank" rel="noopener"
 >INTELAC7265 M.2 NGFF1000M/5G/2.4G/4.0网卡华硕H110T技嘉H110TN&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">135.00&lt;/td>
-&lt;td style="text-align: left">￥145.80(135*1.08)&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>135.00&lt;/td>
+&lt;td>￥145.80(135*1.08)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">09&lt;/td>
-&lt;td style="text-align: left">cpu散热器&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.taobao.com/item.htm?id=527079297198&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
+&lt;td>09&lt;/td>
+&lt;td>cpu散热器&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.taobao.com/item.htm?id=527079297198&amp;amp;tracelogww=ltckbburl" target="_blank" rel="noopener"
 >超薄21mm 1150/1151/ CPU散热器 CPU风扇 适用于立人T3机箱&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">¥ 89.00&lt;/td>
-&lt;td style="text-align: left">93.45（89*1.05）&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>¥ 89.00&lt;/td>
+&lt;td>93.45（89*1.05）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">10&lt;/td>
-&lt;td style="text-align: left">SSD&lt;/td>
-&lt;td style="text-align: left">&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
+&lt;td>10&lt;/td>
+&lt;td>SSD&lt;/td>
+&lt;td>&lt;a class="link" href="https://item.jd.com/100002183461.html#crumb-wrap" target="_blank" rel="noopener"
 >三星（SAMSUNG）1TB SSD固态硬盘 M.2接口(NVMe协议) 970 EVO Plus（MZ-V7S1T0B）&lt;/a>&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">￥1899.00&lt;/td>
-&lt;td style="text-align: left">￥1899.00&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>￥1899.00&lt;/td>
+&lt;td>￥1899.00&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">Sum&lt;/td>
-&lt;td style="text-align: left">￥5128.47&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Sum&lt;/td>
+&lt;td>￥5128.47&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Proxmox Ve How to Chang Network of Hosting Without Reboot Proxmox Ve</title><link>https://echowings.github.io/p/proxmox-ve-how-to-chang-network-of-hosting-without-reboot-proxmox-ve/</link><pubDate>Sat, 27 Apr 2019 11:36:16 +0800</pubDate><guid>https://echowings.github.io/p/proxmox-ve-how-to-chang-network-of-hosting-without-reboot-proxmox-ve/</guid><description>&lt;h1 id="how-to-change-network-settings-of-proxmox-ve-host-without-rebooting">How to change Network settings of proxmox-ve host without rebooting.&lt;/h1>
@@ -18213,18 +18211,18 @@ Uninstall vmware tools and reboot vm.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">KEY&lt;/th>
-&lt;th style="text-align: left">VALUE&lt;/th>
+&lt;th>KEY&lt;/th>
+&lt;th>VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">hostname&lt;/td>
-&lt;td style="text-align: left">mylibrenms&lt;/td>
+&lt;td>hostname&lt;/td>
+&lt;td>mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">domainname&lt;/td>
-&lt;td style="text-align: left">mydomain.net&lt;/td>
+&lt;td>domainname&lt;/td>
+&lt;td>mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -18234,18 +18232,18 @@ Uninstall vmware tools and reboot vm.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">KEY&lt;/th>
-&lt;th style="text-align: left">VALUE&lt;/th>
+&lt;th>KEY&lt;/th>
+&lt;th>VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">hostname&lt;/td>
-&lt;td style="text-align: left">mylibrenms&lt;/td>
+&lt;td>hostname&lt;/td>
+&lt;td>mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">domainname&lt;/td>
-&lt;td style="text-align: left">mydomain.net&lt;/td>
+&lt;td>domainname&lt;/td>
+&lt;td>mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -18652,13 +18650,13 @@ then run the commands:&lt;/p>
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">cat&lt;/span> &lt;span class="p">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">~&lt;/span>/.&lt;span class="nx">vimrc&lt;/span> &lt;span class="p">&amp;lt;&amp;lt;&lt;/span>&lt;span class="nx">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">colorscheme&lt;/span> &lt;span class="nx">gruvbox&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">set&lt;/span> &lt;span class="nx">background&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nb">dark&lt;/span> &lt;span class="c">&amp;#34; Setting dark mode&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">gruvbox_contrast_dark&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;hard&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">airline_theme&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;simple&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">cat&lt;/span> &lt;span class="p">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">~&lt;/span>/.&lt;span class="nx">vimrc&lt;/span> &lt;span class="p">&amp;lt;&amp;lt;&lt;/span>&lt;span class="nx">EOF&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">colorscheme&lt;/span> &lt;span class="nx">gruvbox&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">set&lt;/span> &lt;span class="nx">background&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nb">dark&lt;/span> &lt;span class="c">&amp;#34; Setting dark mode&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">gruvbox_contrast_dark&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;hard&amp;#39;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">let&lt;/span> &lt;span class="nx">g&lt;/span>:&lt;span class="nx">airline_theme&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s1">&amp;#39;simple&amp;#39;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">EOF&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="let-vim-support-nginx-syntax-highlight">Let vim support nginx syntax highlight&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -19916,71 +19914,71 @@ Bingo! Here we go:&lt;/p>
 &lt;/span>&lt;span class="lnt">65
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#FROM alpine:edge&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">FROM&lt;/span> &lt;span class="n">alpine&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">latest&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">MAINTAINER&lt;/span> &lt;span class="n">steve&lt;/span> &lt;span class="n">dong&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">dongjunbo&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="n">gmail&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="err">?&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">#FROM alpine:edge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FROM alpine:latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MAINTAINER steve dong &amp;lt;dongjunbo@gmail.com?
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Environment variables&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##########################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Environment variables
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">##########################
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ENV&lt;/span> &lt;span class="n">VERSION&lt;/span> &lt;span class="n">v1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="mi">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENV VERSION v1.4
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Change this cron rule to what fits best for you.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Change this cron rule to what fits best for you.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ENV&lt;/span> &lt;span class="n">CRONTAB_TIME&lt;/span> &lt;span class="s1">&amp;#39;0 0 * * *&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENV CRONTAB_TIME &amp;#39;0 0 * * *&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Create Volume entry points&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">############################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Create Volume entry points
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">############################
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">VOLUME&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/config&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VOLUME [&amp;#34;/config&amp;#34;]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Set the work directory&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#########################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Set the work directory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#########################
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">WORKDIR&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WORKDIR /srv
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Fix permissions&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Fix permissions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#################
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install required packages&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########################&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">RUN&lt;/span> &lt;span class="n">set&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">xe&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mkdir&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">apk&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">no&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">cache&lt;/span> &lt;span class="n">unzip&lt;/span> &lt;span class="n">curl&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">fsSLO&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">compressed&lt;/span> &lt;span class="s2">&amp;#34;https://github.com/shawn1m/overture/releases/download/${VERSION}/overture-linux-amd64.zip&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">unzip&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">o&lt;/span> &lt;span class="s2">&amp;#34;overture-linux-amd64.zip&amp;#34;&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">raw&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">githubusercontent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">master&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">base64&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sort&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;/^$\|@@/d&amp;#39;&lt;/span>&lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;s#!.\+##; s#|##g; s#@##g; s#http:\/\/##; s#https:\/\/##;&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;/\*/d; / apple\.com/d; /sina\.cn/d; /sina\.com\.cn/d; /baidu\.com/d; /qq\.com/d&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;/^[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+$/d&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">grep&lt;/span> &lt;span class="s1">&amp;#39;^[0-9a-zA-Z\.-]\+$&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">grep&lt;/span> &lt;span class="s1">&amp;#39;\.&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;s#^\.\+##&amp;#39;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sort&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">temp_gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">raw&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">githubusercontent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">hq450&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">fancyss&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">master&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">rules&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">conf&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sed&lt;/span> &lt;span class="s1">&amp;#39;s/ipset=\/\.//g; s/\/gfwlist//g; /^server/d&amp;#39;&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">temp_koolshare&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cat&lt;/span> &lt;span class="n">temp_gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="n">temp_koolshare&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="n">sort&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">gfw_all_domain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">curl&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">fsSLO&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">compressed&lt;/span> &lt;span class="s2">&amp;#34;https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;11s/disable/manual/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;24s/disable/manual/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;12s/&amp;#34;&amp;#34;/&amp;#34;222.90.74.60&amp;#34;/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;25s/&amp;#34;&amp;#34;/&amp;#34;202.60.225.114&amp;#34;/&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;s/&amp;#34;.\/ip_network_primary_sample&amp;#34;/&amp;#34;\/config\/china_ip_list.txt&amp;#34;/g&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sed&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="s1">&amp;#39;s/&amp;#34;.\/domain_alternative_sample&amp;#34;/&amp;#34;\/config\/gfw_all_domain.txt&amp;#34;/g&amp;#39;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rm&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">rf&lt;/span> &lt;span class="n">temp_koolshare&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="n">temp_gfwlist&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rm&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">rf&lt;/span> &lt;span class="s2">&amp;#34;overture-linux-amd64.zip&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">chmod&lt;/span> &lt;span class="mi">0644&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">/&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cp&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">/&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cp&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">srv&lt;/span>&lt;span class="o">/*.&lt;/span>&lt;span class="n">txt&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">/&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">apk&lt;/span> &lt;span class="n">del&lt;/span> &lt;span class="n">unzip&lt;/span> &lt;span class="n">curl&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Expose required ports&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#######################&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">EXPOSE&lt;/span> &lt;span class="mi">53&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">udp&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Install required packages
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###########################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">RUN set -xe &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mkdir -p /config &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> apk add --no-cache unzip curl &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -fsSLO --compressed &amp;#34;https://github.com/shawn1m/overture/releases/download/${VERSION}/overture-linux-amd64.zip&amp;#34; &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> unzip -o &amp;#34;overture-linux-amd64.zip&amp;#34; -d /srv &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt | base64 -d | sort -u | sed &amp;#39;/^$\|@@/d&amp;#39;| sed &amp;#39;s#!.\+##; s#|##g; s#@##g; s#http:\/\/##; s#https:\/\/##;&amp;#39; | sed &amp;#39;/\*/d; / apple\.com/d; /sina\.cn/d; /sina\.com\.cn/d; /baidu\.com/d; /qq\.com/d&amp;#39; | sed &amp;#39;/^[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+$/d&amp;#39; | grep &amp;#39;^[0-9a-zA-Z\.-]\+$&amp;#39; | grep &amp;#39;\.&amp;#39; | sed &amp;#39;s#^\.\+##&amp;#39; | sort -u &amp;gt; temp_gfwlist.txt &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl https://raw.githubusercontent.com/hq450/fancyss/master/rules/gfwlist.conf | sed &amp;#39;s/ipset=\/\.//g; s/\/gfwlist//g; /^server/d&amp;#39; &amp;gt; temp_koolshare.txt &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cat temp_gfwlist.txt temp_koolshare.txt | sort -u &amp;gt; gfw_all_domain.txt &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -fsSLO --compressed &amp;#34;https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt&amp;#34; &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;11s/disable/manual/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;24s/disable/manual/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;12s/&amp;#34;&amp;#34;/&amp;#34;222.90.74.60&amp;#34;/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;25s/&amp;#34;&amp;#34;/&amp;#34;202.60.225.114&amp;#34;/&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;s/&amp;#34;.\/ip_network_primary_sample&amp;#34;/&amp;#34;\/config\/china_ip_list.txt&amp;#34;/g&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#39;s/&amp;#34;.\/domain_alternative_sample&amp;#34;/&amp;#34;\/config\/gfw_all_domain.txt&amp;#34;/g&amp;#39; /srv/config.json &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rm -rf temp_koolshare.txt temp_gfwlist.txt &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rm -rf &amp;#34;overture-linux-amd64.zip&amp;#34; &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> chmod 0644 /config/ &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp /srv/config.json /config/ &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp /srv/*.txt /config/ &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> apk del unzip curl
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#VOLUME [ &amp;#34;/config&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Expose required ports
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#######################
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Change Shell&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##############&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">SHELL&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/bin/bash&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;-c&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">CMD&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;if [ &lt;/span>&lt;span class="se">\&amp;#34;&lt;/span>&lt;span class="s2">`ls -A /config`&lt;/span>&lt;span class="se">\&amp;#34;&lt;/span>&lt;span class="s2"> = &lt;/span>&lt;span class="se">\&amp;#34;\&amp;#34;&lt;/span>&lt;span class="s2"> ]; then cp /srv/config.json /config/ &amp;amp;&amp;amp; cp /srv/*.txt /config/; fi&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="s2">&amp;#34;/srv/overture-linux-amd64&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;-c&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;/config/config.json&amp;#34;&lt;/span> &lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#CMD /srv/overture-linux-amd64 -c /config/config.json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EXPOSE 53/udp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#VOLUME [ &amp;#34;/config&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Change Shell
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">##############
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SHELL [&amp;#34;/bin/bash&amp;#34;, &amp;#34;-c&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMD [&amp;#34;if [ \&amp;#34;`ls -A /config`\&amp;#34; = \&amp;#34;\&amp;#34; ]; then cp /srv/config.json /config/ &amp;amp;&amp;amp; cp /srv/*.txt /config/; fi&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENTRYPOINT [ &amp;#34;/srv/overture-linux-amd64&amp;#34;, &amp;#34;-c&amp;#34;, &amp;#34;/config/config.json&amp;#34; ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#CMD /srv/overture-linux-amd64 -c /config/config.json
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="docker-run-command">Docker run Command&lt;/h2>
@@ -20799,10 +20797,10 @@ Bingo! Here we go:&lt;/p>
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">apt&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">get&lt;/span> &lt;span class="n">autoremove&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">export&lt;/span> &lt;span class="n">LC_ALL&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">en_US&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">UTF&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">8&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">echo&lt;/span> &lt;span class="s2">&amp;#34;en_US.UTF-8 UTF-8&amp;#34;&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">etc&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">locale&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gen&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">locale&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gen&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt-get autoremove
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export LC_ALL=en_US.UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo &amp;#34;en_US.UTF-8 UTF-8&amp;#34; &amp;gt;&amp;gt; /etc/locale.gen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">locale-gen
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>Python Development 01</title><link>https://echowings.github.io/p/python-development-01/</link><pubDate>Thu, 29 Nov 2018 00:28:31 +0800</pubDate><guid>https://echowings.github.io/p/python-development-01/</guid><description>&lt;h1 id="python-development">Python Development&lt;/h1>
@@ -21249,18 +21247,18 @@ Bingo! Here we go:&lt;/p>
 &lt;/span>&lt;span class="lnt">11
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”替换为“空格”&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">expandtab&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”的“缩进幅度”改为 4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">tabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">自动缩进时的&lt;/span>“&lt;span class="nx">缩进幅度&lt;/span>”&lt;span class="nx">改为&lt;/span> &lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">shiftwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">按下键盘&lt;/span>“&lt;span class="nx">Tab&lt;/span>”&lt;span class="nx">键时插入的空格数&lt;/span> “ &lt;span class="nx">这里设置为&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="nx">就可以插入&lt;/span>“&lt;span class="nx">tabstop&lt;/span>”&lt;span class="nx">中设置的空格数了&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setl&lt;/span> &lt;span class="nx">softtabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“ &lt;span class="nx">保存时删除行尾的空格&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">autocmd&lt;/span> &lt;span class="nx">BufWritePre&lt;/span> * :%&lt;span class="nx">s&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>/&lt;span class="nx">ge&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">“&lt;span class="m">80&lt;/span> &lt;span class="nx">个字符换行&lt;/span> &lt;span class="nx">setlocal&lt;/span> &lt;span class="nx">textwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">80&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; 将“Tab”替换为“空格”&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">expandtab&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">&amp;#34; 将“Tab”的“缩进幅度”改为 4&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">tabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 自动缩进时的“缩进幅度”改为 &lt;span class="m">4&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">shiftwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">4&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 按下键盘“&lt;span class="nx">Tab&lt;/span>”键时插入的空格数 “ 这里设置为 &lt;span class="m">0&lt;/span> 就可以插入“&lt;span class="nx">tabstop&lt;/span>”中设置的空格数了 &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">setl&lt;/span> &lt;span class="nx">softtabstop&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“ 保存时删除行尾的空格 &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">autocmd&lt;/span> &lt;span class="nx">BufWritePre&lt;/span> * :%&lt;span class="nx">s&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>/&lt;span class="nx">ge&lt;/span> &lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>“&lt;span class="m">80&lt;/span> 个字符换行 &lt;span class="nx">setlocal&lt;/span> &lt;span class="nx">textwidth&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="m">80&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ul>
 &lt;li>install neobundle.vim&lt;/li>
@@ -21507,16 +21505,16 @@ Bingo! Here we go:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Requested URL&lt;/th>
-&lt;th style="text-align: left">Using&lt;/th>
-&lt;th style="text-align: left">Pattern&lt;/th>
+&lt;th>Requested URL&lt;/th>
+&lt;th>Using&lt;/th>
+&lt;th>Pattern&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Matches the pattern&lt;/td>
-&lt;td style="text-align: left">Regular Expressions&lt;/td>
-&lt;td style="text-align: left">&lt;code>^(.*)&lt;/code>&lt;/td>
+&lt;td>Matches the pattern&lt;/td>
+&lt;td>Regular Expressions&lt;/td>
+&lt;td>&lt;code>^(.*)&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -21525,26 +21523,26 @@ Bingo! Here we go:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Logical grouping&lt;/td>
-&lt;td style="text-align: left">Match ALL&lt;/td>
+&lt;td>Logical grouping&lt;/td>
+&lt;td>Match ALL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">input&lt;/td>
-&lt;td style="text-align: left">&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
+&lt;td>input&lt;/td>
+&lt;td>&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Type&lt;/td>
-&lt;td style="text-align: left">Matches the Pattern&lt;/td>
+&lt;td>Type&lt;/td>
+&lt;td>Matches the Pattern&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Patern&lt;/td>
-&lt;td style="text-align: left">&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
+&lt;td>Patern&lt;/td>
+&lt;td>&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -21553,18 +21551,18 @@ Bingo! Here we go:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Action Type&lt;/td>
-&lt;td style="text-align: left">Rewrite&lt;/td>
+&lt;td>Action Type&lt;/td>
+&lt;td>Rewrite&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Rewrite URL&lt;/td>
-&lt;td style="text-align: left">&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
+&lt;td>Rewrite URL&lt;/td>
+&lt;td>&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -22207,16 +22205,16 @@ issueTerm=&amp;ldquo;pathname&amp;rdquo;&lt;/p>
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### Download git and rebuild blog environment&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">###&lt;/span> &lt;span class="nc">Download&lt;/span> &lt;span class="nv">git&lt;/span> &lt;span class="nv">and&lt;/span> &lt;span class="nv">rebuild&lt;/span> &lt;span class="nv">blog&lt;/span> &lt;span class="nv">environment&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">```&lt;/span> &lt;span class="n">zsh&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">git&lt;/span> &lt;span class="n">pulll&lt;/span> &lt;span class="n">git&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="n">github&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">echowings&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">blogs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">git&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#if public already exsited run `rm public`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">git&lt;/span> &lt;span class="n">submodule&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">force&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="n">master&lt;/span> &lt;span class="n">git&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="n">github&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">echowings&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">echowings&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">github&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">public&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">``` zsh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">git pulll git@github.com:echowings/blogs.git
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">#if public already exsited run `&lt;/span>&lt;span class="nv">rm&lt;/span> &lt;span class="nv">public&lt;/span>&lt;span class="sc">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sc">git submodule add --force -b master git@github.com:echowings/echowings.github.io.git public
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
 &lt;ol>

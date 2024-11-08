@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker-Compose on Steve's Blog</title><link>https://echowings.github.io/tags/docker-compose/</link><description>Recent content in Docker-Compose on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 16 Mar 2023 17:32:08 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/docker-compose/index.xml" rel="self" type="application/rss+xml"/><item><title>how to install docker and docker-compose on debian 11 or proxmox ve 7</title><link>https://echowings.github.io/p/how-to-install-docker-and-docker-compose-on-debian-11-or-proxmox-ve-7/</link><pubDate>Thu, 16 Mar 2023 17:32:08 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-docker-and-docker-compose-on-debian-11-or-proxmox-ve-7/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=0bbdeb62" alt="Featured image of post how to install docker and docker-compose on debian 11 or proxmox ve 7" />&lt;h1 id="how-to-install-docker-and-docker-compose-on-debian-11-or-proxmox-ve-7">how to install docker and docker-compose on debian 11 or proxmox ve 7&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker-compose on Steve's Blog</title><link>https://echowings.github.io/tags/docker-compose/</link><description>Recent content in docker-compose on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Mar 2023 17:32:08 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/docker-compose/index.xml" rel="self" type="application/rss+xml"/><item><title>how to install docker and docker-compose on debian 11 or proxmox ve 7</title><link>https://echowings.github.io/p/how-to-install-docker-and-docker-compose-on-debian-11-or-proxmox-ve-7/</link><pubDate>Thu, 16 Mar 2023 17:32:08 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-docker-and-docker-compose-on-debian-11-or-proxmox-ve-7/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=0bbdeb62" alt="Featured image of post how to install docker and docker-compose on debian 11 or proxmox ve 7" />&lt;h1 id="how-to-install-docker-and-docker-compose-on-debian-11-or-proxmox-ve-7">how to install docker and docker-compose on debian 11 or proxmox ve 7&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -497,14 +497,14 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">USERNAME&lt;/th>
-&lt;th style="text-align: left">PASSWORD&lt;/th>
+&lt;th>USERNAME&lt;/th>
+&lt;th>PASSWORD&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">admin&lt;/td>
-&lt;td style="text-align: left">xA123456&lt;/td>
+&lt;td>admin&lt;/td>
+&lt;td>xA123456&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1395,12 +1395,10 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Hostname&lt;/th>
-&lt;th style="text-align: left">my-graylog&lt;/th>
+&lt;th>Hostname&lt;/th>
+&lt;th>my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
-&lt;tbody>
-&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1673,18 +1671,18 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">KEY&lt;/th>
-&lt;th style="text-align: left">VALUE&lt;/th>
+&lt;th>KEY&lt;/th>
+&lt;th>VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">hostname&lt;/td>
-&lt;td style="text-align: left">mylibrenms&lt;/td>
+&lt;td>hostname&lt;/td>
+&lt;td>mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">domainname&lt;/td>
-&lt;td style="text-align: left">mydomain.net&lt;/td>
+&lt;td>domainname&lt;/td>
+&lt;td>mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1694,18 +1692,18 @@ loading="lazy"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">KEY&lt;/th>
-&lt;th style="text-align: left">VALUE&lt;/th>
+&lt;th>KEY&lt;/th>
+&lt;th>VALUE&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">hostname&lt;/td>
-&lt;td style="text-align: left">mylibrenms&lt;/td>
+&lt;td>hostname&lt;/td>
+&lt;td>mylibrenms&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">domainname&lt;/td>
-&lt;td style="text-align: left">mydomain.net&lt;/td>
+&lt;td>domainname&lt;/td>
+&lt;td>mydomain.net&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

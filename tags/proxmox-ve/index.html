@@ -1,239 +1,231 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Steve's Blog"><title>Tag: Proxmox Ve - Steve's Blog</title>
-<link rel=canonical href=https://echowings.github.io/tags/proxmox-ve/><link rel=stylesheet href=../../scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css><meta property='og:title' content="Tag: Proxmox Ve - Steve's Blog"><meta property='og:description' content="Steve's Blog"><meta property='og:url' content='https://echowings.github.io/tags/proxmox-ve/'><meta property='og:site_name' content="Steve's Blog"><meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-09-19T09:13:45+00:00 '><meta name=twitter:title content="Tag: Proxmox Ve - Steve's Blog"><meta name=twitter:description content="Steve's Blog"><link rel=alternate type=application/rss+xml href=https://echowings.github.io/tags/proxmox-ve/index.xml><script async src="https://www.googletagmanager.com/gtag/js?id=G-P2KWET2PQ5"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-P2KWET2PQ5")}</script><style>:root{--article-font-family:"Merriweather", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></head><body><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
-<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=../../><img src=../../img/avatar_hu11237447865056716349.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=../../>Steve's Blog</a></h1><h2 class=site-description>Steve's Blog</h2></div></header><ol class=menu id=main-menu><li><a href=../../><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
-<span>Home</span></a></li><li><a href=../../about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-<span>About</span></a></li><li><a href=../../archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span></a></li><li><a href=../../search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>Search</span></a></li><li><a href=../../links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
-<span>Links</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg>
-<select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://echowings.github.io/ selected>English</option><option value=https://echowings.github.io/zh-cn/>中文</option><option value=https://echowings.github.io/ja/>日本語　</option></select></li><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>Dark Mode</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><form action=../../search/ class="search-form widget"><p><label>Search</label>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Steve's Blog"><title>Tag: proxmox ve - Steve's Blog</title><link rel=canonical href=https://echowings.github.io/tags/proxmox-ve/><link rel=stylesheet href=../../scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css><meta property="og:title" content="Tag: proxmox ve - Steve's Blog"><meta property="og:description" content="Steve's Blog"><meta property="og:url" content="https://echowings.github.io/tags/proxmox-ve/"><meta property="og:site_name" content="Steve's Blog"><meta property="og:type" content="website"><meta property="og:updated_time" content=" 2024-11-08T12:49:54+00:00 "><meta name=twitter:title content="Tag: proxmox ve - Steve's Blog"><meta name=twitter:description content="Steve's Blog"><link rel=alternate type=application/rss+xml href=https://echowings.github.io/tags/proxmox-ve/index.xml><script async src="https://www.googletagmanager.com/gtag/js?id=G-P2KWET2PQ5"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-P2KWET2PQ5",{anonymize_ip:!1})}</script><style>:root{--article-font-family:"Merriweather", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></head><body><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=../../><img src=../../img/avatar_hu49d781430fb14dff787875229fd54172_10515_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=../../>Steve's Blog</a></h1><h2 class=site-description>Steve's Blog</h2></div></header><ol class=menu id=main-menu><li><a href=../../><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=../../about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=../../archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=../../search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=../../links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://echowings.github.io/ selected>English</option><option value=https://echowings.github.io/zh-cn/>中文</option><option value=https://echowings.github.io/ja/>日本語　</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><form action=../../search/ class="search-form widget"><p><label>Search</label>
 <input name=keyword required placeholder="Type something...">
-<button title=Search><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></button></p></form><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9.828 9.172a4 4 0 100 5.656A10 10 0 0012 12a10 10 0 012.172-2.828 4 4 0 110 5.656A10 10 0 0112 12 10 10 0 009.828 9.172"/></svg></div><h2 class="widget-title section-title">Archives</h2><div class=widget-archive--list><div class=archives-year><a href=../../archives/#2024><span class=year>2024</span>
+<button title=Search><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></button></p></form><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9.828 9.172a4 4 0 100 5.656A10 10 0 0012 12a10 10 0 012.172-2.828 4 4 0 110 5.656A10 10 0 0112 12 10 10 0 009.828 9.172"/></svg></div><h2 class="widget-title section-title">Archives</h2><div class=widget-archive--list><div class=archives-year><a href=../../archives/#2024><span class=year>2024</span>
 <span class=count>10</span></a></div><div class=archives-year><a href=../../archives/#2023><span class=year>2023</span>
 <span class=count>24</span></a></div><div class=archives-year><a href=../../archives/#2022><span class=year>2022</span>
 <span class=count>9</span></a></div><div class=archives-year><a href=../../archives/#2021><span class=year>2021</span>
 <span class=count>18</span></a></div><div class=archives-year><a href=../../archives/#2020><span class=year>2020</span>
 <span class=count>12</span></a></div><div class=archives-year><a href=../../archives/#2019><span class=year>2019</span>
 <span class=count>45</span></a></div><div class=archives-year><a href=../../archives/#2018><span class=year>2018</span>
-<span class=count>21</span></a></div></div></section><section class="widget tagCloud"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags><a href=../../categories/linux/ class=font_size_24>Linux
-</a><a href=../../categories/virtualization/ class=font_size_24>Virtualization
-</a><a href=../../categories/networking/ class=font_size_15>Networking
-</a><a href=../../categories/devops/ class=font_size_13>Devops
-</a><a href=../../categories/pve/ class=font_size_9>Pve
-</a><a href=../../categories/blog/ class=font_size_7>Blog
-</a><a href=../../categories/vyos/ class=font_size_5>Vyos
-</a><a href=../../categories/docker/ class=font_size_4>Docker
-</a><a href=../../categories/macos/ class=font_size_4>Macos
-</a><a href=../../categories/network/ class=font_size_4>Network
-</a><a href=../../categories/python/ class=font_size_3>Python
-</a><a href=../../categories/iac/ class=font_size_2>Iac
-</a><a href=../../categories/k8s/ class=font_size_2>K8s
-</a><a href=../../categories/kubernetes/ class=font_size_2>Kubernetes
-</a><a href=../../categories/nginx/ class=font_size_2>Nginx
-</a><a href=../../categories/programming/ class=font_size_2>Programming
-</a><a href=../../categories/proxmox-ve/ class=font_size_2>Proxmox Ve
-</a><a href=../../categories/pulumi/ class=font_size_2>Pulumi
-</a><a href=../../categories/shell/ class=font_size_2>Shell
-</a><a href=../../categories/windows/ class=font_size_2>Windows
-</a><a href=../../categories/zsh/ class=font_size_2>Zsh
-</a><a href=../../categories/ansible/ class=font_size_1>Ansible
-</a><a href=../../categories/cloud-engineering/ class=font_size_1>CLOUD ENGINEERING
-</a><a href=../../categories/cloud-native/ class=font_size_1>Cloud Native
-</a><a href=../../categories/cloudinit/ class=font_size_1>Cloudinit
-</a><a href=../../categories/container/ class=font_size_1>Container
-</a><a href=../../categories/containers/ class=font_size_1>Containers
-</a><a href=../../categories/develop/ class=font_size_1>Develop
-</a><a href=../../categories/devop/ class=font_size_1>Devop
-</a><a href=../../categories/dns/ class=font_size_1>Dns
-</a><a href=../../categories/freebsd/ class=font_size_1>Freebsd
-</a><a href=../../categories/gitops/ class=font_size_1>Gitops
-</a><a href=../../categories/graylog/ class=font_size_1>Graylog
-</a><a href=../../categories/hardware/ class=font_size_1>Hardware
-</a><a href=../../categories/hugo/ class=font_size_1>Hugo
-</a><a href=../../categories/index/ class=font_size_1>Index
-</a><a href=../../categories/inputmethod/ class=font_size_1>Inputmethod
-</a><a href=../../categories/kubernets/ class=font_size_1>Kubernets
-</a><a href=../../categories/kvm/ class=font_size_1>Kvm
-</a><a href=../../categories/monitoring/ class=font_size_1>Monitoring
-</a><a href=../../categories/new-relic/ class=font_size_1>NEW RELIC
-</a><a href=../../categories/perl/ class=font_size_1>Perl
-</a><a href=../../categories/powerdns/ class=font_size_1>Powerdns
-</a><a href=../../categories/reverse-proxy/ class=font_size_1>Reverse Proxy
-</a><a href=../../categories/software/ class=font_size_1>Software
-</a><a href=../../categories/sre/ class=font_size_1>SRE
-</a><a href=../../categories/ssh/ class=font_size_1>Ssh
-</a><a href=../../categories/terraform/ class=font_size_1>Terraform
-</a><a href=../../categories/vim/ class=font_size_1>Vim
-</a><a href=../../categories/vlmcsd/ class=font_size_1>Vlmcsd
-</a><a href=../../categories/wsl/ class=font_size_1>Wsl</a></div></section><section class="widget tagCloud"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg></div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags><a href=../../tags/pve/ class=font_size_44>Pve
-</a><a href=../../tags/debian/ class=font_size_27>Debian
-</a><a href=../../tags/linux/ class=font_size_26>Linux
-</a><a href=../../tags/docker/ class=font_size_22>Docker
-</a><a href=../../tags/vyos/ class=font_size_22>Vyos
-</a><a href=../../tags/devops/ class=font_size_13>Devops
-</a><a href=../../tags/networking/ class=font_size_10>Networking
-</a><a href=../../tags/docker-compose/ class=font_size_9>Docker-Compose
-</a><a href=../../tags/shell/ class=font_size_7>Shell
-</a><a href=../../tags/k8s/ class=font_size_6>K8s
-</a><a href=../../tags/proxmox-ve/ class=font_size_6>Proxmox Ve
-</a><a href=../../tags/ceph/ class=font_size_5>Ceph
-</a><a href=../../tags/macos/ class=font_size_5>Macos
-</a><a href=../../tags/python/ class=font_size_5>Python
-</a><a href=../../tags/ansible/ class=font_size_4>Ansible
-</a><a href=../../tags/hci/ class=font_size_4>HCI
-</a><a href=../../tags/kubernetes/ class=font_size_4>Kubernetes
-</a><a href=../../tags/api/ class=font_size_3>Api
-</a><a href=../../tags/bash/ class=font_size_3>Bash
-</a><a href=../../tags/centos/ class=font_size_3>Centos
-</a><a href=../../tags/chinese/ class=font_size_3>Chinese
-</a><a href=../../tags/debian10/ class=font_size_3>Debian10
-</a><a href=../../tags/git/ class=font_size_3>Git
-</a><a href=../../tags/iac/ class=font_size_3>Iac
-</a><a href=../../tags/kms/ class=font_size_3>Kms
-</a><a href=../../tags/kvm/ class=font_size_3>Kvm
-</a><a href=../../tags/librenms/ class=font_size_3>Librenms
-</a><a href=../../tags/network/ class=font_size_3>Network
-</a><a href=../../tags/nginx/ class=font_size_3>Nginx
-</a><a href=../../tags/overture/ class=font_size_3>Overture
-</a><a href=../../tags/proxmox/ class=font_size_3>Proxmox
-</a><a href=../../tags/ubuntu/ class=font_size_3>Ubuntu
-</a><a href=../../tags/windows/ class=font_size_3>Windows
-</a><a href=../../tags/automation/ class=font_size_2>Automation
-</a><a href=../../tags/bcache/ class=font_size_2>Bcache
-</a><a href=../../tags/cisco/ class=font_size_2>Cisco
-</a><a href=../../tags/cloud-init/ class=font_size_2>Cloud-Init
-</a><a href=../../tags/cloudinit/ class=font_size_2>Cloudinit
-</a><a href=../../tags/ddns/ class=font_size_2>Ddns
-</a><a href=../../tags/debian-10/ class=font_size_2>Debian 10
-</a><a href=../../tags/dns/ class=font_size_2>Dns
-</a><a href=../../tags/dotnetcore/ class=font_size_2>Dotnetcore
-</a><a href=../../tags/freebsd/ class=font_size_2>Freebsd
-</a><a href=../../tags/go/ class=font_size_2>Go
-</a><a href=../../tags/lvm/ class=font_size_2>Lvm
-</a><a href=../../tags/openssl/ class=font_size_2>Openssl
-</a><a href=../../tags/pbr/ class=font_size_2>Pbr
-</a><a href=../../tags/pbs/ class=font_size_2>Pbs
-</a><a href=../../tags/powershell/ class=font_size_2>Powershell
-</a><a href=../../tags/pppoe/ class=font_size_2>Pppoe
-</a><a href=../../tags/pulumi/ class=font_size_2>Pulumi
-</a><a href=../../tags/snmp/ class=font_size_2>Snmp
-</a><a href=../../tags/sre/ class=font_size_2>Sre
-</a><a href=../../tags/ssh/ class=font_size_2>Ssh
-</a><a href=../../tags/storage/ class=font_size_2>Storage
-</a><a href=../../tags/vlmcsd/ class=font_size_2>Vlmcsd
-</a><a href=../../tags/wsl/ class=font_size_2>Wsl
-</a><a href=../../tags/zsh/ class=font_size_2>Zsh
-</a><a href=../../tags/adsl/ class=font_size_1>Adsl
-</a><a href=../../tags/aks/ class=font_size_1>Aks
-</a><a href=../../tags/azcli/ class=font_size_1>Azcli
-</a><a href=../../tags/backup/ class=font_size_1>Backup
-</a><a href=../../tags/bare-metal/ class=font_size_1>Bare Metal
-</a><a href=../../tags/blue-screen/ class=font_size_1>Blue Screen
-</a><a href=../../tags/bookstack/ class=font_size_1>Bookstack
-</a><a href=../../tags/build/ class=font_size_1>Build
-</a><a href=../../tags/catalina/ class=font_size_1>Catalina
-</a><a href=../../tags/catalyst/ class=font_size_1>Catalyst
-</a><a href=../../tags/cka/ class=font_size_1>Cka
-</a><a href=../../tags/cloud-engineering/ class=font_size_1>Cloud Engineering
-</a><a href=../../tags/cloudflare/ class=font_size_1>Cloudflare
-</a><a href=../../tags/cluster/ class=font_size_1>Cluster
-</a><a href=../../tags/container/ class=font_size_1>Container
-</a><a href=../../tags/crontab/ class=font_size_1>Crontab
-</a><a href=../../tags/dcompass/ class=font_size_1>Dcompass
-</a><a href=../../tags/debian-11/ class=font_size_1>Debian 11
-</a><a href=../../tags/debian-12/ class=font_size_1>Debian 12
-</a><a href=../../tags/debian11/ class=font_size_1>Debian11
-</a><a href=../../tags/debian12/ class=font_size_1>Debian12
-</a><a href=../../tags/dev/ class=font_size_1>Dev
-</a><a href=../../tags/diskutil/ class=font_size_1>Diskutil
-</a><a href=../../tags/diy/ class=font_size_1>DIY
-</a><a href=../../tags/dockerfile/ class=font_size_1>Dockerfile
-</a><a href=../../tags/document/ class=font_size_1>Document
-</a><a href=../../tags/domain/ class=font_size_1>Domain
-</a><a href=../../tags/elasticflow/ class=font_size_1>Elasticflow
-</a><a href=../../tags/etcd/ class=font_size_1>Etcd
-</a><a href=../../tags/firewall/ class=font_size_1>Firewall
-</a><a href=../../tags/flask/ class=font_size_1>Flask
-</a><a href=../../tags/freedns/ class=font_size_1>Freedns
-</a><a href=../../tags/freeradius/ class=font_size_1>Freeradius
-</a><a href=../../tags/git_action/ class=font_size_1>Git_action
-</a><a href=../../tags/gitea/ class=font_size_1>Gitea
-</a><a href=../../tags/github-pag/ class=font_size_1>Github Pag
-</a><a href=../../tags/gitlab/ class=font_size_1>Gitlab
-</a><a href=../../tags/golang/ class=font_size_1>Golang
-</a><a href=../../tags/graylog/ class=font_size_1>Graylog
-</a><a href=../../tags/hardware/ class=font_size_1>Hardware
-</a><a href=../../tags/he.net/ class=font_size_1>He.net
-</a><a href=../../tags/hugo/ class=font_size_1>Hugo
-</a><a href=../../tags/iis/ class=font_size_1>Iis
-</a><a href=../../tags/ios/ class=font_size_1>Ios
-</a><a href=../../tags/iperf/ class=font_size_1>Iperf
-</a><a href=../../tags/ipsec/ class=font_size_1>Ipsec
-</a><a href=../../tags/jenkins/ class=font_size_1>Jenkins
-</a><a href=../../tags/jitsi/ class=font_size_1>Jitsi
-</a><a href=../../tags/kubevirt/ class=font_size_1>Kubevirt
-</a><a href=../../tags/kubrenetes/ class=font_size_1>Kubrenetes
-</a><a href=../../tags/ldap/ class=font_size_1>Ldap
-</a><a href=../../tags/loveit/ class=font_size_1>Loveit
-</a><a href=../../tags/lxc/ class=font_size_1>Lxc
-</a><a href=../../tags/mac/ class=font_size_1>Mac
-</a><a href=../../tags/mellanox/ class=font_size_1>Mellanox
-</a><a href=../../tags/monitor/ class=font_size_1>Monitor
-</a><a href=../../tags/monitoring/ class=font_size_1>Monitoring
-</a><a href=../../tags/mosdns/ class=font_size_1>Mosdns
-</a><a href=../../tags/mysql/ class=font_size_1>Mysql
-</a><a href=../../tags/netflow/ class=font_size_1>Netflow
-</a><a href=../../tags/network_shunt/ class=font_size_1>Network_shunt
-</a><a href=../../tags/new-relic/ class=font_size_1>New Relic
-</a><a href=../../tags/nftable/ class=font_size_1>Nftable
-</a><a href=../../tags/ntfs/ class=font_size_1>Ntfs
-</a><a href=../../tags/ntp/ class=font_size_1>Ntp
-</a><a href=../../tags/opencase/ class=font_size_1>Opencase
-</a><a href=../../tags/pass-through/ class=font_size_1>Pass Through
-</a><a href=../../tags/per-lc_all_error/ class=font_size_1>Per-Lc_all_error
-</a><a href=../../tags/pfsense/ class=font_size_1>Pfsense
-</a><a href=../../tags/pipline/ class=font_size_1>Pipline
-</a><a href=../../tags/powerdns/ class=font_size_1>Powerdns
-</a><a href=../../tags/programming/ class=font_size_1>Programming
-</a><a href=../../tags/proxmox-backup-server/ class=font_size_1>Proxmox Backup Server
-</a><a href=../../tags/pve8/ class=font_size_1>Pve8
-</a><a href=../../tags/qcow2/ class=font_size_1>Qcow2
-</a><a href=../../tags/qemu/ class=font_size_1>Qemu
-</a><a href=../../tags/reboot/ class=font_size_1>Reboot
-</a><a href=../../tags/repair-boot/ class=font_size_1>Repair Boot
-</a><a href=../../tags/reverse-proxy/ class=font_size_1>Reverse Proxy
-</a><a href=../../tags/rhel/ class=font_size_1>Rhel
-</a><a href=../../tags/rime/ class=font_size_1>Rime
-</a><a href=../../tags/sendgrid/ class=font_size_1>Sendgrid
-</a><a href=../../tags/site-to-site/ class=font_size_1>Site-to-Site
-</a><a href=../../tags/speedtest/ class=font_size_1>Speedtest
-</a><a href=../../tags/squirrel/ class=font_size_1>Squirrel
-</a><a href=../../tags/sshpass/ class=font_size_1>Sshpass
-</a><a href=../../tags/ssl/ class=font_size_1>Ssl
-</a><a href=../../tags/sublime/ class=font_size_1>Sublime
-</a><a href=../../tags/talos/ class=font_size_1>Talos
-</a><a href=../../tags/task-scheduler/ class=font_size_1>Task Scheduler
-</a><a href=../../tags/template/ class=font_size_1>Template
-</a><a href=../../tags/terraform/ class=font_size_1>Terraform
-</a><a href=../../tags/time/ class=font_size_1>Time
-</a><a href=../../tags/timesyncd/ class=font_size_1>Timesyncd
-</a><a href=../../tags/translate/ class=font_size_1>Translate
-</a><a href=../../tags/upgrade/ class=font_size_1>Upgrade
-</a><a href=../../tags/vagrant/ class=font_size_1>Vagrant
-</a><a href=../../tags/vbash/ class=font_size_1>Vbash
-</a><a href=../../tags/vim/ class=font_size_1>Vim
-</a><a href=../../tags/virtualbox/ class=font_size_1>Virtualbox
-</a><a href=../../tags/vmid/ class=font_size_1>Vmid
-</a><a href=../../tags/vmware/ class=font_size_1>Vmware
-</a><a href=../../tags/vpn/ class=font_size_1>Vpn
-</a><a href=../../tags/vyos-/ class=font_size_1>Vyos
-</a><a href=../../tags/weak/ class=font_size_1>Weak
-</a><a href=../../tags/win/ class=font_size_1>Win
-</a><a href=../../tags/windows-11/ class=font_size_1>Windows 11
-</a><a href=../../tags/windows-definder/ class=font_size_1>Windows Definder
-</a><a href=../../tags/windows-security/ class=font_size_1>Windows Security
-</a><a href=../../tags/wireguard/ class=font_size_1>Wireguard</a></div></section></aside><main class="main full-width"><header><h3 class=section-title>Tags</h3><div class=section-card><div class=section-details><h3 class=section-count>6 pages</h3><h1 class=section-term>Proxmox Ve</h1></div></div></header><section class=article-list--compact><article><a href=../../p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/><div class=article-details><h2 class=article-title>How to Deploy Vyos With Terraform on Proxmox Ve</h2><footer class=article-time><time datetime=2024-02-21T17:30:09+08:00>Feb 21, 2024</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=e7e0ad45" loading=lazy alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve"></div></a></article><article><a href=../../p/how-to-create-vyos-template-on-proxmox/><div class=article-details><h2 class=article-title>How to Create Vyos Template on Proxmox</h2><footer class=article-time><time datetime=2024-02-21T17:24:06+08:00>Feb 21, 2024</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=16de454a" loading=lazy alt="Featured image of post How to Create Vyos Template on Proxmox"></div></a></article><article><a href=../../p/how-to-setup-vyos-with-vyos-pve-image-on-pve/><div class=article-details><h2 class=article-title>How to Setup Vyos With Vyos Pve Image on Pve</h2><footer class=article-time><time datetime=2023-12-22T23:22:24+08:00>Dec 22, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=7d30e37d" loading=lazy alt="Featured image of post How to Setup Vyos With Vyos Pve Image on Pve"></div></a></article><article><a href=../../p/how-to-install-proxmox-ve-8-on-debian-12/><div class=article-details><h2 class=article-title>How to install proxmox ve 8 on debian 12</h2><footer class=article-time><time datetime=2023-06-24T18:17:00+08:00>Jun 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=aa27590c" loading=lazy alt="Featured image of post How to install proxmox ve 8 on debian 12"></div></a></article><article><a href=../../p/how-to-install-pbs2.3-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pbs2.3 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:10:21+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=244bc190" loading=lazy alt="Featured image of post How to Install Pbs2.3 on Debian11"></div></a></article><article><a href=../../p/how-to-install-pve7-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pve7 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:07:19+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=24e0a3fc" loading=lazy alt="Featured image of post How to Install Pve7 on Debian11"></div></a></article></section><footer class=site-footer><section class=copyright>&copy;
+<span class=count>21</span></a></div></div></section><section class="widget tagCloud"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags><a href=../../categories/linux/ class=font_size_24>linux</a>
+<a href=../../categories/virtualization/ class=font_size_24>virtualization</a>
+<a href=../../categories/networking/ class=font_size_15>networking</a>
+<a href=../../categories/devops/ class=font_size_13>devops</a>
+<a href=../../categories/pve/ class=font_size_9>pve</a>
+<a href=../../categories/blog/ class=font_size_7>Blog</a>
+<a href=../../categories/vyos/ class=font_size_5>vyos</a>
+<a href=../../categories/docker/ class=font_size_4>docker</a>
+<a href=../../categories/macos/ class=font_size_4>macos</a>
+<a href=../../categories/network/ class=font_size_4>network</a>
+<a href=../../categories/python/ class=font_size_3>python</a>
+<a href=../../categories/iac/ class=font_size_2>IAC</a>
+<a href=../../categories/k8s/ class=font_size_2>k8s</a>
+<a href=../../categories/kubernetes/ class=font_size_2>kubernetes</a>
+<a href=../../categories/nginx/ class=font_size_2>nginx</a>
+<a href=../../categories/programming/ class=font_size_2>programming</a>
+<a href=../../categories/proxmox-ve/ class=font_size_2>proxmox ve</a>
+<a href=../../categories/pulumi/ class=font_size_2>Pulumi</a>
+<a href=../../categories/shell/ class=font_size_2>shell</a>
+<a href=../../categories/windows/ class=font_size_2>windows</a>
+<a href=../../categories/zsh/ class=font_size_2>zsh</a>
+<a href=../../categories/ansible/ class=font_size_1>ansible</a>
+<a href=../../categories/cloud-engineering/ class=font_size_1>CLOUD ENGINEERING</a>
+<a href=../../categories/cloud-native/ class=font_size_1>cloud native</a>
+<a href=../../categories/cloudinit/ class=font_size_1>cloudinit</a>
+<a href=../../categories/container/ class=font_size_1>container</a>
+<a href=../../categories/containers/ class=font_size_1>containers</a>
+<a href=../../categories/develop/ class=font_size_1>develop</a>
+<a href=../../categories/devop/ class=font_size_1>devop</a>
+<a href=../../categories/dns/ class=font_size_1>dns</a>
+<a href=../../categories/freebsd/ class=font_size_1>freebsd</a>
+<a href=../../categories/gitops/ class=font_size_1>gitops</a>
+<a href=../../categories/graylog/ class=font_size_1>graylog</a>
+<a href=../../categories/hardware/ class=font_size_1>Hardware</a>
+<a href=../../categories/hugo/ class=font_size_1>hugo</a>
+<a href=../../categories/index/ class=font_size_1>index</a>
+<a href=../../categories/inputmethod/ class=font_size_1>inputmethod</a>
+<a href=../../categories/kubernets/ class=font_size_1>kubernets</a>
+<a href=../../categories/kvm/ class=font_size_1>kvm</a>
+<a href=../../categories/monitoring/ class=font_size_1>monitoring</a>
+<a href=../../categories/new-relic/ class=font_size_1>NEW RELIC</a>
+<a href=../../categories/perl/ class=font_size_1>perl</a>
+<a href=../../categories/powerdns/ class=font_size_1>powerdns</a>
+<a href=../../categories/reverse-proxy/ class=font_size_1>reverse proxy</a>
+<a href=../../categories/software/ class=font_size_1>software</a>
+<a href=../../categories/sre/ class=font_size_1>SRE</a>
+<a href=../../categories/ssh/ class=font_size_1>ssh</a>
+<a href=../../categories/terraform/ class=font_size_1>terraform</a>
+<a href=../../categories/vim/ class=font_size_1>vim</a>
+<a href=../../categories/vlmcsd/ class=font_size_1>vlmcsd</a>
+<a href=../../categories/wsl/ class=font_size_1>wsl</a></div></section><section class="widget tagCloud"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg></div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags><a href=../../tags/pve/ class=font_size_44>pve</a>
+<a href=../../tags/debian/ class=font_size_27>debian</a>
+<a href=../../tags/linux/ class=font_size_26>linux</a>
+<a href=../../tags/vyos/ class=font_size_23>vyos</a>
+<a href=../../tags/docker/ class=font_size_22>docker</a>
+<a href=../../tags/devops/ class=font_size_13>devops</a>
+<a href=../../tags/networking/ class=font_size_10>networking</a>
+<a href=../../tags/docker-compose/ class=font_size_9>docker-compose</a>
+<a href=../../tags/shell/ class=font_size_7>shell</a>
+<a href=../../tags/k8s/ class=font_size_6>k8s</a>
+<a href=../../tags/proxmox-ve/ class=font_size_6>proxmox ve</a>
+<a href=../../tags/ceph/ class=font_size_5>ceph</a>
+<a href=../../tags/macos/ class=font_size_5>macos</a>
+<a href=../../tags/python/ class=font_size_5>python</a>
+<a href=../../tags/ansible/ class=font_size_4>ansible</a>
+<a href=../../tags/hci/ class=font_size_4>hci</a>
+<a href=../../tags/kubernetes/ class=font_size_4>kubernetes</a>
+<a href=../../tags/api/ class=font_size_3>api</a>
+<a href=../../tags/bash/ class=font_size_3>bash</a>
+<a href=../../tags/centos/ class=font_size_3>centos</a>
+<a href=../../tags/chinese/ class=font_size_3>chinese</a>
+<a href=../../tags/debian10/ class=font_size_3>debian10</a>
+<a href=../../tags/git/ class=font_size_3>git</a>
+<a href=../../tags/iac/ class=font_size_3>iac</a>
+<a href=../../tags/kms/ class=font_size_3>kms</a>
+<a href=../../tags/kvm/ class=font_size_3>KVM</a>
+<a href=../../tags/librenms/ class=font_size_3>librenms</a>
+<a href=../../tags/network/ class=font_size_3>network</a>
+<a href=../../tags/nginx/ class=font_size_3>nginx</a>
+<a href=../../tags/overture/ class=font_size_3>overture</a>
+<a href=../../tags/proxmox/ class=font_size_3>proxmox</a>
+<a href=../../tags/ubuntu/ class=font_size_3>ubuntu</a>
+<a href=../../tags/windows/ class=font_size_3>windows</a>
+<a href=../../tags/automation/ class=font_size_2>automation</a>
+<a href=../../tags/bcache/ class=font_size_2>bcache</a>
+<a href=../../tags/cisco/ class=font_size_2>cisco</a>
+<a href=../../tags/cloud-init/ class=font_size_2>cloud-init</a>
+<a href=../../tags/cloudinit/ class=font_size_2>cloudinit</a>
+<a href=../../tags/ddns/ class=font_size_2>ddns</a>
+<a href=../../tags/debian-10/ class=font_size_2>debian 10</a>
+<a href=../../tags/dns/ class=font_size_2>dns</a>
+<a href=../../tags/dotnetcore/ class=font_size_2>dotnetcore</a>
+<a href=../../tags/freebsd/ class=font_size_2>freebsd</a>
+<a href=../../tags/go/ class=font_size_2>go</a>
+<a href=../../tags/lvm/ class=font_size_2>lvm</a>
+<a href=../../tags/openssl/ class=font_size_2>openssl</a>
+<a href=../../tags/pbr/ class=font_size_2>PBR</a>
+<a href=../../tags/pbs/ class=font_size_2>pbs</a>
+<a href=../../tags/powershell/ class=font_size_2>powershell</a>
+<a href=../../tags/pppoe/ class=font_size_2>pppoe</a>
+<a href=../../tags/pulumi/ class=font_size_2>pulumi</a>
+<a href=../../tags/snmp/ class=font_size_2>snmp</a>
+<a href=../../tags/sre/ class=font_size_2>sre</a>
+<a href=../../tags/ssh/ class=font_size_2>ssh</a>
+<a href=../../tags/storage/ class=font_size_2>storage</a>
+<a href=../../tags/vlmcsd/ class=font_size_2>vlmcsd</a>
+<a href=../../tags/wsl/ class=font_size_2>wsl</a>
+<a href=../../tags/zsh/ class=font_size_2>zsh</a>
+<a href=../../tags/adsl/ class=font_size_1>adsl</a>
+<a href=../../tags/aks/ class=font_size_1>aks</a>
+<a href=../../tags/azcli/ class=font_size_1>azcli</a>
+<a href=../../tags/backup/ class=font_size_1>backup</a>
+<a href=../../tags/bare-metal/ class=font_size_1>bare metal</a>
+<a href=../../tags/blue-screen/ class=font_size_1>blue screen</a>
+<a href=../../tags/bookstack/ class=font_size_1>bookstack</a>
+<a href=../../tags/build/ class=font_size_1>build</a>
+<a href=../../tags/catalina/ class=font_size_1>catalina</a>
+<a href=../../tags/catalyst/ class=font_size_1>catalyst</a>
+<a href=../../tags/cka/ class=font_size_1>cka</a>
+<a href=../../tags/cloud-engineering/ class=font_size_1>cloud engineering</a>
+<a href=../../tags/cloudflare/ class=font_size_1>cloudflare</a>
+<a href=../../tags/cluster/ class=font_size_1>cluster</a>
+<a href=../../tags/container/ class=font_size_1>container</a>
+<a href=../../tags/crontab/ class=font_size_1>crontab</a>
+<a href=../../tags/dcompass/ class=font_size_1>dcompass</a>
+<a href=../../tags/debian-11/ class=font_size_1>debian 11</a>
+<a href=../../tags/debian-12/ class=font_size_1>debian 12</a>
+<a href=../../tags/debian11/ class=font_size_1>debian11</a>
+<a href=../../tags/debian12/ class=font_size_1>debian12</a>
+<a href=../../tags/dev/ class=font_size_1>dev</a>
+<a href=../../tags/diskutil/ class=font_size_1>diskutil</a>
+<a href=../../tags/diy/ class=font_size_1>DIY</a>
+<a href=../../tags/dockerfile/ class=font_size_1>dockerfile</a>
+<a href=../../tags/document/ class=font_size_1>document</a>
+<a href=../../tags/domain/ class=font_size_1>domain</a>
+<a href=../../tags/elasticflow/ class=font_size_1>elasticflow</a>
+<a href=../../tags/etcd/ class=font_size_1>etcd</a>
+<a href=../../tags/firewall/ class=font_size_1>firewall</a>
+<a href=../../tags/flask/ class=font_size_1>flask</a>
+<a href=../../tags/freedns/ class=font_size_1>freedns</a>
+<a href=../../tags/freeradius/ class=font_size_1>freeradius</a>
+<a href=../../tags/git_action/ class=font_size_1>git_action</a>
+<a href=../../tags/gitea/ class=font_size_1>gitea</a>
+<a href=../../tags/github-pag/ class=font_size_1>github pag</a>
+<a href=../../tags/gitlab/ class=font_size_1>gitlab</a>
+<a href=../../tags/golang/ class=font_size_1>golang</a>
+<a href=../../tags/graylog/ class=font_size_1>graylog</a>
+<a href=../../tags/hardware/ class=font_size_1>hardware</a>
+<a href=../../tags/he.net/ class=font_size_1>he.net</a>
+<a href=../../tags/hugo/ class=font_size_1>hugo</a>
+<a href=../../tags/iis/ class=font_size_1>iis</a>
+<a href=../../tags/ios/ class=font_size_1>ios</a>
+<a href=../../tags/iperf/ class=font_size_1>iperf</a>
+<a href=../../tags/ipsec/ class=font_size_1>ipsec</a>
+<a href=../../tags/jenkins/ class=font_size_1>jenkins</a>
+<a href=../../tags/jitsi/ class=font_size_1>jitsi</a>
+<a href=../../tags/kubevirt/ class=font_size_1>kubevirt</a>
+<a href=../../tags/kubrenetes/ class=font_size_1>kubrenetes</a>
+<a href=../../tags/ldap/ class=font_size_1>ldap</a>
+<a href=../../tags/loveit/ class=font_size_1>loveit</a>
+<a href=../../tags/lxc/ class=font_size_1>lxc</a>
+<a href=../../tags/mac/ class=font_size_1>mac</a>
+<a href=../../tags/mellanox/ class=font_size_1>mellanox</a>
+<a href=../../tags/monitor/ class=font_size_1>monitor</a>
+<a href=../../tags/monitoring/ class=font_size_1>monitoring</a>
+<a href=../../tags/mosdns/ class=font_size_1>mosdns</a>
+<a href=../../tags/mysql/ class=font_size_1>mysql</a>
+<a href=../../tags/netflow/ class=font_size_1>netflow</a>
+<a href=../../tags/network_shunt/ class=font_size_1>network_shunt</a>
+<a href=../../tags/new-relic/ class=font_size_1>new relic</a>
+<a href=../../tags/nftable/ class=font_size_1>nftable</a>
+<a href=../../tags/ntfs/ class=font_size_1>ntfs</a>
+<a href=../../tags/ntp/ class=font_size_1>ntp</a>
+<a href=../../tags/opencase/ class=font_size_1>opencase</a>
+<a href=../../tags/pass-through/ class=font_size_1>pass through</a>
+<a href=../../tags/per-lc_all_error/ class=font_size_1>per-lc_all_error</a>
+<a href=../../tags/pfsense/ class=font_size_1>pfsense</a>
+<a href=../../tags/pipline/ class=font_size_1>pipline</a>
+<a href=../../tags/powerdns/ class=font_size_1>powerdns</a>
+<a href=../../tags/programming/ class=font_size_1>programming</a>
+<a href=../../tags/proxmox-backup-server/ class=font_size_1>proxmox backup server</a>
+<a href=../../tags/pve8/ class=font_size_1>pve8</a>
+<a href=../../tags/qcow2/ class=font_size_1>qcow2</a>
+<a href=../../tags/qemu/ class=font_size_1>qemu</a>
+<a href=../../tags/reboot/ class=font_size_1>reboot</a>
+<a href=../../tags/repair-boot/ class=font_size_1>repair boot</a>
+<a href=../../tags/reverse-proxy/ class=font_size_1>reverse proxy</a>
+<a href=../../tags/rhel/ class=font_size_1>rhel</a>
+<a href=../../tags/rime/ class=font_size_1>rime</a>
+<a href=../../tags/sendgrid/ class=font_size_1>sendgrid</a>
+<a href=../../tags/site-to-site/ class=font_size_1>site-to-site</a>
+<a href=../../tags/speedtest/ class=font_size_1>speedtest</a>
+<a href=../../tags/squirrel/ class=font_size_1>squirrel</a>
+<a href=../../tags/sshpass/ class=font_size_1>sshpass</a>
+<a href=../../tags/ssl/ class=font_size_1>ssl</a>
+<a href=../../tags/sublime/ class=font_size_1>sublime</a>
+<a href=../../tags/talos/ class=font_size_1>talos</a>
+<a href=../../tags/task-scheduler/ class=font_size_1>task scheduler</a>
+<a href=../../tags/template/ class=font_size_1>template</a>
+<a href=../../tags/terraform/ class=font_size_1>terraform</a>
+<a href=../../tags/time/ class=font_size_1>time</a>
+<a href=../../tags/timesyncd/ class=font_size_1>timesyncd</a>
+<a href=../../tags/translate/ class=font_size_1>translate</a>
+<a href=../../tags/upgrade/ class=font_size_1>upgrade</a>
+<a href=../../tags/vagrant/ class=font_size_1>vagrant</a>
+<a href=../../tags/vbash/ class=font_size_1>vbash</a>
+<a href=../../tags/vim/ class=font_size_1>vim</a>
+<a href=../../tags/virtualbox/ class=font_size_1>virtualbox</a>
+<a href=../../tags/vmid/ class=font_size_1>vmid</a>
+<a href=../../tags/vmware/ class=font_size_1>vmware</a>
+<a href=../../tags/vpn/ class=font_size_1>vpn</a>
+<a href=../../tags/weak/ class=font_size_1>weak</a>
+<a href=../../tags/win/ class=font_size_1>win</a>
+<a href=../../tags/windows-11/ class=font_size_1>windows 11</a>
+<a href=../../tags/windows-definder/ class=font_size_1>windows definder</a>
+<a href=../../tags/windows-security/ class=font_size_1>windows security</a>
+<a href=../../tags/wireguard/ class=font_size_1>wireguard</a></div></section></aside><main class="main full-width"><header><h3 class=section-title>Tags</h3><div class=section-card><div class=section-details><h3 class=section-count>6 pages</h3><h1 class=section-term>proxmox ve</h1></div></div></header><section class=article-list--compact><article><a href=../../p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/><div class=article-details><h2 class=article-title>How to Deploy Vyos With Terraform on Proxmox Ve</h2><footer class=article-time><time datetime=2024-02-21T17:30:09+08:00>Feb 21, 2024</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=e7e0ad45" loading=lazy alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve"></div></a></article><article><a href=../../p/how-to-create-vyos-template-on-proxmox/><div class=article-details><h2 class=article-title>How to Create Vyos Template on Proxmox</h2><footer class=article-time><time datetime=2024-02-21T17:24:06+08:00>Feb 21, 2024</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=16de454a" loading=lazy alt="Featured image of post How to Create Vyos Template on Proxmox"></div></a></article><article><a href=../../p/how-to-setup-vyos-with-vyos-pve-image-on-pve/><div class=article-details><h2 class=article-title>How to Setup Vyos With Vyos Pve Image on Pve</h2><footer class=article-time><time datetime=2023-12-22T23:22:24+08:00>Dec 22, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=7d30e37d" loading=lazy alt="Featured image of post How to Setup Vyos With Vyos Pve Image on Pve"></div></a></article><article><a href=../../p/how-to-install-proxmox-ve-8-on-debian-12/><div class=article-details><h2 class=article-title>How to install proxmox ve 8 on debian 12</h2><footer class=article-time><time datetime=2023-06-24T18:17:00+08:00>Jun 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=aa27590c" loading=lazy alt="Featured image of post How to install proxmox ve 8 on debian 12"></div></a></article><article><a href=../../p/how-to-install-pbs2.3-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pbs2.3 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:10:21+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=244bc190" loading=lazy alt="Featured image of post How to Install Pbs2.3 on Debian11"></div></a></article><article><a href=../../p/how-to-install-pve7-on-debian11/><div class=article-details><h2 class=article-title>How to Install Pve7 on Debian11</h2><footer class=article-time><time datetime=2023-03-24T11:07:19+08:00>Mar 24, 2023</time></footer></div><div class=article-image><img src="https://picsum.photos/800/600.webp?random=24e0a3fc" loading=lazy alt="Featured image of post How to Install Pve7 on Debian11"></div></a></article></section><footer class=site-footer><section class=copyright>&copy;
 2018 -
-2024 Steve's Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.21.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=../../ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
+2024 Steve's Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.21.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=../../ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

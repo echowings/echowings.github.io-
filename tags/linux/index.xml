@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Steve's Blog</title><link>https://echowings.github.io/tags/linux/</link><description>Recent content in Linux on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 05 Feb 2024 16:56:13 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Rime Settings</title><link>https://echowings.github.io/p/rime-settings/</link><pubDate>Mon, 05 Feb 2024 16:56:13 +0800</pubDate><guid>https://echowings.github.io/p/rime-settings/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=fd5d93e8" alt="Featured image of post Rime Settings" />&lt;h2 id="git-repo">Git Repo&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Steve's Blog</title><link>https://echowings.github.io/tags/linux/</link><description>Recent content in linux on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Feb 2024 16:56:13 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Rime Settings</title><link>https://echowings.github.io/p/rime-settings/</link><pubDate>Mon, 05 Feb 2024 16:56:13 +0800</pubDate><guid>https://echowings.github.io/p/rime-settings/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=fd5d93e8" alt="Featured image of post Rime Settings" />&lt;h2 id="git-repo">Git Repo&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/Iorest/rime-setting" target="_blank" rel="noopener"
 >rime-setting&lt;/a>&lt;/p>
 &lt;h2 id="install-rime-squirrel-on-macwindowslinux">Install rime /squirrel on mac/windows/linux&lt;/h2>
@@ -384,7 +384,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Option 2: mirrors utsc&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Downlaod and install gpg key&lt;/span>
@@ -1339,12 +1339,10 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Hostname&lt;/th>
-&lt;th style="text-align: left">my-graylog&lt;/th>
+&lt;th>Hostname&lt;/th>
+&lt;th>my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
-&lt;tbody>
-&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1506,34 +1504,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Domain Name&lt;/td>
-&lt;td style="text-align: left">TESTING.LOCAL&lt;/td>
+&lt;td>Domain Name&lt;/td>
+&lt;td>TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">NTDomain Name&lt;/td>
-&lt;td style="text-align: left">TESTING&lt;/td>
+&lt;td>NTDomain Name&lt;/td>
+&lt;td>TESTING&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">RADIUS HOSTNAME&lt;/td>
-&lt;td style="text-align: left">MYRADIUS&lt;/td>
+&lt;td>RADIUS HOSTNAME&lt;/td>
+&lt;td>MYRADIUS&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
-&lt;td style="text-align: left">MYDC02.TESTING.LOCAL&lt;/td>
+&lt;td>DOMAIN CONTROLLER&lt;/td>
+&lt;td>MYDC02.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN CONTROLLER&lt;/td>
-&lt;td style="text-align: left">MYDC03.TESTING.LOCAL&lt;/td>
+&lt;td>DOMAIN CONTROLLER&lt;/td>
+&lt;td>MYDC03.TESTING.LOCAL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DOMAIN GROUP&lt;/td>
-&lt;td style="text-align: left">VPN_GROUP&lt;/td>
+&lt;td>DOMAIN GROUP&lt;/td>
+&lt;td>VPN_GROUP&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

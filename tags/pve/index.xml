@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pve on Steve's Blog</title><link>https://echowings.github.io/tags/pve/</link><description>Recent content in Pve on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Feb 2024 17:30:09 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/pve/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Vyos With Terraform on Proxmox Ve</title><link>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</link><pubDate>Wed, 21 Feb 2024 17:30:09 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e7e0ad45" alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve" />&lt;h2 id="prerequest">Prerequest&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pve on Steve's Blog</title><link>https://echowings.github.io/tags/pve/</link><description>Recent content in pve on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 21 Feb 2024 17:30:09 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/pve/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy Vyos With Terraform on Proxmox Ve</title><link>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</link><pubDate>Wed, 21 Feb 2024 17:30:09 +0800</pubDate><guid>https://echowings.github.io/p/how-to-deploy-vyos-with-terraform-on-proxmox-ve/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=e7e0ad45" alt="Featured image of post How to Deploy Vyos With Terraform on Proxmox Ve" />&lt;h2 id="prerequest">Prerequest&lt;/h2>
 &lt;p>Since PVE 8 has bug with terraform. so I highly recommand use pve 7&lt;/p>
 &lt;h2 id="install-terraform">Install Terraform&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -901,7 +901,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Option 2: mirrors utsc&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Downlaod and install gpg key&lt;/span>
@@ -5011,30 +5011,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Host name&lt;/th>
-&lt;th style="text-align: left">Host IP&lt;/th>
-&lt;th style="text-align: left">Disk01 for install PVE&lt;/th>
-&lt;th style="text-align: left">Disk02 for ceph&lt;/th>
+&lt;th>Host name&lt;/th>
+&lt;th>Host IP&lt;/th>
+&lt;th>Disk01 for install PVE&lt;/th>
+&lt;th>Disk02 for ceph&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">pve-test01&lt;/td>
-&lt;td style="text-align: left">192.168.0.85&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test01&lt;/td>
+&lt;td>192.168.0.85&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">pve-test02&lt;/td>
-&lt;td style="text-align: left">192.168.0.86&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test02&lt;/td>
+&lt;td>192.168.0.86&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">pve-test03&lt;/td>
-&lt;td style="text-align: left">192.168.0.87&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test03&lt;/td>
+&lt;td>192.168.0.87&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5249,30 +5249,30 @@ Okay! Deploy a centos 7 firstly.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">VM:&lt;/td>
-&lt;td style="text-align: left">${VM-you-created}&lt;/td>
+&lt;td>VM:&lt;/td>
+&lt;td>${VM-you-created}&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max Restart:&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>Max Restart:&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max Relocate:&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>Max Relocate:&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Group&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>Group&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">request State:&lt;/td>
-&lt;td style="text-align: left">started&lt;/td>
+&lt;td>request State:&lt;/td>
+&lt;td>started&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

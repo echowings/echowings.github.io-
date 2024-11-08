@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8s on Steve's Blog</title><link>https://echowings.github.io/categories/k8s/</link><description>Recent content in K8s on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 06 Mar 2024 14:45:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Login Aks in Debian 12</title><link>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</link><pubDate>Wed, 06 Mar 2024 14:45:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=090962a2" alt="Featured image of post How to Login Aks in Debian 12" />&lt;h2 id="install-az-cli">Install az-cli&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>k8s on Steve's Blog</title><link>https://echowings.github.io/categories/k8s/</link><description>Recent content in k8s on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 06 Mar 2024 14:45:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Login Aks in Debian 12</title><link>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</link><pubDate>Wed, 06 Mar 2024 14:45:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-login-aks-in-debian-12/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=090962a2" alt="Featured image of post How to Login Aks in Debian 12" />&lt;h2 id="install-az-cli">Install az-cli&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -121,38 +121,38 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Hostname&lt;/td>
-&lt;td style="text-align: left">talos-k8s&lt;/td>
+&lt;td>Hostname&lt;/td>
+&lt;td>talos-k8s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS Servers&lt;/td>
-&lt;td style="text-align: left">192.168.11.10&lt;/td>
+&lt;td>DNS Servers&lt;/td>
+&lt;td>192.168.11.10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Time Servers&lt;/td>
-&lt;td style="text-align: left">0.pool.ntp.org&lt;/td>
+&lt;td>Time Servers&lt;/td>
+&lt;td>0.pool.ntp.org&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Interface&lt;/td>
-&lt;td style="text-align: left">enp1s0&lt;/td>
+&lt;td>Interface&lt;/td>
+&lt;td>enp1s0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mode&lt;/td>
-&lt;td style="text-align: left">Static&lt;/td>
+&lt;td>Mode&lt;/td>
+&lt;td>Static&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Addresses&lt;/td>
-&lt;td style="text-align: left">192.168.11.61/24&lt;/td>
+&lt;td>Addresses&lt;/td>
+&lt;td>192.168.11.61/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Gateway&lt;/td>
-&lt;td style="text-align: left">192.168.11.1&lt;/td>
+&lt;td>Gateway&lt;/td>
+&lt;td>192.168.11.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

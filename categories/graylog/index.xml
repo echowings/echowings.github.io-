@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Graylog on Steve's Blog</title><link>https://echowings.github.io/categories/graylog/</link><description>Recent content in Graylog on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 24 Dec 2019 11:27:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/graylog/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Graylog With Docker Compose</title><link>https://echowings.github.io/p/how-to-install-graylog-with-docker-compose/</link><pubDate>Tue, 24 Dec 2019 11:27:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-graylog-with-docker-compose/</guid><description>&lt;h1 id="how-to-install-graylog-with-docker-compose">How to Install Graylog with Docker-compose&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>graylog on Steve's Blog</title><link>https://echowings.github.io/categories/graylog/</link><description>Recent content in graylog on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 24 Dec 2019 11:27:21 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/graylog/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Graylog With Docker Compose</title><link>https://echowings.github.io/p/how-to-install-graylog-with-docker-compose/</link><pubDate>Tue, 24 Dec 2019 11:27:21 +0800</pubDate><guid>https://echowings.github.io/p/how-to-install-graylog-with-docker-compose/</guid><description>&lt;h1 id="how-to-install-graylog-with-docker-compose">How to Install Graylog with Docker-compose&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Hostname&lt;/th>
-&lt;th style="text-align: left">my-graylog&lt;/th>
+&lt;th>Hostname&lt;/th>
+&lt;th>my-graylog&lt;/th>
 &lt;/tr>
 &lt;/thead>
-&lt;tbody>
-&lt;/tbody>
 &lt;/table>
 &lt;h2 id="docker-composeyaml">Docker-compose.yaml&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">

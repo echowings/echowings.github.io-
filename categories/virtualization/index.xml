@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtualization on Steve's Blog</title><link>https://echowings.github.io/categories/virtualization/</link><description>Recent content in Virtualization on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 Dec 2023 15:31:54 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/virtualization/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Single Kubernetes Cluster With Talos on Bare Metal</title><link>https://echowings.github.io/p/how-to-create-single-kubernetes-cluster-with-talos-on-bare-metal/</link><pubDate>Tue, 26 Dec 2023 15:31:54 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-single-kubernetes-cluster-with-talos-on-bare-metal/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=24352ced" alt="Featured image of post How to Create Single Kubernetes Cluster With Talos on Bare Metal" />&lt;h2 id="install-talosctl-on-your-laptop-or-client">Install talosctl on your laptop or client&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>virtualization on Steve's Blog</title><link>https://echowings.github.io/categories/virtualization/</link><description>Recent content in virtualization on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 26 Dec 2023 15:31:54 +0800</lastBuildDate><atom:link href="https://echowings.github.io/categories/virtualization/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create Single Kubernetes Cluster With Talos on Bare Metal</title><link>https://echowings.github.io/p/how-to-create-single-kubernetes-cluster-with-talos-on-bare-metal/</link><pubDate>Tue, 26 Dec 2023 15:31:54 +0800</pubDate><guid>https://echowings.github.io/p/how-to-create-single-kubernetes-cluster-with-talos-on-bare-metal/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=24352ced" alt="Featured image of post How to Create Single Kubernetes Cluster With Talos on Bare Metal" />&lt;h2 id="install-talosctl-on-your-laptop-or-client">Install talosctl on your laptop or client&lt;/h2>
 &lt;h3 id="install-talosctl-on-your-system">Install talosctl on your system&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -36,38 +36,38 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Key&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Key&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Hostname&lt;/td>
-&lt;td style="text-align: left">talos-k8s&lt;/td>
+&lt;td>Hostname&lt;/td>
+&lt;td>talos-k8s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DNS Servers&lt;/td>
-&lt;td style="text-align: left">192.168.11.10&lt;/td>
+&lt;td>DNS Servers&lt;/td>
+&lt;td>192.168.11.10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Time Servers&lt;/td>
-&lt;td style="text-align: left">0.pool.ntp.org&lt;/td>
+&lt;td>Time Servers&lt;/td>
+&lt;td>0.pool.ntp.org&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Interface&lt;/td>
-&lt;td style="text-align: left">enp1s0&lt;/td>
+&lt;td>Interface&lt;/td>
+&lt;td>enp1s0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mode&lt;/td>
-&lt;td style="text-align: left">Static&lt;/td>
+&lt;td>Mode&lt;/td>
+&lt;td>Static&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Addresses&lt;/td>
-&lt;td style="text-align: left">192.168.11.61/24&lt;/td>
+&lt;td>Addresses&lt;/td>
+&lt;td>192.168.11.61/24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Gateway&lt;/td>
-&lt;td style="text-align: left">192.168.11.1&lt;/td>
+&lt;td>Gateway&lt;/td>
+&lt;td>192.168.11.1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -517,7 +517,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Option 2: mirrors utsc&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tee /etc/apt/sources.list.d/pve-install-repo.list &amp;lt;&amp;lt; &lt;span class="s2">&amp;#34;EOF&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deb &lt;span class="o">[&lt;/span>&lt;span class="nv">arch&lt;/span>&lt;span class="o">=&lt;/span>amd64&lt;span class="o">]&lt;/span> https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Downlaod and install gpg key&lt;/span>
@@ -2144,30 +2144,30 @@ repository file generator&lt;/a>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Host name&lt;/th>
-&lt;th style="text-align: left">Host IP&lt;/th>
-&lt;th style="text-align: left">Disk01 for install PVE&lt;/th>
-&lt;th style="text-align: left">Disk02 for ceph&lt;/th>
+&lt;th>Host name&lt;/th>
+&lt;th>Host IP&lt;/th>
+&lt;th>Disk01 for install PVE&lt;/th>
+&lt;th>Disk02 for ceph&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">pve-test01&lt;/td>
-&lt;td style="text-align: left">192.168.0.85&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test01&lt;/td>
+&lt;td>192.168.0.85&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">pve-test02&lt;/td>
-&lt;td style="text-align: left">192.168.0.86&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test02&lt;/td>
+&lt;td>192.168.0.86&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">pve-test03&lt;/td>
-&lt;td style="text-align: left">192.168.0.87&lt;/td>
-&lt;td style="text-align: left">/dev/sda&lt;/td>
-&lt;td style="text-align: left">/dev/sdb&lt;/td>
+&lt;td>pve-test03&lt;/td>
+&lt;td>192.168.0.87&lt;/td>
+&lt;td>/dev/sda&lt;/td>
+&lt;td>/dev/sdb&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2382,30 +2382,30 @@ repository file generator&lt;/a>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Name&lt;/th>
-&lt;th style="text-align: left">value&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">VM:&lt;/td>
-&lt;td style="text-align: left">${VM-you-created}&lt;/td>
+&lt;td>VM:&lt;/td>
+&lt;td>${VM-you-created}&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max Restart:&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>Max Restart:&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Max Relocate:&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>Max Relocate:&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Group&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>Group&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">request State:&lt;/td>
-&lt;td style="text-align: left">started&lt;/td>
+&lt;td>request State:&lt;/td>
+&lt;td>started&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

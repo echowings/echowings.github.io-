@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Networking on Steve's Blog</title><link>https://echowings.github.io/tags/networking/</link><description>Recent content in Networking on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 11 Mar 2024 16:16:58 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting</title><link>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</link><pubDate>Mon, 11 Mar 2024 16:16:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d8d1c543" alt="Featured image of post How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting" />&lt;h2 id="download--file-configscriptschinaiprangestxt">Download file &lt;code>/config/scripts/chinaipranges.txt&lt;/code>&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>networking on Steve's Blog</title><link>https://echowings.github.io/tags/networking/</link><description>Recent content in networking on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 11 Mar 2024 16:16:58 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting</title><link>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</link><pubDate>Mon, 11 Mar 2024 16:16:58 +0800</pubDate><guid>https://echowings.github.io/p/how-to-quickly-load-lots-of-networks-in-firewall-group-when-vyos-1.4-booting/</guid><description>&lt;img src="https://picsum.photos/800/600.webp?random=d8d1c543" alt="Featured image of post How to Quickly Load Lots of Networks in Firewall Group When Vyos 1.4 Booting" />&lt;h2 id="download--file-configscriptschinaiprangestxt">Download file &lt;code>/config/scripts/chinaipranges.txt&lt;/code>&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -589,14 +589,14 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">USERNAME&lt;/th>
-&lt;th style="text-align: left">PASSWORD&lt;/th>
+&lt;th>USERNAME&lt;/th>
+&lt;th>PASSWORD&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">admin&lt;/td>
-&lt;td style="text-align: left">xA123456&lt;/td>
+&lt;td>admin&lt;/td>
+&lt;td>xA123456&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

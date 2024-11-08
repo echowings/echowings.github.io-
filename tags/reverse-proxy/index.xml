@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reverse Proxy on Steve's Blog</title><link>https://echowings.github.io/tags/reverse-proxy/</link><description>Recent content in Reverse Proxy on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Nov 2018 23:26:18 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/reverse-proxy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Reverse Proxy With Iis</title><link>https://echowings.github.io/p/how-to-setup-reverse-proxy-with-iis/</link><pubDate>Tue, 06 Nov 2018 23:26:18 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-reverse-proxy-with-iis/</guid><description>&lt;h1 id="how-to-setup-reverse-proxy-with-iis">How to Setup Reverse proxy with IIS&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reverse proxy on Steve's Blog</title><link>https://echowings.github.io/tags/reverse-proxy/</link><description>Recent content in reverse proxy on Steve's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 06 Nov 2018 23:26:18 +0800</lastBuildDate><atom:link href="https://echowings.github.io/tags/reverse-proxy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Reverse Proxy With Iis</title><link>https://echowings.github.io/p/how-to-setup-reverse-proxy-with-iis/</link><pubDate>Tue, 06 Nov 2018 23:26:18 +0800</pubDate><guid>https://echowings.github.io/p/how-to-setup-reverse-proxy-with-iis/</guid><description>&lt;h1 id="how-to-setup-reverse-proxy-with-iis">How to Setup Reverse proxy with IIS&lt;/h1>
 &lt;p>I testing it on Server 2016 with IIS 10&lt;/p>
 &lt;h2 id="install-iisurl-_rewrite-arr">Install IIS,URL _REWRITE, ARR&lt;/h2>
 &lt;ul>
@@ -31,16 +31,16 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Requested URL&lt;/th>
-&lt;th style="text-align: left">Using&lt;/th>
-&lt;th style="text-align: left">Pattern&lt;/th>
+&lt;th>Requested URL&lt;/th>
+&lt;th>Using&lt;/th>
+&lt;th>Pattern&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Matches the pattern&lt;/td>
-&lt;td style="text-align: left">Regular Expressions&lt;/td>
-&lt;td style="text-align: left">&lt;code>^(.*)&lt;/code>&lt;/td>
+&lt;td>Matches the pattern&lt;/td>
+&lt;td>Regular Expressions&lt;/td>
+&lt;td>&lt;code>^(.*)&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -49,26 +49,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Logical grouping&lt;/td>
-&lt;td style="text-align: left">Match ALL&lt;/td>
+&lt;td>Logical grouping&lt;/td>
+&lt;td>Match ALL&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">input&lt;/td>
-&lt;td style="text-align: left">&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
+&lt;td>input&lt;/td>
+&lt;td>&lt;code>{HTTP_HOST}&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Type&lt;/td>
-&lt;td style="text-align: left">Matches the Pattern&lt;/td>
+&lt;td>Type&lt;/td>
+&lt;td>Matches the Pattern&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Patern&lt;/td>
-&lt;td style="text-align: left">&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
+&lt;td>Patern&lt;/td>
+&lt;td>&lt;code>^xa-sys-svr:8080$&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -77,18 +77,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Type&lt;/th>
-&lt;th style="text-align: left">Value&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Action Type&lt;/td>
-&lt;td style="text-align: left">Rewrite&lt;/td>
+&lt;td>Action Type&lt;/td>
+&lt;td>Rewrite&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Rewrite URL&lt;/td>
-&lt;td style="text-align: left">&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
+&lt;td>Rewrite URL&lt;/td>
+&lt;td>&lt;code>http://www.cnblog.com/{R:1}&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
